@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Multiplying Fractions by Whole Numbers and Other Fractions" />
+  <title>Mini OpenStax — Multiply Fractions by Whole Numbers and Fractions</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+    code {
+      background: #f1f1f1;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    pre {
+      background: #f8f9fa;
+      padding: 0.5rem;
+      border-left: 3px solid var(--green);
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Multiplying Fractions by Whole Numbers and Other Fractions</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.3.3.1</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Multiply a <strong>common fraction</strong>, <strong>decimal fraction</strong>, or <strong>percent</strong> by a <strong>whole number</strong>.</li>
+          <li>Multiply two <strong>fractions</strong> (including mixed numbers) together.</li>
+          <li>Interpret “of” as multiplication in real-world contexts (e.g., “⅔ of GH₵60”).</li>
+          <li>Convert between fraction, decimal, and percent forms when needed for computation.</li>
+          <li>Simplify results and express answers in appropriate form.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">multiply</span>
+          <span class="word-item">fraction</span>
+          <span class="word-item">whole number</span>
+          <span class="word-item">mixed number</span>
+          <span class="word-item">improper fraction</span>
+          <span class="word-item">simplify</span>
+          <span class="word-item">cancel</span>
+          <span class="word-item">percent</span>
+          <span class="word-item">decimal</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. Multiplying a Fraction by a Whole Number</h3>
+        <p>This means taking <strong>“that many groups”</strong> or <strong>“a part of”</strong> a whole quantity.</p>
+        <blockquote>
+          <strong>Rule</strong>:<br>
+          Whole number × Fraction = (Whole × Numerator) ÷ Denominator
+        </blockquote>
+        <blockquote>
+          <strong>Example 1</strong>: <strong>3 × ⅖</strong><br>
+          – Think: “3 groups of ⅖”<br>
+          – Compute: (3 × 2) ÷ 5 = ⁶⁄₅ = <strong>1⅕</strong>
+        </blockquote>
+        <blockquote>
+          <strong>Example 2</strong>: <strong>⅔ × 60</strong> → “⅔ <strong>of</strong> 60”<br>
+          – (2 × 60) ÷ 3 = 120 ÷ 3 = <strong>40</strong>
+        </blockquote>
+        <p>✅ <strong>Real Meaning</strong>: If 60 learners are in a class and ⅔ are girls, there are <strong>40 girls</strong>.</p>
+
+        <h3>2. Multiplying a Fraction by Another Fraction</h3>
+        <p>This means finding <strong>“a part of a part.”</strong></p>
+        <blockquote>
+          <strong>Rule</strong>:<br>
+          a⁄b × c⁄d = (a × c) ÷ (b × d)<br>
+          Then simplify if possible.
+        </blockquote>
+        <blockquote>
+          <strong>Example</strong>: <strong>⅔ × ⅗</strong><br>
+          – Multiply numerators: 2 × 3 = 6<br>
+          – Multiply denominators: 3 × 5 = 15<br>
+          – Result: ⁶⁄₁₅ = <strong>⅖</strong> (simplified)
+        </blockquote>
+        <blockquote>
+          💡 <strong>Tip</strong>: Cancel common factors <strong>before</strong> multiplying to simplify:<br>
+          ²⁄<del>3</del> × <del>3</del>⁄₅ = <strong>⅖</strong>
+        </blockquote>
+
+        <h3>3. Working with Mixed Numbers</h3>
+        <p>Convert to <strong>improper fractions</strong> first.</p>
+        <blockquote>
+          <strong>Example</strong>: <strong>2⅔ × 5</strong><br>
+          – Convert: 2⅔ = ⁸⁄₃<br>
+          – Multiply: ⁸⁄₃ × 5 = ⁴⁰⁄₃ = <strong>13⅓</strong>
+        </blockquote>
+        <blockquote>
+          <strong>Example</strong>: <strong>1½ × ⅔</strong><br>
+          – Convert: ³⁄₂ × ⅔ = ⁶⁄₆ = <strong>1</strong>
+        </blockquote>
+
+        <h3>4. Multiplying Percentages and Decimals</h3>
+        <p>Convert to <strong>fractions or decimals</strong> as needed.</p>
+        <p><strong>A. Percent × Whole Number</strong><br>
+          <em>Example</em>: 28% of 40<br>
+          – 28% = 28⁄100 = 0.28<br>
+          – 0.28 × 40 = <strong>11.2</strong></p>
+        <p><strong>B. Decimal × Whole Number</strong><br>
+          <em>Example</em>: <strong>0.25 × 120</strong><br>
+          – 0.25 = ¼ → ¼ × 120 = <strong>30</strong></p>
+        <p><strong>C. Decimal × Decimal (up to thousandths)</strong><br>
+          <em>Example</em>: <strong>0.125 × 0.4</strong><br>
+          – 0.125 = ⅛,&nbsp; 0.4 = ⅖<br>
+          – ⅛ × ⅖ = ²⁄₄₀ = ¹⁄₂₀ = <strong>0.05</strong></p>
+        <blockquote>
+          ✅ <strong>Alternative</strong>: Multiply as whole numbers, then count total decimal places:<br>
+          125 × 4 = 500 → total 4 decimal places → <strong>0.0500 = 0.05</strong>
+        </blockquote>
+
+        <h3>5. Real-World Applications</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Context</th>
+              <th>Problem</th>
+              <th>Solution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Shopping</strong></td>
+              <td>25% off GH₵80 shirt</td>
+              <td>0.25 × 80 = 20 → Discount = <strong>GH₵20</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Classroom</strong></td>
+              <td>⅜ of 480 books are fiction</td>
+              <td>⅜ × 480 = <strong>180 books</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Cooking</strong></td>
+              <td>Recipe needs ⅔ cup sugar; make half the recipe</td>
+              <td>⅔ × ½ = <strong>⅓ cup</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Finance</strong></td>
+              <td>3½% interest on GH₵50</td>
+              <td>0.035 × 50 = <strong>GH₵1.75</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing efficient forms (fraction/decimal/percent) for multiplication.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Explaining why “of” means multiply.</li>
+          <li><strong>Personal Development and Leadership (PL)</strong>: Applying math to budgeting, shopping, and resource sharing.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Calculate:
+              <br>a) <strong>¾ × 240</strong>
+              <br>b) <strong>15 × ⅔</strong>
+              <br>c) <strong>2½ × ⅘</strong>
+            </li>
+            <li>Find:
+              <br>a) <strong>234% of 8</strong>
+              <br>b) <strong>0.2% of 15,000</strong>
+              <br>c) <strong>8.25% of 62</strong>
+            </li>
+            <li>A pizza is cut into 12 slices. Kofi eats <strong>⅔ of it</strong>. How many slices did he eat?</li>
+            <li>Explain why <strong>⅗ × ⅚ = ½</strong> using cancellation.</li>
+          </ol>
+          <p><em>Confirm your answers before moving forward.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 22, we’ll focus on <strong>finding a fraction of a given quantity</strong>—like “⅔ of GH₵60” or “¾ of 132 learners”—and use this to solve problems about portions, discounts, and group sizes.</p>
+        <p>You’ll deepen your understanding of <strong>“of = multiply”</strong> in practical scenarios!</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 20; // ← Lesson 21 (zero-indexed)
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Multiplying Fractions by Whole Numbers and Other Fractions",
+      loTag: "B7.1.3.3.1",
+      objectives: [
+        "Multiply a common fraction, decimal fraction, or percent by a whole number.",
+        "Multiply two fractions (including mixed numbers) together.",
+        "Interpret “of” as multiplication in real-world contexts (e.g., “⅔ of GH₵60”).",
+        "Convert between fraction, decimal, and percent forms when needed for computation.",
+        "Simplify results and express answers in appropriate form."
+      ],
+      words: [
+        "multiply",
+        "fraction",
+        "whole number",
+        "mixed number",
+        "improper fraction",
+        "simplify",
+        "cancel",
+        "percent",
+        "decimal"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Calculate:
+            <br>a) <strong>¾ × 240</strong>
+            <br>b) <strong>15 × ⅔</strong>
+            <br>c) <strong>2½ × ⅘</strong>
+          </li>
+          <li>Find:
+            <br>a) <strong>234% of 8</strong>
+            <br>b) <strong>0.2% of 15,000</strong>
+            <br>c) <strong>8.25% of 62</strong>
+          </li>
+          <li>A pizza is cut into 12 slices. Kofi eats <strong>⅔ of it</strong>. How many slices did he eat?</li>
+          <li>Explain why <strong>⅗ × ⅚ = ½</strong> using cancellation.</li>
+        </ol>
+        <p><em>Confirm your answers before moving forward.</em></p>
+      `,
+      nextPreview: "In Lesson 22, we’ll focus on finding a fraction of a given quantity—like “⅔ of GH₵60” or “¾ of 132 learners”—and use this to solve problems about portions, discounts, and group sizes.\n\nYou’ll deepen your understanding of “of = multiply” in practical scenarios!"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "What is 3 × ⅖?", a: "1⅕", opts: ["⅗", "1⅕", "⁶⁄₅", "Both 1⅕ and ⁶⁄₅"] },
+      { q: "⅔ of 60 =", a: "40", opts: ["20", "30", "40", "50"] },
+      { q: "⅔ × ⅗ =", a: "⅖", opts: ["⁶⁄₁₅", "⅖", "⅙", "⅗"] },
+      { q: "2⅔ × 5 =", a: "13⅓", opts: ["10⅔", "13⅓", "15", "12"] },
+      { q: "1½ × ⅔ =", a: "1", opts: ["1", "⅔", "¾", "2"] },
+      { q: "28% of 40 =", a: "11.2", opts: ["11.2", "12", "10", "14"] },
+      { q: "0.25 × 120 =", a: "30", opts: ["25", "30", "40", "12.5"] },
+      { q: "0.125 × 0.4 =", a: "0.05", opts: ["0.5", "0.05", "0.005", "5"] },
+      { q: "25% off GH₵80 =", a: "GH₵20", opts: ["GH₵20", "GH₵60", "GH₵10", "GH₵80"] },
+      { q: "⅜ of 480 =", a: "180", opts: ["120", "180", "240", "360"] },
+      { q: "Half of ⅔ cup =", a: "⅓ cup", opts: ["⅓ cup", "⅔ cup", "¼ cup", "¾ cup"] },
+      { q: "3½% of GH₵50 =", a: "GH₵1.75", opts: ["GH₵1.75", "GH₵3.50", "GH₵0.875", "GH₵5"] },
+      { q: "¾ × 240 =", a: "180", opts: ["120", "180", "200", "240"] },
+      { q: "15 × ⅔ =", a: "10", opts: ["5", "10", "15", "20"] },
+      { q: "2½ × ⅘ =", a: "2", opts: ["1", "2", "2½", "3"] },
+      { q: "234% of 8 =", a: "18.72", opts: ["18.72", "23.4", "187.2", "1.872"] },
+      { q: "0.2% of 15,000 =", a: "30", opts: ["3", "30", "300", "0.3"] },
+      { q: "Kofi eats ⅔ of 12 slices =", a: "8 slices", opts: ["6", "8", "9", "10"] },
+      { q: "Why does ⅗ × ⅚ = ½?", a: "Cancel 3 and 6 → ⅗ × ⅚ = ⅕ × 1 = ½", opts: ["Add numerators", "Cancel 3 and 6 → ⅗ × ⅚ = ⅕ × 1 = ½", "Multiply denominators only", "It's a guess"] },
+      { q: "Next lesson focuses on:", a: "Finding a fraction of a quantity", opts: ["Dividing fractions", "Finding a fraction of a quantity", "Graphing", "Algebra"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      let preview = LESSON_CONFIG.nextPreview;
+      preview = preview.replace(/\n\n/g, '</p><p>')
+                      .replace(/^- /gm, '• ')
+                      .replace(/\n/g, '<br>');
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${preview}</p>
+      `.replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
