@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Find the Value of a Number Written in Index Form" />
+  <title>Mini OpenStax — Evaluate Numbers in Index Form</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+    code {
+      background: #f1f1f1;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    pre {
+      background: #f8f9fa;
+      padding: 0.5rem;
+      border-left: 3px solid var(--green);
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Find the Value of a Number Written in Index Form</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.2.3.4</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Interpret and evaluate expressions written in <strong>index (exponential) form</strong>, such as <code>5³</code>, <code>6³</code>, or <code>11 ÷ 2⁵</code>.</li>
+          <li>Compute powers of natural numbers accurately using repeated multiplication.</li>
+          <li>Apply knowledge of <strong>base</strong> and <strong>exponent</strong> to simplify and solve problems.</li>
+          <li>Use index notation confidently in real-world and mathematical contexts.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">index form</span>
+          <span class="word-item">base</span>
+          <span class="word-item">exponent</span>
+          <span class="word-item">power</span>
+          <span class="word-item">repeated multiplication</span>
+          <span class="word-item">fraction with power</span>
+          <span class="word-item">volume</span>
+          <span class="word-item">evaluate</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. What Is Index (Exponential) Form?</h3>
+        <p>Index form is a shorthand way to write <strong>repeated multiplication</strong> of the same number.</p>
+        <ul>
+          <li><strong>Base</strong>: The number being multiplied (e.g., 5 in <code>5³</code>)</li>
+          <li><strong>Exponent (or Index)</strong>: How many times the base is used as a factor (e.g., 3 in <code>5³</code>)</li>
+        </ul>
+        <blockquote>
+          <strong>Example</strong>:<br>
+          <code>5³ = 5 × 5 × 5 = 125</code>
+        </blockquote>
+
+        <h3>2. Evaluating Common Powers</h3>
+        <p>Use step-by-step multiplication to find the value.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Index Form</th>
+              <th>Expanded Form</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5³</td>
+              <td>5 × 5 × 5</td>
+              <td>25 × 5 = <strong>125</strong></td>
+            </tr>
+            <tr>
+              <td>3⁴</td>
+              <td>3 × 3 × 3 × 3</td>
+              <td>9 × 9 = <strong>81</strong></td>
+            </tr>
+            <tr>
+              <td>6³</td>
+              <td>6 × 6 × 6</td>
+              <td>36 × 6 = <strong>216</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          ✅ <strong>Tip</strong>: Multiply in pairs to make it easier:<br>
+          <code>3⁴ = (3 × 3) × (3 × 3) = 9 × 9 = 81</code>
+        </blockquote>
+
+        <h3>3. Working with Fractions Involving Powers</h3>
+        <p>Sometimes index form appears in <strong>fractions</strong>, like <code>11 ÷ 2⁵</code>.</p>
+        <blockquote>
+          <strong>Step-by-Step Evaluation</strong>:<br>
+          1. Evaluate the denominator:<br>
+             <code>2⁵ = 2 × 2 × 2 × 2 × 2 = 32</code><br>
+          2. Write the fraction:<br>
+             <code>11 ÷ 32</code>
+        </blockquote>
+        <p>🔍 <strong>Note</strong>: The numerator may also be a power (e.g., <code>3² ÷ 2³ = 9 ÷ 8</code>).</p>
+
+        <h3>4. Special Cases to Remember</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Expression</th>
+              <th>Value</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>a¹</td>
+              <td>a</td>
+              <td>Any number to the power of 1 is itself</td>
+            </tr>
+            <tr>
+              <td>a⁰</td>
+              <td>1</td>
+              <td>For any natural number a ≠ 0 (from Lesson 14)</td>
+            </tr>
+            <tr>
+              <td>1ⁿ</td>
+              <td>1</td>
+              <td>1 multiplied by itself any number of times is still 1</td>
+            </tr>
+            <tr>
+              <td>10ⁿ</td>
+              <td>1 followed by n zeros</td>
+              <td>e.g., 10³ = 1,000</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>5. Real-World Applications</h3>
+        <ul>
+          <li><strong>Area & Volume</strong>:<br>
+            – Area of a square with side 5 cm → <code>5² = 25 cm²</code><br>
+            – Volume of a cube with edge 6 m → <code>6³ = 216 m³</code></li>
+          <li><strong>Digital Systems</strong>:<br>
+            – <code>2¹⁰ = 1,024</code> bytes = 1 kilobyte</li>
+          <li><strong>Finance</strong>:<br>
+            – Compound interest: <code>A = P(1 + r)ᵗ</code> uses powers to model growth</li>
+        </ul>
+        <div class="thought-experiment">
+          <strong>Thought Experiment</strong>:<br>
+          If a cell divides into 3 every hour, how many cells after 4 hours starting from 1?<br>
+          → <code>3⁴ = 81</code> cells
+        </div>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Creativity and Innovation (CI)</strong>: Using index form to model growth and patterns.</li>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Breaking down powers into manageable steps.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Explaining how <code>6³ = 216</code> using clear mathematical language.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Find the value of:
+              <br>a) <code>4³</code>
+              <br>b) <code>7²</code>
+              <br>c) <code>2⁶</code>
+            </li>
+            <li>Evaluate:
+              <br>a) <code>9 ÷ 3²</code>
+              <br>b) <code>5² ÷ 10</code>
+            </li>
+            <li>A cube has an edge length of 5 cm. What is its volume in cubic centimeters? (Write and evaluate the power.)</li>
+            <li>Explain why <code>3⁴ = 81</code> but <code>4³ = 64</code>. Are they the same? Why or why not?</li>
+          </ol>
+          <p><em>Confirm your answers before moving forward.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 16, we’ll explore <strong>number patterns in large sequences</strong>, such as:</p>
+        <p><code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; 1,687,500 &nbsp; ...</code></p>
+        <p>You’ll combine your knowledge of:</p>
+        <ul>
+          <li>Place value (over 1 billion)</li>
+          <li>Addition and skip counting (+500,000)</li>
+          <li>Writing numbers in words</li>
+        </ul>
+        <p>This will prepare you for algebraic thinking and functions!</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 14; // ← Lesson 15 (zero-indexed)
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Find the Value of a Number Written in Index Form",
+      loTag: "B7.1.2.3.4",
+      objectives: [
+        "Interpret and evaluate expressions written in index (exponential) form, such as 5³, 6³, or 11 ÷ 2⁵.",
+        "Compute powers of natural numbers accurately using repeated multiplication.",
+        "Apply knowledge of base and exponent to simplify and solve problems.",
+        "Use index notation confidently in real-world and mathematical contexts."
+      ],
+      words: [
+        "index form",
+        "base",
+        "exponent",
+        "power",
+        "repeated multiplication",
+        "fraction with power",
+        "volume",
+        "evaluate"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Find the value of:
+            <br>a) <code>4³</code>
+            <br>b) <code>7²</code>
+            <br>c) <code>2⁶</code>
+          </li>
+          <li>Evaluate:
+            <br>a) <code>9 ÷ 3²</code>
+            <br>b) <code>5² ÷ 10</code>
+          </li>
+          <li>A cube has an edge length of 5 cm. What is its volume in cubic centimeters? (Write and evaluate the power.)</li>
+          <li>Explain why <code>3⁴ = 81</code> but <code>4³ = 64</code>. Are they the same? Why or why not?</li>
+        </ol>
+        <p><em>Confirm your answers before moving forward.</em></p>
+      `,
+      nextPreview: "In Lesson 16, we’ll explore number patterns in large sequences, such as:\n\n187,500   687,500   1,187,500   1,687,500   ...\n\nYou’ll combine your knowledge of:\n- Place value (over 1 billion)\n- Addition and skip counting (+500,000)\n- Writing numbers in words\n\nThis will prepare you for algebraic thinking and functions!"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "What is 5³?", a: "125", opts: ["15", "25", "125", "625"] },
+      { q: "What is 6³?", a: "216", opts: ["18", "36", "216", "1,296"] },
+      { q: "What is 3⁴?", a: "81", opts: ["12", "27", "81", "243"] },
+      { q: "What is 4³?", a: "64", opts: ["12", "16", "64", "256"] },
+      { q: "What is 7²?", a: "49", opts: ["14", "49", "343", "7"] },
+      { q: "What is 2⁶?", a: "64", opts: ["12", "32", "64", "128"] },
+      { q: "Evaluate: 9 ÷ 3²", a: "1", opts: ["3", "1", "9", "0"] },
+      { q: "Evaluate: 5² ÷ 10", a: "2.5", opts: ["25", "2.5", "5", "10"] },
+      { q: "Volume of cube with edge 5 cm:", a: "125 cm³", opts: ["25 cm²", "125 cm³", "15 cm³", "50 cm³"] },
+      { q: "Why is 3⁴ ≠ 4³?", a: "Different bases and exponents give different results", opts: ["They are equal", "Different bases and exponents give different results", "Both equal 64", "Only one is a cube"] },
+      { q: "What is 10³?", a: "1,000", opts: ["30", "100", "1,000", "10,000"] },
+      { q: "What is 1⁵?", a: "1", opts: ["5", "1", "0", "10"] },
+      { q: "What is 8¹?", a: "8", opts: ["1", "8", "64", "0"] },
+      { q: "2¹⁰ =", a: "1,024", opts: ["100", "1,000", "1,024", "2,048"] },
+      { q: "3² ÷ 2³ =", a: "9 ÷ 8", opts: ["6 ÷ 6", "9 ÷ 8", "5 ÷ 5", "1"] },
+      { q: "Which equals 81?", a: "3⁴", opts: ["9²", "3⁴", "Both 9² and 3⁴", "4³"] },
+      { q: "How many cells after 4 hours if tripling each hour?", a: "81", opts: ["12", "27", "81", "243"] },
+      { q: "Best way to compute 4³:", a: "4×4×4 = 64", opts: ["4+4+4", "4×3", "4×4×4 = 64", "4⁴ ÷ 4"] },
+      { q: "Index form helps with:", a: "All of the above", opts: ["Volume", "Digital storage", "Growth models", "All of the above"] },
+      { q: "Which is NOT a power?", a: "5 + 5", opts: ["5²", "2³", "5 + 5", "10⁴"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      let preview = LESSON_CONFIG.nextPreview;
+      preview = preview.replace(/\n\n/g, '</p><p>')
+                      .replace(/^- /gm, '• ')
+                      .replace(/\n/g, '<br>');
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${preview}</p>
+      `.replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
