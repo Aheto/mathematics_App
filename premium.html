@@ -21,6 +21,7 @@
       padding: 0; 
       background: var(--light); 
       color: var(--dark); 
+      line-height: 1.5;
     }
     .container { 
       max-width: 700px; 
@@ -34,6 +35,11 @@
     h1 { 
       color: var(--green); 
       font-size: 1.8rem; 
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: #555;
+      font-size: 1.05rem;
     }
     .tabs { 
       display: flex; 
@@ -48,8 +54,9 @@
       border-radius: 6px;
       cursor: pointer; 
       font-weight: bold;
+      transition: background 0.2s;
     }
-    .tab-btn.active { 
+    .tab-btn.active, .tab-btn:hover { 
       background: var(--green); 
       color: white; 
     }
@@ -89,6 +96,7 @@
       width: 100%;
       margin-top: 1rem;
       font-weight: 600;
+      transition: background 0.2s;
     }
     .btn:hover { 
       background: #00502e; 
@@ -100,12 +108,13 @@
       color: #666; 
     }
     .free-forever {
-      background: #e9ecef; 
+      background: #e8f5e9; 
       padding: 1rem; 
       border-radius: 8px;
       font-style: italic; 
       text-align: center; 
       margin-bottom: 1.2rem;
+      border: 1px solid #c8e6c9;
     }
     .momo-instruction {
       background: #fff8e1; 
@@ -122,6 +131,13 @@
     }
     .step { 
       margin: 0.6rem 0; 
+      display: flex;
+      gap: 0.5rem;
+    }
+    .step::before {
+      content: "•";
+      color: var(--gold);
+      font-weight: bold;
     }
     label { 
       display: block; 
@@ -153,6 +169,14 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    .teacher-highlight {
+      background: #e3f2fd;
+      padding: 0.8rem;
+      border-radius: 6px;
+      border-left: 4px solid var(--blue);
+      margin-top: 0.8rem;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body>
@@ -161,11 +185,11 @@
 
     <header>
       <h1>✨ Mini OpenStax Premium</h1>
-      <p>Enhance your child’s phonics journey—offline, ethical, and Ghana-made.</p>
+      <p class="subtitle">Deepen mastery in ratios, algebra & problem-solving—offline, ethical, and Ghana-made.</p>
     </header>
 
     <div class="free-forever">
-      <strong>The full 262-lesson app is always 100% free & offline.</strong><br>
+      <strong>The full curriculum (Lessons 25–38+) is always 100% free & works offline.</strong><br>
       Premium adds convenience—never locks learning behind a paywall.
     </div>
 
@@ -180,35 +204,38 @@
         <h2>Premium Features</h2>
         <div class="feature">
           <span class="feature-icon">☁️</span>
-          <div><strong>Progress Backup</strong> — Securely save mastery data across devices.</div>
+          <div><strong>Progress Backup</strong> — Securely sync mastery data across devices via WhatsApp.</div>
         </div>
         <div class="feature">
           <span class="feature-icon">📊</span>
-          <div><strong>Weekly Insights</strong> — See which patterns (e.g., <em>ph=/f/</em>) need review.</div>
+          <div><strong>Weekly Insights</strong> — See which concepts (e.g., <em>unit rates</em> or <em>algebraic substitution</em>) need review.</div>
         </div>
         <div class="feature">
           <span class="feature-icon">🖨️</span>
-          <div><strong>Printable Worksheets</strong> — Generate PDFs from any lesson.</div>
+          <div><strong>Printable Worksheets</strong> — Generate practice sheets from any lesson (PDF).</div>
         </div>
       </div>
 
       <div class="card">
-        <h2>💰 Pricing (GHS)</h2>
+        <h2>💰 Fair Pricing (GHS)</h2>
         <p>• <strong>GHS 50/year</strong> — Full family access<br>
            • <strong>FREE</strong> for public school teachers (email verification required)</p>
+        <div class="teacher-highlight">
+          🍎 Are you a public school teacher? Select “Teacher” on the next tab—we’ll verify and activate your access at no cost.
+        </div>
       </div>
 
       <div class="card">
-        <h2>📲 How to Pay via MTN MoMo</h2>
+        <h2>📲 Pay via MTN MoMo (Ghana Only)</h2>
         <div class="momo-instruction">
-          <div class="step">1. Open your <strong>MTN MoMo app</strong> or dial <code>*170#</code></div>
-          <div class="step">2. Choose <strong>“Transfer Money”</strong> → <strong>“Pay Merchant”</strong></div>
-          <div class="step">3. Enter the number: <span class="momo-number">0257320201</span></div>
-          <div class="step">4. Enter amount: <strong>GHS 50</strong></div>
-          <div class="step">5. In the reference, type: <strong>Your Child’s First Name</strong></div>
-          <div class="step">6. Complete payment</div>
+          <div class="step">Open your <strong>MTN MoMo app</strong> or dial <code>*170#</code></div>
+          <div class="step">Choose <strong>“Transfer Money” → “Pay Merchant”</strong></div>
+          <div class="step">Enter number: <span class="momo-number">0257320201</span></div>
+          <div class="step">Amount: <strong>GHS 50</strong></div>
+          <div class="step">Reference: <strong>Your Child’s First Name</strong></div>
+          <div class="step">Complete payment</div>
         </div>
-        <p style="margin-top: 1rem;"><strong>✅ After payment:</strong> Tap “Confirm Payment” above to submit your details.</p>
+        <p style="margin-top: 1rem;"><strong>✅ After paying:</strong> Tap “Confirm Payment” above to notify us.</p>
       </div>
     </div>
 
@@ -216,13 +243,13 @@
     <div id="confirm" class="tab-content">
       <div class="card">
         <h2>✅ Confirm Your MTN MoMo Payment</h2>
-        <p id="welcome-message">Thank you for supporting Mini OpenStax! Please fill in the details below so we can activate your premium access.</p>
+        <p id="welcome-message"></p>
 
         <form id="momo-form">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required placeholder="e.g., Ama Serwah">
 
-          <label for="child">Child's First Name (for reference)</label>
+          <label for="child">Learner's First Name (for reference)</label>
           <input type="text" id="child" name="child" required placeholder="e.g., Kwame">
 
           <label for="phone">Your WhatsApp Number</label>
@@ -236,7 +263,7 @@
             <option value="other">Other</option>
           </select>
 
-          <label for="ref">MoMo Reference Number (Optional)</label>
+          <label for="ref">MoMo Reference (Optional)</label>
           <input type="text" id="ref" name="ref" placeholder="e.g., TXN123456">
 
           <button type="submit" class="btn">Submit for Verification</button>
@@ -250,19 +277,19 @@
     </div>
 
     <div class="footer">
-      <p>© Mini OpenStax • Literacy for all, powered by Ghana</p>
-      <p>No ads • No tracking • COPPA & FERPA compliant</p>
+      <p>© Mini OpenStax • Made in Ghana for African learners</p>
+      <p>No ads • No tracking • COPPA & FERPA compliant • Works offline</p>
     </div>
   </div>
 
   <script>
-    // Set personalized welcome message
+    // Personalize welcome message
     const studentName = localStorage.getItem('student_name') || 'Learner';
     const userRole = localStorage.getItem('user_role');
     const welcomeMsg = document.getElementById('welcome-message');
     
     if (userRole === 'instructor') {
-      welcomeMsg.textContent = 'Thank you for your dedication to literacy! As a teacher, your premium access is FREE. Please verify your school affiliation below.';
+      welcomeMsg.innerHTML = 'Thank you for your dedication to math education! As a public school teacher, your premium access is <strong>FREE</strong>. Please verify your school below.';
       document.querySelector('#school option[value="teacher"]').selected = true;
     } else {
       welcomeMsg.textContent = `Thank you for supporting Mini OpenStax, ${studentName}’s guardian! Please fill in the details below so we can activate your premium access.`;
@@ -278,16 +305,18 @@
       });
     });
 
-    // Form submission
+    // Form submission with corrected WhatsApp URL
     document.getElementById('momo-form').addEventListener('submit', function(e) {
       e.preventDefault();
       
-      const phone = document.getElementById('phone').value.replace(/\D/g, '');
+      const phoneInput = document.getElementById('phone').value.trim();
       const child = document.getElementById('child').value.trim();
       const name = document.getElementById('name').value.trim();
       const school = document.getElementById('school').value;
       
-      // Basic validation
+      // Clean phone number: keep only digits, ensure starts with 233
+      let phone = phoneInput.replace(/\D/g, '');
+      if (phone.startsWith('0')) phone = '233' + phone.substring(1);
       if (!phone.startsWith('233') || phone.length !== 12) {
         alert('Please enter a valid Ghanaian WhatsApp number (e.g., +233 24 123 4567)');
         return;
@@ -295,12 +324,12 @@
       
       let message = `Hi! I just paid for Mini OpenStax Premium.\n\n`;
       message += `Name: ${name}\n`;
-      message += `Child: ${child}\n`;
+      message += `Learner: ${child}\n`;
       message += `Affiliation: ${school}\n`;
       message += `Phone: +${phone}\n\n`;
       message += `Please activate my premium access. Thank you!`;
       
-      // ✅ Fixed WhatsApp URL (no extra spaces)
+      // ✅ Fixed: Removed extra spaces in URL
       const waUrl = `https://wa.me/233257320201?text=${encodeURIComponent(message)}`;
       
       alert('Thank you! We’ll verify your payment soon.\n\nYou can also message us directly on WhatsApp to speed up the process.');
