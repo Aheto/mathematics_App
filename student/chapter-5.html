@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Multiply and Divide Numbers by Powers of 10 (Including Decimals and Benchmark Fractions)" />
+  <title>Mini OpenStax — Multiply and Divide Numbers by Powers of 10</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+    code {
+      background: #f1f1f1;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Multiply and Divide Numbers by Powers of 10 (Including Decimals and Benchmark Fractions)</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.2.1.1</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Multiply and divide whole numbers, decimals, and benchmark fractions by <strong>powers of 10</strong> (e.g., 10, 100, 1,000, 0.1, 0.01, etc.).</li>
+          <li>Explain <strong>how the decimal point moves</strong> when multiplying or dividing by powers of 10.</li>
+          <li>Apply these operations to real-world contexts such as unit conversion and scaling.</li>
+          <li>Use <strong>exponential notation</strong> (e.g., 10^3, 10^-2) to represent powers of 10.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">power of 10</span>
+          <span class="word-item">exponent</span>
+          <span class="word-item">decimal point</span>
+          <span class="word-item">benchmark fraction</span>
+          <span class="word-item">multiply</span>
+          <span class="word-item">divide</span>
+          <span class="word-item">metric system</span>
+          <span class="word-item">place value</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. What Are Powers of 10?</h3>
+        <p>Powers of 10 are numbers like:</p>
+        <ul>
+          <li><strong>Positive exponents</strong>:<br>
+            10^1 = 10<br>
+            10^2 = 100<br>
+            10^3 = 1,000<br>
+            10^6 = 1,000,000</li>
+          <li><strong>Negative exponents (for decimals)</strong>:<br>
+            10^-1 = 0.1<br>
+            10^-2 = 0.01<br>
+            10^-3 = 0.001</li>
+        </ul>
+        <blockquote>
+          ✅ <strong>Rule</strong>: The exponent tells you <strong>how many places</strong> to move the decimal point.
+        </blockquote>
+
+        <h3>2. Multiplying by Powers of 10</h3>
+        <ul>
+          <li><strong>When multiplying by 10^n (n > 0)</strong>: Move the decimal point <strong>n places to the right</strong>.</li>
+          <li><strong>When multiplying by 10^-n (n > 0)</strong>: Move the decimal point <strong>n places to the left</strong>.</li>
+        </ul>
+        <blockquote>
+          <strong>Examples</strong>:<br>
+          – 45.67 × 10^2 = 45.67 × 100 = 4,567<br>
+          – 45.67 × 10^-2 = 45.67 × 0.01 = 0.4567
+        </blockquote>
+        <p>🔍 <strong>Tip</strong>: If there aren’t enough digits, <strong>add zeros</strong> as placeholders.</p>
+
+        <h3>3. Dividing by Powers of 10</h3>
+        <p>Dividing by a power of 10 is the <strong>same as multiplying by its reciprocal</strong>:</p>
+        <ul>
+          <li>÷ 10 = × 10^-1</li>
+          <li>÷ 100 = × 10^-2</li>
+          <li>÷ 1,000 = × 10^-3</li>
+        </ul>
+        <blockquote>
+          <strong>Rule</strong>:<br>
+          – <strong>Divide by 10^n</strong> → move decimal <strong>n places left</strong><br>
+          – <strong>Divide by 10^-n</strong> → move decimal <strong>n places right</strong>
+        </blockquote>
+        <blockquote>
+          <strong>Examples</strong>:<br>
+          – 8,432 ÷ 10^3 = 8,432 ÷ 1,000 = 8.432<br>
+          – 0.075 ÷ 10^-2 = 0.075 ÷ 0.01 = 7.5
+        </blockquote>
+        <p>💡 <strong>Memory Aid</strong>:<br>
+          <strong>“Multiply → Right | Divide → Left”</strong> (for positive powers of 10)</p>
+
+        <h3>4. Working with Benchmark Fractions</h3>
+        <p><strong>Benchmark fractions</strong> include:<br>
+          1/2, 1/4, 1/5, 1/10, 3/4, 2/5, etc.</p>
+        <p>These can be <strong>converted to decimals</strong> to make multiplication/division by powers of 10 easier:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Fraction</th>
+              <th>Decimal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1/2</td>
+              <td>0.5</td>
+            </tr>
+            <tr>
+              <td>1/4</td>
+              <td>0.25</td>
+            </tr>
+            <tr>
+              <td>1/5</td>
+              <td>0.2</td>
+            </tr>
+            <tr>
+              <td>1/10</td>
+              <td>0.1</td>
+            </tr>
+            <tr>
+              <td>3/4</td>
+              <td>0.75</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>Example</strong>:<br>
+          Multiply 3/4 by 10^2:<br>
+          – 3/4 = 0.75<br>
+          – 0.75 × 100 = 75
+        </blockquote>
+        <blockquote>
+          <strong>Example</strong>:<br>
+          Divide 1/5 by 100:<br>
+          – 1/5 = 0.2<br>
+          – 0.2 ÷ 100 = 0.002
+        </blockquote>
+
+        <h3>5. Real-World Applications</h3>
+        <p><strong>A. Unit Conversions (Metric System)</strong><br>
+          The metric system is based on powers of 10:<br>
+          – 1 km = 1,000 m → multiply by 10^3<br>
+          – 1 cm = 0.01 m → multiply by 10^-2</p>
+        <blockquote>
+          <strong>Example</strong>: Convert 2.5 km to meters:<br>
+          2.5 × 10^3 = 2,500 m
+        </blockquote>
+        <p><strong>B. Financial Scaling</strong><br>
+          – Converting cedis to pesewas:<br>
+            GH₵1 = 100 pesewas → multiply by 10^2</p>
+        <blockquote>
+          <strong>Example</strong>: GH₵45.67 = 45.67 × 100 = 4,567 pesewas
+        </blockquote>
+        <p><strong>C. Scientific Notation Prep</strong><br>
+          Understanding powers of 10 is essential for writing numbers in scientific notation later.</p>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Analyzing how magnitude changes with powers of 10.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Explaining movement of the decimal point using precise language.</li>
+          <li><strong>Creativity and Innovation (CI)</strong>: Applying rules flexibly across whole numbers, decimals, and fractions.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Calculate:
+              <br>a) 7.89 × 10^4
+              <br>b) 56,000 ÷ 10^3
+              <br>c) 0.0042 × 10^-2
+            </li>
+            <li>Express as a decimal and then multiply:<br>
+              1/4 × 10^3
+            </li>
+            <li>A ribbon is 0.75 meters long. How many <strong>centimeters</strong> is that?<br>
+              <em>(Hint: 1 m = 100 cm = 10^2 cm)</em>
+            </li>
+            <li>Explain in words: What happens to the value of a number when you divide it by 10^-3?</li>
+          </ol>
+          <p><em>Confirm your answers before moving forward.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 7, we’ll explore <strong>number patterns in sequences over one billion</strong>, such as:</p>
+        <p><code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; 1,687,500 &nbsp; ...</code></p>
+        <p>You’ll learn to:</p>
+        <ul>
+          <li>Identify the <strong>common difference</strong> (e.g., +500,000)</li>
+          <li>Predict missing terms</li>
+          <li>Write large numbers in words based on their position</li>
+        </ul>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 5; // ← Lesson 6 (zero-indexed)
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Multiply and Divide Numbers by Powers of 10 (Including Decimals and Benchmark Fractions)",
+      loTag: "B7.1.2.1.1",
+      objectives: [
+        "Multiply and divide whole numbers, decimals, and benchmark fractions by powers of 10 (e.g., 10, 100, 1,000, 0.1, 0.01, etc.).",
+        "Explain how the decimal point moves when multiplying or dividing by powers of 10.",
+        "Apply these operations to real-world contexts such as unit conversion and scaling.",
+        "Use exponential notation (e.g., 10^3, 10^-2) to represent powers of 10."
+      ],
+      words: [
+        "power of 10",
+        "exponent",
+        "decimal point",
+        "benchmark fraction",
+        "multiply",
+        "divide",
+        "metric system",
+        "place value"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Calculate:
+            <br>a) 7.89 × 10^4
+            <br>b) 56,000 ÷ 10^3
+            <br>c) 0.0042 × 10^-2
+          </li>
+          <li>Express as a decimal and then multiply:<br>
+            1/4 × 10^3
+          </li>
+          <li>A ribbon is 0.75 meters long. How many <strong>centimeters</strong> is that?<br>
+            <em>(Hint: 1 m = 100 cm = 10^2 cm)</em>
+          </li>
+          <li>Explain in words: What happens to the value of a number when you divide it by 10^-3?</li>
+        </ol>
+        <p><em>Confirm your answers before moving forward.</em></p>
+      `,
+      nextPreview: "In Lesson 7, we’ll explore number patterns in sequences over one billion, such as:\n\n187,500   687,500   1,187,500   1,687,500   ...\n\nYou’ll learn to:\n- Identify the common difference (e.g., +500,000)\n- Predict missing terms\n- Write large numbers in words based on their position"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "What is 7.89 × 10^4?", a: "78,900", opts: ["789", "7,890", "78,900", "789,000"] },
+      { q: "What is 56,000 ÷ 10^3?", a: "56", opts: ["560", "5,600", "56", "5.6"] },
+      { q: "What is 0.0042 × 10^-2?", a: "0.000042", opts: ["0.00042", "0.000042", "0.042", "0.42"] },
+      { q: "What is 1/4 × 10^3?", a: "250", opts: ["25", "250", "0.25", "2,500"] },
+      { q: "0.75 meters = ? centimeters", a: "75", opts: ["7.5", "75", "750", "0.0075"] },
+      { q: "Dividing by 10^-3 is the same as:", a: "Multiplying by 1,000", opts: ["Multiplying by 0.001", "Multiplying by 1,000", "Dividing by 1,000", "Moving decimal 3 places left"] },
+      { q: "What is 8,432 ÷ 10^3?", a: "8.432", opts: ["84.32", "843.2", "8.432", "0.8432"] },
+      { q: "What is 0.075 ÷ 10^-2?", a: "7.5", opts: ["0.0075", "0.75", "7.5", "75"] },
+      { q: "Which is 10^-2?", a: "0.01", opts: ["100", "10", "0.1", "0.01"] },
+      { q: "Multiply 45.67 by 100:", a: "4,567", opts: ["456.7", "4,567", "45,670", "4.567"] },
+      { q: "Divide 45.67 by 0.01:", a: "4,567", opts: ["4.567", "456.7", "4,567", "0.4567"] },
+      { q: "What is 3/4 as a decimal?", a: "0.75", opts: ["0.25", "0.5", "0.75", "0.34"] },
+      { q: "1 km = ? meters", a: "1,000", opts: ["100", "1,000", "10,000", "10"] },
+      { q: "GH₵1 = ? pesewas", a: "100", opts: ["10", "100", "1,000", "1"] },
+      { q: "Move decimal 4 places right in 2.5:", a: "25,000", opts: ["25", "250", "2,500", "25,000"] },
+      { q: "Move decimal 3 places left in 123:", a: "0.123", opts: ["12.3", "1.23", "0.123", "0.0123"] },
+      { q: "What is 10^6?", a: "1,000,000", opts: ["100,000", "1,000,000", "10,000,000", "1,000"] },
+      { q: "Which memory aid is correct?", a: "Multiply → Right | Divide → Left", opts: ["Multiply → Left | Divide → Right", "Multiply → Right | Divide → Left", "Always move right", "Never move decimal"] },
+      { q: "0.2 ÷ 100 =", a: "0.002", opts: ["20", "2", "0.02", "0.002"] },
+      { q: "Why is understanding powers of 10 important?", a: "All of the above", opts: ["Metric conversions", "Financial calculations", "Scientific notation", "All of the above"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      let preview = LESSON_CONFIG.nextPreview;
+      preview = preview.replace(/\n\n/g, '</p><p>')
+                      .replace(/^- /gm, '• ')
+                      .replace(/\n/g, '<br>');
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${preview}</p>
+      `.replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
