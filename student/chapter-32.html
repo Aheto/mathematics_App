@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Locate Points on the Number Plane, Draw Tables and Graphs of Relations, and Use Them to Solve Problems" />
+  <title>Mini OpenStax — Locate Points on the Number Plane, Draw Tables and Graphs of Relations, and Use Them to Solve Problems</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Locate Points on the Number Plane, Draw Tables and Graphs of Relations, and Use Them to Solve Problems</h1>
+        <div class="lo-tags" id="lo-tag">B7.2.1.1.4</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
+
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Plot ordered pairs (x, y) accurately on the <strong>coordinate (number) plane</strong>.</li>
+          <li>Create a <strong>table of values</strong> from a given rule or real-world context.</li>
+          <li>Draw the <strong>graph of a linear relation</strong> by plotting and connecting points.</li>
+          <li>Use graphs to <strong>solve real-world problems</strong>, such as comparing costs, predicting values, or locating positions.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">Coordinate plane</span>
+          <span class="word-item">Ordered pair</span>
+          <span class="word-item">x-axis</span>
+          <span class="word-item">y-axis</span>
+          <span class="word-item">Origin</span>
+          <span class="word-item">Linear relation</span>
+          <span class="word-item">Table of values</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. The Coordinate (Number) Plane</h3>
+        <p>The coordinate plane has:</p>
+        <ul>
+          <li>A <strong>horizontal x-axis</strong> (input)</li>
+          <li>A <strong>vertical y-axis</strong> (output)</li>
+          <li><strong>Four quadrants</strong>, but Grade 7 focuses mostly on <strong>Quadrant I</strong> (positive x and y)</li>
+        </ul>
+        <blockquote>✅ <strong>To plot a point (x, y)</strong>:<br>
+        1. Start at the origin (0, 0)<br>
+        2. Move <strong>right</strong> x units (or left if negative)<br>
+        3. Move <strong>up</strong> y units (or down if negative)</blockquote>
+        <p><strong>Example</strong>: Plot (3, 5) and (-2, 4)</p>
+        <ul>
+          <li>(3, 5): Right 3, up 5 → Quadrant I</li>
+          <li>(-2, 4): Left 2, up 4 → Quadrant II</li>
+        </ul>
+
+        <h3>2. Creating a Table of Values from a Rule</h3>
+        <p>Given a rule like y = 2x + 1, substitute values of x to find y.</p>
+        <p><strong>Example</strong>: Rule: y = 2x + 1, domain: x = -2, -1, 0, 1, 2, 3</p>
+        <table>
+          <thead>
+            <tr>
+              <th>x</th>
+              <th>-2</th>
+              <th>-1</th>
+              <th>0</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>y</td>
+              <td>-3</td>
+              <td>-1</td>
+              <td>1</td>
+              <td>3</td>
+              <td>5</td>
+              <td>7</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>✅ <strong>Check</strong>: When x = 2, y = 2(2) + 1 = 5 ✓</blockquote>
+
+        <h3>3. Drawing the Graph of a Relation</h3>
+        <ol>
+          <li><strong>Plot all points</strong> from the table.</li>
+          <li><strong>Connect the points</strong> with a straight line (for linear relations).</li>
+          <li><strong>Label the axes</strong> and give the graph a title.</li>
+        </ol>
+        <blockquote>📌 <strong>Note</strong>: If the relation is <strong>proportional</strong> (e.g., y = 3x), the line passes through (0, 0).</blockquote>
+        <p><strong>Example Graph</strong>: y = -2x + 5</p>
+        <table>
+          <thead>
+            <tr>
+              <th>x</th>
+              <th>0</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>y</td>
+              <td>5</td>
+              <td>3</td>
+              <td>1</td>
+              <td>-1</td>
+              <td>-3</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>Plot: (0,5), (1,3), (2,1), etc.</li>
+          <li>Draw a <strong>straight line</strong> through the points.</li>
+        </ul>
+
+        <h3>4. Using Graphs to Solve Real-World Problems</h3>
+        <p><strong>Example 1: Cost Comparison</strong><br>
+        Two phone plans:<br>
+        - Plan A: y = 10x (GH₵10 per GB)<br>
+        - Plan B: y = 5x + 20 (GH₵5/GB + GH₵20 base)</p>
+        <p><strong>Graph both lines</strong> on the same plane.<br>
+        - The <strong>intersection point</strong> shows where costs are equal.<br>
+        - For low usage (&lt;4 GB), Plan A is cheaper; for high usage, Plan B wins.</p>
+        <p><strong>Example 2: Animal Location (from curriculum)</strong><br>
+        A map uses coordinates to show animal locations.<br>
+        - Giraffe at (2, 7)<br>
+        - Lion at (-3, 2)<br>
+        - Faako starts at (0, 0)</p>
+        <p><strong>Question</strong>: If Faako walks 7 units west and 8 units south, where is he?<br>
+        - West = negative x, South = negative y<br>
+        - New position: (0 - 7, 0 - 8) = (-7, -8)<br>
+        - Check which animal is near that point.</p>
+
+        <h3>5. Key Features of Linear Graphs</h3>
+        <ul>
+          <li><strong>Straight line</strong> = constant rate of change</li>
+          <li><strong>Slope</strong> = how steep the line is (rise/run)</li>
+          <li><strong>y-intercept</strong> = where the line crosses the y-axis (x = 0)</li>
+        </ul>
+        <blockquote>💡 In Grade 7, focus on <strong>reading and interpreting</strong>—not calculating slope formally.</blockquote>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Creativity and Innovation (CI)</strong>: Designing real-world scenarios modeled by graphs.</li>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Using graphs to compare, predict, and decide.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Explaining how a graph answers a question.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Plot these points on a coordinate plane:
+              <br>a) (4, 2)
+              <br>b) (-1, 3)
+              <br>c) (0, -5)</li>
+            <li>Complete the table and graph the relation:
+              <br>Rule: y = 3x - 2
+              <br>Domain: x = 0, 1, 2, 3, 4</li>
+            <li>A delivery service charges GH₵4 per km with no base fee.
+              <br>a) Write the rule.
+              <br>b) Make a table for 0 to 5 km.
+              <br>c) Graph it.
+              <br>d) How much for 7 km? (Use the graph or rule.)</li>
+            <li>True or False: The graph of y = 5x passes through the origin. Explain.</li>
+          </ol>
+          <p><em>Confirm your understanding before moving on.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In upcoming lessons, you’ll explore non-linear patterns, inequalities on the number line, and real-world data analysis—building toward algebra and statistics!</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 32; // Lesson 33
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT (EDIT PER FILE)
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Locate Points on the Number Plane, Draw Tables and Graphs of Relations, and Use Them to Solve Problems",
+      loTag: "B7.2.1.1.4",
+      objectives: [
+        "Plot ordered pairs (x, y) accurately on the coordinate (number) plane.",
+        "Create a table of values from a given rule or real-world context.",
+        "Draw the graph of a linear relation by plotting and connecting points.",
+        "Use graphs to solve real-world problems, such as comparing costs, predicting values, or locating positions."
+      ],
+      words: [
+        "Coordinate plane",
+        "Ordered pair",
+        "x-axis",
+        "y-axis",
+        "Origin",
+        "Linear relation",
+        "Table of values"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Plot these points on a coordinate plane:
+            <br>a) (4, 2)
+            <br>b) (-1, 3)
+            <br>c) (0, -5)</li>
+          <li>Complete the table and graph the relation:
+            <br>Rule: y = 3x - 2
+            <br>Domain: x = 0, 1, 2, 3, 4</li>
+          <li>A delivery service charges GH₵4 per km with no base fee.
+            <br>a) Write the rule.
+            <br>b) Make a table for 0 to 5 km.
+            <br>c) Graph it.
+            <br>d) How much for 7 km? (Use the graph or rule.)</li>
+          <li>True or False: The graph of y = 5x passes through the origin. Explain.</li>
+        </ol>
+        <p><em>Confirm your understanding before moving on.</em></p>
+      `,
+      nextPreview: "In upcoming lessons, you’ll explore non-linear patterns, inequalities on the number line, and real-world data analysis—building toward algebra and statistics!"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "Which point is in Quadrant I?", a: "(3, 5)", opts: ["(-2, 4)", "(3, 5)", "(-1, -3)", "(0, 4)"] },
+      { q: "What are the coordinates of the origin?", a: "(0, 0)", opts: ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"] },
+      { q: "If y = 2x + 3, what is y when x = 2?", a: "7", opts: ["5", "6", "7", "8"] },
+      { q: "Which graph passes through (0, 0)?", a: "y = 4x", opts: ["y = 4x", "y = 4x + 1", "y = 4x - 2", "y = x + 4"] },
+      { q: "To plot (-3, 2), you move:", a: "3 left, 2 up", opts: ["3 right, 2 up", "3 left, 2 up", "3 right, 2 down", "3 left, 2 down"] },
+      { q: "True or False: The graph of y = 3x - 1 passes through the origin.", a: "False", opts: ["True", "False"] },
+      { q: "If a taxi costs GH₵3/km with no base fee, what is the rule?", a: "y = 3x", opts: ["y = 3", "y = x + 3", "y = 3x", "y = 3/x"] },
+      { q: "What is the y-value when x = 0 in y = -2x + 5?", a: "5", opts: ["-5", "0", "2", "5"] },
+      { q: "Which point is on the graph of y = x + 2?", a: "(1, 3)", opts: ["(1, 3)", "(2, 3)", "(3, 4)", "(0, 1)"] },
+      { q: "Faako moves 4 units east and 5 units south from (0,0). Where is he?", a: "(4, -5)", opts: ["(4, 5)", "(-4, 5)", "(4, -5)", "(-4, -5)"] },
+      { q: "For y = 5x - 3, what is y when x = 1?", a: "2", opts: ["1", "2", "3", "5"] },
+      { q: "Which axis is horizontal?", a: "x-axis", opts: ["x-axis", "y-axis", "z-axis", "origin"] },
+      { q: "If Plan A: y = 2x and Plan B: y = x + 4, at what x do they cost the same?", a: "4", opts: ["2", "3", "4", "5"] },
+      { q: "What is the rule for a proportional relation with y = 12 when x = 3?", a: "y = 4x", opts: ["y = 3x", "y = 4x", "y = 12x", "y = x + 9"] },
+      { q: "Which point is in Quadrant III?", a: "(-2, -3)", opts: ["(2, 3)", "(-2, 3)", "(2, -3)", "(-2, -3)"] },
+      { q: "If y = -x + 6, what is y when x = 2?", a: "4", opts: ["2", "4", "6", "8"] },
+      { q: "A delivery costs GH₵5 base + GH₵2/km. What is the rule?", a: "y = 2x + 5", opts: ["y = 2x", "y = 5x + 2", "y = 2x + 5", "y = 7x"] },
+      { q: "Which is NOT a linear graph feature?", a: "Curved line", opts: ["Straight line", "Constant rate", "Curved line", "y-intercept"] },
+      { q: "If x = -1 in y = 3x + 2, what is y?", a: "-1", opts: ["-1", "0", "1", "5"] },
+      { q: "The point (0, -4) lies on which axis?", a: "y-axis", opts: ["x-axis", "y-axis", "origin", "Quadrant IV"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${LESSON_CONFIG.nextPreview}</p>
+      `;
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
