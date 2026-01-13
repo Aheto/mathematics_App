@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Describe the Rule for a Given Relation Using Mathematical Language" />
+  <title>Mini OpenStax — Describe the Rule for a Given Relation Using Mathematical Language</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Describe the Rule for a Given Relation Using Mathematical Language</h1>
+        <div class="lo-tags" id="lo-tag">B7.2.1.1.2</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
+
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Analyze tables or patterns to identify how the output (co-domain) relates to the input (domain).</li>
+          <li>Express the rule of a relation using <strong>precise verbal phrases</strong> like:
+            <ul>
+              <li>“One more than three times the input”</li>
+              <li>“Twice the input minus two”</li>
+              <li>“Four times one less than the input”</li>
+            </ul>
+          </li>
+          <li>Translate between <strong>tables</strong>, <strong>verbal rules</strong>, and <strong>simple algebraic expressions</strong>.</li>
+          <li>Apply rules to predict missing values or solve real-world problems.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">Rule</span>
+          <span class="word-item">Input</span>
+          <span class="word-item">Output</span>
+          <span class="word-item">Domain</span>
+          <span class="word-item">Co-domain</span>
+          <span class="word-item">Verbal description</span>
+          <span class="word-item">Algebraic expression</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. What Is a Rule in a Relation?</h3>
+        <p>A <strong>rule</strong> explains <strong>how to get from the input (x) to the output (y)</strong>. It describes the consistent pattern that connects every pair in the relation.</p>
+        <blockquote>✅ The goal is to move beyond “+3 each time” to <strong>descriptive mathematical language</strong>.</blockquote>
+
+        <h3>2. Common Rule Phrases and Their Meanings</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Verbal Rule</th>
+              <th>Meaning</th>
+              <th>Example (x = 2)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>“One more than x”</td>
+              <td>x + 1</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>“One less than x”</td>
+              <td>x - 1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>“Twice x”</td>
+              <td>2x</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>“One more than twice x”</td>
+              <td>2x + 1</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>“Three times x minus 2”</td>
+              <td>3x - 2</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>“Four times one less than x”</td>
+              <td>4(x - 1)</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>“Five times x”</td>
+              <td>5x</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>💡 These phrases help bridge <strong>words</strong> → <strong>math</strong> → <strong>real-world meaning</strong>.</blockquote>
+
+        <h3>3. Finding and Describing the Rule from a Table</h3>
+        <p><strong>Example 1</strong>:<br>
+        <table>
+          <thead>
+            <tr>
+              <th>x</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>y</td>
+              <td>5</td>
+              <td>10</td>
+              <td>15</td>
+              <td>20</td>
+            </tr>
+          </tbody>
+        </table>
+        - Observe: y = 5, 10, 15, 20 → multiples of 5<br>
+        - Rule: <strong>“Five times the input”</strong> or <strong>“y is five times x”</strong></p>
+        <p>✅ <strong>Mathematical form</strong>: y = 5x</p>
+
+        <p><strong>Example 2</strong>:<br>
+        <table>
+          <thead>
+            <tr>
+              <th>x</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>y</td>
+              <td>4</td>
+              <td>7</td>
+              <td>10</td>
+              <td>13</td>
+            </tr>
+          </tbody>
+        </table>
+        - Differences: 7 - 4 = 3, 10 - 7 = 3 → constant increase of 3<br>
+        - When x = 1, y = 4 → not just “3x” (that would be 3)<br>
+        - So: y = 3x + 1</p>
+        <p>✅ <strong>Verbal rule</strong>: <strong>“One more than three times the input”</strong></p>
+
+        <p><strong>Example 3</strong>:<br>
+        <table>
+          <thead>
+            <tr>
+              <th>x</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>y</td>
+              <td>0</td>
+              <td>4</td>
+              <td>8</td>
+              <td>12</td>
+            </tr>
+          </tbody>
+        </table>
+        - y = 0, 4, 8, 12 → multiples of 4, but starts at 0 when x = 1<br>
+        - Try: y = 4(x - 1)<br>
+          - x = 1 → 4(0) = 0<br>
+          - x = 2 → 4(1) = 4</p>
+        <p>✅ <strong>Verbal rule</strong>: <strong>“Four times one less than the input”</strong></p>
+
+        <h3>4. Real-World Context: Packed Breakfast Cost</h3>
+        <p><strong>Table</strong>:<br>
+        <table>
+          <thead>
+            <tr>
+              <th>Workers (x)</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>6</th>
+              <th>?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cost (GH₵) (y)</td>
+              <td>3</td>
+              <td>6</td>
+              <td>9</td>
+              <td>12</td>
+              <td>15</td>
+              <td>18</td>
+              <td>120</td>
+            </tr>
+          </tbody>
+        </table>
+        - Pattern: Cost = 3 × number of workers<br>
+        - Rule: <strong>“Three times the number of workers”</strong> or <strong>“GH₵3 per worker”</strong></p>
+        <p><strong>Question</strong>: If total cost is GH₵120, how many workers?<br>
+        3x = 120 → x = 40</p>
+        <p>✅ <strong>Answer</strong>: <strong>40 workers</strong></p>
+
+        <h3>5. Practice Translating Rules</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Verbal Description</th>
+              <th>Algebraic Expression</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>One more than twice x</td>
+              <td>2x + 1</td>
+            </tr>
+            <tr>
+              <td>Two less than thrice x</td>
+              <td>3x - 2</td>
+            </tr>
+            <tr>
+              <td>Five times one more than x</td>
+              <td>5(x + 1)</td>
+            </tr>
+            <tr>
+              <td>Half of x plus four</td>
+              <td>(1/2)x + 4</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>📌 <strong>Note</strong>: In Grade 7, focus on <strong>whole-number coefficients</strong> and <strong>simple operations</strong>.</blockquote>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Creativity and Innovation (CI)</strong>: Inventing clear, accurate descriptions of patterns.</li>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Detecting structure in data and generalizing rules.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Using precise mathematical language to explain relationships.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Describe the rule in words for this table:
+              <table style="margin-top:0.5rem;">
+                <thead>
+                  <tr>
+                    <th>x</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>y</td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li>Write the rule: “Twice one more than x.” Then complete the table for x = 1, 2, 3.</li>
+            <li>A taxi charges a base fare of GH₵5 plus GH₵2 per km.
+              <br>a) Is this proportional? Why or why not?
+              <br>b) Write a rule for the total cost. (This is an extension—think carefully!)</li>
+            <li>True or False: The rule “one more than three times x” gives the same output as “three times x plus one.” Explain.</li>
+          </ol>
+          <p><em>Confirm your understanding before moving on.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 32, you’ll learn to plot points on the coordinate plane, create graphs from tables, and use those graphs to solve real-world problems—like finding where two paths cross or predicting future values!</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 30; // Lesson 31
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT (EDIT PER FILE)
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Describe the Rule for a Given Relation Using Mathematical Language",
+      loTag: "B7.2.1.1.2",
+      objectives: [
+        "Analyze tables or patterns to identify how the output (co-domain) relates to the input (domain).",
+        "Express the rule of a relation using precise verbal phrases like: “One more than three times the input”, “Twice the input minus two”, “Four times one less than the input”.",
+        "Translate between tables, verbal rules, and simple algebraic expressions.",
+        "Apply rules to predict missing values or solve real-world problems."
+      ],
+      words: [
+        "Rule",
+        "Input",
+        "Output",
+        "Domain",
+        "Co-domain",
+        "Verbal description",
+        "Algebraic expression"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Describe the rule in words for this table:
+            <table style="margin-top:0.5rem;">
+              <thead>
+                <tr>
+                  <th>x</th>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>y</td>
+                  <td>2</td>
+                  <td>6</td>
+                  <td>8</td>
+                  <td>10</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+          <li>Write the rule: “Twice one more than x.” Then complete the table for x = 1, 2, 3.</li>
+          <li>A taxi charges a base fare of GH₵5 plus GH₵2 per km.
+            <br>a) Is this proportional? Why or why not?
+            <br>b) Write a rule for the total cost. (This is an extension—think carefully!)</li>
+          <li>True or False: The rule “one more than three times x” gives the same output as “three times x plus one.” Explain.</li>
+        </ol>
+        <p><em>Confirm your understanding before moving on.</em></p>
+      `,
+      nextPreview: "In Lesson 32, you’ll learn to plot points on the coordinate plane, create graphs from tables, and use those graphs to solve real-world problems—like finding where two paths cross or predicting future values!"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "What is the rule for x:1,2,3 y:3,6,9?", a: "Three times the input", opts: ["Three more than input", "Three times the input", "Input plus three", "Twice the input"] },
+      { q: "Which phrase matches y = 2x + 1?", a: "One more than twice the input", opts: ["Twice the input", "One more than twice the input", "Twice one more than input", "Two more than input"] },
+      { q: "If the rule is “four times one less than x,” what is y when x=3?", a: "8", opts: ["4", "8", "12", "16"] },
+      { q: "What is the rule for x:1,2,3 y:0,5,10?", a: "Five times one less than x", opts: ["Five times x", "Five times one less than x", "x minus five", "Five less than x"] },
+      { q: "Which expression means “three times x minus 2”?", a: "3x - 2", opts: ["3x - 2", "2 - 3x", "3(x - 2)", "(3x)2"] },
+      { q: "True or False: “One more than three times x” equals “three times x plus one.”", a: "True", opts: ["True", "False"] },
+      { q: "If y = 4(x + 1), what is y when x=2?", a: "12", opts: ["6", "8", "10", "12"] },
+      { q: "What is the rule for x:1,2,3 y:7,9,11?", a: "Two times x plus five", opts: ["x plus six", "Two times x plus five", "Three times x plus four", "Five times x plus two"] },
+      { q: "Which table matches “twice one more than x”?", a: "x:1,2,3 y:4,6,8", opts: ["x:1,2,3 y:2,4,6", "x:1,2,3 y:3,4,5", "x:1,2,3 y:4,6,8", "x:1,2,3 y:1,2,3"] },
+      { q: "If a rule is “five times the input,” what is y when x=7?", a: "35", opts: ["12", "25", "30", "35"] },
+      { q: "What phrase describes y = 3(x - 1)?", a: "Three times one less than x", opts: ["Three times x minus one", "Three times one less than x", "One less than three times x", "Three less than x"] },
+      { q: "If x=4 gives y=13 with rule “one more than three times x,” what is y when x=5?", a: "16", opts: ["14", "15", "16", "17"] },
+      { q: "Which is NOT a valid rule description?", a: "Times x more than five", opts: ["One more than twice x", "Three times x minus two", "Times x more than five", "Four times one less than x"] },
+      { q: "If y = 5x + 2, what is the verbal rule?", a: "Two more than five times x", opts: ["Five more than two times x", "Two more than five times x", "Five times two plus x", "x plus seven"] },
+      { q: "What is y when x=1 for rule “six times one less than x”?", a: "0", opts: ["0", "1", "5", "6"] },
+      { q: "Which rule gives y=10 when x=3?", a: "Two more than twice x", opts: ["Three times x", "Two more than twice x", "x plus seven", "Four times x minus two"] },
+      { q: "If a table shows x:2,3,4 y:5,7,9, what is the rule?", a: "Two times x plus one", opts: ["x plus three", "Two times x plus one", "Three times x minus one", "x times four"] },
+      { q: "What is the output for “four times one more than x” when x=0?", a: "4", opts: ["0", "1", "4", "5"] },
+      { q: "Which expression matches “seven times x”?", a: "7x", opts: ["7 + x", "7x", "x7", "7/x"] },
+      { q: "If the rule is “three times one less than x,” what is x when y=12?", a: "5", opts: ["3", "4", "5", "6"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${LESSON_CONFIG.nextPreview}</p>
+      `;
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
