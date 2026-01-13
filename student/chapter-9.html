@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Multiply or Divide Multi-Digit Numbers by 1- and 2-Digit Numbers" />
+  <title>Mini OpenStax — Multiply or Divide Multi-Digit Numbers</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+    code {
+      background: #f1f1f1;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    pre {
+      background: #f8f9fa;
+      padding: 0.5rem;
+      border-left: 3px solid var(--green);
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Multiply or Divide Multi-Digit Numbers by 1- and 2-Digit Numbers</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.2.2.2</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Use <strong>partitioning (expanded form)</strong>, <strong>place value methods</strong>, and the <strong>distributive property</strong> to multiply multi-digit numbers by 1- or 2-digit numbers.</li>
+          <li>Apply efficient <strong>division strategies</strong>, including understanding <strong>divisibility rules</strong>.</li>
+          <li>Choose and justify the most appropriate method for a given problem.</li>
+          <li>Solve real-world word problems involving multiplication and division.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">partitioning</span>
+          <span class="word-item">distributive property</span>
+          <span class="word-item">vertical method</span>
+          <span class="word-item">lattice multiplication</span>
+          <span class="word-item">divisibility rules</span>
+          <span class="word-item">partial products</span>
+          <span class="word-item">multi-digit</span>
+          <span class="word-item">place value</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. Multiplication Using Partitioning (Expanded Form)</h3>
+        <p>Break the larger number into place values, then multiply each part.</p>
+        <blockquote>
+          <strong>Example</strong>: Multiply <strong>584 × 8</strong><br>
+          – Partition: 584 = 500 + 80 + 4<br>
+          – Multiply each:<br>
+            • 500 × 8 = 4,000<br>
+            • 80 × 8 = 640<br>
+            • 4 × 8 = 32<br>
+          – Add: 4,000 + 640 + 32 = <strong>4,672</strong><br>
+          ✅ <strong>Answer: 4,672</strong>
+        </blockquote>
+        <p>This method reinforces <strong>place value</strong> and avoids errors in carrying.</p>
+
+        <h3>2. Vertical Place Value Method (Standard Algorithm)</h3>
+        <p>Use column multiplication with clear alignment of place values.</p>
+        <blockquote>
+          <strong>Example</strong>: Multiply <strong>345 × 27</strong><br>
+          Step 1: Multiply 345 by 7 (units):<br>
+          <pre>
+    345
+  ×   7
+  -----
+   2,415
+          </pre>
+          Step 2: Multiply 345 by 20 (tens):<br>
+          <pre>
+    345
+  ×  20
+  -----
+   6,900
+          </pre>
+          Step 3: Add partial products:<br>
+          <pre>
+   2,415
+ + 6,900
+ -------
+   9,315
+          </pre>
+          ✅ <strong>Answer: 9,315</strong>
+        </blockquote>
+        <p>💡 <strong>Tip</strong>: Always write the second product shifted one place to the left (or add a zero) to reflect multiplying by tens.</p>
+
+        <h3>3. Lattice Multiplication (Alternative Visual Method)</h3>
+        <p>A grid-based method that separates digit multiplication and addition.</p>
+        <blockquote>
+          <strong>Steps for 345 × 27</strong>:<br>
+          1. Draw a <strong>2-row × 3-column</strong> lattice (since 27 has 2 digits, 345 has 3).<br>
+          2. Write 345 across the top, 27 down the right.<br>
+          3. Multiply each pair of digits; write tens in top-left, units in bottom-right of each cell.<br>
+          4. Add diagonally from bottom-right to top-left.<br>
+          5. Read the final answer along the left and bottom edges.<br><br>
+          ✅ Result: <strong>9,315</strong>
+        </blockquote>
+        <p>📌 <strong>Advantage</strong>: Reduces carrying errors; great for visual learners.</p>
+
+        <h3>4. Using the Distributive Property</h3>
+        <p>Break the multiplier into easier parts (e.g., 15 = 10 + 5).</p>
+        <blockquote>
+          <strong>Example</strong>: Multiply <strong>325 × 15</strong><br>
+          – 325 × (10 + 5) = (325 × 10) + (325 × 5)<br>
+          – = 3,250 + 1,625 = <strong>4,875</strong><br>
+          ✅ <strong>Answer: 4,875</strong>
+        </blockquote>
+        <p>This is especially useful for mental math and estimation.</p>
+
+        <h3>5. Division and Divisibility Rules</h3>
+        <p>Before dividing, check if a number is divisible using these rules:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Divisor</th>
+              <th>Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>2</strong></td>
+              <td>Last digit is even (0,2,4,6,8)</td>
+            </tr>
+            <tr>
+              <td><strong>3</strong></td>
+              <td>Sum of digits is divisible by 3</td>
+            </tr>
+            <tr>
+              <td><strong>4</strong></td>
+              <td>Last two digits form a number divisible by 4</td>
+            </tr>
+            <tr>
+              <td><strong>5</strong></td>
+              <td>Ends in 0 or 5</td>
+            </tr>
+            <tr>
+              <td><strong>6</strong></td>
+              <td>Divisible by both 2 and 3</td>
+            </tr>
+            <tr>
+              <td><strong>7</strong></td>
+              <td>Double the last digit, subtract from the rest. If result is 0 or divisible by 7, the number is divisible by 7.</td>
+            </tr>
+            <tr>
+              <td><strong>8</strong></td>
+              <td>Last three digits divisible by 8</td>
+            </tr>
+            <tr>
+              <td><strong>9</strong></td>
+              <td>Sum of digits divisible by 9</td>
+            </tr>
+            <tr>
+              <td><strong>10</strong></td>
+              <td>Ends in 0</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>Example</strong>: Is <strong>595 divisible by 7</strong>?<br>
+          – Last digit: 5 → double it: 5 × 2 = 10<br>
+          – Rest of number: 59<br>
+          – 59 - 10 = 49 → 49 ÷ 7 = 7 → ✅ <strong>Yes</strong>
+        </blockquote>
+        <p><strong>Why it matters</strong>: Helps simplify division and factor large numbers.</p>
+
+        <h3>6. Real-World Application</h3>
+        <blockquote>
+          <strong>Word Problem</strong>:<br>
+          215 men and 784 women attended a concert. Each paid GH₵25. How much was collected?<br>
+          – Total people: 215 + 784 = 999<br>
+          – Total money: 999 × 25<br>
+          – Use distributive property:<br>
+            999 × 25 = (1,000 - 1) × 25 = 25,000 - 25 = <strong>24,975</strong><br>
+          ✅ <strong>Answer: GH₵24,975</strong>
+        </blockquote>
+        <p>💡 This shows how <strong>compensation</strong> and <strong>distribution</strong> make real-life calculations faster.</p>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing the best strategy based on numbers and context.</li>
+          <li><strong>Personal Development and Leadership (PL)</strong>: Building confidence in handling complex calculations without calculators.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Use <strong>partitioning</strong> to calculate:<br>
+              a) 672 × 6<br>
+              b) 4,218 × 9
+            </li>
+            <li>Multiply <strong>428 × 36</strong> using the <strong>vertical place value method</strong>.</li>
+            <li>Use the <strong>distributive property</strong> to find:<br>
+              250 × 18
+            </li>
+            <li>Test whether <strong>1,248</strong> is divisible by:<br>
+              a) 3<br>
+              b) 4<br>
+              c) 7
+            </li>
+            <li>A school sold <strong>876 tickets</strong> at <strong>GH₵45</strong> each. How much money was raised? (Use an efficient mental strategy.)</li>
+          </ol>
+          <p><em>Confirm your answers before moving forward.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 11, we’ll explore <strong>number patterns in sequences over one billion</strong>, such as:</p>
+        <p><code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; 1,687,500 &nbsp; ...</code></p>
+        <p>You’ll learn to:</p>
+        <ul>
+          <li>Identify the <strong>common difference</strong> (+500,000)</li>
+          <li>Find the <strong>n-th term</strong> using position and pattern</li>
+          <li>Write large numbers in words based on their location in the chart</li>
+        </ul>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 9; // ← Lesson 10 (zero-indexed)
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Multiply or Divide Multi-Digit Numbers by 1- and 2-Digit Numbers",
+      loTag: "B7.1.2.2.2",
+      objectives: [
+        "Use partitioning (expanded form), place value methods, and the distributive property to multiply multi-digit numbers by 1- or 2-digit numbers.",
+        "Apply efficient division strategies, including understanding divisibility rules.",
+        "Choose and justify the most appropriate method for a given problem.",
+        "Solve real-world word problems involving multiplication and division."
+      ],
+      words: [
+        "partitioning",
+        "distributive property",
+        "vertical method",
+        "lattice multiplication",
+        "divisibility rules",
+        "partial products",
+        "multi-digit",
+        "place value"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Use <strong>partitioning</strong> to calculate:<br>
+            a) 672 × 6<br>
+            b) 4,218 × 9
+          </li>
+          <li>Multiply <strong>428 × 36</strong> using the <strong>vertical place value method</strong>.</li>
+          <li>Use the <strong>distributive property</strong> to find:<br>
+            250 × 18
+          </li>
+          <li>Test whether <strong>1,248</strong> is divisible by:<br>
+            a) 3<br>
+            b) 4<br>
+            c) 7
+          </li>
+          <li>A school sold <strong>876 tickets</strong> at <strong>GH₵45</strong> each. How much money was raised? (Use an efficient mental strategy.)</li>
+        </ol>
+        <p><em>Confirm your answers before moving forward.</em></p>
+      `,
+      nextPreview: "In Lesson 11, we’ll explore number patterns in sequences over one billion, such as:\n\n187,500   687,500   1,187,500   1,687,500   ...\n\nYou’ll learn to:\n- Identify the common difference (+500,000)\n- Find the n-th term using position and pattern\n- Write large numbers in words based on their location in the chart"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "What is 584 × 8?", a: "4,672", opts: ["4,672", "4,572", "4,772", "4,662"] },
+      { q: "345 × 27 =", a: "9,315", opts: ["9,315", "9,215", "9,415", "8,315"] },
+      { q: "325 × 15 =", a: "4,875", opts: ["4,875", "4,775", "4,975", "3,875"] },
+      { q: "Is 595 divisible by 7?", a: "Yes", opts: ["Yes", "No"] },
+      { q: "Which method breaks numbers into place values?", a: "Partitioning", opts: ["Guessing", "Partitioning", "Rounding", "Lattice"] },
+      { q: "672 × 6 =", a: "4,032", opts: ["4,032", "4,132", "3,932", "4,022"] },
+      { q: "4,218 × 9 =", a: "37,962", opts: ["37,962", "36,962", "38,962", "37,862"] },
+      { q: "250 × 18 =", a: "4,500", opts: ["4,500", "4,400", "4,600", "3,500"] },
+      { q: "Is 1,248 divisible by 3?", a: "Yes (1+2+4+8=15, 15÷3=5)", opts: ["Yes (1+2+4+8=15, 15÷3=5)", "No"] },
+      { q: "Is 1,248 divisible by 4?", a: "Yes (48 ÷ 4 = 12)", opts: ["Yes (48 ÷ 4 = 12)", "No"] },
+      { q: "Is 1,248 divisible by 7?", a: "No", opts: ["Yes", "No"] },
+      { q: "876 × 45 = ?", a: "39,420", opts: ["39,420", "38,420", "40,420", "39,320"] },
+      { q: "In vertical multiplication, why shift the second row?", a: "Because you're multiplying by tens", opts: ["To make it neat", "Because you're multiplying by tens", "To confuse students", "It's optional"] },
+      { q: "Lattice multiplication helps with:", a: "Reducing carrying errors", opts: ["Speed", "Reducing carrying errors", "Memorization", "Division"] },
+      { q: "Distributive property: a(b + c) =", a: "ab + ac", opts: ["ab + ac", "a + bc", "abc", "(a+b)c"] },
+      { q: "Divisibility by 6 requires:", a: "Divisible by 2 and 3", opts: ["Even number", "Sum divisible by 6", "Divisible by 2 and 3", "Ends in 6"] },
+      { q: "999 × 25 = ?", a: "24,975", opts: ["24,975", "25,000", "24,950", "25,975"] },
+      { q: "Which is NOT a multiplication strategy?", a: "Long division", opts: ["Partitioning", "Vertical method", "Long division", "Distributive property"] },
+      { q: "Real-world use of these skills includes:", a: "All of the above", opts: ["Budgeting", "Shopping", "Event planning", "All of the above"] },
+      { q: "The sum of digits in 1,248 is:", a: "15", opts: ["12", "15", "18", "24"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      let preview = LESSON_CONFIG.nextPreview;
+      preview = preview.replace(/\n\n/g, '</p><p>')
+                      .replace(/^- /gm, '• ')
+                      .replace(/\n/g, '<br>');
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${preview}</p>
+      `.replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
