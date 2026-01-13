@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form" />
+  <title>Mini OpenStax — Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form</h1>
+        <div class="lo-tags" id="lo-tag">B7.2.2.1.1</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
+
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Translate verbal phrases or real-life situations into <strong>algebraic expressions</strong>.</li>
+          <li>Use letters (variables) such as x, y, a, etc., to represent unknown quantities.</li>
+          <li>Apply the correct <strong>order of operations</strong> when forming expressions.</li>
+          <li>Interpret and write expressions involving <strong>addition, subtraction, multiplication, division</strong>, and <strong>grouping</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">Algebraic expression</span>
+          <span class="word-item">Variable</span>
+          <span class="word-item">Constant</span>
+          <span class="word-item">Operation</span>
+          <span class="word-item">Grouping</span>
+          <span class="word-item">Translate</span>
+          <span class="word-item">Order of operations</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. What Is an Algebraic Expression?</h3>
+        <p>An <strong>algebraic expression</strong> is a mathematical phrase that includes:</p>
+        <ul>
+          <li><strong>Numbers</strong> (constants)</li>
+          <li><strong>Variables</strong> (letters like x, y)</li>
+          <li><strong>Operations</strong> (+, −, ×, ÷)</li>
+        </ul>
+        <blockquote>✅ <strong>Examples</strong>:<br>
+        - x + 10<br>
+        - 5x - 2<br>
+        - 2(5 - 8x)</blockquote>
+        <blockquote>❌ <strong>Not expressions</strong>: Equations like x + 3 = 7 (these are statements, not expressions).</blockquote>
+
+        <h3>2. Translating Words into Algebraic Expressions</h3>
+        <p>Use key words to identify operations:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Verbal Phrase</th>
+              <th>Operation</th>
+              <th>Algebraic Expression</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>“More than” / “Increased by”</td>
+              <td>Addition</td>
+              <td>x + 5</td>
+            </tr>
+            <tr>
+              <td>“Less than” / “Decreased by”</td>
+              <td>Subtraction</td>
+              <td>x - 3</td>
+            </tr>
+            <tr>
+              <td>“Times” / “Product of”</td>
+              <td>Multiplication</td>
+              <td>4x or 4·x</td>
+            </tr>
+            <tr>
+              <td>“Half of” / “Divided by”</td>
+              <td>Division</td>
+              <td>x/2 or x ÷ 2</td>
+            </tr>
+            <tr>
+              <td>“Times the sum/difference”</td>
+              <td>Grouping with parentheses</td>
+              <td>3(x + 2)</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>💡 <strong>Important</strong>: The phrase “less than” <strong>reverses order</strong>:<br>
+        - “5 less than x” → x - 5 (not 5 - x)</blockquote>
+
+        <h3>3. Worked Examples from Curriculum</h3>
+        <p><strong>Example 1: Basic Translations</strong><br>
+        Let x represent an unknown number.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Statement</th>
+              <th>Algebraic Expression</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10 more than a number x</td>
+              <td>x + 10</td>
+            </tr>
+            <tr>
+              <td>5 less than a number x</td>
+              <td>x - 5</td>
+            </tr>
+            <tr>
+              <td>3 times a number x</td>
+              <td>3x</td>
+            </tr>
+            <tr>
+              <td>Half of a number x</td>
+              <td>x/2 or (1/2)x</td>
+            </tr>
+            <tr>
+              <td>2 more than 5 times x</td>
+              <td>5x + 2</td>
+            </tr>
+            <tr>
+              <td>When 8 times x is subtracted from 5 and the result is multiplied by 2</td>
+              <td>2(5 - 8x)</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>✅ <strong>Note</strong>: Parentheses ensure correct order—do the subtraction <strong>before</strong> multiplying.</blockquote>
+
+        <h3>4. Real-Life Contexts</h3>
+        <p><strong>Example 2: Age Problems</strong><br>
+        Afrako is 3 years older than Maako. If Maako is x years old, what is Afrako’s age?</p>
+        <ul>
+          <li>Maako = x</li>
+          <li>Afrako = x + 3</li>
+        </ul>
+        <p>✅ <strong>Expression</strong>: x + 3</p>
+
+        <p><strong>Example 3: Money Sharing</strong><br>
+        Agbolosu and Tetteh were given GH₵400. Tetteh had GH₵35 more than Agbolosu. If Agbolosu’s share is x, write an expression for Tetteh’s share.</p>
+        <ul>
+          <li>Agbolosu = x</li>
+          <li>Tetteh = x + 35</li>
+        </ul>
+        <p>✅ <strong>Expression</strong>: x + 35</p>
+        <blockquote>📌 <strong>Bonus</strong>: Total = x + (x + 35) = 2x + 35</blockquote>
+
+        <p><strong>Example 4: Business & Geometry</strong></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Situation</th>
+              <th>Expression</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Profit = Selling price − Cost price</td>
+              <td>If cost = x, sell = y → Profit = y - x</td>
+            </tr>
+            <tr>
+              <td>Area of rectangle (length t, width q)</td>
+              <td>t × q = tq</td>
+            </tr>
+            <tr>
+              <td>Perimeter of rectangle (length x, width y)</td>
+              <td>2x + 2y or 2(x + y)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>5. Common Pitfalls to Avoid</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Mistake</th>
+              <th>Correction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Writing “5 less than x” as 5 - x</td>
+              <td>❌ Should be x - 5</td>
+            </tr>
+            <tr>
+              <td>Forgetting parentheses in grouped operations</td>
+              <td>“Twice the sum of x and 3” → 2(x + 3), <strong>not</strong> 2x + 3</td>
+            </tr>
+            <tr>
+              <td>Confusing “of” (multiplication) with “and” (addition)</td>
+              <td>“Half of x” = (1/2)x; “x and 5” = x + 5</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Communication and Collaboration (CC)</strong>: Translating everyday language into precise mathematical form.</li>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Analyzing word problems to identify variables and operations.</li>
+          <li><strong>Creativity and Innovation (CI)</strong>: Modeling real-world scenarios with symbols.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Let x be a number. Write expressions for:
+              <br>a) 7 more than x
+              <br>b) 4 less than x
+              <br>c) Three times x
+              <br>d) Half of x
+              <br>e) 5 less than twice x</li>
+            <li>Kofi is x years old. His sister is 6 years younger. Write an expression for his sister’s age.</li>
+            <li>A basket of mangoes costs m cedis. A basket of oranges costs o cedis.
+              <br>a) What is the total cost of one of each?
+              <br>b) What is the profit if both are sold together for s cedis?</li>
+            <li>Translate: “Subtract 9 from 4 times a number, then multiply the result by 3.”</li>
+          </ol>
+          <p><em>Confirm your understanding before moving on.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 35, you’ll learn to simplify algebraic expressions by combining like terms—such as turning 4x + 3x into 7x—and use these skills to find perimeters, totals, and more!</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 33; // Lesson 34
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT (EDIT PER FILE)
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form",
+      loTag: "B7.2.2.1.1",
+      objectives: [
+        "Translate verbal phrases or real-life situations into algebraic expressions.",
+        "Use letters (variables) such as x, y, a, etc., to represent unknown quantities.",
+        "Apply the correct order of operations when forming expressions.",
+        "Interpret and write expressions involving addition, subtraction, multiplication, division, and grouping."
+      ],
+      words: [
+        "Algebraic expression",
+        "Variable",
+        "Constant",
+        "Operation",
+        "Grouping",
+        "Translate",
+        "Order of operations"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Let x be a number. Write expressions for:
+            <br>a) 7 more than x
+            <br>b) 4 less than x
+            <br>c) Three times x
+            <br>d) Half of x
+            <br>e) 5 less than twice x</li>
+          <li>Kofi is x years old. His sister is 6 years younger. Write an expression for his sister’s age.</li>
+          <li>A basket of mangoes costs m cedis. A basket of oranges costs o cedis.
+            <br>a) What is the total cost of one of each?
+            <br>b) What is the profit if both are sold together for s cedis?</li>
+          <li>Translate: “Subtract 9 from 4 times a number, then multiply the result by 3.”</li>
+        </ol>
+        <p><em>Confirm your understanding before moving on.</em></p>
+      `,
+      nextPreview: "In Lesson 35, you’ll learn to simplify algebraic expressions by combining like terms—such as turning 4x + 3x into 7x—and use these skills to find perimeters, totals, and more!"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "Which is an algebraic expression?", a: "3x + 5", opts: ["3x + 5", "3x + 5 = 11", "x = 2", "7 > 5"] },
+      { q: "“5 more than x” is written as:", a: "x + 5", opts: ["5 + x", "x + 5", "5x", "x - 5"] },
+      { q: "“7 less than x” is written as:", a: "x - 7", opts: ["7 - x", "x - 7", "7x", "x + 7"] },
+      { q: "“Three times x” is written as:", a: "3x", opts: ["3 + x", "x3", "3x", "x/3"] },
+      { q: "“Half of x” is written as:", a: "x/2", opts: ["2x", "x/2", "x + 2", "x - 2"] },
+      { q: "“Twice the sum of x and 4” is:", a: "2(x + 4)", opts: ["2x + 4", "2(x + 4)", "x + 8", "2x + 8"] },
+      { q: "Kwame is x years old. His brother is 3 years older. Brother's age:", a: "x + 3", opts: ["3x", "x + 3", "x - 3", "3 - x"] },
+      { q: "“5 less than twice x” is:", a: "2x - 5", opts: ["5 - 2x", "2x - 5", "2(x - 5)", "10x"] },
+      { q: "A book costs x cedis. A pen costs 2 cedis more. Pen cost:", a: "x + 2", opts: ["2x", "x + 2", "x - 2", "2 - x"] },
+      { q: "“Subtract 6 from 3 times x” is:", a: "3x - 6", opts: ["6 - 3x", "3x - 6", "3(x - 6)", "18x"] },
+      { q: "Area of rectangle with length x and width y:", a: "xy", opts: ["x + y", "2x + 2y", "xy", "x/y"] },
+      { q: "“Four times the difference of x and 2” is:", a: "4(x - 2)", opts: ["4x - 2", "4(x - 2)", "8x", "4x - 8"] },
+      { q: "Total cost of x items at GH₵5 each:", a: "5x", opts: ["5 + x", "5x", "x/5", "5 - x"] },
+      { q: "“Multiply the sum of x and 3 by 2” is:", a: "2(x + 3)", opts: ["2x + 3", "2(x + 3)", "6x", "2x + 6"] },
+      { q: "Profit = selling price - cost. If cost = x, sell = y, profit =", a: "y - x", opts: ["x - y", "y - x", "xy", "x + y"] },
+      { q: "“One-third of x” is:", a: "x/3", opts: ["3x", "x/3", "x + 3", "3/x"] },
+      { q: "Perimeter of square with side x:", a: "4x", opts: ["x", "2x", "4x", "x²"] },
+      { q: "“9 decreased by x” is:", a: "9 - x", opts: ["x - 9", "9 - x", "9x", "9/x"] },
+      { q: "If x = 4, which expression equals 10?", a: "2x + 2", opts: ["x + 4", "2x + 2", "3x", "x/2"] },
+      { q: "“The product of 5 and x, increased by 3” is:", a: "5x + 3", opts: ["5(x + 3)", "5x + 3", "15x", "5 + 3x"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${LESSON_CONFIG.nextPreview}</p>
+      `;
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
