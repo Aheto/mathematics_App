@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Create and Solve Story Problems Involving Decimals Using the Four Basic Operations" />
+  <title>Mini OpenStax — Decimal Word Problems with Four Operations</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+    code {
+      background: #f1f1f1;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    pre {
+      background: #f8f9fa;
+      padding: 0.5rem;
+      border-left: 3px solid var(--green);
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Create and Solve Story Problems Involving Decimals Using the Four Basic Operations</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.2.2.3</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Interpret real-life situations involving decimals and identify the correct operation(s).</li>
+          <li>Solve multi-step word problems using addition, subtraction, multiplication, or division of decimals.</li>
+          <li>Create your own realistic decimal-based word problems based on everyday contexts.</li>
+          <li>Justify your solution process using place value reasoning and estimation.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">decimal</span>
+          <span class="word-item">addition</span>
+          <span class="word-item">subtraction</span>
+          <span class="word-item">multiplication</span>
+          <span class="word-item">division</span>
+          <span class="word-item">word problem</span>
+          <span class="word-item">estimation</span>
+          <span class="word-item">reasonableness</span>
+          <span class="word-item">multi-step</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. The Four Operations with Decimals in Context</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Operation</th>
+              <th>When It’s Used</th>
+              <th>Example Context</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Addition</strong></td>
+              <td>Combining quantities</td>
+              <td>Total weight, total cost, total distance</td>
+            </tr>
+            <tr>
+              <td><strong>Subtraction</strong></td>
+              <td>Finding difference or remaining amount</td>
+              <td>Change from payment, leftover material</td>
+            </tr>
+            <tr>
+              <td><strong>Multiplication</strong></td>
+              <td>Repeated addition or scaling</td>
+              <td>Cost per unit × quantity, weight × multiplier</td>
+            </tr>
+            <tr>
+              <td><strong>Division</strong></td>
+              <td>Sharing equally or finding rate</td>
+              <td>Splitting a bill, meters per person</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          ✅ Always <strong>align decimal points</strong> for addition/subtraction.<br>
+          ✅ For multiplication/division, <strong>count decimal places</strong> or convert to whole numbers if helpful.
+        </blockquote>
+
+        <h3>2. Solving Real-World Decimal Word Problems</h3>
+        <p><strong>Example 1: Addition & Subtraction</strong><br>
+        <em>Mrs. Adamu bought 13.6 kg of meat. Mrs. Anderson bought 2.4 kg less than Mrs. Adamu. How many kilograms of meat did they buy altogether?</em></p>
+        <blockquote>
+          <strong>Step-by-step</strong>:<br>
+          1. Find Mrs. Anderson’s amount:<br>
+             13.6 - 2.4 = <strong>11.2 kg</strong><br>
+          2. Add both amounts:<br>
+             13.6 + 11.2 = <strong>24.8 kg</strong><br>
+          ✅ <strong>Answer: 24.8 kg</strong>
+        </blockquote>
+        <p>💡 <strong>Check</strong>: Estimate → 14 + 11 = 25 → 24.8 is reasonable.</p>
+
+        <p><strong>Example 2: Multiplication</strong><br>
+        <em>Ebo weighs 28.6 kg. His father weighs four times as much. What is their total weight?</em></p>
+        <blockquote>
+          <strong>Step-by-step</strong>:<br>
+          1. Father’s weight:<br>
+             28.6 × 4 = <strong>114.4 kg</strong><br>
+          2. Total weight:<br>
+             28.6 + 114.4 = <strong>143.0 kg</strong><br>
+          ✅ <strong>Answer: 143 kg</strong>
+        </blockquote>
+        <p>🔍 <strong>Note</strong>: 28.6 × 4 → think: 28 × 4 = 112, 0.6 × 4 = 2.4 → 112 + 2.4 = 114.4</p>
+
+        <p><strong>Example 3: Division</strong><br>
+        <em>Mrs. Armah bought 45.75 metres of linen for her five children. If they share it equally, how many metres does each receive?</em></p>
+        <blockquote>
+          <strong>Step-by-step</strong>:<br>
+          – Divide: 45.75 ÷ 5<br>
+          – Use partitioning:<br>
+            45 ÷ 5 = 9<br>
+            0.75 ÷ 5 = 0.15<br>
+          – Total: 9 + 0.15 = <strong>9.15 m</strong><br>
+          ✅ <strong>Answer: 9.15 metres per child</strong>
+        </blockquote>
+        <p>📌 <strong>Alternative</strong>: Multiply answer back: 9.15 × 5 = 45.75 → verifies correctness.</p>
+
+        <p><strong>Example 4: Multi-Step Budget Problem</strong><br>
+        <em>A school approved the following budget (in GH₵):</em><br>
+        – Painting building: 4,580<br>
+        – Mending basketball pitch: 3,050<br>
+        – Restocking library: 2,690<br>
+        – Choir robes: 5,340<br>
+        – Prizes: 4,270</p>
+        <blockquote>
+          <strong>Questions</strong>:<br>
+          a) How much for painting + choir robes?<br>
+          → 4,580 + 5,340 = 9,920 → <strong>GH₵9,920</strong><br><br>
+          b) How much more for mending than restocking?<br>
+          → 3,050 - 2,690 = 360 → <strong>GH₵360 more</strong><br><br>
+          c) If <strong>twice</strong> the approved amount was spent on prizes, how much was spent?<br>
+          → 4,270 × 2 = 8,540 → <strong>GH₵8,540</strong>
+        </blockquote>
+        <p>💡 Even though these are whole numbers, the same logic applies when decimals are involved (e.g., GH₵4,270.50).</p>
+
+        <h3>3. Creating Your Own Decimal Word Problems</h3>
+        <p>Use real-life scenarios:</p>
+        <ul>
+          <li><strong>Shopping</strong>: “Apples cost GH₵3.75 per kg. Kofi bought 2.4 kg. How much did he pay?”</li>
+          <li><strong>Travel</strong>: “A car uses 0.08 litres per km. How far can it go on 12.8 litres?”</li>
+          <li><strong>Cooking</strong>: “A recipe needs 0.75 cups of sugar. How much for 6 batches?”</li>
+        </ul>
+        <blockquote>
+          ✍️ <strong>Tips for Good Problems</strong>:<br>
+          – Include clear numbers and units.<br>
+          – Require <strong>one or two operations</strong>.<br>
+          – Use relatable contexts (school, market, home).
+        </blockquote>
+
+        <h3>4. Estimation & Reasonableness Check</h3>
+        <p>Always ask:</p>
+        <ul>
+          <li>“Does my answer make sense?”</li>
+          <li>“Is it close to my estimate?”</li>
+        </ul>
+        <blockquote>
+          <strong>Example</strong>:<br>
+          If you calculate that 3.2 kg × 5 = 160 kg, you know something’s wrong!<br>
+          Estimate: 3 × 5 = 15 → answer should be <strong>around 16</strong>, not 160.
+        </blockquote>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Analyzing context to choose the right operation.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Explaining your reasoning clearly.</li>
+          <li><strong>Creativity and Innovation (CI)</strong>: Designing original, meaningful problems.</li>
+          <li><strong>Personal Development and Leadership (PL)</strong>: Applying math to manage real resources responsibly.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li><strong>Create a problem</strong>: Write a word problem that requires <strong>multiplying 6.25 by 8</strong>. Then solve it.</li>
+            <li><strong>Solve</strong>: A bottle holds 2.25 litres of juice. How many litres in 12 bottles?</li>
+            <li><strong>Multi-step</strong>: Kwame ran 5.6 km on Monday and 1.8 km less on Tuesday.<br>
+              a) How far did he run on Tuesday?<br>
+              b) What’s his total distance for both days?
+            </li>
+            <li><strong>Budgeting</strong>: A project costs GH₵12,450.75. If three departments share the cost equally, how much does each pay?</li>
+          </ol>
+          <p><em>Confirm your answers before moving forward.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 12, we’ll return to <strong>large number patterns</strong> like:</p>
+        <p><code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; 1,687,500 &nbsp; ...</code></p>
+        <p>You’ll learn to:</p>
+        <ul>
+          <li>Identify missing terms</li>
+          <li>Describe the rule (“add 500,000”)</li>
+          <li>Write any term using its position in the sequence</li>
+        </ul>
+        <p>This connects arithmetic operations to algebraic thinking!</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 10; // ← Lesson 11 (zero-indexed)
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Create and Solve Story Problems Involving Decimals Using the Four Basic Operations",
+      loTag: "B7.1.2.2.3",
+      objectives: [
+        "Interpret real-life situations involving decimals and identify the correct operation(s).",
+        "Solve multi-step word problems using addition, subtraction, multiplication, or division of decimals.",
+        "Create your own realistic decimal-based word problems based on everyday contexts.",
+        "Justify your solution process using place value reasoning and estimation."
+      ],
+      words: [
+        "decimal",
+        "addition",
+        "subtraction",
+        "multiplication",
+        "division",
+        "word problem",
+        "estimation",
+        "reasonableness",
+        "multi-step"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li><strong>Create a problem</strong>: Write a word problem that requires <strong>multiplying 6.25 by 8</strong>. Then solve it.</li>
+          <li><strong>Solve</strong>: A bottle holds 2.25 litres of juice. How many litres in 12 bottles?</li>
+          <li><strong>Multi-step</strong>: Kwame ran 5.6 km on Monday and 1.8 km less on Tuesday.<br>
+            a) How far did he run on Tuesday?<br>
+            b) What’s his total distance for both days?
+          </li>
+          <li><strong>Budgeting</strong>: A project costs GH₵12,450.75. If three departments share the cost equally, how much does each pay?</li>
+        </ol>
+        <p><em>Confirm your answers before moving forward.</em></p>
+      `,
+      nextPreview: "In Lesson 12, we’ll return to large number patterns like:\n\n187,500   687,500   1,187,500   1,687,500   ...\n\nYou’ll learn to:\n- Identify missing terms\n- Describe the rule (“add 500,000”)\n- Write any term using its position in the sequence\n\nThis connects arithmetic operations to algebraic thinking!"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "Mrs. Adamu bought 13.6 kg of meat. Mrs. Anderson bought 2.4 kg less. Total?", a: "24.8 kg", opts: ["24.8 kg", "11.2 kg", "26.0 kg", "22.4 kg"] },
+      { q: "Ebo weighs 28.6 kg. His father weighs 4 times as much. Total weight?", a: "143 kg", opts: ["114.4 kg", "143 kg", "171.6 kg", "85.8 kg"] },
+      { q: "45.75 m of linen shared by 5 children. Each gets?", a: "9.15 m", opts: ["9.15 m", "9.05 m", "9.25 m", "8.15 m"] },
+      { q: "Painting (GH₵4,580) + Choir robes (GH₵5,340) =", a: "GH₵9,920", opts: ["GH₵9,920", "GH₵9,820", "GH₵10,920", "GH₵8,920"] },
+      { q: "Which operation combines quantities?", a: "Addition", opts: ["Addition", "Subtraction", "Multiplication", "Division"] },
+      { q: "Which operation finds 'how much more'?", a: "Subtraction", opts: ["Addition", "Subtraction", "Multiplication", "Division"] },
+      { q: "A bottle holds 2.25 L. 12 bottles hold?", a: "27 L", opts: ["24 L", "27 L", "25.5 L", "28.5 L"] },
+      { q: "Kwame ran 5.6 km Monday, 1.8 km less Tuesday. Tuesday distance?", a: "3.8 km", opts: ["3.8 km", "4.2 km", "7.4 km", "4.8 km"] },
+      { q: "Total distance for Kwame (Mon + Tue)?", a: "9.4 km", opts: ["9.4 km", "11.2 km", "8.6 km", "10.4 km"] },
+      { q: "GH₵12,450.75 shared by 3 departments. Each pays?", a: "GH₵4,150.25", opts: ["GH₵4,150.25", "GH₵4,150.00", "GH₵3,150.25", "GH₵4,250.25"] },
+      { q: "Good word problems should:", a: "All of the above", opts: ["Use real contexts", "Have clear numbers", "Require 1-2 operations", "All of the above"] },
+      { q: "Estimate 3.2 × 5:", a: "Around 16", opts: ["Around 16", "Around 160", "Around 8", "Around 32"] },
+      { q: "To check division, you can:", a: "Multiply the answer by the divisor", opts: ["Add the numbers", "Multiply the answer by the divisor", "Round to nearest 10", "Guess again"] },
+      { q: "6.25 × 8 =", a: "50", opts: ["48", "50", "52", "49"] },
+      { q: "Creating problems helps develop:", a: "Creativity and Innovation", opts: ["Memorization", "Creativity and Innovation", "Speed", "Copying"] },
+      { q: "Align decimals for:", a: "Addition and subtraction", opts: ["Multiplication only", "Division only", "Addition and subtraction", "All operations"] },
+      { q: "0.75 cups × 6 batches =", a: "4.5 cups", opts: ["4.5 cups", "3.5 cups", "5.5 cups", "4.0 cups"] },
+      { q: "Car uses 0.08 L/km. On 12.8 L, distance =", a: "160 km", opts: ["160 km", "128 km", "102.4 km", "16 km"] },
+      { q: "Reasonableness means:", a: "Answer makes sense", opts: ["Answer is exact", "Answer makes sense", "Answer is large", "Answer matches friend's"] },
+      { q: "Which competency involves designing problems?", a: "Creativity and Innovation", opts: ["Critical Thinking", "Creativity and Innovation", "Leadership", "Memory"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      let preview = LESSON_CONFIG.nextPreview;
+      preview = preview.replace(/\n\n/g, '</p><p>')
+                      .replace(/^- /gm, '• ')
+                      .replace(/\n/g, '<br>');
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${preview}</p>
+      `.replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
