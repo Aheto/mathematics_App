@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: The Zero Exponent Rule – Why Any Natural Number to the Power of Zero Equals 1" />
+  <title>Mini OpenStax — The Zero Exponent Rule</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+    code {
+      background: #f1f1f1;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    pre {
+      background: #f8f9fa;
+      padding: 0.5rem;
+      border-left: 3px solid var(--green);
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">The Zero Exponent Rule – Why Any Natural Number to the Power of Zero Equals 1</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.2.3.3</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Explain <strong>why</strong> <code>a⁰ = 1</code> for any natural number <code>a ≠ 0</code>.</li>
+          <li>Use patterns, division of powers, and logical reasoning to <strong>verify</strong> the zero exponent rule.</li>
+          <li>Apply <code>a⁰ = 1</code> in calculations and problem-solving contexts.</li>
+          <li>Avoid common misconceptions (e.g., confusing <code>0⁰</code> or thinking <code>a⁰ = 0</code>).</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">zero exponent</span>
+          <span class="word-item">base</span>
+          <span class="word-item">natural number</span>
+          <span class="word-item">quotient rule</span>
+          <span class="word-item">pattern</span>
+          <span class="word-item">undefined</span>
+          <span class="word-item">power</span>
+          <span class="word-item">index</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. Understanding the Zero Exponent Rule</h3>
+        <blockquote>
+          <strong>Rule</strong>: For any <strong>natural number</strong> <code>a</code> (where <code>a ≠ 0</code>),<br>
+          <code>a⁰ = 1</code>
+        </blockquote>
+        <p>This is <strong>not arbitrary</strong>—it follows logically from the <strong>laws of exponents</strong>, especially the <strong>quotient rule</strong>.</p>
+
+        <h3>2. Proof by Pattern (Using Powers of a Number)</h3>
+        <p>Look at powers of 2:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Power</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2⁵</td>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td>2⁴</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td>2³</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>2²</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>2¹</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>2⁰</td>
+              <td>?</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Each time we <strong>decrease the exponent by 1</strong>, we <strong>divide by 2</strong>:</p>
+        <ul>
+          <li>32 ÷ 2 = 16</li>
+          <li>16 ÷ 2 = 8</li>
+          <li>8 ÷ 2 = 4</li>
+          <li>4 ÷ 2 = 2</li>
+          <li>So, 2 ÷ 2 = <strong>1</strong> → Therefore, <strong>2⁰ = 1</strong></li>
+        </ul>
+        <p>✅ This pattern holds for <strong>any base</strong> (3, 5, 10, etc.).</p>
+
+        <h3>3. Proof Using the Quotient Law of Exponents</h3>
+        <p>The <strong>quotient rule</strong> states:<br>
+          <code>aᵐ ÷ aⁿ = aᵐ⁻ⁿ</code> (for <code>a ≠ 0</code>)</p>
+        <p>Now consider:<br>
+          <code>4⁴ ÷ 4⁴ = 1</code> (any non-zero number divided by itself is 1)</p>
+        <p>But using the exponent rule:<br>
+          <code>4⁴ ÷ 4⁴ = 4⁴⁻⁴ = 4⁰</code></p>
+        <p>So:<br>
+          <code>4⁰ = 1</code></p>
+        <p>Similarly:<br>
+          <code>27 ÷ 27 = 1</code> and <code>27 = 3³</code> → <code>3³ ÷ 3³ = 3³⁻³ = 3⁰ = 1</code></p>
+        <p>✅ Thus, <strong>for any natural number <code>a ≠ 0</code>, <code>a⁰ = 1</code></strong>.</p>
+
+        <h3>4. Important Notes & Common Misconceptions</h3>
+        <ul>
+          <li>❌ <strong>Myth</strong>: “Anything to the power of zero is zero.”<br>
+            ✅ <strong>Truth</strong>: It’s <strong>1</strong>, not 0.</li>
+          <li>⚠️ <strong>Exception</strong>: <code>0⁰</code> is <strong>undefined</strong> (not covered here since we only deal with <strong>natural numbers as bases</strong>, and natural numbers start from 1).</li>
+          <li>✅ <strong>Examples</strong>:
+            <ul>
+              <li><code>5⁰ = 1</code></li>
+              <li><code>100⁰ = 1</code></li>
+              <li><code>1⁰ = 1</code></li>
+              <li><code>(2⁴ × 3²)⁰ = 1</code> → <strong>Any non-zero expression to the 0 power is 1</strong></li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>5. Applying the Rule in Problems</h3>
+        <p><strong>Example 1</strong>: Simplify<br>
+          <code>7³ × 7⁰ = ?</code><br>
+          → <code>7⁰ = 1</code>, so:<br>
+          <code>7³ × 1 = 343</code></p>
+        <p><strong>Example 2</strong>: Evaluate<br>
+          <code>(9 + 16)⁰ = ?</code><br>
+          → <code>25⁰ = 1</code></p>
+        <p><strong>Example 3</strong>: Solve<br>
+          If <code>x = 5</code>, what is <code>x⁰ + x¹</code>?<br>
+          → <code>5⁰ + 5¹ = 1 + 5 = 6</code></p>
+
+        <h3>6. Real-World Connection</h3>
+        <p>While <code>a⁰ = 1</code> may seem abstract, it ensures <strong>consistency in formulas</strong> used in:</p>
+        <ul>
+          <li><strong>Computer science</strong> (binary systems, algorithms)</li>
+          <li><strong>Finance</strong> (compound interest formulas when time = 0)</li>
+          <li><strong>Science</strong> (exponential decay models at time zero)</li>
+        </ul>
+        <div class="thought-experiment">
+          <strong>Thought Experiment</strong>:<br>
+          If a bacteria population is modeled by <code>P = 100 × 2ᵗ</code>, what is the population at <strong>time <code>t = 0</code></strong>?<br>
+          → <code>P = 100 × 2⁰ = 100 × 1 = 100</code> → the <strong>initial population</strong>.<br>
+          Without <code>2⁰ = 1</code>, the model would break!
+        </div>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Creativity and Innovation (CI)</strong>: Using patterns and logic to discover mathematical truths.</li>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Justifying rules rather than memorizing them.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Explaining why <code>a⁰ = 1</code> using multiple methods.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Use the <strong>pattern method</strong> to show why <code>5⁰ = 1</code>.</li>
+            <li>Use the <strong>quotient law</strong> to prove that <code>10⁰ = 1</code>.</li>
+            <li>Simplify:
+              <br>a) <code>8⁰ + 2³</code>
+              <br>b) <code>(3² × 4)⁰</code>
+              <br>c) <code>100⁰ × 0.5</code>
+            </li>
+            <li>A student claims: “<code>0⁰ = 1</code> because every number to the zero power is 1.” Is this correct? Explain.</li>
+          </ol>
+          <p><em>Confirm your answers before moving forward.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 15, we’ll focus on <strong>evaluating numbers in index form</strong>, such as:</p>
+        <ul>
+          <li><code>5³ = 125</code></li>
+          <li><code>6³ = 216</code></li>
+          <li>Mixed expressions like <code>11 ÷ 2⁵</code></li>
+        </ul>
+        <p>You’ll practice computing powers quickly and accurately—building fluency for algebra and scientific notation.</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 13; // ← Lesson 14 (zero-indexed)
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "The Zero Exponent Rule – Why Any Natural Number to the Power of Zero Equals 1",
+      loTag: "B7.1.2.3.3",
+      objectives: [
+        "Explain why a⁰ = 1 for any natural number a ≠ 0.",
+        "Use patterns, division of powers, and logical reasoning to verify the zero exponent rule.",
+        "Apply a⁰ = 1 in calculations and problem-solving contexts.",
+        "Avoid common misconceptions (e.g., confusing 0⁰ or thinking a⁰ = 0)."
+      ],
+      words: [
+        "zero exponent",
+        "base",
+        "natural number",
+        "quotient rule",
+        "pattern",
+        "undefined",
+        "power",
+        "index"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Use the <strong>pattern method</strong> to show why <code>5⁰ = 1</code>.</li>
+          <li>Use the <strong>quotient law</strong> to prove that <code>10⁰ = 1</code>.</li>
+          <li>Simplify:
+            <br>a) <code>8⁰ + 2³</code>
+            <br>b) <code>(3² × 4)⁰</code>
+            <br>c) <code>100⁰ × 0.5</code>
+          </li>
+          <li>A student claims: “<code>0⁰ = 1</code> because every number to the zero power is 1.” Is this correct? Explain.</li>
+        </ol>
+        <p><em>Confirm your answers before moving forward.</em></p>
+      `,
+      nextPreview: "In Lesson 15, we’ll focus on evaluating numbers in index form, such as:\n- 5³ = 125\n- 6³ = 216\n- Mixed expressions like 11 ÷ 2⁵\n\nYou’ll practice computing powers quickly and accurately—building fluency for algebra and scientific notation."
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "What is 5⁰?", a: "1", opts: ["0", "1", "5", "Undefined"] },
+      { q: "What is 100⁰?", a: "1", opts: ["0", "1", "100", "10"] },
+      { q: "What is 1⁰?", a: "1", opts: ["0", "1", "Undefined", "10"] },
+      { q: "Why is 2⁰ = 1? (Pattern method)", a: "Because 2¹ ÷ 2 = 2 ÷ 2 = 1", opts: ["Because 2×0=0", "Because 2¹ ÷ 2 = 2 ÷ 2 = 1", "It's a guess", "Because 0²=0"] },
+      { q: "Using quotient law: 7⁵ ÷ 7⁵ =", a: "7⁰ = 1", opts: ["7⁰ = 1", "7¹⁰", "0", "49"] },
+      { q: "Simplify: 8⁰ + 2³", a: "9", opts: ["0", "8", "9", "1"] },
+      { q: "(3² × 4)⁰ =", a: "1", opts: ["0", "1", "36", "12"] },
+      { q: "100⁰ × 0.5 =", a: "0.5", opts: ["0", "0.5", "50", "100"] },
+      { q: "Is 0⁰ defined in this lesson?", a: "No, it's undefined", opts: ["Yes, it's 1", "Yes, it's 0", "No, it's undefined", "It equals 10"] },
+      { q: "If x = 7, what is x⁰ + x¹?", a: "8", opts: ["0", "7", "8", "1"] },
+      { q: "Which is true?", a: "9⁰ = 1", opts: ["9⁰ = 0", "9⁰ = 9", "9⁰ = 1", "9⁰ is undefined"] },
+      { q: "(2⁴)⁰ =", a: "1", opts: ["16", "1", "0", "2"] },
+      { q: "Natural numbers start from:", a: "1", opts: ["0", "1", "-1", "10"] },
+      { q: "In bacteria model P = 50 × 3ᵗ, P at t=0 is:", a: "50", opts: ["0", "1", "50", "150"] },
+      { q: "7³ × 7⁰ =", a: "343", opts: ["0", "1", "343", "2401"] },
+      { q: "Which expression equals 1?", a: "All of the above", opts: ["5⁰", "(100)⁰", "(2×3)⁰", "All of the above"] },
+      { q: "Common mistake: a⁰ =", a: "1 (not 0)", opts: ["0", "a", "1 (not 0)", "Undefined"] },
+      { q: "Quotient rule: aᵐ ÷ aⁿ =", a: "aᵐ⁻ⁿ", opts: ["aᵐ⁺ⁿ", "aᵐ⁻ⁿ", "aᵐ×ⁿ", "m ÷ n"] },
+      { q: "Why does the zero exponent rule matter?", a: "All of the above", opts: ["For consistent formulas", "In science models", "In computer algorithms", "All of the above"] },
+      { q: "Which is NOT equal to 1?", a: "0⁰", opts: ["5⁰", "100⁰", "0⁰", "(7+3)⁰"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      let preview = LESSON_CONFIG.nextPreview;
+      preview = preview.replace(/\n\n/g, '</p><p>')
+                      .replace(/^- /gm, '• ')
+                      .replace(/\n/g, '<br>');
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${preview}</p>
+      `.replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
