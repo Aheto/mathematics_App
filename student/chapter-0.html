@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Mini OpenStax: Modeling Number Quantities Greater Than 1,000,000,000"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Modeling Number Quantities Greater Than 1,000,000,000" />
   <title>Mini OpenStax — Modeling Number Quantities Greater Than 1,000,000,000</title>
   <style>
     :root {
@@ -12,67 +12,70 @@
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body { 
-      font-family: 'Segoe UI', system-ui, sans-serif; 
-      margin: 0; 
-      padding: 0; 
-      background: #fff; 
-      color: var(--dark); 
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
       line-height: 1.6;
     }
-    .container { 
-      max-width: 800px; 
-      margin: 0 auto; 
-      padding: 1rem; 
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
     }
-    .header { 
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      margin-bottom: 1.5rem; 
-      flex-wrap: wrap; 
-      gap: 0.5rem; 
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
-    .role-badge { 
-      background: #e9ecef; 
-      padding: 0.25rem 0.5rem; 
-      border-radius: 4px; 
-      font-size: 0.85rem; 
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
     }
-    .chapter-nav { 
-      margin: 1.2rem 0; 
-      display: flex; 
-      flex-wrap: wrap; 
-      gap: 0.4rem; 
-      justify-content: center; 
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem; 
-      background: var(--green); 
-      color: white; 
-      text-decoration: none; 
-      border-radius: 4px; 
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
       font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
     }
-    .chapter-btn.active, .chapter-btn:hover { 
-      background: #00502e; 
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
     }
-    .section { 
-      margin-bottom: 2rem; 
+    .section {
+      margin-bottom: 2rem;
       padding-bottom: 1.5rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list { 
-      display: flex; 
-      flex-wrap: wrap; 
-      gap: 0.5rem; 
-      margin: 0.5rem 0; 
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
     }
-    .word-item { 
-      background: var(--light); 
-      padding: 0.25rem 0.5rem; 
-      border-radius: 4px; 
-      font-family: monospace; 
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
       font-size: 0.95rem;
     }
     table {
@@ -88,64 +91,63 @@
     th {
       background-color: #f0f7f4;
     }
-    .thought-experiment,
-    .checkpoint {
+    .checkpoint, .thought-experiment {
       background: #f8f9fa;
       padding: 1rem;
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz { 
-      margin-top: 2rem; 
+    .quiz {
+      margin-top: 2rem;
     }
-    .question { 
-      margin-bottom: 1.2rem; 
+    .question {
+      margin-bottom: 1.2rem;
     }
-    .options { 
-      margin-left: 1rem; 
+    .options {
+      margin-left: 1rem;
     }
-    .option { 
-      margin: 0.4rem 0; 
+    .option {
+      margin: 0.4rem 0;
     }
     .btn {
-      background: var(--green); 
-      color: white; 
-      border: none; 
+      background: var(--green);
+      color: white;
+      border: none;
       padding: 0.5rem 1rem;
-      border-radius: 4px; 
-      cursor: pointer; 
-      font-size: 1rem; 
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover { 
-      background: #00502e; 
+    .btn:hover {
+      background: #00502e;
     }
-    .btn-secondary { 
-      background: #6c757d; 
+    .btn-secondary {
+      background: #6c757d;
     }
-    .btn-secondary:hover { 
-      background: #5a6268; 
+    .btn-secondary:hover {
+      background: #5a6268;
     }
-    .feedback { 
-      margin-top: 1.5rem; 
-      padding: 1rem; 
-      background: var(--light); 
-      border-left: 4px solid var(--green); 
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
     }
-    footer { 
-      text-align: center; 
-      margin-top: 2rem; 
-      font-size: 0.9rem; 
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a { 
-      color: var(--green); 
-      text-decoration: none; 
+    a {
+      color: var(--green);
+      text-decoration: none;
     }
-    a:hover { 
-      text-decoration: underline; 
+    a:hover {
+      text-decoration: underline;
     }
     blockquote {
       margin: 1rem 0;
@@ -160,149 +162,217 @@
       border-radius: 6px;
       margin-top: 1.5rem;
     }
+    code {
+      background: #f1f1f1;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
       <div>
-        <h1>Modeling Number Quantities Greater Than 1,000,000,000</h1>
-        <div class="lo-tags">B7.1.1.1.1</div>
+        <h1 id="lesson-title">Modeling Number Quantities Greater Than 1,000,000,000</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.1.1.1</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
+    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
     <main>
       <!-- Learning Objectives -->
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul>
-          <li>Understand how numbers bigger than one billion are built using place value.</li>
-          <li>Use tools like graph paper, isometric paper, and base-10 blocks to model huge numbers.</li>
-          <li>Break down big numbers into parts you can see and understand.</li>
+        <ul id="objectives">
+          <li>Understand the place value system for numbers greater than one billion (1,000,000,000).</li>
+          <li>Use physical and visual tools—graph sheets, isometric paper, and multi-base blocks—to model large numbers.</li>
+          <li>Apply critical thinking to decompose and represent numbers over one billion in multiple ways.</li>
         </ul>
       </div>
 
       <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
-        <p>Get familiar with these key terms:</p>
-        <div class="word-list" id="word-list"></div>
-      </div>
-
-      <!-- Key Concepts -->
-      <div class="section">
-        <h2>📘 Understanding Big Numbers</h2>
-
-        <h3>1. How Big Is a Billion?</h3>
-        <p>One billion is written as 1,000,000,000. That’s a 1 followed by nine zeros!</p>
-        <p>Numbers even bigger than that keep following the same pattern:</p>
-        <table>
-          <thead><tr><th>Place Name</th><th>Number</th></tr></thead>
-          <tbody>
-            <tr><td>Billions</td><td>1,000,000,000</td></tr>
-            <tr><td>Ten Billions</td><td>10,000,000,000</td></tr>
-            <tr><td>Hundred Billions</td><td>100,000,000,000</td></tr>
-            <tr><td>Trillions</td><td>1,000,000,000,000</td></tr>
-          </tbody>
-        </table>
-
-        <h3>2. Using Base-10 Blocks for Huge Numbers</h3>
-        <p>You’ve probably used small cubes, rods, and flats to show ones, tens, and hundreds. For really big numbers, we “scale up” those blocks:</p>
-        <table>
-          <thead><tr><th>Block Name</th><th>What It Shows</th><th>Value</th></tr></thead>
-          <tbody>
-            <tr><td>Unit</td><td>One small cube</td><td>1</td></tr>
-            <tr><td>Rod</td><td>10 units stuck together</td><td>10</td></tr>
-            <tr><td>Flat</td><td>10 rods (100 units)</td><td>100</td></tr>
-            <tr><td>Cube</td><td>10 flats (1,000 units)</td><td>1,000</td></tr>
-            <tr><td>Large Cube</td><td>100,000 units</td><td>100,000</td></tr>
-            <tr><td>Scaled Rod</td><td>10 large cubes</td><td>1,000,000</td></tr>
-            <tr><td>Scaled Flat</td><td>10 scaled rods</td><td>10,000,000</td></tr>
-            <tr><td>Scaled Block</td><td>10 scaled flats</td><td>100,000,000</td></tr>
-          </tbody>
-        </table>
-        <blockquote>
-          To make one billion (1,000,000,000), you need ten of the “100 million” blocks.<br>
-          Because 10 × 100,000,000 = 1,000,000,000.
-        </blockquote>
-
-        <h3>3. Drawing Big Numbers on Paper</h3>
-        <p>You don’t always have physical blocks. So we use paper tools:</p>
-        <ul>
-          <li><strong>Graph paper</strong> (with squares): Each square can stand for 1, 1,000, or even 100,000—whatever makes sense.</li>
-          <li><strong>Isometric paper</strong> (with triangles): Helps you draw 3D-looking blocks so you can “see” the size difference between millions and billions.</li>
-        </ul>
-        <p><strong>Tip:</strong> Use different colors! For example:
-          <ul>
-            <li>Green for millions</li>
-            <li>Blue for hundred millions</li>
-            <li>Red for billions</li>
-          </ul>
-        This makes it easier to tell the parts apart.
-        </p>
-      </div>
-
-      <!-- Hands-On Activity -->
-      <div class="section">
-        <h2>🛠️ Let’s Practice: Modeling 2,450,000,000</h2>
-        <p>Break this number into its parts:</p>
-        <ul>
-          <li>2 in the billions place → 2 × 1,000,000,000</li>
-          <li>4 in the hundred millions place → 4 × 100,000,000</li>
-          <li>5 in the ten millions place → 5 × 10,000,000</li>
-        </ul>
-        <p>So to build it with scaled blocks, you’d use:</p>
-        <ul>
-          <li>20 blocks of 100,000,000 (to make 2 billion) <strong>plus</strong></li>
-          <li>4 more blocks of 100,000,000 <strong>plus</strong></li>
-          <li>5 flats of 10,000,000</li>
-        </ul>
-        <p><strong>Total:</strong> 24 blocks of 100 million + 5 flats of 10 million.</p>
-        <p>On graph paper, draw 24 big rectangles labeled “100M” and 5 smaller ones labeled “10M”.</p>
-      </div>
-
-      <!-- Real-World Connection -->
-      <div class="section">
-        <h2>🌍 Why This Matters</h2>
-        <p>Governments, big companies, and even countries talk about money in the billions. For example, Ghana’s national budget might be over 100 billion cedis!</p>
-        <p>If you can picture what “100 billion” really looks like, you’ll better understand news, budgets, and decisions that affect your life.</p>
-        <div class="thought-experiment">
-          <strong>Think About This:</strong> If Ghana spends 12.5 billion cedis on education in a year, how many GH₵200 notes would that be? (We’ll explore this idea in the next lesson!)
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">place value</span>
+          <span class="word-item">billion</span>
+          <span class="word-item">multi-base blocks</span>
+          <span class="word-item">graph sheet</span>
+          <span class="word-item">isometric paper</span>
+          <span class="word-item">scaled model</span>
+          <span class="word-item">decompose</span>
+          <span class="word-item">ten billions</span>
+          <span class="word-item">hundred billions</span>
         </div>
       </div>
 
-      <!-- Core Skills -->
-      <div class="section">
-        <h2>🧠 Skills You’re Building</h2>
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. Understanding Large Numbers</h3>
+        <p>Numbers beyond one billion follow the same base-10 place value structure but extend further to the left:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Place Value</th>
+              <th>Example (in digits)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Billions</td>
+              <td>1,000,000,000</td>
+            </tr>
+            <tr>
+              <td>Ten Billions</td>
+              <td>10,000,000,000</td>
+            </tr>
+            <tr>
+              <td>Hundred Billions</td>
+              <td>100,000,000,000</td>
+            </tr>
+            <tr>
+              <td>Trillions</td>
+              <td>1,000,000,000,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>Note</strong>: One billion = 1,000,000,000
+        </blockquote>
+
+        <h3>2. Multi-Base Blocks for Modeling Large Numbers</h3>
+        <p>Multi-base (base-10) blocks help visualize place value concretely. For numbers beyond one million, we scale up the traditional blocks:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Block Type</th>
+              <th>Represents</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Unit</td>
+              <td>Single cube</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Rod</td>
+              <td>10 units</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Flat</td>
+              <td>10 rods (100 units)</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Cube</td>
+              <td>10 flats (1,000)</td>
+              <td>1,000</td>
+            </tr>
+            <tr>
+              <td><strong>Large Cube</strong></td>
+              <td>100,000 units</td>
+              <td>100,000</td>
+            </tr>
+            <tr>
+              <td><strong>Rod (scaled)</strong></td>
+              <td>10 large cubes</td>
+              <td>1,000,000</td>
+            </tr>
+            <tr>
+              <td><strong>Flat (scaled)</strong></td>
+              <td>10 scaled rods</td>
+              <td>10,000,000</td>
+            </tr>
+            <tr>
+              <td><strong>Block (scaled)</strong></td>
+              <td>10 scaled flats</td>
+              <td><strong>100,000,000</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          To reach <strong>1,000,000,000 (one billion)</strong>, you need <strong>10 of the 100,000,000 blocks</strong>.
+        </blockquote>
+        <blockquote>
+          <strong>Example: How many blocks make a billion?</strong><br>
+          – 1 block = 100,000,000<br>
+          – So, 10 × 100,000,000 = 1,000,000,000<br>
+          ✅ <strong>Answer: 10 blocks</strong>
+        </blockquote>
+
+        <h3>3. Using Graph Sheets and Isometric Paper</h3>
         <ul>
-          <li><strong>Critical Thinking:</strong> Breaking huge ideas into smaller, manageable pieces.</li>
-          <li><strong>Communication:</strong> Explaining your thinking clearly to others using math words.</li>
+          <li><strong>Graph sheets</strong> (square grid paper): Useful for drawing scaled representations of blocks. Each square can represent a unit, or you can assign larger values (e.g., 1 square = 10,000).</li>
+          <li><strong>Isometric paper</strong> (triangular grid): Helps draw 3D-like blocks to show volume and hierarchy of place values more clearly.</li>
+        </ul>
+        <blockquote>
+          <strong>Tip</strong>: Color-code each place value (e.g., green for millions, blue for hundred millions, red for billions) to enhance visual understanding.
+        </blockquote>
+
+        <h3>Hands-On Activity: Modeling 2,450,000,000</h3>
+        <p>Let’s break down <strong>2,450,000,000</strong> using scaled multi-base blocks:</p>
+        <ul>
+          <li><strong>Billions place</strong>: 2 → 2 × 1,000,000,000</li>
+          <li><strong>Hundred millions place</strong>: 4 → 4 × 100,000,000</li>
+          <li><strong>Ten millions place</strong>: 5 → 5 × 10,000,000</li>
+        </ul>
+        <p>So you would use:</p>
+        <ul>
+          <li><strong>2 billion blocks</strong> (if available), or</li>
+          <li><strong>20 blocks of 100,000,000</strong> (since 1 billion = 10 × 100,000,000)</li>
+          <li>Plus <strong>4 additional 100,000,000 blocks</strong></li>
+          <li>Plus <strong>5 flats of 10,000,000</strong></li>
+        </ul>
+        <p><strong>Total</strong>: <strong>24 blocks of 100,000,000 + 5 flats of 10,000,000</strong></p>
+        <p>On graph paper, you could draw:</p>
+        <ul>
+          <li>24 large rectangles labeled “100M”</li>
+          <li>5 smaller rectangles labeled “10M”</li>
+        </ul>
+
+        <h3>Real-World Connection</h3>
+        <p>Governments and corporations often deal with budgets in the billions (e.g., national debt, tech company revenues). Being able to <strong>visualize and model</strong> these numbers helps in understanding their magnitude and making informed decisions.</p>
+        <div class="thought-experiment">
+          <strong>Thought Experiment</strong>:<br>
+          If Ghana’s annual education budget is GH₵12,500,000,000, how many GH₵200 notes would that be? (We’ll explore this in the next lesson using currency modeling.)
+        </div>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking & Problem Solving</strong>: Decomposing huge numbers into manageable parts.</li>
+          <li><strong>Communication & Collaboration</strong>: Explaining your model to peers using precise mathematical language.</li>
         </ul>
       </div>
 
       <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint">
+        <div class="checkpoint" id="checkpoint-questions">
           <ol>
-            <li>How many “100 million” blocks do you need to show 3.7 billion?</li>
-            <li>Sketch a simple drawing of 1.2 billion using labeled boxes or rectangles.</li>
-            <li>Why is it better to use scaled blocks instead of counting out one billion little cubes?</li>
+            <li>How many 100,000,000 blocks are needed to model 3.7 billion?</li>
+            <li>Draw a simple representation of 1,200,000,000 using graph paper notation (label each part).</li>
+            <li>Why is it helpful to use scaled blocks instead of counting individual units for large numbers?</li>
           </ol>
-          <p><em>Take your time. Make sure you’re confident before moving on!</em></p>
+          <p><em>Confirm your answers before moving to the next lesson.</em></p>
         </div>
       </div>
 
       <!-- Preview Next Lesson -->
-      <div class="preview-next">
-        <h3>🔜 Coming Up: Lesson 2</h3>
-        <p>We’ll use real Ghanaian money—like GH₵20, GH₵50, GH₵100, and GH₵200 notes—to model amounts up to one billion. You’ll see how math connects directly to everyday life!</p>
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 2, we’ll explore <strong>using currency denominations (GH₵20, GH₵50, GH₵100, GH₵200)</strong> to model amounts up to one billion—linking math to real-life financial literacy.</p>
       </div>
 
-      <!-- Name & Quiz Section (Hidden Until Ready) -->
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
       <div id="student-name-prompt" class="section" style="display:none;">
         <h2>👤 Your Name</h2>
         <div id="name-display"></div>
@@ -313,7 +383,7 @@
 
       <div class="quiz" id="quiz-container" style="display:none;">
         <h2>📝 Quick Check (20 Questions)</h2>
-        <p>Choose the best answer for each question.</p>
+        <p>Select the best answer for each question.</p>
         <form id="quiz-form"></form>
         <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
       </div>
@@ -331,28 +401,101 @@
   </div>
 
   <script>
-    // ====== Basic Setup ======
-    const currentChapter = 0;
-    const MAX_CHAPTER = 261;
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 0; // ← Lesson 1 (zero-indexed)
     const WHATSAPP_NUMBER = "233257320201";
     window.startTime = Date.now();
 
-    // Analytics
-    const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
-    function isAnalyticsEnabled() {
-      return localStorage.getItem(ANALYTICS_KEY) === '1';
-    }
-    function logEvent(type, data = {}) {
-      if (!isAnalyticsEnabled()) return;
-      const events = JSON.parse(localStorage.getItem('events') || '[]');
-      events.push({ type, timestamp: Date.now(), lesson: currentChapter, data });
-      localStorage.setItem('events', JSON.stringify(events));
-    }
-    function enableAnalytics() {
-      localStorage.setItem(ANALYTICS_KEY, '1');
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Modeling Number Quantities Greater Than 1,000,000,000",
+      loTag: "B7.1.1.1.1",
+      objectives: [
+        "Understand the place value system for numbers greater than one billion (1,000,000,000).",
+        "Use physical and visual tools—graph sheets, isometric paper, and multi-base blocks—to model large numbers.",
+        "Apply critical thinking to decompose and represent numbers over one billion in multiple ways."
+      ],
+      words: [
+        "place value",
+        "billion",
+        "multi-base blocks",
+        "graph sheet",
+        "isometric paper",
+        "scaled model",
+        "decompose",
+        "ten billions",
+        "hundred billions"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>How many 100,000,000 blocks are needed to model 3.7 billion?</li>
+          <li>Draw a simple representation of 1,200,000,000 using graph paper notation (label each part).</li>
+          <li>Why is it helpful to use scaled blocks instead of counting individual units for large numbers?</li>
+        </ol>
+        <p><em>Confirm your answers before moving to the next lesson.</em></p>
+      `,
+      nextPreview: "In Lesson 2, we’ll explore using currency denominations (GH₵20, GH₵50, GH₵100, GH₵200) to model amounts up to one billion—linking math to real-life financial literacy."
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "How many 100,000,000 blocks make 1 billion?", a: "10", opts: ["1", "10", "100", "1,000"] },
+      { q: "What is 1,000,000,000 in words?", a: "One billion", opts: ["One million", "One billion", "One trillion", "Ten billion"] },
+      { q: "Which tool uses triangular grids to draw 3D blocks?", a: "Isometric paper", opts: ["Graph sheet", "Isometric paper", "Ruler", "Calculator"] },
+      { q: "How many 100,000,000 blocks are in 3.7 billion?", a: "37", opts: ["3", "30", "37", "370"] },
+      { q: "What does a scaled flat represent in this lesson?", a: "10,000,000", opts: ["1,000", "100,000", "1,000,000", "10,000,000"] },
+      { q: "Which place comes after billions?", a: "Ten billions", opts: ["Millions", "Ten billions", "Hundred thousands", "Trillions"] },
+      { q: "Why use scaled blocks for large numbers?", a: "It's impossible to count individual units", opts: ["They are prettier", "It's impossible to count individual units", "Teachers require it", "Blocks are free"] },
+      { q: "How many zeros are in one billion?", a: "9", opts: ["6", "9", "12", "3"] },
+      { q: "What is 2,450,000,000 broken into place values?", a: "2 billions, 4 hundred millions, 5 ten millions", opts: ["24 billions, 5 millions", "2 billions, 4 hundred millions, 5 ten millions", "245 millions", "2 trillions"] },
+      { q: "Graph sheets have which type of grid?", a: "Square", opts: ["Triangular", "Hexagonal", "Square", "Circular"] },
+      { q: "What is 100,000,000 × 10?", a: "1,000,000,000", opts: ["100,000,000", "1,000,000,000", "10,000,000,000", "100,000"] },
+      { q: "Which competency is developed by modeling large numbers?", a: "Critical Thinking & Problem Solving", opts: ["Memorization", "Speed counting", "Critical Thinking & Problem Solving"] },
+      { q: "How would you model 1.2 billion using 100M blocks?", a: "12 blocks", opts: ["1 block", "2 blocks", "10 blocks", "12 blocks"] },
+      { q: "What is the value of a scaled rod in this lesson?", a: "1,000,000", opts: ["10", "1,000", "100,000", "1,000,000"] },
+      { q: "Color-coding blocks helps with:", a: "Visual understanding of place value", opts: ["Making art", "Visual understanding of place value", "Saving ink", "Playing games"] },
+      { q: "Which number is largest?", a: "100,000,000,000", opts: ["1,000,000,000", "10,000,000,000", "100,000,000,000", "1,000,000"] },
+      { q: "Ten billions equals:", a: "10,000,000,000", opts: ["1,000,000,000", "10,000,000,000", "100,000,000", "1,000,000"] },
+      { q: "Multi-base blocks are based on which number system?", a: "Base-10", opts: ["Binary", "Base-10", "Hexadecimal", "Roman"] },
+      { q: "In 2,450,000,000, the digit '4' is in which place?", a: "Hundred millions", opts: ["Billions", "Hundred millions", "Ten millions", "Millions"] },
+      { q: "Real-world use of modeling billions includes:", a: "National budgets", opts: ["Shopping lists", "National budgets", "Counting pencils", "Telling time"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
     }
 
-    // Simple shuffle (for quiz options)
+    // --- Simple Shuffle ---
     function shuffle(array) {
       const arr = [...array];
       for (let i = arr.length - 1; i > 0; i--) {
@@ -362,57 +505,35 @@
       return arr;
     }
 
-    // Content
-    const WORDS = [
-      "billion", "trillion", "place value", "base-10 blocks",
-      "graph paper", "isometric paper", "hundred million",
-      "ten billion", "scaled model", "break down"
-    ];
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
 
-    const QUIZ = [
-      { q: "How many 100,000,000 blocks make 1,000,000,000?", a: "10", opts: ["1", "10", "100", "1,000"] },
-      { q: "Which paper helps you draw 3D-looking blocks?", a: "Isometric paper", opts: ["Plain paper", "Graph paper", "Isometric paper", "Notebook"] },
-      { q: "What does a 'scaled flat' represent?", a: "10,000,000", opts: ["1,000", "10,000,000", "100,000,000", "1,000,000,000"] },
-      { q: "How many 100,000,000 blocks for 3.7 billion?", a: "37", opts: ["37", "370", "3", "7"] },
-      { q: "What place comes right after 'billions'?", a: "Ten billions", opts: ["Millions", "Ten billions", "Hundred thousands", "Trillions"] },
-      { q: "Why scale up blocks for big numbers?", a: "Counting single units is impractical", opts: ["To save plastic", "Counting single units is impractical", "To make them prettier", "To confuse students"] },
-      { q: "How to model 2,450,000,000?", a: "24 × 100M + 5 × 10M", opts: ["24 × 100M + 5 × 10M", "2 × 1B + 45 × 1M", "245 × 10M", "2450 × 1M"] },
-      { q: "How many billions in one trillion?", a: "1,000", opts: ["10", "100", "1,000", "10,000"] },
-      { q: "Which paper has square grids?", a: "Graph paper", opts: ["Isometric paper", "Graph paper", "Whiteboard", "Chart paper"] },
-      { q: "Value of '4' in 4,200,000,000?", a: "4 billion", opts: ["4 million", "400 million", "4 billion", "40 billion"] },
-      { q: "How many 100M blocks for 5 billion?", a: "50", opts: ["5", "50", "500", "5,000"] },
-      { q: "What skill do you build by explaining your model?", a: "Communication", opts: ["Physical fitness", "Communication", "Cooking", "Memory recall only"] },
-      { q: "What is 10 × 100,000,000?", a: "1,000,000,000", opts: ["100,000,000", "1,000,000,000", "10,000,000,000", "100,000,000,000"] },
-      { q: "In our number system, each place is how many times the last?", a: "10", opts: ["2", "5", "10", "100"] },
-      { q: "Which is larger: 999,999,999 or 1,000,000,000?", a: "1,000,000,000", opts: ["999,999,999", "1,000,000,000", "They are equal", "Cannot compare"] },
-      { q: "Why color-code blocks?", a: "To tell place values apart", opts: ["To match uniforms", "To tell place values apart", "To reduce printing cost", "For decoration"] },
-      { q: "How to show 1.2 billion with 100M blocks?", a: "12 blocks", opts: ["12 blocks", "120 blocks", "1 block", "2 blocks"] },
-      { q: "Where do we see numbers over 1 billion?", a: "National budget", opts: ["Pencils in a box", "National budget", "Pages in a book", "Students in class"] },
-      { q: "What comes after 'hundred billions'?", a: "Trillions", opts: ["Trillions", "Quadrillions", "Ten trillions", "Millions"] },
-      { q: "Why model big numbers?", a: "To understand their size and make smart choices", opts: ["It makes math harder", "To understand their size and make smart choices", "Only teachers need it", "It replaces calculators"] }
-    ];
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
 
-    // ====== Rendering Functions ======
-    function renderWords() {
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
       document.getElementById('word-list').innerHTML =
-        WORDS.map(w => `<span class="word-item">${w}</span>`).join('');
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${LESSON_CONFIG.nextPreview}</p>
+      `;
     }
 
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      let html = `<a href="../index.html" class="chapter-btn">Home</a>`;
-      for (let i = 0; i < 3; i++) {
-        const num = currentChapter + i + 1;
-        const active = i === 0 ? 'active' : '';
-        html += `<a href="chapter-${currentChapter + i}.html" class="chapter-btn ${active}">Lesson ${num}</a>`;
-      }
-      nav.innerHTML = html;
-    }
-
+    // --- Quiz Rendering ---
     function renderQuiz() {
       const form = document.getElementById('quiz-form');
       let html = '';
-      QUIZ.forEach((item, idx) => {
+      QUIZ_ITEMS.forEach((item, idx) => {
         const num = idx + 1;
         const opts = shuffle(item.opts);
         html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
@@ -425,9 +546,10 @@
       form.innerHTML = html;
     }
 
+    // --- Feedback & WhatsApp ---
     function showFeedback() {
       const answers = [];
-      for (let i = 1; i <= 20; i++) {
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
         const el = document.querySelector(`input[name="q${i}"]:checked`);
         answers.push(el ? el.value : null);
       }
@@ -437,37 +559,34 @@
       }
 
       let correct = 0;
-      const results = [];
-      QUIZ.forEach((item, i) => {
-        const isCorrect = answers[i] === item.a;
-        if (isCorrect) correct++;
-        results.push({ q: item.q, given: answers[i], correct: item.a, ok: isCorrect });
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
       });
 
       const score = correct;
-      const mastery = score >= 15;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
       const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem('attempts_0')) || 0) + 1;
-      localStorage.setItem('attempts_0', attempts);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
       const name = localStorage.getItem('student_name') || '[Name]';
 
-      // Build WhatsApp message
-      let msg = `*Mini OpenStax — Big Numbers Lesson*\nStudent: ${name}\nScore: ${score}/20 (${Math.round(score/20*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}\n\n`;
-      if (mastery) msg += "🎉 Great job! You've mastered modeling huge numbers.\n";
-      
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 
       document.getElementById('feedback').innerHTML = `
         <div class="feedback">
-          <h3>Your Score: ${score} out of 20</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered the concept!' : score >= 10 ? 'Review the questions you missed.' : 'Try the lesson again, then retake the quiz.'}</p>
-          <p><strong>Time:</strong> ${timeSec} seconds | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send My Report</a>
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
         </div>
       `;
     }
 
+    // --- Name Prompt ---
     function setupNamePrompt() {
       const saved = localStorage.getItem('student_name');
       const promptDiv = document.getElementById('student-name-prompt');
@@ -486,7 +605,12 @@
       }
     }
 
-    function askForNewName() {
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
       document.getElementById('student-name-prompt').style.display = 'block';
       document.getElementById('quiz-container').style.display = 'none';
       document.getElementById('name-display').style.display = 'none';
@@ -498,44 +622,33 @@
           <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
         </div>
       `;
-    }
-
-    // Global functions for buttons
-    window.startQuiz = function() {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-      logEvent('lesson_start');
     };
-
-    window.askForNewName = askForNewName;
-
-    window.saveName = function() {
+    window.saveName = () => {
       const name = document.getElementById('student-name').value.trim();
-      if (!name) {
-        alert("Please enter your name.");
-        return;
-      }
+      if (!name) { alert("Please enter your name."); return; }
       localStorage.setItem('student_name', name);
-      const isTeacher = document.getElementById('teacher-mode').checked;
-      if (isTeacher) enableAnalytics();
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
       window.startQuiz();
     };
 
-    // ====== Initialize Page ======
+    // --- Initialize Page ---
     function init() {
       renderNavigation();
-      renderWords();
+      renderContent();
       renderQuiz();
       document.getElementById('submit-quiz').onclick = showFeedback;
       setupNamePrompt();
     }
 
+    // Analytics toggle
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('send-analytics').onclick = (e) => {
         e.preventDefault();
-        if (confirm('Help us improve Mini OpenStax by sharing anonymous usage data?')) {
-          alert("Thank you! Your data will be sent securely.");
-          // In a full app, this would send logs—but simplified here
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
         }
       };
       init();
