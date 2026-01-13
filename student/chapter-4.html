@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Expressing Decimal Numerals to Given Significant Figures and Decimal Places" />
+  <title>Mini OpenStax — Expressing Decimal Numerals to Given Significant Figures and Decimal Places</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+    code {
+      background: #f1f1f1;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    ul.rules li {
+      margin-bottom: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Expressing Decimal Numerals to Given Significant Figures and Decimal Places</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.1.1.5</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Identify <strong>significant figures</strong> in decimal numbers, including when <strong>zero is significant</strong>.</li>
+          <li>Round decimals to a specified number of <strong>significant figures (sf)</strong>.</li>
+          <li>Round decimals to a specified number of <strong>decimal places (dp)</strong>.</li>
+          <li>Interpret real-world measurement scenarios involving rounding to decimal places.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">significant figures (sf)</span>
+          <span class="word-item">decimal places (dp)</span>
+          <span class="word-item">leading zeros</span>
+          <span class="word-item">trailing zeros</span>
+          <span class="word-item">precision</span>
+          <span class="word-item">measurement tolerance</span>
+          <span class="word-item">rounding</span>
+          <span class="word-item">non-zero digits</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. Understanding Significant Figures (SF) in Decimals</h3>
+        <p><strong>Significant figures</strong> are the digits in a number that carry meaningful information about its precision.</p>
+        
+        <h4>Rules for Identifying Significant Figures:</h4>
+        <ul class="rules">
+          <li><strong>All non-zero digits are significant</strong>.<br>
+            → e.g., 7.429 has <strong>4 sf</strong></li>
+          <li><strong>Zeros between non-zero digits are significant</strong>.<br>
+            → e.g., 7.021 has <strong>4 sf</strong></li>
+          <li><strong>Leading zeros (before the first non-zero digit) are NOT significant</strong>.<br>
+            → e.g., 0.0045 has <strong>2 sf</strong></li>
+          <li><strong>Trailing zeros in a decimal number ARE significant</strong>.<br>
+            → e.g., 0.360 has <strong>3 sf</strong> (the final zero shows precision to thousandths)</li>
+        </ul>
+
+        <blockquote>
+          ✅ <strong>Examples from Curriculum</strong>:<br>
+          – <strong>0.360</strong> → <strong>3 sf</strong><br>
+          – <strong>7.021</strong> → <strong>4 sf</strong>
+        </blockquote>
+
+        <h3>2. Rounding to Significant Figures (SF)</h3>
+        <p><strong>Steps</strong>:</p>
+        <ol>
+          <li>Count the required number of <strong>significant digits</strong> from the <strong>first non-zero digit</strong>.</li>
+          <li>Look at the <strong>next digit</strong> (to the right).
+            <ul>
+              <li>If ≥5 → round up</li>
+              <li>If &lt;5 → keep unchanged</li>
+            </ul>
+          </li>
+          <li>Replace remaining digits with zeros or drop them (for decimals).</li>
+        </ol>
+
+        <blockquote>
+          <strong>Example</strong>: Round <strong>0.00234567</strong><br>
+          – To <strong>3 sf</strong>: First 3 sig figs = 2, 3, 4 → look at 5 → round up → <strong>0.00235</strong><br>
+          – To <strong>4 sf</strong>: 2,3,4,5 → look at 6 → round up → <strong>0.002346</strong><br>
+          – To <strong>6 sf</strong>: 2,3,4,5,6,7 → no next digit → <strong>0.00234567</strong>
+        </blockquote>
+
+        <blockquote>
+          <strong>Example</strong>: Round <strong>84.40995000</strong><br>
+          – To <strong>3 sf</strong>: 8,4,4 → look at 0 → <strong>84.4</strong><br>
+          – To <strong>4 sf</strong>: 8,4,4,0 → look at 9 → round up → <strong>84.41</strong><br>
+          – To <strong>6 sf</strong>: 8,4,4,0,9,9 → look at 5 → round up → <strong>84.4100</strong>
+        </blockquote>
+        <p>🔍 Note: Trailing zeros after a decimal <strong>are kept</strong> to show precision.</p>
+
+        <h3>3. Rounding to Decimal Places (DP)</h3>
+        <p><strong>Decimal places</strong> count digits <strong>after the decimal point</strong>, regardless of significance.</p>
+        <p><strong>Steps</strong>:</p>
+        <ol>
+          <li>Count the required number of digits <strong>after the decimal</strong>.</li>
+          <li>Look at the <strong>next digit</strong>.
+            <ul>
+              <li>If ≥5 → round up</li>
+              <li>If &lt;5 → leave unchanged</li>
+            </ul>
+          </li>
+          <li>Drop all further digits.</li>
+        </ol>
+
+        <blockquote>
+          <strong>Example</strong>: <strong>745.9674</strong><br>
+          – To <strong>3 dp</strong>: Look at 4th digit (4 &lt; 5) → <strong>745.967</strong><br>
+          – To <strong>2 dp</strong>: Look at 3rd digit (7 ≥ 5) → <strong>745.97</strong><br>
+          – To <strong>1 dp</strong>: Look at 2nd digit (6 ≥ 5) → <strong>746.0</strong>
+        </blockquote>
+        <p>💡 Important: <strong>746.0 ≠ 746</strong> in terms of precision—746.0 implies accuracy to tenths.</p>
+
+        <h3>4. Real-World Context: Measurement & Precision</h3>
+        <blockquote>
+          <strong>Scenario</strong>: Musa measured his teacher’s table and reported it as <strong>0.76 m (to 2 dp)</strong>.<br>
+          What actual lengths could he have measured?
+        </blockquote>
+        <p><strong>Answer</strong>: Any length <strong>≥ 0.755 m and &lt; 0.765 m</strong> would round to <strong>0.76 m</strong>.</p>
+        <ul>
+          <li>Lower bound: <strong>0.755 m</strong> (rounds up)</li>
+          <li>Upper bound: <strong>0.764999... m</strong> (rounds down)</li>
+        </ul>
+        <p>✅ So possible actual readings: <strong>0.755 m ≤ actual &lt; 0.765 m</strong></p>
+        <p>This illustrates <strong>measurement tolerance</strong>—a key concept in science and engineering.</p>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Analyzing digit roles and rounding consequences.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Using precise language to describe numerical accuracy.</li>
+          <li><strong>Creativity and Innovation (CI)</strong>: Applying rounding rules to design realistic data scenarios.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Determine the number of significant figures:
+              <br>a) 0.04050
+              <br>b) 100.00
+              <br>c) 7.002
+            </li>
+            <li>Round <strong>0.00234567</strong> to:
+              <br>a) 3 sf
+              <br>b) 5 sf
+              <br>c) 7 sf
+            </li>
+            <li>Round <strong>84.40995000</strong> to:
+              <br>a) 4 dp
+              <br>b) 6 sf
+            </li>
+            <li>A digital thermometer displays body temperature as <strong>37.25°C (to 2 dp)</strong>.
+              <br>What is the <strong>range of possible actual temperatures</strong>?</li>
+          </ol>
+          <p><em>Confirm your understanding before moving forward.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 6, we’ll return to <strong>large whole numbers over one billion</strong> and analyze <strong>number patterns in sequences</strong> like:</p>
+        <p><code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; 1,687,500 &nbsp; ...</code></p>
+        <p>You’ll learn to:</p>
+        <ul>
+          <li>Identify the <strong>rule</strong> (e.g., “add 500,000”)</li>
+          <li>Find missing terms</li>
+          <li>Write numbers in words based on position</li>
+        </ul>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 4; // ← Lesson 5 (zero-indexed)
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Expressing Decimal Numerals to Given Significant Figures and Decimal Places",
+      loTag: "B7.1.1.1.5",
+      objectives: [
+        "Identify significant figures in decimal numbers, including when zero is significant.",
+        "Round decimals to a specified number of significant figures (sf).",
+        "Round decimals to a specified number of decimal places (dp).",
+        "Interpret real-world measurement scenarios involving rounding to decimal places."
+      ],
+      words: [
+        "significant figures (sf)",
+        "decimal places (dp)",
+        "leading zeros",
+        "trailing zeros",
+        "precision",
+        "measurement tolerance",
+        "rounding",
+        "non-zero digits"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Determine the number of significant figures:
+            <br>a) 0.04050
+            <br>b) 100.00
+            <br>c) 7.002
+          </li>
+          <li>Round <strong>0.00234567</strong> to:
+            <br>a) 3 sf
+            <br>b) 5 sf
+            <br>c) 7 sf
+          </li>
+          <li>Round <strong>84.40995000</strong> to:
+            <br>a) 4 dp
+            <br>b) 6 sf
+          </li>
+          <li>A digital thermometer displays body temperature as <strong>37.25°C (to 2 dp)</strong>.
+            <br>What is the <strong>range of possible actual temperatures</strong>?</li>
+        </ol>
+        <p><em>Confirm your understanding before moving forward.</em></p>
+      `,
+      nextPreview: "In Lesson 6, we’ll return to large whole numbers over one billion and analyze number patterns in sequences like:\n\n187,500   687,500   1,187,500   1,687,500   ...\n\nYou’ll learn to:\n- Identify the rule (e.g., “add 500,000”)\n- Find missing terms\n- Write numbers in words based on position"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "How many significant figures in 0.04050?", a: "4", opts: ["2", "3", "4", "5"] },
+      { q: "How many significant figures in 100.00?", a: "5", opts: ["1", "2", "3", "5"] },
+      { q: "How many significant figures in 7.002?", a: "4", opts: ["2", "3", "4", "1"] },
+      { q: "Round 0.00234567 to 3 sf.", a: "0.00235", opts: ["0.00234", "0.00235", "0.002", "0.002345"] },
+      { q: "Round 0.00234567 to 5 sf.", a: "0.0023457", opts: ["0.0023456", "0.0023457", "0.00235", "0.0023"] },
+      { q: "Round 84.40995000 to 4 dp.", a: "84.4100", opts: ["84.4099", "84.4100", "84.41", "84.40995"] },
+      { q: "Round 84.40995000 to 6 sf.", a: "84.4100", opts: ["84.4099", "84.4100", "84.41", "84.40995"] },
+      { q: "What is the range for a measurement reported as 37.25°C (to 2 dp)?", a: "37.245°C ≤ actual < 37.255°C", opts: ["37.24 ≤ actual < 37.26", "37.245 ≤ actual < 37.255", "37.25 ≤ actual < 37.26", "37.2 ≤ actual < 37.3"] },
+      { q: "Which zeros are NEVER significant?", a: "Leading zeros", opts: ["Trailing zeros in decimals", "Zeros between digits", "Leading zeros"] },
+      { q: "0.360 has how many significant figures?", a: "3", opts: ["2", "3", "1", "4"] },
+      { q: "7.429 has how many significant figures?", a: "4", opts: ["3", "4", "5", "2"] },
+      { q: "Round 745.9674 to 1 dp.", a: "746.0", opts: ["746", "745.9", "746.0", "745.97"] },
+      { q: "Why is 746.0 different from 746?", a: "746.0 shows precision to tenths", opts: ["They are the same", "746.0 is larger", "746.0 shows precision to tenths"] },
+      { q: "Round 0.00045678 to 2 sf.", a: "0.00046", opts: ["0.00045", "0.00046", "0.0005", "0.000456"] },
+      { q: "How many decimal places in 84.4100?", a: "4", opts: ["2", "4", "6", "0"] },
+      { q: "The number 100 has how many significant figures (without a decimal)?", a: "1", opts: ["1", "2", "3", "ambiguous"] },
+      { q: "In measurement, trailing zeros after a decimal indicate:", a: "Precision", opts: ["Error", "Precision", "Approximation", "Rounding"] },
+      { q: "Round 9.9995 to 3 sf.", a: "10.0", opts: ["9.99", "10.0", "10", "9.999"] },
+      { q: "What does 'dp' stand for?", a: "Decimal places", opts: ["Digital precision", "Decimal places", "Digit positions", "Data points"] },
+      { q: "Which number has exactly 3 significant figures?", a: "0.0405", opts: ["0.04", "0.0405", "0.04050", "0.004"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      let previewText = LESSON_CONFIG.nextPreview;
+      previewText = previewText.replace(/\n\n/g, '</p><p>')
+                              .replace(/^- /gm, '• ')
+                              .replace(/\n/g, '<br>');
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${previewText}</p>
+      `.replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
