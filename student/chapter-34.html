@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Perform Addition and Subtraction of Algebraic Expressions with Rational Coefficients" />
+  <title>Mini OpenStax — Perform Addition and Subtraction of Algebraic Expressions with Rational Coefficients</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Perform Addition and Subtraction of Algebraic Expressions with Rational Coefficients</h1>
+        <div class="lo-tags" id="lo-tag">B7.2.2.1.2</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
+
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Identify <strong>like terms</strong> in algebraic expressions.</li>
+          <li>Combine like terms using <strong>addition and subtraction</strong>.</li>
+          <li>Simplify expressions that include <strong>rational coefficients</strong> (whole numbers, fractions, or decimals).</li>
+          <li>Apply these skills to find <strong>perimeters</strong>, <strong>totals</strong>, and other real-world quantities.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">Like terms</span>
+          <span class="word-item">Coefficient</span>
+          <span class="word-item">Rational coefficient</span>
+          <span class="word-item">Simplify</span>
+          <span class="word-item">Perimeter</span>
+          <span class="word-item">Variable</span>
+          <span class="word-item">Constant</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. What Are Like Terms?</h3>
+        <p><strong>Like terms</strong> are terms that have:</p>
+        <ul>
+          <li>The <strong>same variable(s)</strong></li>
+          <li>The <strong>same exponent(s)</strong> on those variables</li>
+        </ul>
+        <blockquote>✅ Examples of like terms:<br>
+        - 4x and 3x<br>
+        - 5ab and 2ab<br>
+        - (1/2)y² and 3y²</blockquote>
+        <blockquote>❌ Not like terms:<br>
+        - 4x and 3y (different variables)<br>
+        - x² and x (different exponents)</blockquote>
+
+        <h3>2. Adding Algebraic Expressions</h3>
+        <p>To add, <strong>group like terms</strong> and <strong>add their coefficients</strong>.</p>
+        <p><strong>Example 1: Simple Addition</strong><br>
+        Simplify:<br>
+        4x + 3x + x</p>
+        <ul>
+          <li>All are like terms → add coefficients: 4 + 3 + 1 = 8</li>
+        </ul>
+        <p>✅ <strong>Answer</strong>: 8x</p>
+
+        <p><strong>Example 2: Multiple Variables</strong><br>
+        Simplify:<br>
+        m + m + m + a + a + k + k + k</p>
+        <ul>
+          <li>Group:<br>
+            - m + m + m = 3m<br>
+            - a + a = 2a<br>
+            - k + k + k = 3k</li>
+        </ul>
+        <p>✅ <strong>Answer</strong>: 3m + 2a + 3k</p>
+
+        <p><strong>Example 3: With Constants</strong><br>
+        Simplify:<br>
+        5x + 4 - 9y + 3x + 2y - 7</p>
+        <ul>
+          <li>Group like terms:<br>
+            - x-terms: 5x + 3x = 8x<br>
+            - y-terms: -9y + 2y = -7y<br>
+            - Constants: 4 - 7 = -3</li>
+        </ul>
+        <p>✅ <strong>Answer</strong>: 8x - 7y - 3</p>
+
+        <h3>3. Subtracting Algebraic Expressions</h3>
+        <p>Subtraction works the same way—<strong>subtract coefficients</strong> of like terms.</p>
+        <p><strong>Example 1: Basic Subtraction</strong><br>
+        Simplify:<br>
+        5x - 2x = 3x</p>
+
+        <p><strong>Example 2: With Negative Results</strong><br>
+        Simplify:<br>
+        3x - 4x - 2x = (3 - 4 - 2)x = -3x</p>
+
+        <p><strong>Example 3: Mixed Terms</strong><br>
+        Simplify:<br>
+        7x - 4x - x = (7 - 4 - 1)x = 2x</p>
+
+        <h3>4. Real-World Application: Perimeter</h3>
+        <p>The <strong>perimeter</strong> of a shape is the sum of all its side lengths—often expressed as an algebraic expression.</p>
+        <p><strong>Example: Rectangle with sides x and y</strong><br>
+        - Perimeter = x + y + x + y = 2x + 2y<br>
+          or factored: 2(x + y)</p>
+        <p><strong>Example: Irregular Shape</strong><br>
+        Sides: 4x, 7, 2x, 4<br>
+        - Perimeter = 4x + 2x + 7 + 4 = 6x + 11</p>
+        <blockquote>✅ Always <strong>combine like terms</strong> to give the simplest form.</blockquote>
+
+        <h3>5. Working with Rational Coefficients</h3>
+        <p>“Rational coefficients” include:</p>
+        <ul>
+          <li>Whole numbers: 3x</li>
+          <li>Fractions: (1/2)x</li>
+          <li>Decimals: 0.75x</li>
+        </ul>
+        <blockquote>**Note**: In Grade 7, most problems use <strong>whole-number coefficients</strong>, but the method is the same for fractions/decimals.</blockquote>
+        <p><strong>Example (Extension)</strong>:<br>
+        (1/2)x + (3/4)x = (2/4 + 3/4)x = (5/4)x</p>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Identifying structure in expressions and simplifying logically.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Explaining why only like terms can be combined.</li>
+          <li><strong>Creativity and Innovation (CI)</strong>: Modeling real shapes and situations with algebra.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Simplify:
+              <br>a) x + x + x
+              <br>b) y + y + y + y
+              <br>c) 5x + 4x + x</li>
+            <li>Simplify:
+              <br>a) 5x - 2x
+              <br>b) 3x - 4x - 2x
+              <br>c) 7x - 4x - x</li>
+            <li>Simplify fully:
+              <br>a) 5x + 4 - 9y + 3x + 2y - 7
+              <br>b) 2p - 3q + 3p + 5q</li>
+            <li>A triangle has sides 4x + 7, 2x, and 4. Write and simplify an expression for its perimeter.</li>
+          </ol>
+          <p><em>Confirm your understanding before moving on.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 36, you’ll learn to multiply and divide algebraic expressions—including how to find the area of rectangles with algebraic side lengths like 3x and 4y. You’ll also explore rules for multiplying variables: x · x = x², x · y = xy, and more!</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 34; // Lesson 35
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT (EDIT PER FILE)
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Perform Addition and Subtraction of Algebraic Expressions with Rational Coefficients",
+      loTag: "B7.2.2.1.2",
+      objectives: [
+        "Identify like terms in algebraic expressions.",
+        "Combine like terms using addition and subtraction.",
+        "Simplify expressions that include rational coefficients (whole numbers, fractions, or decimals).",
+        "Apply these skills to find perimeters, totals, and other real-world quantities."
+      ],
+      words: [
+        "Like terms",
+        "Coefficient",
+        "Rational coefficient",
+        "Simplify",
+        "Perimeter",
+        "Variable",
+        "Constant"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Simplify:
+            <br>a) x + x + x
+            <br>b) y + y + y + y
+            <br>c) 5x + 4x + x</li>
+          <li>Simplify:
+            <br>a) 5x - 2x
+            <br>b) 3x - 4x - 2x
+            <br>c) 7x - 4x - x</li>
+          <li>Simplify fully:
+            <br>a) 5x + 4 - 9y + 3x + 2y - 7
+            <br>b) 2p - 3q + 3p + 5q</li>
+          <li>A triangle has sides 4x + 7, 2x, and 4. Write and simplify an expression for its perimeter.</li>
+        </ol>
+        <p><em>Confirm your understanding before moving on.</em></p>
+      `,
+      nextPreview: "In Lesson 36, you’ll learn to multiply and divide algebraic expressions—including how to find the area of rectangles with algebraic side lengths like 3x and 4y. You’ll also explore rules for multiplying variables: x · x = x², x · y = xy, and more!"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "Which are like terms?", a: "3x and 5x", opts: ["3x and 5y", "3x and 5x", "x² and x", "3 and x"] },
+      { q: "Simplify: x + x + x", a: "3x", opts: ["x", "2x", "3x", "x³"] },
+      { q: "Simplify: 4y + 2y", a: "6y", opts: ["2y", "4y", "6y", "8y"] },
+      { q: "Simplify: 5x - 2x", a: "3x", opts: ["2x", "3x", "5x", "7x"] },
+      { q: "Simplify: 3a + 2b + 4a", a: "7a + 2b", opts: ["5a + 2b", "7a + 2b", "9ab", "6a + 2b"] },
+      { q: "Simplify: 7x - 4x - x", a: "2x", opts: ["x", "2x", "3x", "4x"] },
+      { q: "Simplify: 2p + 3q + p - q", a: "3p + 2q", opts: ["2p + 2q", "3p + 2q", "3p + 4q", "5pq"] },
+      { q: "Simplify: 5x + 4 - 2x - 7", a: "3x - 3", opts: ["3x - 3", "7x - 3", "3x + 11", "7x + 11"] },
+      { q: "Which is NOT like terms?", a: "4x and 4y", opts: ["5a and 2a", "4x and 4y", "3m and m", "7 and 2"] },
+      { q: "Simplify: 6k - 3k + k", a: "4k", opts: ["2k", "3k", "4k", "10k"] },
+      { q: "Perimeter of rectangle with sides x and y:", a: "2x + 2y", opts: ["x + y", "xy", "2x + 2y", "x² + y²"] },
+      { q: "Simplify: 9m - 5n + 2m + n", a: "11m - 4n", opts: ["11m - 4n", "7m - 4n", "11m - 6n", "9m - 4n"] },
+      { q: "Simplify: 3x + 5 - x - 8", a: "2x - 3", opts: ["2x - 3", "4x - 3", "2x + 13", "4x + 13"] },
+      { q: "Simplify: 4a + 3b - 2a + b", a: "2a + 4b", opts: ["2a + 4b", "6a + 4b", "2a + 2b", "6a + 2b"] },
+      { q: "Simplify: 5x - 7x + 3x", a: "x", opts: ["-x", "x", "15x", "-15x"] },
+      { q: "Triangle sides: 2x, 3x, 4. Perimeter:", a: "5x + 4", opts: ["5x", "6x", "5x + 4", "6x + 4"] },
+      { q: "Simplify: 8y - 3 + 2y + 7", a: "10y + 4", opts: ["10y + 4", "6y + 4", "10y - 4", "6y - 4"] },
+      { q: "Which expression simplifies to 0?", a: "3x - 3x", opts: ["3x + 3x", "3x - 3x", "3x - x", "x + 3"] },
+      { q: "Simplify: 7p - 2q - 3p + 5q", a: "4p + 3q", opts: ["4p + 3q", "10p + 3q", "4p - 7q", "10p - 7q"] },
+      { q: "Simplify: x + x + y + y + y", a: "2x + 3y", opts: ["2x + 3y", "5xy", "x² + y³", "2x + 2y"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${LESSON_CONFIG.nextPreview}</p>
+      `;
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
