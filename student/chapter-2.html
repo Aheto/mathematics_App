@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Rounding Whole Numbers Greater Than 1,000,000,000" />
+  <title>Mini OpenStax — Rounding Whole Numbers Greater Than 1,000,000,000</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Rounding Whole Numbers Greater Than 1,000,000,000</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.1.1.3</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Distinguish between <strong>rounding off</strong>, <strong>rounding up</strong>, and <strong>rounding down</strong>.</li>
+          <li>Round numbers greater than one billion to specified place values (hundred-thousands down to tens).</li>
+          <li>Apply rounding rules accurately using digit analysis.</li>
+          <li>Express large numbers to a given number of <strong>significant figures</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">rounding off</span>
+          <span class="word-item">rounding up</span>
+          <span class="word-item">rounding down</span>
+          <span class="word-item">place value</span>
+          <span class="word-item">significant figures</span>
+          <span class="word-item">nearest ten</span>
+          <span class="word-item">nearest thousand</span>
+          <span class="word-item">digit analysis</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. Understanding Rounding Terminology</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Term</th>
+              <th>Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Rounding Off</strong></td>
+              <td>The standard method: look at the digit <strong>to the right</strong> of the target place. If ≥5, round <strong>up</strong>; if &lt;5, round <strong>down</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Rounding Up</strong></td>
+              <td>Always move to the <strong>next higher</strong> value at the target place, regardless of the next digit.</td>
+            </tr>
+            <tr>
+              <td><strong>Rounding Down</strong></td>
+              <td>Always keep the <strong>current</strong> value at the target place and replace all digits to the right with zeros.</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>Example</strong>: For the number <strong>2,846,655</strong><br>
+          – <strong>To the nearest thousand</strong>:<br>
+            • Round <strong>up</strong>: 2,847,000<br>
+            • Round <strong>down</strong>: 2,846,000<br>
+            • Round <strong>off</strong>: Look at the hundreds digit (6 ≥ 5) → <strong>2,847,000</strong>
+        </blockquote>
+        <table>
+          <thead>
+            <tr>
+              <th>Place Value</th>
+              <th>Round Up</th>
+              <th>Round Down</th>
+              <th>Round Off</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nearest <strong>thousand</strong></td>
+              <td>2,847,000</td>
+              <td>2,846,000</td>
+              <td>2,847,000</td>
+            </tr>
+            <tr>
+              <td>Nearest <strong>ten thousand</strong></td>
+              <td>2,850,000</td>
+              <td>2,840,000</td>
+              <td>2,850,000</td>
+            </tr>
+            <tr>
+              <td>Nearest <strong>hundred thousand</strong></td>
+              <td>2,900,000</td>
+              <td>2,800,000</td>
+              <td><strong>2,800,000</strong> (since 4 &lt; 5)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>✅ <strong>Key Insight</strong>: “Round off” follows mathematical convention; “round up/down” are directional and absolute.</p>
+
+        <h3>2. Steps to Round Off a Number (&gt;1,000,000,000)</h3>
+        <ol>
+          <li><strong>Identify the target place</strong> (e.g., nearest hundred-thousand).</li>
+          <li><strong>Underline</strong> that digit.</li>
+          <li><strong>Look at the digit immediately to its right</strong>.
+            <ul>
+              <li>If it’s <strong>5 or more</strong>, increase the underlined digit by 1.</li>
+              <li>If it’s <strong>less than 5</strong>, leave the underlined digit unchanged.</li>
+            </ul>
+          </li>
+          <li><strong>Replace all digits to the right</strong> with zeros.</li>
+        </ol>
+        <blockquote>
+          <strong>Example</strong>: Round <strong>5,287,643,921</strong> to the nearest <strong>ten-thousand</strong>.<br>
+          – Target place: <strong>ten-thousands</strong> → digit is <strong>4</strong> (in 43,921)<br>
+          – Digit to the right: <strong>3</strong> (&lt;5) → keep 4<br>
+          – Result: <strong>5,287,640,000</strong>
+        </blockquote>
+
+        <h3>3. Practice: Rounding Large Numbers</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>To Nearest...</th>
+              <th>Rounded Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>7,892,345,678</td>
+              <td>Hundred-thousand</td>
+              <td>7,892,300,000</td>
+            </tr>
+            <tr>
+              <td>7,892,345,678</td>
+              <td>Ten-thousand</td>
+              <td>7,892,350,000</td>
+            </tr>
+            <tr>
+              <td>7,892,345,678</td>
+              <td>Thousand</td>
+              <td>7,892,346,000</td>
+            </tr>
+            <tr>
+              <td>7,892,345,678</td>
+              <td>Hundred</td>
+              <td>7,892,345,700</td>
+            </tr>
+            <tr>
+              <td>7,892,345,678</td>
+              <td>Ten</td>
+              <td>7,892,345,680</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>🔍 <strong>Check</strong>: Each time, only the digits <strong>at and right of</strong> the target place change.</p>
+
+        <h3>4. Significant Figures (SF) for Large Whole Numbers</h3>
+        <p>Significant figures count <strong>all non-zero digits</strong> and any <strong>zeros between them or after the first non-zero digit</strong> in a decimal context. For whole numbers without decimals, trailing zeros may or may not be significant—but in this curriculum, we treat them as <strong>placeholders</strong>, so we <strong>count from the leftmost non-zero digit</strong>.</p>
+        <blockquote>
+          <strong>Example</strong>: Number = <strong>857,386,321</strong>
+        </blockquote>
+        <table>
+          <thead>
+            <tr>
+              <th>Significant Figures</th>
+              <th>Rounded Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5 SF</td>
+              <td>857,390,000</td>
+            </tr>
+            <tr>
+              <td>4 SF</td>
+              <td>857,400,000</td>
+            </tr>
+            <tr>
+              <td>3 SF</td>
+              <td>857,000,000</td>
+            </tr>
+            <tr>
+              <td>2 SF</td>
+              <td>860,000,000</td>
+            </tr>
+            <tr>
+              <td>1 SF</td>
+              <td>900,000,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>📌 <strong>Rule</strong>: Start counting from the <strong>first non-zero digit on the left</strong>. Round the last significant digit using standard rounding rules.</p>
+
+        <h3>Real-World Application</h3>
+        <ul>
+          <li><strong>Budget Reporting</strong>: Governments often round national expenditures to the nearest hundred-million for public summaries.</li>
+          <li><strong>Population Estimates</strong>: World population (≈8,000,000,000) is frequently rounded to 1 SF for headlines.</li>
+          <li><strong>Scientific Data</strong>: Astronomical distances or national debts use significant figures to convey precision without clutter.</li>
+        </ul>
+        <div class="thought-experiment">
+          <strong>Thought Experiment</strong>:<br>
+          A country reports its debt as <strong>GH₵4,287,654,321</strong>.<br>
+          – If rounded to the nearest <strong>billion</strong>, what would it be? → <strong>GH₵4,000,000,000</strong><br>
+          – If rounded <strong>up</strong> to the nearest <strong>hundred-million</strong>, what would it be? → <strong>GH₵4,300,000,000</strong>
+        </div>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Creativity and Innovation (CI)</strong>: Choosing appropriate levels of precision for different contexts.</li>
+          <li><strong>Personal Development and Leadership (PL)</strong>: Making informed decisions based on estimated vs. exact values.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Round <strong>6,789,456,123</strong>:
+              <br>a) To the nearest <strong>ten-thousand</strong>
+              <br>b) <strong>Up</strong> to the nearest <strong>hundred-thousand</strong>
+              <br>c) <strong>Down</strong> to the nearest <strong>million</strong>
+            </li>
+            <li>What is <strong>9,234,567,890</strong> rounded <strong>off</strong> to:
+              <br>a) 4 significant figures?
+              <br>b) 2 significant figures?
+            </li>
+            <li>Explain the difference between “rounding off” and “rounding up” using the number <strong>3,149,999,999</strong> to the nearest <strong>hundred-million</strong>.</li>
+          </ol>
+          <p><em>Confirm your understanding before moving forward.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 4, we’ll explore <strong>number patterns and sequences</strong> beyond one billion—using number charts like the one below to identify, read, and predict values:</p>
+        <p><code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; 1,687,500 &nbsp; 2,187,500 &nbsp; ...</code></p>
+        <p>You’ll learn how to find missing terms and describe the rule governing the sequence.</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 2; // ← Lesson 3 (zero-indexed)
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Rounding Whole Numbers Greater Than 1,000,000,000",
+      loTag: "B7.1.1.1.3",
+      objectives: [
+        "Distinguish between rounding off, rounding up, and rounding down.",
+        "Round numbers greater than one billion to specified place values (hundred-thousands down to tens).",
+        "Apply rounding rules accurately using digit analysis.",
+        "Express large numbers to a given number of significant figures."
+      ],
+      words: [
+        "rounding off",
+        "rounding up",
+        "rounding down",
+        "place value",
+        "significant figures",
+        "nearest ten",
+        "nearest thousand",
+        "digit analysis"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Round <strong>6,789,456,123</strong>:
+            <br>a) To the nearest <strong>ten-thousand</strong>
+            <br>b) <strong>Up</strong> to the nearest <strong>hundred-thousand</strong>
+            <br>c) <strong>Down</strong> to the nearest <strong>million</strong>
+          </li>
+          <li>What is <strong>9,234,567,890</strong> rounded <strong>off</strong> to:
+            <br>a) 4 significant figures?
+            <br>b) 2 significant figures?
+          </li>
+          <li>Explain the difference between “rounding off” and “rounding up” using the number <strong>3,149,999,999</strong> to the nearest <strong>hundred-million</strong>.</li>
+        </ol>
+        <p><em>Confirm your understanding before moving forward.</em></p>
+      `,
+      nextPreview: "In Lesson 4, we’ll explore number patterns and sequences beyond one billion—using number charts like the one below to identify, read, and predict values:\n\n187,500   687,500   1,187,500   1,687,500   2,187,500   ...\n\nYou’ll learn how to find missing terms and describe the rule governing the sequence."
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "What is 5,287,643,921 rounded to the nearest ten-thousand?", a: "5,287,640,000", opts: ["5,287,640,000", "5,287,650,000", "5,287,643,900", "5,287,644,000"] },
+      { q: "Round 7,892,345,678 UP to the nearest hundred-thousand.", a: "7,892,400,000", opts: ["7,892,300,000", "7,892,400,000", "7,893,000,000", "7,900,000,000"] },
+      { q: "Round 7,892,345,678 DOWN to the nearest million.", a: "7,892,000,000", opts: ["7,892,000,000", "7,893,000,000", "7,890,000,000", "7,800,000,000"] },
+      { q: "What is 9,234,567,890 rounded OFF to 4 significant figures?", a: "9,235,000,000", opts: ["9,234,000,000", "9,235,000,000", "9,230,000,000", "9,200,000,000"] },
+      { q: "What is 9,234,567,890 rounded OFF to 2 significant figures?", a: "9,200,000,000", opts: ["9,000,000,000", "9,200,000,000", "9,300,000,000", "9,230,000,000"] },
+      { q: "Which term means 'always increase the target digit'?", a: "Rounding up", opts: ["Rounding off", "Rounding down", "Rounding up"] },
+      { q: "When rounding OFF, if the digit to the right is 4, you should:", a: "Leave the target digit unchanged", opts: ["Increase the target digit by 1", "Leave the target digit unchanged", "Replace all digits with zeros"] },
+      { q: "Round 3,149,999,999 UP to the nearest hundred-million.", a: "3,200,000,000", opts: ["3,100,000,000", "3,150,000,000", "3,200,000,000", "3,149,000,000"] },
+      { q: "Round 3,149,999,999 OFF to the nearest hundred-million.", a: "3,100,000,000", opts: ["3,100,000,000", "3,200,000,000", "3,150,000,000", "3,149,000,000"] },
+      { q: "How many significant figures are in 857,386,321 when rounded to 857,000,000?", a: "3", opts: ["3", "4", "6", "9"] },
+      { q: "What is 4,287,654,321 rounded OFF to the nearest billion?", a: "4,000,000,000", opts: ["4,000,000,000", "5,000,000,000", "4,300,000,000", "4,288,000,000"] },
+      { q: "Rounding 1,000,000,001 DOWN to the nearest billion gives:", a: "1,000,000,000", opts: ["1,000,000,000", "2,000,000,000", "0", "1,000,000,001"] },
+      { q: "Which is correct for 6,789,456,123 to nearest ten-thousand?", a: "6,789,460,000", opts: ["6,789,450,000", "6,789,460,000", "6,789,456,000", "6,789,500,000"] },
+      { q: "The digit used to decide rounding is always:", a: "The one immediately to the right of the target place", opts: ["The last digit", "The first digit", "The one immediately to the right of the target place"] },
+      { q: "Rounding 999,999,999 UP to the nearest billion gives:", a: "1,000,000,000", opts: ["999,000,000", "1,000,000,000", "2,000,000,000", "0"] },
+      { q: "In 7,892,345,678, the ten-thousands digit is:", a: "4", opts: ["5", "4", "3", "6"] },
+      { q: "Rounding to 1 SF means keeping only the:", a: "First non-zero digit", opts: ["Last digit", "First non-zero digit", "Middle digit", "Billions digit"] },
+      { q: "Which number is 857,386,321 rounded to 5 SF?", a: "857,390,000", opts: ["857,380,000", "857,390,000", "857,400,000", "857,000,000"] },
+      { q: "Real-world budgets are often rounded to avoid:", a: "False precision", opts: ["Large numbers", "False precision", "Decimals", "Zeros"] },
+      { q: "Rounding OFF follows which rule?", a: "≥5 rounds up, <5 rounds down", opts: ["Always round up", "Always round down", "≥5 rounds up, <5 rounds down"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${LESSON_CONFIG.nextPreview.replace(/\n/g, '<br>')}</p>
+      `;
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
