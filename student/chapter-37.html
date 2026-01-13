@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Use Properties of the Four Operations to Simplify Algebraic Expressions with Rational Coefficients" />
+  <title>Mini OpenStax — Use Properties of the Four Operations to Simplify Algebraic Expressions with Rational Coefficients</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Use Properties of the Four Operations to Simplify Algebraic Expressions with Rational Coefficients</h1>
+        <div class="lo-tags" id="lo-tag">B7.2.2.1.5</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
+
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Apply the <strong>commutative, associative, distributive, identity</strong>, and <strong>inverse properties</strong> to simplify algebraic expressions.</li>
+          <li>Combine <strong>like terms</strong> efficiently using these properties.</li>
+          <li>Simplify complex expressions involving <strong>multiplication, division, addition, and subtraction</strong> of terms with rational coefficients.</li>
+          <li>Justify each simplification step using a named property.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">Commutative</span>
+          <span class="word-item">Associative</span>
+          <span class="word-item">Distributive</span>
+          <span class="word-item">Identity</span>
+          <span class="word-item">Inverse</span>
+          <span class="word-item">Rational coefficient</span>
+          <span class="word-item">Simplify</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. Review of Number Properties in Algebra</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Rule</th>
+              <th>Algebraic Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Commutative (Addition & Multiplication)</strong></td>
+              <td>Order doesn’t matter</td>
+              <td>a + b = b + a<br>ab = ba</td>
+            </tr>
+            <tr>
+              <td><strong>Associative (Addition & Multiplication)</strong></td>
+              <td>Grouping doesn’t matter</td>
+              <td>(a + b) + c = a + (b + c)<br>(ab)c = a(bc)</td>
+            </tr>
+            <tr>
+              <td><strong>Distributive</strong></td>
+              <td>Multiply across a sum/difference</td>
+              <td>a(b + c) = ab + ac</td>
+            </tr>
+            <tr>
+              <td><strong>Identity</strong></td>
+              <td>Adding 0 or multiplying by 1 changes nothing</td>
+              <td>a + 0 = a<br>a · 1 = a</td>
+            </tr>
+            <tr>
+              <td><strong>Inverse</strong></td>
+              <td>Opposites cancel</td>
+              <td>a + (-a) = 0<br>a · (1/a) = 1 (if a ≠ 0)</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>✅ These properties allow us to <strong>rearrange, regroup, and factor</strong> expressions for simplification.</blockquote>
+
+        <h3>2. Simplifying Using the Distributive Property</h3>
+        <p>The distributive property is essential when removing parentheses.</p>
+        <p><strong>Example 1: Expand and simplify</strong><br>
+        3x²y + 2xy² - 4x²y - 6xy²</p>
+        <p><strong>Step 1: Group like terms</strong><br>
+        - x²y-terms: 3x²y - 4x²y = -x²y<br>
+        - xy²-terms: 2xy² - 6xy² = -4xy²</p>
+        <p>✅ <strong>Answer</strong>: -x²y - 4xy²</p>
+        <blockquote>🔍 <strong>Property Used</strong>: Commutative (to reorder), Associative (to group), Inverse (to combine opposites).</blockquote>
+
+        <p><strong>Example 2: Apply distributive property first</strong><br>
+        3xy × 2 + (6x²y³)/(2y²)</p>
+        <p><strong>Step 1: Multiply</strong><br>
+        3xy × 2 = 6xy</p>
+        <p><strong>Step 2: Simplify division</strong><br>
+        (6x²y³)/(2y²) = 3x²y</p>
+        <p>✅ <strong>Simplified expression</strong>: 6xy + 3x²y</p>
+        <blockquote>💡 No like terms → cannot combine further.</blockquote>
+
+        <h3>3. Combining Operations: Multiplication, Division, Addition</h3>
+        <p><strong>Example 3: Full simplification</strong><br>
+        (15p³q² × 12x⁵y³) / (36pq × 45xy)</p>
+        <p><strong>Step 1: Multiply numerators and denominators</strong><br>
+        Numerator: 15 × 12 = 180; p³q²x⁵y³<br>
+        Denominator: 36 × 45 = 1620; pqxy</p>
+        <p><strong>Step 2: Simplify coefficient</strong><br>
+        180/1620 = 1/9</p>
+        <p><strong>Step 3: Simplify variables</strong><br>
+        - p³/p = p²<br>
+        - q²/q = q<br>
+        - x⁵/x = x⁴<br>
+        - y³/y = y²</p>
+        <p>✅ <strong>Answer</strong>: (1/9)p²q x⁴ y²</p>
+
+        <h3>4. Working with Rational Coefficients</h3>
+        <p>“Rational coefficients” include fractions and decimals, but Grade 7 focuses on <strong>whole numbers and simple fractions</strong>.</p>
+        <p><strong>Example 4: Fractional coefficients</strong><br>
+        (7a - 7a)/3 + (14a)/4</p>
+        <p><strong>Step 1: Simplify numerator</strong><br>
+        7a - 7a = 0 → First term = 0</p>
+        <p><strong>Step 2: Simplify second term</strong><br>
+        (14a)/4 = (7a)/2</p>
+        <p>✅ <strong>Answer</strong>: (7a)/2</p>
+        <blockquote>📌 <strong>Property Used</strong>: Inverse (7a − 7a = 0), Identity (0/3 = 0)</blockquote>
+
+        <h3>5. Real-World Application</h3>
+        <blockquote>A rectangle has length 3x and width 2x + 4.<br>
+        Find its <strong>area</strong> and <strong>perimeter</strong>.</blockquote>
+        <ul>
+          <li><strong>Area</strong> = 3x(2x + 4) = 6x² + 12x → <strong>Distributive property</strong></li>
+          <li><strong>Perimeter</strong> = 2(3x) + 2(2x + 4) = 6x + 4x + 8 = 10x + 8 → <strong>Distributive + combining like terms</strong></li>
+        </ul>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing the right property for each step.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Explaining why 3x²y - 4x²y = -x²y using the inverse property.</li>
+          <li><strong>Creativity and Innovation (CI)</strong>: Designing expressions that require multiple properties to simplify.</li>
+        </ul>
+
+        <h3>End of Algebraic Expressions Unit</h3>
+        <p>Congratulations! You’ve now mastered:</p>
+        <ul>
+          <li>Translating words into algebraic expressions</li>
+          <li>Adding, subtracting, multiplying, and dividing algebraic terms</li>
+          <li>Substituting values to evaluate expressions</li>
+          <li>Using number properties to simplify complex expressions</li>
+        </ul>
+        <p>These skills are the foundation for <strong>solving equations</strong>, <strong>graphing functions</strong>, and <strong>advanced problem-solving</strong> in mathematics.</p>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Simplify:
+              <br>a) 3x²y + 2xy² - 4x²y - 6xy²
+              <br>b) (7x + 4x - 2x) / (3x)</li>
+            <li>Evaluate using properties:<br>
+              (15p³q² × 12x⁵y³) / (36pq × 45xy)</li>
+            <li>Simplify:<br>
+              (7a - 7a)/3 + (14a)/4</li>
+            <li>Which property justifies:<br>
+              5x + 3x = 3x + 5x?<br>
+              2(x + 3) = 2x + 6?</li>
+          </ol>
+          <p><em>Confirm your understanding before moving on.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>You've completed the Algebraic Expressions unit! The next topic will build on these foundational skills with new mathematical concepts.</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 37; // Lesson 38
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT (EDIT PER FILE)
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Use Properties of the Four Operations to Simplify Algebraic Expressions with Rational Coefficients",
+      loTag: "B7.2.2.1.5",
+      objectives: [
+        "Apply the commutative, associative, distributive, identity, and inverse properties to simplify algebraic expressions.",
+        "Combine like terms efficiently using these properties.",
+        "Simplify complex expressions involving multiplication, division, addition, and subtraction of terms with rational coefficients.",
+        "Justify each simplification step using a named property."
+      ],
+      words: [
+        "Commutative",
+        "Associative",
+        "Distributive",
+        "Identity",
+        "Inverse",
+        "Rational coefficient",
+        "Simplify"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Simplify:
+            <br>a) 3x²y + 2xy² - 4x²y - 6xy²
+            <br>b) (7x + 4x - 2x) / (3x)</li>
+          <li>Evaluate using properties:<br>
+            (15p³q² × 12x⁵y³) / (36pq × 45xy)</li>
+          <li>Simplify:<br>
+            (7a - 7a)/3 + (14a)/4</li>
+          <li>Which property justifies:<br>
+            5x + 3x = 3x + 5x?<br>
+            2(x + 3) = 2x + 6?</li>
+        </ol>
+        <p><em>Confirm your understanding before moving on.</em></p>
+      `,
+      nextPreview: "You've completed the Algebraic Expressions unit! The next topic will build on these foundational skills with new mathematical concepts."
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "Which property says a + b = b + a?", a: "Commutative", opts: ["Associative", "Commutative", "Distributive", "Identity"] },
+      { q: "Which property is used in 3(x + 2) = 3x + 6?", a: "Distributive", opts: ["Commutative", "Associative", "Distributive", "Inverse"] },
+      { q: "Simplify: 4x²y - 7x²y", a: "-3x²y", opts: ["3x²y", "-3x²y", "11x²y", "-11x²y"] },
+      { q: "Simplify: 5a + 3b - 2a + b", a: "3a + 4b", opts: ["3a + 4b", "7a + 4b", "3a + 2b", "7a + 2b"] },
+      { q: "Which property says (ab)c = a(bc)?", a: "Associative", opts: ["Commutative", "Associative", "Distributive", "Identity"] },
+      { q: "True or False: a + 0 = a shows the identity property.", a: "True", opts: ["True", "False"] },
+      { q: "Simplify: 2x(3x + 4)", a: "6x² + 8x", opts: ["6x + 8", "6x² + 4", "6x² + 8x", "5x + 4"] },
+      { q: "Simplify: (8x³y²)/(4xy)", a: "2x²y", opts: ["2x²y", "2xy", "4x²y", "4xy"] },
+      { q: "Which shows the inverse property?", a: "5 + (-5) = 0", opts: ["5 + 0 = 5", "5 + (-5) = 0", "5 × 1 = 5", "5 × 2 = 2 × 5"] },
+      { q: "Simplify: 3x²y + 5xy² - x²y - 2xy²", a: "2x²y + 3xy²", opts: ["2x²y + 3xy²", "4x²y + 7xy²", "2xy + 3xy", "4x³y³"] },
+      { q: "Area of rectangle with sides 2x and (x + 3):", a: "2x² + 6x", opts: ["2x + 3", "3x + 3", "2x² + 6x", "2x² + 3"] },
+      { q: "Simplify: (12a⁴b³)/(6a²b)", a: "2a²b²", opts: ["2a²b²", "6a²b²", "2ab", "6ab"] },
+      { q: "Which property allows you to write 3x + 5x as (3 + 5)x?", a: "Distributive", opts: ["Commutative", "Associative", "Distributive", "Inverse"] },
+      { q: "Simplify: 7m - 3n + 2m + 5n", a: "9m + 2n", opts: ["9m + 2n", "5m + 8n", "9m + 8n", "5m + 2n"] },
+      { q: "Simplify: (9x⁵y⁴)/(3x³y²)", a: "3x²y²", opts: ["3x²y²", "6x²y²", "3xy", "6xy"] },
+      { q: "Which is NOT a number property?", a: "Exponential", opts: ["Commutative", "Associative", "Distributive", "Exponential"] },
+      { q: "Simplify: 4(2x - 3) + 5x", a: "13x - 12", opts: ["8x - 12", "13x - 12", "8x - 7", "13x - 7"] },
+      { q: "Perimeter of rectangle with sides x and (x + 2):", a: "4x + 4", opts: ["2x + 2", "4x + 2", "4x + 4", "2x + 4"] },
+      { q: "Simplify: (15p³q)/(5pq)", a: "3p²", opts: ["3p²", "10p²", "3pq", "10pq"] },
+      { q: "Which property justifies 4x × 1 = 4x?", a: "Identity", opts: ["Commutative", "Associative", "Distributive", "Identity"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${LESSON_CONFIG.nextPreview}</p>
+      `;
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
