@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Rounding Decimals to the Nearest Tenth, Hundredth, Thousandth, etc." />
+  <title>Mini OpenStax — Rounding Decimals to the Nearest Tenth, Hundredth, Thousandth, etc.</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+    code {
+      background: #f1f1f1;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Rounding Decimals to the Nearest Tenth, Hundredth, Thousandth, etc.</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.1.1.4</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Identify decimal place values up to ten-thousandths and beyond.</li>
+          <li>Round decimal numbers <strong>off</strong>, <strong>up</strong>, and <strong>down</strong> to specified places (tenths, hundredths, thousandths).</li>
+          <li>Apply rounding rules accurately using digit analysis.</li>
+          <li>Interpret and compare rounded values in real-world contexts.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">tenths</span>
+          <span class="word-item">hundredths</span>
+          <span class="word-item">thousandths</span>
+          <span class="word-item">ten-thousandths</span>
+          <span class="word-item">rounding off</span>
+          <span class="word-item">rounding up</span>
+          <span class="word-item">rounding down</span>
+          <span class="word-item">decimal place value</span>
+          <span class="word-item">trailing zero</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. Decimal Place Value Review</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Place</th>
+              <th>Value</th>
+              <th>Example in 486.3685</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Units</td>
+              <td>\(10^0 = 1\)</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Tenths</td>
+              <td>\(10^{-1} = 0.1\)</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Hundredths</td>
+              <td>\(10^{-2} = 0.01\)</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Thousandths</td>
+              <td>\(10^{-3} = 0.001\)</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Ten-thousandths</td>
+              <td>\(10^{-4} = 0.0001\)</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>Example</strong>: In <strong>486.3685</strong>,<br>
+          – The digit <strong>3</strong> is in the <strong>tenths</strong> place<br>
+          – <strong>6</strong> is in the <strong>hundredths</strong><br>
+          – <strong>8</strong> is in the <strong>thousandths</strong><br>
+          – <strong>5</strong> is in the <strong>ten-thousandths</strong>
+        </blockquote>
+
+        <h3>2. Rounding Off Decimals (Standard Method)</h3>
+        <p><strong>Steps</strong>:</p>
+        <ol>
+          <li>Identify the <strong>target place</strong> (e.g., hundredths).</li>
+          <li>Look at the digit <strong>immediately to the right</strong>.
+            <ul>
+              <li>If <strong>≥ 5</strong>, increase the target digit by 1.</li>
+              <li>If <strong>&lt; 5</strong>, leave the target digit unchanged.</li>
+            </ul>
+          </li>
+          <li>Drop all digits to the right of the target place.</li>
+        </ol>
+        <blockquote>
+          <strong>Example</strong>: Round <strong>486.3685</strong><br>
+          – To <strong>nearest tenth</strong>: look at hundredths (6 ≥ 5) → <strong>486.4</strong><br>
+          – To <strong>nearest hundredth</strong>: look at thousandths (8 ≥ 5) → <strong>486.37</strong><br>
+          – To <strong>nearest thousandth</strong>: look at ten-thousandths (5 ≥ 5) → <strong>486.369</strong>
+        </blockquote>
+        <table>
+          <thead>
+            <tr>
+              <th>Target Place</th>
+              <th>Rounded Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tenth</td>
+              <td>486.4</td>
+            </tr>
+            <tr>
+              <td>Hundredth</td>
+              <td>486.37</td>
+            </tr>
+            <tr>
+              <td>Thousandth</td>
+              <td>486.369</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>3. Rounding Up vs. Rounding Down (Decimals)</h3>
+        <p>Unlike “rounding off,” these are <strong>directional</strong> and <strong>do not depend on the next digit</strong>.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Round Up</strong></td>
+              <td>Always go to the <strong>next higher</strong> value at the target place.</td>
+            </tr>
+            <tr>
+              <td><strong>Round Down</strong></td>
+              <td>Always <strong>truncate</strong>—keep the target digit and drop the rest.</td>
+            </tr>
+          </tbody>
+        </table>
+        <blockquote>
+          <strong>Example</strong>: Round <strong>78.4604783</strong>
+        </blockquote>
+        <table>
+          <thead>
+            <tr>
+              <th>Target</th>
+              <th>Round Up</th>
+              <th>Round Off</th>
+              <th>Round Down</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tenth</td>
+              <td>78.5</td>
+              <td>78.5</td>
+              <td>78.4</td>
+            </tr>
+            <tr>
+              <td>Hundredth</td>
+              <td>78.47</td>
+              <td>78.46</td>
+              <td>78.46</td>
+            </tr>
+            <tr>
+              <td>Thousandth</td>
+              <td>78.461</td>
+              <td>78.460</td>
+              <td>78.460</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>🔍 <strong>Why?</strong><br>
+        – <strong>Tenths</strong>: Next digit is 6 → round off = up = 78.5; round down = 78.4<br>
+        – <strong>Hundredths</strong>: Next digit is 0 (&lt;5) → round off = round down = 78.46; round up = 78.47<br>
+        – <strong>Thousandths</strong>: Next digit is 4 (&lt;5) → round off = round down = 78.460; round up = 78.461</p>
+
+        <h3>4. Special Cases & Common Pitfalls</h3>
+        <ul>
+          <li><strong>Trailing zeros matter in precision</strong>:<br>
+            – 78.460 ≠ 78.46 in scientific contexts (the former implies precision to thousandths).</li>
+          <li><strong>Zeros after rounding</strong>: Never omit trailing zeros <strong>if they indicate place value</strong> in a specified rounding instruction.<br>
+            – E.g., rounding 5.2 to the nearest <strong>hundredth</strong> → <strong>5.20</strong></li>
+        </ul>
+        <blockquote>
+          <strong>Example</strong>: Round <strong>0.0605368</strong><br>
+          – To <strong>tenth</strong>: look at hundredths (6 ≥ 5) → <strong>0.1</strong><br>
+          – To <strong>hundredth</strong>: look at thousandths (0 &lt; 5) → <strong>0.06</strong><br>
+          – To <strong>thousandth</strong>: look at ten-thousandths (5 ≥ 5) → <strong>0.061</strong>
+        </blockquote>
+
+        <h3>Real-World Applications</h3>
+        <ul>
+          <li><strong>Financial Transactions</strong>: Prices rounded to the nearest <strong>cent</strong> (hundredth of a cedi).</li>
+          <li><strong>Scientific Measurements</strong>: Lab results reported to 3 decimal places for accuracy.</li>
+          <li><strong>Grading Systems</strong>: GPA often rounded to the nearest <strong>hundredth</strong> (e.g., 3.76).</li>
+        </ul>
+        <div class="thought-experiment">
+          <strong>Thought Experiment</strong>:<br>
+          A fuel pump displays <strong>GH₵486.3685</strong> for your purchase.<br>
+          – The cashier charges you <strong>GH₵486.37</strong>. Why?<br>
+          ✅ Because money is rounded to the <strong>nearest hundredth</strong> (1 pesewa = GH₵0.01).
+        </div>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing appropriate rounding methods based on context.</li>
+          <li><strong>Precision in Communication</strong>: Using correct notation and understanding implied accuracy.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Round <strong>123.456789</strong>:
+              <br>a) To the nearest <strong>tenth</strong>
+              <br>b) <strong>Up</strong> to the nearest <strong>hundredth</strong>
+              <br>c) <strong>Down</strong> to the nearest <strong>thousandth</strong>
+            </li>
+            <li>Explain why <strong>0.0605368</strong> rounds to <strong>0.1</strong> when rounded to the nearest <strong>tenth</strong>, even though most digits are small.</li>
+            <li>A digital scale shows <strong>78.4604783 kg</strong>.
+              <br>– What would it display if it only showed <strong>two decimal places</strong>?
+              <br>– What if it always <strong>rounded up</strong> for safety in shipping?</li>
+          </ol>
+          <p><em>Confirm your understanding before moving forward.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 5, we’ll return to <strong>whole numbers over one billion</strong> and explore <strong>number patterns in charts</strong>, such as:</p>
+        <p><code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; 1,687,500 &nbsp; ...</code></p>
+        <p>You’ll learn to <strong>identify, read, and write</strong> numbers in sequence—and describe the rule that generates them.</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 3; // ← Lesson 4 (zero-indexed)
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Rounding Decimals to the Nearest Tenth, Hundredth, Thousandth, etc.",
+      loTag: "B7.1.1.1.4",
+      objectives: [
+        "Identify decimal place values up to ten-thousandths and beyond.",
+        "Round decimal numbers off, up, and down to specified places (tenths, hundredths, thousandths).",
+        "Apply rounding rules accurately using digit analysis.",
+        "Interpret and compare rounded values in real-world contexts."
+      ],
+      words: [
+        "tenths",
+        "hundredths",
+        "thousandths",
+        "ten-thousandths",
+        "rounding off",
+        "rounding up",
+        "rounding down",
+        "decimal place value",
+        "trailing zero"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Round <strong>123.456789</strong>:
+            <br>a) To the nearest <strong>tenth</strong>
+            <br>b) <strong>Up</strong> to the nearest <strong>hundredth</strong>
+            <br>c) <strong>Down</strong> to the nearest <strong>thousandth</strong>
+          </li>
+          <li>Explain why <strong>0.0605368</strong> rounds to <strong>0.1</strong> when rounded to the nearest <strong>tenth</strong>, even though most digits are small.</li>
+          <li>A digital scale shows <strong>78.4604783 kg</strong>.
+            <br>– What would it display if it only showed <strong>two decimal places</strong>?
+            <br>– What if it always <strong>rounded up</strong> for safety in shipping?</li>
+        </ol>
+        <p><em>Confirm your understanding before moving forward.</em></p>
+      `,
+      nextPreview: "In Lesson 5, we’ll return to whole numbers over one billion and explore number patterns in charts, such as:\n\n187,500   687,500   1,187,500   1,687,500   ...\n\nYou’ll learn to identify, read, and write numbers in sequence—and describe the rule that generates them."
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "What is 486.3685 rounded to the nearest hundredth?", a: "486.37", opts: ["486.36", "486.368", "486.37", "486.4"] },
+      { q: "Round 123.456789 UP to the nearest hundredth.", a: "123.46", opts: ["123.45", "123.46", "123.456", "123.5"] },
+      { q: "Round 123.456789 DOWN to the nearest thousandth.", a: "123.456", opts: ["123.456", "123.457", "123.45", "123.4"] },
+      { q: "Why does 0.0605368 round to 0.1 to the nearest tenth?", a: "The hundredths digit is 6 (≥5), so tenths digit increases from 0 to 1", opts: ["Because it's close to 0.1", "The hundredths digit is 6 (≥5), so tenths digit increases from 0 to 1", "All decimals round up", "It has many digits"] },
+      { q: "A price of GH₵78.4604783 is rounded to the nearest cent. What is charged?", a: "GH₵78.46", opts: ["GH₵78.46", "GH₵78.47", "GH₵78.5", "GH₵78"] },
+      { q: "What is the thousandths digit in 78.4604783?", a: "0", opts: ["4", "6", "0", "4"] },
+      { q: "Round 5.2 to the nearest hundredth.", a: "5.20", opts: ["5.2", "5.20", "5.00", "5"] },
+      { q: "Which is correct for 0.0605368 to nearest thousandth?", a: "0.061", opts: ["0.060", "0.061", "0.06", "0.1"] },
+      { q: "Rounding OFF depends on:", a: "The digit immediately to the right of the target place", opts: ["The last digit", "The first digit", "The digit immediately to the right of the target place"] },
+      { q: "Round 99.999 UP to the nearest tenth.", a: "100.0", opts: ["99.9", "100.0", "100", "99.99"] },
+      { q: "What does a trailing zero in 78.460 imply?", a: "Precision to the thousandths place", opts: ["It’s a mistake", "Precision to the thousandths place", "It equals 78.46", "It’s less accurate"] },
+      { q: "Round 0.0005 to the nearest thousandth.", a: "0.001", opts: ["0.000", "0.001", "0.0005", "0.01"] },
+      { q: "If a scale rounds UP to two decimals, what does 78.4604783 become?", a: "78.47", opts: ["78.46", "78.47", "78.5", "78.460"] },
+      { q: "The tenths place is how many places right of the decimal?", a: "1", opts: ["1", "2", "3", "0"] },
+      { q: "Round 12.9995 OFF to the nearest thousandth.", a: "13.000", opts: ["12.999", "13.000", "13.00", "13"] },
+      { q: "Which number has a 5 in the ten-thousandths place?", a: "0.0605", opts: ["0.5", "0.05", "0.0605", "0.065"] },
+      { q: "In financial contexts, decimals are usually rounded to:", a: "Hundredths (cents)", opts: ["Tenths", "Hundredths (cents)", "Thousandths", "Whole numbers"] },
+      { q: "Round 3.14159 DOWN to the nearest hundredth.", a: "3.14", opts: ["3.14", "3.15", "3.1", "3.141"] },
+      { q: "What is 486.3685 rounded OFF to the nearest tenth?", a: "486.4", opts: ["486.3", "486.36", "486.4", "486"] },
+      { q: "Rounding UP always:", a: "Increases the target digit or carries over", opts: ["Keeps the number the same", "Drops digits", "Increases the target digit or carries over"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${LESSON_CONFIG.nextPreview.replace(/\n/g, '<br>').replace(/`([^`]+)`/g, '<code>$1</code>')}</p>
+      `;
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
