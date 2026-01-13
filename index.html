@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Open educational platform for mastery-based phonics learning (static demo)" />
+  <meta name="description" content="Mini OpenStax: Open educational platform for mastery-based learning (static demo)" />
   <title>Mini OpenStax MVP — Static Demo</title>
   <style>
     /* Minimal, educational, mobile-first */
@@ -115,6 +115,7 @@
       transition: background 0.2s;
       border: none;
       cursor: pointer;
+      min-width: 140px;
     }
 
     .role-card.student .btn {
@@ -155,19 +156,19 @@
     <div class="brand">
       <div class="app-icon">📚</div>
       <h1 class="app-title">Mini OpenStax MVP</h1>
-      <p class="tagline">Mastery-based phonics learning with instant feedback</p>
+      <p class="tagline">Mastery-based learning with instant feedback and WhatsApp reporting</p>
     </div>
 
     <div class="access-grid">
       <div class="role-card student">
         <h2>Student</h2>
-        <p>Practice short-vowel words, take auto-graded quizzes, and earn mastery badges.</p>
+        <p>Learn core concepts, complete interactive lessons, and take auto-graded quizzes.</p>
         <a href="setup.html" class="btn" rel="noopener">Start Learning</a>
       </div>
 
       <div class="role-card instructor">
         <h2>Instructor</h2>
-        <p>Review class progress, identify struggling learners, and guide interventions.</p>
+        <p>Monitor progress, review mastery data, and support learners effectively.</p>
         <a href="instructor/analytics-1.html" class="btn" rel="noopener">View Dashboard</a>
       </div>
     </div>
@@ -180,12 +181,12 @@
   <!-- Privacy-friendly analytics by Plausible -->
   <script defer data-domain="miniopenstax.example" src="https://plausible.io/js/script.js"></script>
 
-  <!-- Optional: Auto-redirect based on saved role (comment out if not desired) -->
+  <!-- Optional: Auto-redirect based on saved role -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const savedRole = localStorage.getItem('user_role');
       if (savedRole === 'student') {
-        // Only redirect if user is clearly a returning student
+        // Redirect only if student has already set up a name
         if (localStorage.getItem('student_name')) {
           window.location.href = 'dashboard.html';
         }
