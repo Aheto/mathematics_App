@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients" />
+  <title>Mini OpenStax — Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients</h1>
+        <div class="lo-tags" id="lo-tag">B7.2.2.1.3</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
+
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Multiply algebraic terms involving <strong>variables and rational coefficients</strong> (whole numbers, fractions, or decimals).</li>
+          <li>Divide algebraic expressions by simplifying coefficients and canceling common variables.</li>
+          <li>Apply the <strong>laws of exponents</strong> when multiplying or dividing like bases.</li>
+          <li>Use these skills to find <strong>areas</strong>, <strong>volumes</strong>, and other real-world quantities.</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">Coefficient</span>
+          <span class="word-item">Exponent</span>
+          <span class="word-item">Monomial</span>
+          <span class="word-item">Rational coefficient</span>
+          <span class="word-item">Area</span>
+          <span class="word-item">Volume</span>
+          <span class="word-item">Cancel</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. Multiplying Algebraic Expressions</h3>
+        <p>When multiplying algebraic terms:</p>
+        <ul>
+          <li><strong>Multiply the coefficients</strong> (numbers)</li>
+          <li><strong>Add the exponents</strong> of like variables (Law of Exponents: x^a · x^b = x^(a+b))</li>
+        </ul>
+        <p><strong>Example 1: Simple Monomials</strong><br>
+        4p × 8p² = (4 × 8) · (p¹ · p²) = 32p³</p>
+        <p><strong>Example 2: With Two Variables</strong><br>
+        5xy² × 4x⁴y³ = (5 × 4) · (x¹ · x⁴) · (y² · y³) = 20x⁵y⁵</p>
+        <p><strong>Example 3: With Negative Coefficients</strong><br>
+        -2a × 4a × 5a = (-2 × 4 × 5) · (a · a · a) = -40a³</p>
+        <p><strong>Example 4: Mixed Signs</strong><br>
+        -3xy × 5y = (-3 × 5) · x · (y · y) = -15xy²</p>
+        <blockquote>✅ <strong>Rule</strong>:<br>
+        - Numbers × Numbers<br>
+        - Variables × Variables → <strong>add exponents</strong></blockquote>
+
+        <h3>2. Dividing Algebraic Expressions</h3>
+        <p>When dividing:</p>
+        <ul>
+          <li><strong>Divide the coefficients</strong></li>
+          <li><strong>Subtract the exponents</strong> of like variables (Law: x^a / x^b = x^(a-b))</li>
+          <li>Cancel common factors</li>
+        </ul>
+        <p><strong>Example 1: Simple Division</strong><br>
+        (12x³y²) / (16xy⁴) = (12/16) · (x³/x) · (y²/y⁴) = (3/4) · x² · y⁻² = 3x² / (4y²)</p>
+        <blockquote>📌 In Grade 7, we usually write answers <strong>without negative exponents</strong>, so keep variables in the denominator if needed.</blockquote>
+        <p><strong>Example 2: With Common Factors</strong><br>
+        (-30a³b²) / (6a³b²) = (-30/6) · (a³/a³) · (b²/b²) = -5 · 1 · 1 = -5</p>
+        <p><strong>Example 3: Higher Powers</strong><br>
+        (18x⁵y²) / (24x⁷y²) = (18/24) · (x⁵/x⁷) · (y²/y²) = (3/4) · x⁻² · 1 = 3 / (4x²)</p>
+
+        <h3>3. Real-World Applications</h3>
+        <p><strong>A. Area of a Rectangle</strong><br>
+        - Length = 3x, Width = 4y<br>
+        - Area = 3x × 4y = 12xy</p>
+        <p><strong>B. Volume of a Box</strong><br>
+        - Length = 2p, Width = 3p, Height = 5p<br>
+        - Volume = 2p × 3p × 5p = 30p³</p>
+        <p><strong>C. Cost per Unit</strong><br>
+        - Total cost = 24x⁵y² cedis<br>
+        - Number of items = 8x³y<br>
+        - Cost per item = (24x⁵y²) / (8x³y) = 3x²y</p>
+
+        <h3>4. Key Rules Summary</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Operation</th>
+              <th>Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Multiplication</strong></td>
+              <td>Multiply coefficients; add exponents of like bases</td>
+            </tr>
+            <tr>
+              <td><strong>Division</strong></td>
+              <td>Divide coefficients; subtract exponents of like bases</td>
+            </tr>
+            <tr>
+              <td><strong>Same base, same exponent</strong></td>
+              <td>Cancels to 1 (e.g., a³/a³ = 1)</td>
+            </tr>
+            <tr>
+              <td><strong>Negative result</strong></td>
+              <td>Comes from odd number of negative signs</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Applying exponent rules accurately.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Explaining steps clearly (e.g., “I added the exponents because…”).</li>
+          <li><strong>Creativity and Innovation (CI)</strong>: Modeling real shapes and rates with algebra.</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Simplify:
+              <br>a) 4p × 8p²
+              <br>b) -2a × 4a × 5a
+              <br>c) 5xy² × 4x⁴y³</li>
+            <li>Simplify:
+              <br>a) (12x³y²) / (16xy⁴)
+              <br>b) (-30a³b²) / (6a³b²)
+              <br>c) (18x⁵y²) / (24x⁷y²)</li>
+            <li>A rectangle has length 7x and width 3y. Write an expression for its area.</li>
+            <li>True or False: x⁵ / x² = x³. Explain.</li>
+          </ol>
+          <p><em>Confirm your understanding before moving on.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 37, you’ll learn to substitute values into algebraic expressions and evaluate them—like finding the actual area when x = 2 and y = 3. This connects symbolic math to real numerical results!</p>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 35; // Lesson 36
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT (EDIT PER FILE)
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients",
+      loTag: "B7.2.2.1.3",
+      objectives: [
+        "Multiply algebraic terms involving variables and rational coefficients (whole numbers, fractions, or decimals).",
+        "Divide algebraic expressions by simplifying coefficients and canceling common variables.",
+        "Apply the laws of exponents when multiplying or dividing like bases.",
+        "Use these skills to find areas, volumes, and other real-world quantities."
+      ],
+      words: [
+        "Coefficient",
+        "Exponent",
+        "Monomial",
+        "Rational coefficient",
+        "Area",
+        "Volume",
+        "Cancel"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Simplify:
+            <br>a) 4p × 8p²
+            <br>b) -2a × 4a × 5a
+            <br>c) 5xy² × 4x⁴y³</li>
+          <li>Simplify:
+            <br>a) (12x³y²) / (16xy⁴)
+            <br>b) (-30a³b²) / (6a³b²)
+            <br>c) (18x⁵y²) / (24x⁷y²)</li>
+          <li>A rectangle has length 7x and width 3y. Write an expression for its area.</li>
+          <li>True or False: x⁵ / x² = x³. Explain.</li>
+        </ol>
+        <p><em>Confirm your understanding before moving on.</em></p>
+      `,
+      nextPreview: "In Lesson 37, you’ll learn to substitute values into algebraic expressions and evaluate them—like finding the actual area when x = 2 and y = 3. This connects symbolic math to real numerical results!"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "Simplify: 3x × 4x", a: "12x²", opts: ["7x", "12x", "12x²", "7x²"] },
+      { q: "Simplify: 5a² × 2a³", a: "10a⁵", opts: ["10a⁶", "10a⁵", "7a⁵", "7a⁶"] },
+      { q: "Simplify: -2p × 3p", a: "-6p²", opts: ["-6p", "-6p²", "6p", "6p²"] },
+      { q: "Simplify: 4xy × 5x²y³", a: "20x³y⁴", opts: ["20x²y³", "20x³y⁴", "9x³y⁴", "9xy⁴"] },
+      { q: "Simplify: (12x⁴) / (3x²)", a: "4x²", opts: ["4x²", "4x⁶", "9x²", "9x⁶"] },
+      { q: "Simplify: (15a³b²) / (5ab)", a: "3a²b", opts: ["3a²b", "3ab", "10a²b", "10ab"] },
+      { q: "True or False: x⁷ / x³ = x⁴", a: "True", opts: ["True", "False"] },
+      { q: "Area of rectangle with sides 2x and 5y:", a: "10xy", opts: ["7xy", "10xy", "10x²y²", "7x + 5y"] },
+      { q: "Simplify: -3m × 4m²", a: "-12m³", opts: ["-12m²", "-12m³", "12m³", "-7m³"] },
+      { q: "Simplify: (18p⁵q³) / (6p²q)", a: "3p³q²", opts: ["3p³q²", "12p³q²", "3p⁷q⁴", "12p⁷q⁴"] },
+      { q: "Volume of box with sides 2a, 3a, a:", a: "6a³", opts: ["6a", "6a²", "6a³", "5a³"] },
+      { q: "Simplify: 7x²y × 3xy⁴", a: "21x³y⁵", opts: ["21x²y⁴", "21x³y⁵", "10x³y⁵", "10x²y⁴"] },
+      { q: "Simplify: (-20r⁴s²) / (4r³s²)", a: "-5r", opts: ["-5r", "-5rs", "5r", "5rs"] },
+      { q: "Which equals 8x⁴?", a: "2x² × 4x²", opts: ["2x² × 4x²", "2x × 4x", "8x × x⁴", "2x⁴ + 4x⁴"] },
+      { q: "Simplify: (25m⁶n) / (5m⁴n)", a: "5m²", opts: ["5m²", "5m¹⁰", "20m²", "20m¹⁰"] },
+      { q: "Cost per unit: total = 36x³y², units = 9x²y", a: "4xy", opts: ["4xy", "4x⁵y³", "27xy", "27x⁵y³"] },
+      { q: "Simplify: -4a²b × 3ab³", a: "-12a³b⁴", opts: ["-12a²b³", "-12a³b⁴", "12a³b⁴", "-7a³b⁴"] },
+      { q: "Simplify: (42p⁷q⁵) / (7p⁵q³)", a: "6p²q²", opts: ["6p²q²", "6pq", "35p²q²", "35pq"] },
+      { q: "Which is NOT correct?", a: "x⁵ / x² = x⁷", opts: ["x³ × x² = x⁵", "x⁵ / x² = x³", "x⁵ / x² = x⁷", "2x × 3x = 6x²"] },
+      { q: "Simplify: (16r⁴s³t) / (8r²st)", a: "2r²s²", opts: ["2r²s²", "2r⁶s⁴t²", "8r²s²", "8r⁶s⁴t²"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${LESSON_CONFIG.nextPreview}</p>
+      `;
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
