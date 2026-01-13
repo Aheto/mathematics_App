@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mini OpenStax: Add and Subtract Up to Four-Digit Numbers" />
+  <title>Mini OpenStax — Add and Subtract Up to Four-Digit Numbers</title>
+  <style>
+    :root {
+      --green: #006b3d;   /* Ghana green */
+      --gold: #cead00;    /* Ghana gold */
+      --light: #f9f9f9;
+      --dark: #2d2d2d;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .role-badge {
+      background: #e9ecef;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .chapter-nav {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+    }
+    .chapter-btn {
+      padding: 0.4rem 0.8rem;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      min-width: 80px;
+      text-align: center;
+    }
+    .chapter-btn.active,
+    .chapter-btn:hover {
+      background: #00502e;
+    }
+    .section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+    }
+    .word-item {
+      background: var(--light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f7f4;
+    }
+    .checkpoint, .thought-experiment {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .quiz {
+      margin-top: 2rem;
+    }
+    .question {
+      margin-bottom: 1.2rem;
+    }
+    .options {
+      margin-left: 1rem;
+    }
+    .option {
+      margin: 0.4rem 0;
+    }
+    .btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #00502e;
+    }
+    .btn-secondary {
+      background: #6c757d;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    .feedback {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--light);
+      border-left: 4px solid var(--green);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid var(--green);
+      color: #555;
+      font-style: italic;
+    }
+    .preview-next {
+      background: #e8f5e9;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+    }
+    code {
+      background: #f1f1f1;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    pre {
+      background: #f8f9fa;
+      padding: 0.5rem;
+      border-left: 3px solid var(--green);
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1 id="lesson-title">Add and Subtract Up to Four-Digit Numbers</h1>
+        <div class="lo-tags" id="lo-tag">B7.1.2.2.1</div>
+      </div>
+      <div class="role-badge">Student View</div>
+    </div>
+
+    <!-- Navigation: Home + Current + Next 3 -->
+    <nav class="chapter-nav" id="chapter-nav"></nav>
+
+    <main>
+      <!-- Learning Objectives -->
+      <div class="section">
+        <h2>🎯 What You’ll Learn</h2>
+        <ul id="objectives">
+          <li>Use <strong>partitioning (expanded form)</strong> and <strong>place value understanding</strong> to add and subtract whole numbers up to four digits.</li>
+          <li>Apply the same strategies to <strong>decimal numbers</strong> with up to two decimal places.</li>
+          <li>Solve problems accurately using structured decomposition and regrouping.</li>
+          <li>Justify each step using place value language (e.g., “3 hundreds + 5 hundreds = 8 hundreds”).</li>
+        </ul>
+      </div>
+
+      <!-- Word List -->
+      <div class="section">
+        <h2>🔤 Important Words</h2>
+        <p id="word-list-desc">Key terms for this lesson:</p>
+        <div class="word-list" id="word-list">
+          <span class="word-item">partitioning</span>
+          <span class="word-item">expanded form</span>
+          <span class="word-item">place value</span>
+          <span class="word-item">regrouping</span>
+          <span class="word-item">borrowing</span>
+          <span class="word-item">carrying</span>
+          <span class="word-item">decimal point</span>
+          <span class="word-item">inverse operation</span>
+        </div>
+      </div>
+
+      <!-- Lesson Content -->
+      <div class="section" id="lesson-content">
+        <h3>1. Partitioning (Expanded Form) for Addition</h3>
+        <p>Partitioning means breaking numbers into their place values before adding.</p>
+        <blockquote>
+          <strong>Example</strong>: Add <strong>785 + 9,342</strong><br>
+          Step 1: Write in expanded form:<br>
+          – 785 = <strong>700 + 80 + 5</strong><br>
+          – 9,342 = <strong>9,000 + 300 + 40 + 2</strong><br><br>
+          Step 2: Group by place value:<br>
+          – Thousands: <strong>9,000</strong><br>
+          – Hundreds: <strong>700 + 300 = 1,000</strong><br>
+          – Tens: <strong>80 + 40 = 120</strong><br>
+          – Ones: <strong>5 + 2 = 7</strong><br><br>
+          Step 3: Combine:<br>
+          <strong>9,000 + 1,000 = 10,000</strong><br>
+          <strong>10,000 + 120 = 10,120</strong><br>
+          <strong>10,120 + 7 = 10,127</strong><br>
+          ✅ <strong>Answer: 10,127</strong>
+        </blockquote>
+        <p>🔍 <strong>Note</strong>: This method makes <strong>regrouping visible</strong>—e.g., 700 + 300 becomes a new thousand.</p>
+
+        <h3>2. Partitioning for Subtraction</h3>
+        <p>Subtraction uses the same idea—but may require <strong>borrowing across place values</strong>, which partitioning helps clarify.</p>
+        <blockquote>
+          <strong>Example</strong>: Subtract <strong>7.85 from 93.6</strong><br>
+          Step 1: Align decimals and write in expanded form:<br>
+          – 93.60 = <strong>90 + 3 + 6/10 + 0/100</strong><br>
+          – 7.85 = <strong>7 + 8/10 + 5/100</strong><br><br>
+          Step 2: Regroup if needed (e.g., convert 1 one into 10 tenths):<br>
+          – 93.60 → <strong>90 + 2 + 16/10 + 0/100</strong><br><br>
+          Using vertical alignment:<br>
+          <pre>
+    93.60
+  –  7.85
+  --------
+    85.75
+          </pre>
+          Step 3 (using partitioning):<br>
+          – Tenths: 6 tenths &lt; 8 tenths → borrow 1 from ones → 16 tenths – 8 tenths = <strong>8 tenths</strong><br>
+          – Hundredths: 0 &lt; 5 → borrow from tenths → 10 hundredths – 5 = <strong>5 hundredths</strong><br>
+          – Ones: After borrowing, 2 – 7 → borrow from tens → 12 – 7 = <strong>5</strong><br>
+          – Tens: 8 (after borrow) – 0 = <strong>8</strong><br>
+          ✅ <strong>Answer: 85.75</strong>
+        </blockquote>
+
+        <h3>3. Adding Decimal Numbers</h3>
+        <p>Same rules apply—<strong>align decimal points</strong> and use place value columns.</p>
+        <blockquote>
+          <strong>Example</strong>: Add <strong>327.6 + 54.13</strong><br>
+          Step 1: Write with same decimal places:<br>
+          – 327.60<br>
+          –  54.13<br><br>
+          Step 2: Expanded form:<br>
+          – 327.60 = <strong>300 + 20 + 7 + 6/10 + 0/100</strong><br>
+          –  54.13 = <strong>50 + 4 + 1/10 + 3/100</strong><br><br>
+          Step 3: Add each place:<br>
+          – Hundreds: <strong>300</strong><br>
+          – Tens: <strong>20 + 50 = 70</strong><br>
+          – Ones: <strong>7 + 4 = 11</strong> → write <strong>1</strong>, carry <strong>10</strong> to tens → tens become <strong>80</strong><br>
+          – Tenths: <strong>6 + 1 = 7</strong><br>
+          – Hundredths: <strong>0 + 3 = 3</strong><br><br>
+          Final sum: <strong>300 + 80 + 1 + 0.7 + 0.03 = 381.73</strong><br>
+          ✅ <strong>Answer: 381.73</strong>
+        </blockquote>
+
+        <h3>4. Why Partitioning Works</h3>
+        <ul>
+          <li>It reinforces <strong>place value understanding</strong>.</li>
+          <li>Makes <strong>carrying (addition)</strong> and <strong>borrowing (subtraction)</strong> transparent.</li>
+          <li>Builds foundation for <strong>algebraic thinking</strong> and <strong>mental math</strong>.</li>
+        </ul>
+        <blockquote>
+          💡 <strong>Tip</strong>: Always check your answer using the inverse operation:<br>
+          If A + B = C, then C - B = A
+        </blockquote>
+
+        <h3>Real-World Applications</h3>
+        <ul>
+          <li><strong>Shopping</strong>: Adding prices like GH₵327.60 and GH₵54.13 mentally or on paper.</li>
+          <li><strong>Measurement</strong>: Finding total length: 93.6 cm of fabric minus 7.85 cm used.</li>
+          <li><strong>Budgeting</strong>: Tracking income and expenses with decimals.</li>
+        </ul>
+        <div class="thought-experiment">
+          <strong>Thought Experiment</strong>:<br>
+          You have GH₵93.60. You spend GH₵7.85 on lunch and GH₵54.13 on books. How much is left?<br>
+          → First: 93.60 – 7.85 = 85.75<br>
+          → Then: 85.75 – 54.13 = <strong>31.62</strong><br>
+          ✅ <strong>GH₵31.62 remains</strong>
+        </div>
+
+        <h3>Core Competencies Developed</h3>
+        <ul>
+          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing efficient decomposition strategies.</li>
+          <li><strong>Communication and Collaboration (CC)</strong>: Explaining steps using place value terms (“I regrouped 1 ten as 10 ones”).</li>
+        </ul>
+      </div>
+
+      <!-- Checkpoint Questions -->
+      <div class="section">
+        <h2>✅ Check Your Understanding</h2>
+        <div class="checkpoint" id="checkpoint-questions">
+          <ol>
+            <li>Use partitioning to add:<br>
+              a) <strong>842 + 3,576</strong><br>
+              b) <strong>409.25 + 67.8</strong>
+            </li>
+            <li>Subtract using expanded form:<br>
+              a) <strong>5,203 – 867</strong><br>
+              b) <strong>64.5 – 9.78</strong>
+            </li>
+            <li>A student wrote:<br>
+              > “327.6 + 54.13 = 371.73”<br>
+              Is this correct? Explain using place value.</li>
+          </ol>
+          <p><em>Confirm your answers before moving forward.</em></p>
+        </div>
+      </div>
+
+      <!-- Preview Next Lesson -->
+      <div class="preview-next" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 10, we’ll explore <strong>number patterns in large sequences</strong>, such as:</p>
+        <p><code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; 1,687,500 &nbsp; ...</code></p>
+        <p>You’ll learn to:</p>
+        <ul>
+          <li>Identify the <strong>common difference</strong> (+500,000)</li>
+          <li>Find any term using <strong>position × increment + start</strong></li>
+          <li>Write large numbers in words based on their place in the sequence</li>
+        </ul>
+      </div>
+
+      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- Footer -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View My Progress</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // ==============================
+    // 🔧 CONFIGURE PER CHAPTER
+    // ==============================
+    const currentChapter = 8; // ← Lesson 9 (zero-indexed)
+    const WHATSAPP_NUMBER = "233257320201";
+    window.startTime = Date.now();
+
+    // ==============================
+    // 🧠 LESSON CONTENT
+    // ==============================
+    const LESSON_CONFIG = {
+      title: "Add and Subtract Up to Four-Digit Numbers",
+      loTag: "B7.1.2.2.1",
+      objectives: [
+        "Use partitioning (expanded form) and place value understanding to add and subtract whole numbers up to four digits.",
+        "Apply the same strategies to decimal numbers with up to two decimal places.",
+        "Solve problems accurately using structured decomposition and regrouping.",
+        "Justify each step using place value language (e.g., “3 hundreds + 5 hundreds = 8 hundreds”)."
+      ],
+      words: [
+        "partitioning",
+        "expanded form",
+        "place value",
+        "regrouping",
+        "borrowing",
+        "carrying",
+        "decimal point",
+        "inverse operation"
+      ],
+      wordListDesc: "Key terms for this lesson:",
+      checkpointQuestions: `
+        <ol>
+          <li>Use partitioning to add:<br>
+            a) <strong>842 + 3,576</strong><br>
+            b) <strong>409.25 + 67.8</strong>
+          </li>
+          <li>Subtract using expanded form:<br>
+            a) <strong>5,203 – 867</strong><br>
+            b) <strong>64.5 – 9.78</strong>
+          </li>
+          <li>A student wrote:<br>
+            > “327.6 + 54.13 = 371.73”<br>
+            Is this correct? Explain using place value.</li>
+        </ol>
+        <p><em>Confirm your answers before moving forward.</em></p>
+      `,
+      nextPreview: "In Lesson 10, we’ll explore number patterns in large sequences, such as:\n\n187,500   687,500   1,187,500   1,687,500   ...\n\nYou’ll learn to:\n- Identify the common difference (+500,000)\n- Find any term using position × increment + start\n- Write large numbers in words based on their place in the sequence"
+    };
+
+    // ==============================
+    // 📝 QUIZ ITEMS (20 QUESTIONS)
+    // ==============================
+    const QUIZ_ITEMS = [
+      { q: "What is 785 + 9,342?", a: "10,127", opts: ["10,027", "10,127", "9,127", "10,227"] },
+      { q: "93.60 - 7.85 =", a: "85.75", opts: ["85.75", "86.75", "84.75", "85.85"] },
+      { q: "327.6 + 54.13 =", a: "381.73", opts: ["371.73", "381.73", "381.63", "382.73"] },
+      { q: "Which method breaks numbers into place values?", a: "Partitioning", opts: ["Guessing", "Partitioning", "Rounding", "Multiplying"] },
+      { q: "842 + 3,576 =", a: "4,418", opts: ["4,418", "4,318", "4,518", "3,418"] },
+      { q: "409.25 + 67.8 =", a: "477.05", opts: ["477.05", "467.05", "477.15", "476.05"] },
+      { q: "5,203 - 867 =", a: "4,336", opts: ["4,336", "4,436", "4,236", "5,336"] },
+      { q: "64.5 - 9.78 =", a: "54.72", opts: ["54.72", "55.72", "54.82", "53.72"] },
+      { q: "Is 327.6 + 54.13 = 371.73 correct?", a: "No, it should be 381.73", opts: ["Yes", "No, it should be 381.73", "No, it should be 371.63", "Can't tell"] },
+      { q: "What does 'regrouping' mean in addition?", a: "Carrying over when a place value sum ≥ 10", opts: ["Erasing numbers", "Carrying over when a place value sum ≥ 10", "Writing in words", "Using a calculator"] },
+      { q: "In subtraction, 'borrowing' means:", a: "Taking value from a higher place", opts: ["Asking a friend", "Taking value from a higher place", "Rounding down", "Adding extra"] },
+      { q: "To add decimals, you must:", a: "Align the decimal points", opts: ["Ignore decimals", "Align the decimal points", "Round first", "Multiply by 100"] },
+      { q: "How do you check 381.73 - 54.13?", a: "Add 54.13 to the result", opts: ["Subtract again", "Add 54.13 to the result", "Divide by 2", "Round to nearest 10"] },
+      { q: "700 + 300 in partitioning becomes:", a: "1,000", opts: ["100", "1,000", "730", "300"] },
+      { q: "93.60 has how many hundredths?", a: "0", opts: ["6", "0", "60", "93"] },
+      { q: "When adding 7 + 4 in the ones place, you get 11. What do you do?", a: "Write 1, carry 1 to tens", opts: ["Write 11", "Write 1, carry 1 to tens", "Write 0", "Stop"] },
+      { q: "Real-world use of partitioning includes:", a: "All of the above", opts: ["Shopping", "Budgeting", "Measurement", "All of the above"] },
+      { q: "GH₵93.60 - GH₵7.85 - GH₵54.13 =", a: "GH₵31.62", opts: ["GH₵31.62", "GH₵41.62", "GH₵32.62", "GH₵30.62"] },
+      { q: "Which is NOT a place value in 327.60?", a: "Thousands", opts: ["Hundreds", "Tens", "Thousands", "Tenths"] },
+      { q: "Partitioning builds foundation for:", a: "Algebra and mental math", opts: ["Art", "Algebra and mental math", "History", "Spelling"] }
+    ];
+
+    // ==============================
+    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
+    // ==============================
+
+    // --- Navigation (Unlimited Chapters) ---
+    function renderNavigation() {
+      const nav = document.getElementById('chapter-nav');
+      const buttons = [];
+
+      // Button 1: Home
+      buttons.push({ label: "Home", url: "../index.html", active: false });
+
+      // Buttons 2–5: Current + next 3 lessons
+      for (let i = 0; i < 4; i++) {
+        const chap = currentChapter + i;
+        buttons.push({
+          label: `Lesson ${chap + 1}`,
+          url: `chapter-${chap}.html`,
+          active: i === 0
+        });
+      }
+
+      nav.innerHTML = buttons.map(btn =>
+        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
+      ).join('');
+    }
+
+    // --- Simple Shuffle ---
+    function shuffle(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // --- Render Content ---
+    function renderContent() {
+      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
+      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
+
+      // Objectives
+      document.getElementById('objectives').innerHTML =
+        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+      // Words
+      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
+      document.getElementById('word-list').innerHTML =
+        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+      // Checkpoint
+      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
+
+      // Next preview
+      let preview = LESSON_CONFIG.nextPreview;
+      preview = preview.replace(/\n\n/g, '</p><p>')
+                      .replace(/^- /gm, '• ')
+                      .replace(/\n/g, '<br>');
+      document.getElementById('next-preview').innerHTML = `
+        <h3>🔜 Coming Up</h3>
+        <p>${preview}</p>
+      `.replace(/`([^`]+)`/g, '<code>$1</code>');
+    }
+
+    // --- Quiz Rendering ---
+    function renderQuiz() {
+      const form = document.getElementById('quiz-form');
+      let html = '';
+      QUIZ_ITEMS.forEach((item, idx) => {
+        const num = idx + 1;
+        const opts = shuffle(item.opts);
+        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
+        opts.forEach(opt => {
+          const letter = String.fromCharCode(65 + opts.indexOf(opt));
+          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
+        });
+        html += `</div></div>`;
+      });
+      form.innerHTML = html;
+    }
+
+    // --- Feedback & WhatsApp ---
+    function showFeedback() {
+      const answers = [];
+      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
+        const el = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(el ? el.value : null);
+      }
+      if (answers.includes(null)) {
+        alert("Please answer all questions.");
+        return;
+      }
+
+      let correct = 0;
+      QUIZ_ITEMS.forEach((item, i) => {
+        if (answers[i] === item.a) correct++;
+      });
+
+      const score = correct;
+      const total = QUIZ_ITEMS.length;
+      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
+      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
+      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
+      localStorage.setItem(`attempts_${currentChapter}`, attempts);
+      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+      const name = localStorage.getItem('student_name') || '[Name]';
+
+      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+      document.getElementById('feedback').innerHTML = `
+        <div class="feedback">
+          <h3>📊 Results: ${score}/${total}</h3>
+          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
+          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
+          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
+          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
+        </div>
+      `;
+    }
+
+    // --- Name Prompt ---
+    function setupNamePrompt() {
+      const saved = localStorage.getItem('student_name');
+      const promptDiv = document.getElementById('student-name-prompt');
+      const quizDiv = document.getElementById('quiz-container');
+
+      if (saved) {
+        promptDiv.style.display = 'block';
+        quizDiv.style.display = 'none';
+        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
+        document.getElementById('name-buttons').innerHTML = `
+          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
+          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
+        `;
+      } else {
+        askForNewName();
+      }
+    }
+
+    // Global functions for button clicks
+    window.startQuiz = () => {
+      document.getElementById('student-name-prompt').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+    };
+    window.askForNewName = () => {
+      document.getElementById('student-name-prompt').style.display = 'block';
+      document.getElementById('quiz-container').style.display = 'none';
+      document.getElementById('name-display').style.display = 'none';
+      document.getElementById('student-name').style.display = 'block';
+      document.getElementById('student-name').value = '';
+      document.getElementById('name-buttons').innerHTML = `
+        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
+        <div style="margin-top:1rem; font-size:0.9rem;">
+          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
+        </div>
+      `;
+    };
+    window.saveName = () => {
+      const name = document.getElementById('student-name').value.trim();
+      if (!name) { alert("Please enter your name."); return; }
+      localStorage.setItem('student_name', name);
+      if (document.getElementById('teacher-mode').checked) {
+        localStorage.setItem('miniopenstax_analytics_consent', '1');
+      }
+      window.startQuiz();
+    };
+
+    // --- Initialize Page ---
+    function init() {
+      renderNavigation();
+      renderContent();
+      renderQuiz();
+      document.getElementById('submit-quiz').onclick = showFeedback;
+      setupNamePrompt();
+    }
+
+    // Analytics toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('send-analytics').onclick = (e) => {
+        e.preventDefault();
+        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+          localStorage.setItem('miniopenstax_analytics_consent', '1');
+          alert('Analytics enabled. Thank you!');
+        }
+      };
+      init();
+    });
+  </script>
+</body>
+</html>
