@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Use Proportional Reasoning to Find Missing Values in Tables and Plot Pairs on the Coordinate Plane" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Use Proportional Reasoning to Find Missing Values in Tables and Plot Pairs on the Coordinate Plane">
   <title>Mini OpenStax — Use Proportional Reasoning to Find Missing Values in Tables and Plot Pairs on the Coordinate Plane</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
-      min-width: 80px;
-      text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +94,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -168,226 +165,154 @@
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Use Proportional Reasoning to Find Missing Values in Tables and Plot Pairs on the Coordinate Plane</h1>
-        <div class="lo-tags" id="lo-tag">B7.1.4.1.4</div>
+        <h1 id="chapter-title">[LESSON_TITLE]</h1>
+        <div class="lo-tags" id="lo-tags">[LO_TAG]</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
-
-      <!-- Learning Objectives -->
+    <main id="main-content">
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Identify <strong>proportional relationships</strong> in ratio tables.</li>
-          <li>Use <strong>multiplicative reasoning</strong> (not additive) to find missing values.</li>
-          <li>Complete tables of equivalent ratios accurately.</li>
-          <li>Plot corresponding pairs of values as <strong>ordered pairs (x, y)</strong> on the <strong>coordinate plane</strong>.</li>
-          <li>Recognize that proportional relationships form a <strong>straight line through the origin (0, 0)</strong>.</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">Proportional reasoning</span>
-          <span class="word-item">Scale factor</span>
-          <span class="word-item">Ordered pair</span>
-          <span class="word-item">Coordinate plane</span>
-          <span class="word-item">Origin</span>
-          <span class="word-item">Multiplicative</span>
-          <span class="word-item">Unit rate</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
-        <h3>1. What Is Proportional Reasoning?</h3>
-        <p>Proportional reasoning means understanding that <strong>two quantities change at a constant rate</strong>—i.e., their <strong>ratio stays the same</strong>.</p>
-        <blockquote>✅ <strong>Key Idea</strong>: In a proportional table, you can find a <strong>scale factor</strong> (multiplier) that links any two rows.</blockquote>
-
-        <h3>2. Finding Missing Values in Ratio Tables</h3>
-        <p>Use <strong>cross-multiplication</strong> or <strong>unit rate</strong> to find unknowns.</p>
-        <p><strong>Example from Curriculum</strong>:<br>
-        Complete the table of equivalent ratios:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>x</th>
-              <th>3</th>
-              <th>6</th>
-              <th>9</th>
-              <th>y</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>y</td>
-              <td>10</td>
-              <td>x</td>
-              <td>30</td>
-              <td>40</td>
-            </tr>
-          </tbody>
-        </table>
-        <p><strong>Step 1: Find the unit rate (y per x)</strong><br>
-        From first pair: 10/3 → but better to find multiplier between columns.</p>
-        <p>Notice:<br>
-        - When <strong>x = 3</strong>, <strong>y = 10</strong><br>
-        - When <strong>x = 9</strong>, <strong>y = 30</strong> → 9 is <strong>3 × 3</strong>, and 30 is <strong>10 × 3</strong> → consistent!</p>
-        <p>So, <strong>multiplier = 10/3</strong>, or <strong>y = (10/3) × x</strong></p>
-        <p><strong>Step 2: Find missing x when y = 40</strong><br>
-        40 = (10/3) × x → x = 40 ÷ (10/3) = 40 × (3/10) = 12</p>
-        <p><strong>Step 3: Find y when x = 6</strong><br>
-        y = (10/3) × 6 = 20</p>
-        <p>✅ <strong>Completed Table</strong>:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>x</th>
-              <th>3</th>
-              <th>6</th>
-              <th>9</th>
-              <th>12</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>y</td>
-              <td>10</td>
-              <td>20</td>
-              <td>30</td>
-              <td>40</td>
-            </tr>
-          </tbody>
-        </table>
-        <blockquote>💡 <strong>Check</strong>: Each time <strong>x increases by 3</strong>, <strong>y increases by 10</strong> → constant rate.</blockquote>
-
-        <h3>3. Plotting Pairs on the Coordinate Plane</h3>
-        <p>Each row in the table becomes an <strong>ordered pair (x, y)</strong>.</p>
-        <p>From the table above:</p>
-        <ul>
-          <li>(3, 10)</li>
-          <li>(6, 20)</li>
-          <li>(9, 30)</li>
-          <li>(12, 40)</li>
-        </ul>
-        <p><strong>Steps to Plot</strong>:</p>
-        <ol>
-          <li>Draw x-axis (horizontal) and y-axis (vertical).</li>
-          <li>Mark equal intervals on both axes.</li>
-          <li>Plot each point:
-            <ul>
-              <li>For (3, 10): go 3 right, 10 up</li>
-              <li>For (6, 20): go 6 right, 20 up</li>
-            </ul>
-          </li>
-          <li>Connect the points.</li>
-        </ol>
-        <p>✅ <strong>Observation</strong>: The points lie on a <strong>straight line that passes through (0, 0)</strong>.</p>
-        <blockquote>📌 <strong>Why through (0,0)?</strong><br>
-        If <strong>x = 0</strong>, then <strong>y = 0</strong> in a proportional relationship (no input → no output).</blockquote>
-
-        <h3>4. Real-World Applications</h3>
-        <p><strong>A. Pricing</strong><br>
-        At Salaga Market, <strong>3 kg</strong> of meat costs <strong>GH₵60</strong>.<br>
-        Table:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Mass (kg)</th>
-              <th>2</th>
-              <th>3</th>
-              <th>5</th>
-              <th>12</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Cost (GH₵)</td>
-              <td>40</td>
-              <td>60</td>
-              <td>100</td>
-              <td>240</td>
-            </tr>
-          </tbody>
-        </table>
-        <ul>
-          <li>Unit rate = GH₵20/kg</li>
-          <li>Ordered pairs: (2, 40), (3, 60), (5, 100), (12, 240)</li>
-          <li>Plotting these shows a straight line through origin.</li>
-        </ul>
-        <p><strong>B. Fuel Efficiency</strong><br>
-        A car travels <strong>14 km per litre</strong> of petrol.<br>
-        Table:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Petrol (L)</th>
-              <th>1</th>
-              <th>2</th>
-              <th>5</th>
-              <th>10</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Distance (km)</td>
-              <td>14</td>
-              <td>28</td>
-              <td>70</td>
-              <td>140</td>
-            </tr>
-          </tbody>
-        </table>
-        <ul>
-          <li>Equation: <strong>Distance = 14 × Petrol</strong></li>
-          <li>Graph: Straight line with slope 14</li>
-        </ul>
-
-        <h3>5. Common Mistakes to Avoid</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Mistake</th>
-              <th>Correction</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Using <strong>addition</strong> instead of multiplication (e.g., “3→10, so 6→13”)</td>
-              <td>❌ Wrong! Must use <strong>multiplication</strong>: 3×2=6 → 10×2=20</td>
-            </tr>
-            <tr>
-              <td>Plotting (y, x) instead of (x, y)</td>
-              <td>Always: <strong>(input, output) = (x, y)</strong></td>
-            </tr>
-            <tr>
-              <td>Forgetting that proportional graphs <strong>must pass through (0,0)</strong></td>
-              <td>If it doesn’t, it’s <strong>not proportional</strong> (e.g., taxi fare with base charge)</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3>Core Competencies Developed</h3>
-        <ul>
-          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Using multiplicative strategies to find missing values.</li>
-          <li><strong>Communication and Collaboration (CC)</strong>: Explaining why a relationship is proportional.</li>
-          <li><strong>Creativity and Innovation (CI)</strong>: Designing real-world tables and interpreting graphs.</li>
-        </ul>
+        <!-- Dynamically filled -->
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
+        <div class="checkpoint" id="checkpoint-questions"></div>
+      </div>
+
+      <div class="section" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>[Brief preview of next lesson]</p>
+      </div>
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View Dashboard</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
+
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
+      }
+
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 27; // Lesson 28 (zero-indexed)
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === CHAPTER CONTENT ===
+      const CHAPTER_CONFIG = {
+        title: "Use Proportional Reasoning to Find Missing Values in Tables and Plot Pairs on the Coordinate Plane",
+        loTags: ["B7.1.4.1.4"],
+        objectives: [
+          "Identify proportional relationships in ratio tables.",
+          "Use multiplicative reasoning (not additive) to find missing values.",
+          "Complete tables of equivalent ratios accurately.",
+          "Plot corresponding pairs of values as ordered pairs (x, y) on the coordinate plane.",
+          "Recognize that proportional relationships form a straight line through the origin (0, 0)."
+        ],
+        words: [
+          "Proportional reasoning", "Scale factor", "Ordered pair",
+          "Coordinate plane", "Origin", "Multiplicative", "Unit rate"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
           <ol>
             <li>Complete the table of equivalent ratios:
               <table style="margin-top:0.5rem;">
@@ -419,323 +344,549 @@
             <li>True or False: If (2, 6) and (4, 12) are in a ratio table, then (6, 18) must also be in it. Explain.</li>
           </ol>
           <p><em>Confirm your understanding before moving on.</em></p>
-        </div>
-      </div>
-
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
-        <h3>🔜 Coming Up</h3>
-        <p>In Lesson 29, we’ll explore percent as a rate per 100—including: calculating commissions, discounts, and interest; solving problems like “20% off GH₵80” or “6% interest on GH₵520”; and connecting percentages to ratios and unit rates. This links all our work on fractions, decimals, and proportions to real-life financial literacy!</p>
-      </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
-
-      <div id="student-name-prompt" class="section" style="display:none;">
-        <h2>👤 Your Name</h2>
-        <div id="name-display"></div>
-        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
-          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
-        <div id="name-buttons"></div>
-      </div>
-
-      <div class="quiz" id="quiz-container" style="display:none;">
-        <h2>📝 Quick Check (20 Questions)</h2>
-        <p>Select the best answer for each question.</p>
-        <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
-      </div>
-
-      <div id="feedback"></div>
-
-      <!-- Footer -->
-      <footer>
-        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
-        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
-        <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 27; // Lesson 28
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
-
-    // ==============================
-    // 🧠 LESSON CONTENT (EDIT PER FILE)
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Use Proportional Reasoning to Find Missing Values in Tables and Plot Pairs on the Coordinate Plane",
-      loTag: "B7.1.4.1.4",
-      objectives: [
-        "Identify proportional relationships in ratio tables.",
-        "Use multiplicative reasoning (not additive) to find missing values.",
-        "Complete tables of equivalent ratios accurately.",
-        "Plot corresponding pairs of values as ordered pairs (x, y) on the coordinate plane.",
-        "Recognize that proportional relationships form a straight line through the origin (0, 0)."
-      ],
-      words: [
-        "Proportional reasoning",
-        "Scale factor",
-        "Ordered pair",
-        "Coordinate plane",
-        "Origin",
-        "Multiplicative",
-        "Unit rate"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li>Complete the table of equivalent ratios:
-            <table style="margin-top:0.5rem;">
-              <thead>
-                <tr>
-                  <th>x</th>
-                  <th>4</th>
-                  <th>8</th>
-                  <th>12</th>
-                  <th>?</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>y</td>
-                  <td>5</td>
-                  <td>?</td>
-                  <td>15</td>
-                  <td>25</td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li>Plot the points from your completed table on a coordinate plane. Does the line pass through (0, 0)?</li>
-          <li>A printer prints <strong>12 pages per minute</strong>.
-            <br>a) Make a table for 1, 2, 3, 5, and 10 minutes.
-            <br>b) Write three ordered pairs.
-            <br>c) Describe the graph.</li>
-          <li>True or False: If (2, 6) and (4, 12) are in a ratio table, then (6, 18) must also be in it. Explain.</li>
-        </ol>
-        <p><em>Confirm your understanding before moving on.</em></p>
-      `,
-      nextPreview: "In Lesson 29, we’ll explore percent as a rate per 100—including: calculating commissions, discounts, and interest; solving problems like “20% off GH₵80” or “6% interest on GH₵520”; and connecting percentages to ratios and unit rates. This links all our work on fractions, decimals, and proportions to real-life financial literacy!"
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "What is the missing value? x:3,6,9 y:7,?,21", a: "14", opts: ["10", "12", "14", "16"] },
-      { q: "Which point must be on the graph of a proportional relationship that includes (2,8)?", a: "(4,16)", opts: ["(4,10)", "(4,16)", "(4,20)", "(4,24)"] },
-      { q: "If a car travels 180 km in 3 hours, how far in 5 hours at same rate?", a: "300 km", opts: ["240 km", "300 km", "360 km", "420 km"] },
-      { q: "Which table shows a proportional relationship?", a: "x:1,2,3 y:5,10,15", opts: ["x:1,2,3 y:4,7,10", "x:1,2,3 y:5,10,15", "x:2,4,6 y:6,10,14", "x:1,3,5 y:3,7,11"] },
-      { q: "What is the unit rate for 24 pages in 4 minutes?", a: "6 pages per minute", opts: ["4 pages per minute", "6 pages per minute", "8 pages per minute", "24 pages per minute"] },
-      { q: "True or False: A proportional graph must pass through (0,0).", a: "True", opts: ["True", "False"] },
-      { q: "If (3,12) is in a ratio table, what is y when x=5?", a: "20", opts: ["15", "18", "20", "24"] },
-      { q: "Which is NOT a characteristic of proportional relationships?", a: "Additive pattern", opts: ["Constant ratio", "Multiplicative pattern", "Additive pattern", "Line through origin"] },
-      { q: "A printer uses 3 cartridges for 120 pages. How many for 200 pages?", a: "5", opts: ["4", "5", "6", "8"] },
-      { q: "What is the scale factor from (4,10) to (8,20)?", a: "2", opts: ["1.5", "2", "2.5", "3"] },
-      { q: "If 5 kg of rice costs GH₵35, what is cost of 8 kg?", a: "GH₵56", opts: ["GH₵40", "GH₵48", "GH₵56", "GH₵64"] },
-      { q: "Which ordered pair comes from ratio 3:7?", a: "(3,7)", opts: ["(3,7)", "(7,3)", "(10,3)", "(7,10)"] },
-      { q: "What is the missing x? x:?,8,12 y:10,20,30", a: "4", opts: ["2", "4", "6", "10"] },
-      { q: "A recipe uses 2 cups flour for 3 cups sugar. How much flour for 9 cups sugar?", a: "6 cups", opts: ["4 cups", "6 cups", "8 cups", "12 cups"] },
-      { q: "Which statement is true about proportional graphs?", a: "They are straight lines through origin", opts: ["They curve upward", "They are straight lines through origin", "They start at (0,5)", "They decrease"] },
-      { q: "If 1 part = GH₵8,000 in a 2:3:5 ratio, what is total?", a: "GH₵80,000", opts: ["GH₵16,000", "GH₵40,000", "GH₵80,000", "GH₵100,000"] },
-      { q: "What is y when x=7 in a relationship where x=2 gives y=14?", a: "49", opts: ["21", "28", "35", "49"] },
-      { q: "Which mistake is common in proportional reasoning?", a: "Using addition instead of multiplication", opts: ["Using addition instead of multiplication", "Using fractions", "Finding unit rate", "Plotting points"] },
-      { q: "If (5,15) and (10,30) are in a table, what is y when x=15?", a: "45", opts: ["35", "40", "45", "50"] },
-      { q: "What is the equation for a relationship where y=24 when x=6?", a: "y = 4x", opts: ["y = 4x", "y = 6x", "y = 18x", "y = x + 18"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
-      }
-
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 Coming Up</h3>
-        <p>${LESSON_CONFIG.nextPreview}</p>
-      `;
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
-        }
+        `,
+        nextPreview: "In Lesson 29, we’ll explore percent as a rate per 100—including: calculating commissions, discounts, and interest; solving problems like “20% off GH₵80” or “6% interest on GH₵520”; and connecting percentages to ratios and unit rates. This links all our work on fractions, decimals, and proportions to real-life financial literacy!",
+        assessmentItems: [
+          { id: "1", prompt: "What is the missing value? x:3,6,9 y:7,?,21", options: [
+            {id:"a",text:"10",is_correct:false},
+            {id:"b",text:"12",is_correct:false},
+            {id:"c",text:"14",is_correct:true},
+            {id:"d",text:"16",is_correct:false}
+          ]},
+          { id: "2", prompt: "Which point must be on the graph of a proportional relationship that includes (2,8)?", options: [
+            {id:"a",text:"(4,10)",is_correct:false},
+            {id:"b",text:"(4,16)",is_correct:true},
+            {id:"c",text:"(4,20)",is_correct:false},
+            {id:"d",text:"(4,24)",is_correct:false}
+          ]},
+          { id: "3", prompt: "If a car travels 180 km in 3 hours, how far in 5 hours at same rate?", options: [
+            {id:"a",text:"240 km",is_correct:false},
+            {id:"b",text:"300 km",is_correct:true},
+            {id:"c",text:"360 km",is_correct:false},
+            {id:"d",text:"420 km",is_correct:false}
+          ]},
+          { id: "4", prompt: "Which table shows a proportional relationship?", options: [
+            {id:"a",text:"x:1,2,3 y:4,7,10",is_correct:false},
+            {id:"b",text:"x:1,2,3 y:5,10,15",is_correct:true},
+            {id:"c",text:"x:2,4,6 y:6,10,14",is_correct:false},
+            {id:"d",text:"x:1,3,5 y:3,7,11",is_correct:false}
+          ]},
+          { id: "5", prompt: "What is the unit rate for 24 pages in 4 minutes?", options: [
+            {id:"a",text:"4 pages per minute",is_correct:false},
+            {id:"b",text:"6 pages per minute",is_correct:true},
+            {id:"c",text:"8 pages per minute",is_correct:false},
+            {id:"d",text:"24 pages per minute",is_correct:false}
+          ]},
+          { id: "6", prompt: "True or False: A proportional graph must pass through (0,0).", options: [
+            {id:"a",text:"True",is_correct:true},
+            {id:"b",text:"False",is_correct:false}
+          ]},
+          { id: "7", prompt: "If (3,12) is in a ratio table, what is y when x=5?", options: [
+            {id:"a",text:"15",is_correct:false},
+            {id:"b",text:"18",is_correct:false},
+            {id:"c",text:"20",is_correct:true},
+            {id:"d",text:"24",is_correct:false}
+          ]},
+          { id: "8", prompt: "Which is NOT a characteristic of proportional relationships?", options: [
+            {id:"a",text:"Constant ratio",is_correct:false},
+            {id:"b",text:"Multiplicative pattern",is_correct:false},
+            {id:"c",text:"Additive pattern",is_correct:true},
+            {id:"d",text:"Line through origin",is_correct:false}
+          ]},
+          { id: "9", prompt: "A printer uses 3 cartridges for 120 pages. How many for 200 pages?", options: [
+            {id:"a",text:"4",is_correct:false},
+            {id:"b",text:"5",is_correct:true},
+            {id:"c",text:"6",is_correct:false},
+            {id:"d",text:"8",is_correct:false}
+          ]},
+          { id: "10", prompt: "What is the scale factor from (4,10) to (8,20)?", options: [
+            {id:"a",text:"1.5",is_correct:false},
+            {id:"b",text:"2",is_correct:true},
+            {id:"c",text:"2.5",is_correct:false},
+            {id:"d",text:"3",is_correct:false}
+          ]},
+          { id: "11", prompt: "If 5 kg of rice costs GH₵35, what is cost of 8 kg?", options: [
+            {id:"a",text:"GH₵40",is_correct:false},
+            {id:"b",text:"GH₵48",is_correct:false},
+            {id:"c",text:"GH₵56",is_correct:true},
+            {id:"d",text:"GH₵64",is_correct:false}
+          ]},
+          { id: "12", prompt: "Which ordered pair comes from ratio 3:7?", options: [
+            {id:"a",text:"(3,7)",is_correct:true},
+            {id:"b",text:"(7,3)",is_correct:false},
+            {id:"c",text:"(10,3)",is_correct:false},
+            {id:"d",text:"(7,10)",is_correct:false}
+          ]},
+          { id: "13", prompt: "What is the missing x? x:?,8,12 y:10,20,30", options: [
+            {id:"a",text:"2",is_correct:false},
+            {id:"b",text:"4",is_correct:true},
+            {id:"c",text:"6",is_correct:false},
+            {id:"d",text:"10",is_correct:false}
+          ]},
+          { id: "14", prompt: "A recipe uses 2 cups flour for 3 cups sugar. How much flour for 9 cups sugar?", options: [
+            {id:"a",text:"4 cups",is_correct:false},
+            {id:"b",text:"6 cups",is_correct:true},
+            {id:"c",text:"8 cups",is_correct:false},
+            {id:"d",text:"12 cups",is_correct:false}
+          ]},
+          { id: "15", prompt: "Which statement is true about proportional graphs?", options: [
+            {id:"a",text:"They curve upward",is_correct:false},
+            {id:"b",text:"They are straight lines through origin",is_correct:true},
+            {id:"c",text:"They start at (0,5)",is_correct:false},
+            {id:"d",text:"They decrease",is_correct:false}
+          ]},
+          { id: "16", prompt: "If 1 part = GH₵8,000 in a 2:3:5 ratio, what is total?", options: [
+            {id:"a",text:"GH₵16,000",is_correct:false},
+            {id:"b",text:"GH₵40,000",is_correct:false},
+            {id:"c",text:"GH₵80,000",is_correct:true},
+            {id:"d",text:"GH₵100,000",is_correct:false}
+          ]},
+          { id: "17", prompt: "What is y when x=7 in a relationship where x=2 gives y=14?", options: [
+            {id:"a",text:"21",is_correct:false},
+            {id:"b",text:"28",is_correct:false},
+            {id:"c",text:"35",is_correct:false},
+            {id:"d",text:"49",is_correct:true}
+          ]},
+          { id: "18", prompt: "Which mistake is common in proportional reasoning?", options: [
+            {id:"a",text:"Using addition instead of multiplication",is_correct:true},
+            {id:"b",text:"Using fractions",is_correct:false},
+            {id:"c",text:"Finding unit rate",is_correct:false},
+            {id:"d",text:"Plotting points",is_correct:false}
+          ]},
+          { id: "19", prompt: "If (5,15) and (10,30) are in a table, what is y when x=15?", options: [
+            {id:"a",text:"35",is_correct:false},
+            {id:"b",text:"40",is_correct:false},
+            {id:"c",text:"45",is_correct:true},
+            {id:"d",text:"50",is_correct:false}
+          ]},
+          { id: "20", prompt: "What is the equation for a relationship where y=24 when x=6?", options: [
+            {id:"a",text:"y = 4x",is_correct:true},
+            {id:"b",text:"y = 6x",is_correct:false},
+            {id:"c",text:"y = 18x",is_correct:false},
+            {id:"d",text:"y = x + 18",is_correct:false}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDER LESSON CONTENT ===
+      function renderLessonContent() {
+        const content = `
+          <h3>1. What Is Proportional Reasoning?</h3>
+          <p>Proportional reasoning means understanding that <strong>two quantities change at a constant rate</strong>—i.e., their <strong>ratio stays the same</strong>.</p>
+          <blockquote>✅ <strong>Key Idea</strong>: In a proportional table, you can find a <strong>scale factor</strong> (multiplier) that links any two rows.</blockquote>
+
+          <h3>2. Finding Missing Values in Ratio Tables</h3>
+          <p>Use <strong>cross-multiplication</strong> or <strong>unit rate</strong> to find unknowns.</p>
+          <p><strong>Example from Curriculum</strong>:<br>
+          Complete the table of equivalent ratios:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>x</th>
+                <th>3</th>
+                <th>6</th>
+                <th>9</th>
+                <th>y</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>y</td>
+                <td>10</td>
+                <td>x</td>
+                <td>30</td>
+                <td>40</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>Step 1: Find the unit rate (y per x)</strong><br>
+          From first pair: 10/3 → but better to find multiplier between columns.</p>
+          <p>Notice:<br>
+          - When <strong>x = 3</strong>, <strong>y = 10</strong><br>
+          - When <strong>x = 9</strong>, <strong>y = 30</strong> → 9 is <strong>3 × 3</strong>, and 30 is <strong>10 × 3</strong> → consistent!</p>
+          <p>So, <strong>multiplier = 10/3</strong>, or <strong>y = (10/3) × x</strong></p>
+          <p><strong>Step 2: Find missing x when y = 40</strong><br>
+          40 = (10/3) × x → x = 40 ÷ (10/3) = 40 × (3/10) = 12</p>
+          <p><strong>Step 3: Find y when x = 6</strong><br>
+          y = (10/3) × 6 = 20</p>
+          <p>✅ <strong>Completed Table</strong>:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>x</th>
+                <th>3</th>
+                <th>6</th>
+                <th>9</th>
+                <th>12</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>y</td>
+                <td>10</td>
+                <td>20</td>
+                <td>30</td>
+                <td>40</td>
+              </tr>
+            </tbody>
+          </table>
+          <blockquote>💡 <strong>Check</strong>: Each time <strong>x increases by 3</strong>, <strong>y increases by 10</strong> → constant rate.</blockquote>
+
+          <h3>3. Plotting Pairs on the Coordinate Plane</h3>
+          <p>Each row in the table becomes an <strong>ordered pair (x, y)</strong>.</p>
+          <p>From the table above:</p>
+          <ul>
+            <li>(3, 10)</li>
+            <li>(6, 20)</li>
+            <li>(9, 30)</li>
+            <li>(12, 40)</li>
+          </ul>
+          <p><strong>Steps to Plot</strong>:</p>
+          <ol>
+            <li>Draw x-axis (horizontal) and y-axis (vertical).</li>
+            <li>Mark equal intervals on both axes.</li>
+            <li>Plot each point:
+              <ul>
+                <li>For (3, 10): go 3 right, 10 up</li>
+                <li>For (6, 20): go 6 right, 20 up</li>
+              </ul>
+            </li>
+            <li>Connect the points.</li>
+          </ol>
+          <p>✅ <strong>Observation</strong>: The points lie on a <strong>straight line that passes through (0, 0)</strong>.</p>
+          <blockquote>📌 <strong>Why through (0,0)?</strong><br>
+          If <strong>x = 0</strong>, then <strong>y = 0</strong> in a proportional relationship (no input → no output).</blockquote>
+
+          <h3>4. Real-World Applications</h3>
+          <p><strong>A. Pricing</strong><br>
+          At Salaga Market, <strong>3 kg</strong> of meat costs <strong>GH₵60</strong>.<br>
+          Table:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Mass (kg)</th>
+                <th>2</th>
+                <th>3</th>
+                <th>5</th>
+                <th>12</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cost (GH₵)</td>
+                <td>40</td>
+                <td>60</td>
+                <td>100</td>
+                <td>240</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul>
+            <li>Unit rate = GH₵20/kg</li>
+            <li>Ordered pairs: (2, 40), (3, 60), (5, 100), (12, 240)</li>
+            <li>Plotting these shows a straight line through origin.</li>
+          </ul>
+          <p><strong>B. Fuel Efficiency</strong><br>
+          A car travels <strong>14 km per litre</strong> of petrol.<br>
+          Table:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Petrol (L)</th>
+                <th>1</th>
+                <th>2</th>
+                <th>5</th>
+                <th>10</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Distance (km)</td>
+                <td>14</td>
+                <td>28</td>
+                <td>70</td>
+                <td>140</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul>
+            <li>Equation: <strong>Distance = 14 × Petrol</strong></li>
+            <li>Graph: Straight line with slope 14</li>
+          </ul>
+
+          <h3>5. Common Mistakes to Avoid</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Mistake</th>
+                <th>Correction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Using <strong>addition</strong> instead of multiplication (e.g., “3→10, so 6→13”)</td>
+                <td>❌ Wrong! Must use <strong>multiplication</strong>: 3×2=6 → 10×2=20</td>
+              </tr>
+              <tr>
+                <td>Plotting (y, x) instead of (x, y)</td>
+                <td>Always: <strong>(input, output) = (x, y)</strong></td>
+              </tr>
+              <tr>
+                <td>Forgetting that proportional graphs <strong>must pass through (0,0)</strong></td>
+                <td>If it doesn’t, it’s <strong>not proportional</strong> (e.g., taxi fare with base charge)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Core Competencies Developed</h3>
+          <ul>
+            <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Using multiplicative strategies to find missing values.</li>
+            <li><strong>Communication and Collaboration (CC)</strong>: Explaining why a relationship is proportional.</li>
+            <li><strong>Creativity and Innovation (CI)</strong>: Designing real-world tables and interpreting graphs.</li>
+          </ul>
+        `;
+        document.getElementById('lesson-content').innerHTML = content;
+      }
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        const preview = CHAPTER_CONFIG.nextPreview
+          .replace(/\n\n/g, '</p><p>')
+          .replace(/\n/g, '<br>');
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 Coming Up</h3>
+          <p>${preview}</p>
+        `;
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderLessonContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
