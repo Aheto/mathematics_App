@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Apply Mental Mathematics Strategies and Number Properties to Perform Calculations" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Apply Mental Mathematics Strategies and Number Properties to Perform Calculations">
   <title>Mini OpenStax — Apply Mental Math Strategies and Number Properties</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
-      min-width: 80px;
-      text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +94,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -174,178 +171,154 @@
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Apply Mental Mathematics Strategies and Number Properties to Perform Calculations</h1>
-        <div class="lo-tags" id="lo-tag">B7.1.2.1.2</div>
+        <h1 id="chapter-title">[LESSON_TITLE]</h1>
+        <div class="lo-tags" id="lo-tags">[LO_TAG]</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- Learning Objectives -->
+    <main id="main-content">
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Use <strong>mental math strategies</strong> (e.g., compensation, decomposition, doubling/halving) to simplify calculations.</li>
-          <li>Apply <strong>number properties</strong>—commutative, associative, distributive, identity, and inverse—to speed up and verify computations.</li>
-          <li>Solve problems involving large numbers (including those over 1 billion) and decimals <strong>without a calculator</strong>.</li>
-          <li>Justify your reasoning using mathematical language.</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">commutative</span>
-          <span class="word-item">associative</span>
-          <span class="word-item">distributive</span>
-          <span class="word-item">compensation</span>
-          <span class="word-item">decomposition</span>
-          <span class="word-item">doubling and halving</span>
-          <span class="word-item">mental math</span>
-          <span class="word-item">inverse</span>
-          <span class="word-item">identity</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
-        <h3>1. Core Number Properties</h3>
-        <p>These properties form the foundation of efficient mental computation:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Rule</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Commutative</strong><br>(Addition & Multiplication)</td>
-              <td>Order doesn’t matter</td>
-              <td>a + b = b + a<br>a × b = b × a</td>
-            </tr>
-            <tr>
-              <td><strong>Associative</strong><br>(Addition & Multiplication)</td>
-              <td>Grouping doesn’t matter</td>
-              <td>(a + b) + c = a + (b + c)<br>(a × b) × c = a × (b × c)</td>
-            </tr>
-            <tr>
-              <td><strong>Distributive</strong></td>
-              <td>Multiply across a sum/difference</td>
-              <td>a(b + c) = ab + ac</td>
-            </tr>
-            <tr>
-              <td><strong>Identity</strong></td>
-              <td>Adding 0 or multiplying by 1 changes nothing</td>
-              <td>a + 0 = a<br>a × 1 = a</td>
-            </tr>
-            <tr>
-              <td><strong>Inverse</strong></td>
-              <td>Opposites cancel out</td>
-              <td>a + (-a) = 0<br>a × (1/a) = 1 (if a ≠ 0)</td>
-            </tr>
-          </tbody>
-        </table>
-        <blockquote>
-          ✅ These allow you to <strong>rearrange, regroup, or break apart</strong> numbers for easier mental work.
-        </blockquote>
-
-        <h3>2. Mental Math Strategies</h3>
-        <p><strong>A. Compensation</strong><br>
-        Adjust one number to make the calculation easier, then adjust the result.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          487 + 299<br>
-          → Think: 487 + 300 = 787<br>
-          → Then subtract 1: <strong>786</strong>
-        </blockquote>
-        <blockquote>
-          <strong>With decimals</strong>:<br>
-          56.8 - 19.9 = 56.8 - 20 + 0.1 = <strong>36.9</strong>
-        </blockquote>
-
-        <p><strong>B. Decomposition (Breaking Apart)</strong><br>
-        Split numbers into place values or friendly chunks.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          7,845 × 6<br>
-          → 7,000 × 6 = 42,000<br>
-          → 800 × 6 = 4,800<br>
-          → 40 × 6 = 240<br>
-          → 5 × 6 = 30<br>
-          → Total: <strong>47,070</strong>
-        </blockquote>
-
-        <p><strong>C. Doubling and Halving</strong><br>
-        Useful in multiplication: double one factor, halve the other.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          14 × 50<br>
-          → Halve 14 → 7<br>
-          → Double 50 → 100<br>
-          → 7 × 100 = <strong>700</strong>
-        </blockquote>
-        <p>Works because: 14 × 50 = (14 ÷ 2) × (50 × 2) = 7 × 100</p>
-
-        <p><strong>D. Using Known Facts & Patterns</strong><br>
-        Leverage multiplication tables, powers of 10, or familiar sums.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          25 × 36<br>
-          → 25 × 4 = 100, so 25 × 36 = 25 × (4 × 9) = (25 × 4) × 9 = 100 × 9 = <strong>900</strong>
-        </blockquote>
-
-        <p><strong>E. Front-End Estimation</strong><br>
-        Focus on the largest digits first for quick approximations.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          4,872,345 + 3,198,765<br>
-          → Estimate: 4.8M + 3.2M ≈ <strong>8,000,000</strong>
-        </blockquote>
-
-        <h3>3. Applying Strategies to Large Numbers (&gt;1 Billion)</h3>
-        <p>Even with huge numbers, mental math works when you <strong>focus on structure</strong>.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          What is 5,187,500,000 - 187,500,000?<br>
-          → Notice both share “187,500,000”<br>
-          → So: 5,187.5M - 187.5M = <strong>5,000,000,000</strong>
-        </blockquote>
-        <blockquote>
-          <strong>Using distributive property</strong>:<br>
-          8 × 1,250,000,000 = 8 × (1.25 × 10^9) = (8 × 1.25) × 10^9 = 10 × 10^9 = <strong>10,000,000,000</strong>
-        </blockquote>
-
-        <h3>4. Real-World Applications</h3>
-        <ul>
-          <li><strong>Shopping</strong>: Quickly estimate total cost of 3 items priced at GH₵299 each → 3 × 300 = 900, minus 3 → <strong>GH₵897</strong></li>
-          <li><strong>Budgeting</strong>: Add national expenditures mentally by rounding to nearest hundred-million.</li>
-          <li><strong>Time Management</strong>: Calculate elapsed time using compensation (e.g., from 8:47 a.m. to 12:15 p.m.).</li>
-        </ul>
-        <div class="thought-experiment">
-          <strong>Thought Experiment</strong>:<br>
-          A school has <strong>2,687,500</strong> textbooks. If they distribute <strong>500,000</strong> per region, how many regions can be fully supplied?<br>
-          → Mentally: 2,687,500 ÷ 500,000 = 2.6875 ÷ 0.5 = 5.375 → <strong>5 full regions</strong>
-        </div>
-
-        <h3>Core Competencies Developed</h3>
-        <ul>
-          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing the best strategy for a given problem.</li>
-          <li><strong>Communication and Collaboration (CC)</strong>: Explaining your mental steps clearly to others.</li>
-          <li><strong>Personal Development and Leadership (PL)</strong>: Building confidence in numerical fluency without digital tools.</li>
-        </ul>
+        <!-- Dynamically filled -->
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
+        <div class="checkpoint" id="checkpoint-questions"></div>
+      </div>
+
+      <div class="section" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>[Brief preview of next lesson]</p>
+      </div>
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View Dashboard</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
+
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
+      }
+
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 6; // Lesson 7 (zero-indexed)
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === CHAPTER CONTENT ===
+      const CHAPTER_CONFIG = {
+        title: "Apply Mental Mathematics Strategies and Number Properties to Perform Calculations",
+        loTags: ["B7.1.2.1.2"],
+        objectives: [
+          "Use mental math strategies (e.g., compensation, decomposition, doubling/halving) to simplify calculations.",
+          "Apply number properties—commutative, associative, distributive, identity, and inverse—to speed up and verify computations.",
+          "Solve problems involving large numbers (including those over 1 billion) and decimals without a calculator.",
+          "Justify your reasoning using mathematical language."
+        ],
+        words: [
+          "commutative", "associative", "distributive",
+          "compensation", "decomposition", "doubling and halving",
+          "mental math", "inverse", "identity"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
           <ol>
             <li>Use <strong>compensation</strong> to find:<br>
               a) 8,999 + 4,567<br>
@@ -360,317 +333,504 @@
             <li>Which mental strategy would you use for 4,187,500 + 5,687,500? Explain.</li>
           </ol>
           <p><em>Confirm your answers before moving forward.</em></p>
-        </div>
-      </div>
-
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
-        <h3>🔜 Coming Up</h3>
-        <p>In Lesson 8, we’ll return to <strong>number patterns</strong> and explore sequences like:</p>
-        <p><code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; 1,687,500 &nbsp; ...</code></p>
-        <p>You’ll learn to:</p>
-        <ul>
-          <li>Identify the <strong>rule</strong> (e.g., “add 500,000”)</li>
-          <li>Predict the <strong>10th term</strong></li>
-          <li>Write any term using <strong>position notation</strong></li>
-        </ul>
-      </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
-
-      <div id="student-name-prompt" class="section" style="display:none;">
-        <h2>👤 Your Name</h2>
-        <div id="name-display"></div>
-        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
-          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
-        <div id="name-buttons"></div>
-      </div>
-
-      <div class="quiz" id="quiz-container" style="display:none;">
-        <h2>📝 Quick Check (20 Questions)</h2>
-        <p>Select the best answer for each question.</p>
-        <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
-      </div>
-
-      <div id="feedback"></div>
-
-      <!-- Footer -->
-      <footer>
-        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
-        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
-        <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 6; // ← Lesson 7 (zero-indexed)
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
-
-    // ==============================
-    // 🧠 LESSON CONTENT
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Apply Mental Mathematics Strategies and Number Properties to Perform Calculations",
-      loTag: "B7.1.2.1.2",
-      objectives: [
-        "Use mental math strategies (e.g., compensation, decomposition, doubling/halving) to simplify calculations.",
-        "Apply number properties—commutative, associative, distributive, identity, and inverse—to speed up and verify computations.",
-        "Solve problems involving large numbers (including those over 1 billion) and decimals without a calculator.",
-        "Justify your reasoning using mathematical language."
-      ],
-      words: [
-        "commutative",
-        "associative",
-        "distributive",
-        "compensation",
-        "decomposition",
-        "doubling and halving",
-        "mental math",
-        "inverse",
-        "identity"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li>Use <strong>compensation</strong> to find:<br>
-            a) 8,999 + 4,567<br>
-            b) 12,000 - 3,998
-          </li>
-          <li>Use <strong>doubling and halving</strong> to compute:<br>
-            18 × 250
-          </li>
-          <li>Apply the <strong>distributive property</strong> to calculate:<br>
-            7 × 2,001,000,000
-          </li>
-          <li>Which mental strategy would you use for 4,187,500 + 5,687,500? Explain.</li>
-        </ol>
-        <p><em>Confirm your answers before moving forward.</em></p>
-      `,
-      nextPreview: "In Lesson 8, we’ll return to number patterns and explore sequences like:\n\n187,500   687,500   1,187,500   1,687,500   ...\n\nYou’ll learn to:\n- Identify the rule (e.g., “add 500,000”)\n- Predict the 10th term\n- Write any term using position notation"
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "What property says a + b = b + a?", a: "Commutative", opts: ["Associative", "Distributive", "Commutative", "Identity"] },
-      { q: "Which strategy adjusts a number to make math easier, then corrects the answer?", a: "Compensation", opts: ["Decomposition", "Doubling", "Compensation", "Estimation"] },
-      { q: "Use compensation: 8,999 + 4,567 =", a: "13,566", opts: ["13,566", "13,567", "13,565", "13,600"] },
-      { q: "Use compensation: 12,000 - 3,998 =", a: "8,002", opts: ["8,000", "8,002", "7,998", "8,004"] },
-      { q: "Compute 18 × 250 using doubling/halving:", a: "4,500", opts: ["450", "4,500", "9,000", "2,250"] },
-      { q: "7 × 2,001,000,000 using distributive property:", a: "14,007,000,000", opts: ["14,007,000,000", "14,000,000,000", "14,001,000,000", "14,700,000,000"] },
-      { q: "Which property allows (a × b) × c = a × (b × c)?", a: "Associative", opts: ["Commutative", "Associative", "Distributive", "Inverse"] },
-      { q: "What is 25 × 36 using known facts?", a: "900", opts: ["800", "900", "1,000", "720"] },
-      { q: "Front-end estimate of 4.9M + 3.1M:", a: "8,000,000", opts: ["7,000,000", "8,000,000", "9,000,000", "7,500,000"] },
-      { q: "5,187,500,000 - 187,500,000 =", a: "5,000,000,000", opts: ["5,000,000,000", "5,100,000,000", "4,900,000,000", "5,375,000,000"] },
-      { q: "8 × 1.25 billion =", a: "10,000,000,000", opts: ["8,000,000,000", "9,000,000,000", "10,000,000,000", "1,000,000,000"] },
-      { q: "Shopping: 3 items at GH₵299 each → total?", a: "GH₵897", opts: ["GH₵900", "GH₵897", "GH₵894", "GH₵899"] },
-      { q: "2,687,500 ÷ 500,000 = ?", a: "5.375", opts: ["5", "5.375", "6", "4.5"] },
-      { q: "a + 0 = a shows which property?", a: "Identity", opts: ["Inverse", "Identity", "Commutative", "Zero"] },
-      { q: "a × (1/a) = 1 shows which property?", a: "Inverse", opts: ["Identity", "Inverse", "Reciprocal", "Division"] },
-      { q: "Best strategy for 4,187,500 + 5,687,500?", a: "Notice both end in 187,500 and 687,500 → sum = 9,875,000", opts: ["Add digit by digit", "Use calculator", "Notice both end in 187,500 and 687,500 → sum = 9,875,000", "Round to billions"] },
-      { q: "Which is NOT a mental math strategy?", a: "Long division", opts: ["Compensation", "Decomposition", "Long division", "Doubling/halving"] },
-      { q: "Why use mental math?", a: "All of the above", opts: ["Build number sense", "Save time", "Verify calculator results", "All of the above"] },
-      { q: "7,000 × 6 is part of decomposing which product?", a: "7,845 × 6", opts: ["784 × 6", "7,845 × 6", "78 × 6", "70,845 × 6"] },
-      { q: "Mental math builds confidence in:", a: "Numerical fluency without digital tools", opts: ["Memorizing answers", "Numerical fluency without digital tools", "Using apps", "Guessing"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
-      }
-
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      let preview = LESSON_CONFIG.nextPreview;
-      preview = preview.replace(/\n\n/g, '</p><p>')
-                      .replace(/^- /gm, '• ')
-                      .replace(/\n/g, '<br>');
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 Coming Up</h3>
-        <p>${preview}</p>
-      `.replace(/`([^`]+)`/g, '<code>$1</code>');
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
-        }
+        `,
+        nextPreview: "In Lesson 8, we’ll return to number patterns and explore sequences like:\n\n187,500   687,500   1,187,500   1,687,500   ...\n\nYou’ll learn to:\n- Identify the rule (e.g., “add 500,000”)\n- Predict the 10th term\n- Write any term using position notation",
+        assessmentItems: [
+          { id: "1", prompt: "What property says a + b = b + a?", options: [
+            {id:"a",text:"Associative",is_correct:false},
+            {id:"b",text:"Distributive",is_correct:false},
+            {id:"c",text:"Commutative",is_correct:true},
+            {id:"d",text:"Identity",is_correct:false}
+          ]},
+          { id: "2", prompt: "Which strategy adjusts a number to make math easier, then corrects the answer?", options: [
+            {id:"a",text:"Decomposition",is_correct:false},
+            {id:"b",text:"Doubling",is_correct:false},
+            {id:"c",text:"Compensation",is_correct:true},
+            {id:"d",text:"Estimation",is_correct:false}
+          ]},
+          { id: "3", prompt: "Use compensation: 8,999 + 4,567 =", options: [
+            {id:"a",text:"13,566",is_correct:true},
+            {id:"b",text:"13,567",is_correct:false},
+            {id:"c",text:"13,565",is_correct:false},
+            {id:"d",text:"13,600",is_correct:false}
+          ]},
+          { id: "4", prompt: "Use compensation: 12,000 - 3,998 =", options: [
+            {id:"a",text:"8,000",is_correct:false},
+            {id:"b",text:"8,002",is_correct:true},
+            {id:"c",text:"7,998",is_correct:false},
+            {id:"d",text:"8,004",is_correct:false}
+          ]},
+          { id: "5", prompt: "Compute 18 × 250 using doubling/halving:", options: [
+            {id:"a",text:"450",is_correct:false},
+            {id:"b",text:"4,500",is_correct:true},
+            {id:"c",text:"9,000",is_correct:false},
+            {id:"d",text:"2,250",is_correct:false}
+          ]},
+          { id: "6", prompt: "7 × 2,001,000,000 using distributive property:", options: [
+            {id:"a",text:"14,007,000,000",is_correct:true},
+            {id:"b",text:"14,000,000,000",is_correct:false},
+            {id:"c",text:"14,001,000,000",is_correct:false},
+            {id:"d",text:"14,700,000,000",is_correct:false}
+          ]},
+          { id: "7", prompt: "Which property allows (a × b) × c = a × (b × c)?", options: [
+            {id:"a",text:"Commutative",is_correct:false},
+            {id:"b",text:"Associative",is_correct:true},
+            {id:"c",text:"Distributive",is_correct:false},
+            {id:"d",text:"Inverse",is_correct:false}
+          ]},
+          { id: "8", prompt: "What is 25 × 36 using known facts?", options: [
+            {id:"a",text:"800",is_correct:false},
+            {id:"b",text:"900",is_correct:true},
+            {id:"c",text:"1,000",is_correct:false},
+            {id:"d",text:"720",is_correct:false}
+          ]},
+          { id: "9", prompt: "Front-end estimate of 4.9M + 3.1M:", options: [
+            {id:"a",text:"7,000,000",is_correct:false},
+            {id:"b",text:"8,000,000",is_correct:true},
+            {id:"c",text:"9,000,000",is_correct:false},
+            {id:"d",text:"7,500,000",is_correct:false}
+          ]},
+          { id: "10", prompt: "5,187,500,000 - 187,500,000 =", options: [
+            {id:"a",text:"5,000,000,000",is_correct:true},
+            {id:"b",text:"5,100,000,000",is_correct:false},
+            {id:"c",text:"4,900,000,000",is_correct:false},
+            {id:"d",text:"5,375,000,000",is_correct:false}
+          ]},
+          { id: "11", prompt: "8 × 1.25 billion =", options: [
+            {id:"a",text:"8,000,000,000",is_correct:false},
+            {id:"b",text:"9,000,000,000",is_correct:false},
+            {id:"c",text:"10,000,000,000",is_correct:true},
+            {id:"d",text:"1,000,000,000",is_correct:false}
+          ]},
+          { id: "12", prompt: "Shopping: 3 items at GH₵299 each → total?", options: [
+            {id:"a",text:"GH₵900",is_correct:false},
+            {id:"b",text:"GH₵897",is_correct:true},
+            {id:"c",text:"GH₵894",is_correct:false},
+            {id:"d",text:"GH₵899",is_correct:false}
+          ]},
+          { id: "13", prompt: "2,687,500 ÷ 500,000 = ?", options: [
+            {id:"a",text:"5",is_correct:false},
+            {id:"b",text:"5.375",is_correct:true},
+            {id:"c",text:"6",is_correct:false},
+            {id:"d",text:"4.5",is_correct:false}
+          ]},
+          { id: "14", prompt: "a + 0 = a shows which property?", options: [
+            {id:"a",text:"Inverse",is_correct:false},
+            {id:"b",text:"Identity",is_correct:true},
+            {id:"c",text:"Commutative",is_correct:false},
+            {id:"d",text:"Zero",is_correct:false}
+          ]},
+          { id: "15", prompt: "a × (1/a) = 1 shows which property?", options: [
+            {id:"a",text:"Identity",is_correct:false},
+            {id:"b",text:"Inverse",is_correct:true},
+            {id:"c",text:"Reciprocal",is_correct:false},
+            {id:"d",text:"Division",is_correct:false}
+          ]},
+          { id: "16", prompt: "Best strategy for 4,187,500 + 5,687,500?", options: [
+            {id:"a",text:"Add digit by digit",is_correct:false},
+            {id:"b",text:"Use calculator",is_correct:false},
+            {id:"c",text:"Notice both end in 187,500 and 687,500 → sum = 9,875,000",is_correct:true},
+            {id:"d",text:"Round to billions",is_correct:false}
+          ]},
+          { id: "17", prompt: "Which is NOT a mental math strategy?", options: [
+            {id:"a",text:"Compensation",is_correct:false},
+            {id:"b",text:"Decomposition",is_correct:false},
+            {id:"c",text:"Long division",is_correct:true},
+            {id:"d",text:"Doubling/halving",is_correct:false}
+          ]},
+          { id: "18", prompt: "Why use mental math?", options: [
+            {id:"a",text:"Build number sense",is_correct:false},
+            {id:"b",text:"Save time",is_correct:false},
+            {id:"c",text:"Verify calculator results",is_correct:false},
+            {id:"d",text:"All of the above",is_correct:true}
+          ]},
+          { id: "19", prompt: "7,000 × 6 is part of decomposing which product?", options: [
+            {id:"a",text:"784 × 6",is_correct:false},
+            {id:"b",text:"7,845 × 6",is_correct:true},
+            {id:"c",text:"78 × 6",is_correct:false},
+            {id:"d",text:"70,845 × 6",is_correct:false}
+          ]},
+          { id: "20", prompt: "Mental math builds confidence in:", options: [
+            {id:"a",text:"Memorizing answers",is_correct:false},
+            {id:"b",text:"Numerical fluency without digital tools",is_correct:true},
+            {id:"c",text:"Using apps",is_correct:false},
+            {id:"d",text:"Guessing",is_correct:false}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDER LESSON CONTENT ===
+      function renderLessonContent() {
+        const content = `
+          <h3>1. Core Number Properties</h3>
+          <p>These properties form the foundation of efficient mental computation:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Rule</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Commutative</strong><br>(Addition & Multiplication)</td>
+                <td>Order doesn’t matter</td>
+                <td>a + b = b + a<br>a × b = b × a</td>
+              </tr>
+              <tr>
+                <td><strong>Associative</strong><br>(Addition & Multiplication)</td>
+                <td>Grouping doesn’t matter</td>
+                <td>(a + b) + c = a + (b + c)<br>(a × b) × c = a × (b × c)</td>
+              </tr>
+              <tr>
+                <td><strong>Distributive</strong></td>
+                <td>Multiply across a sum/difference</td>
+                <td>a(b + c) = ab + ac</td>
+              </tr>
+              <tr>
+                <td><strong>Identity</strong></td>
+                <td>Adding 0 or multiplying by 1 changes nothing</td>
+                <td>a + 0 = a<br>a × 1 = a</td>
+              </tr>
+              <tr>
+                <td><strong>Inverse</strong></td>
+                <td>Opposites cancel out</td>
+                <td>a + (-a) = 0<br>a × (1/a) = 1 (if a ≠ 0)</td>
+              </tr>
+            </tbody>
+          </table>
+          <blockquote>
+            ✅ These allow you to <strong>rearrange, regroup, or break apart</strong> numbers for easier mental work.
+          </blockquote>
+
+          <h3>2. Mental Math Strategies</h3>
+          <p><strong>A. Compensation</strong><br>
+          Adjust one number to make the calculation easier, then adjust the result.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            487 + 299<br>
+            → Think: 487 + 300 = 787<br>
+            → Then subtract 1: <strong>786</strong>
+          </blockquote>
+          <blockquote>
+            <strong>With decimals</strong>:<br>
+            56.8 - 19.9 = 56.8 - 20 + 0.1 = <strong>36.9</strong>
+          </blockquote>
+
+          <p><strong>B. Decomposition (Breaking Apart)</strong><br>
+          Split numbers into place values or friendly chunks.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            7,845 × 6<br>
+            → 7,000 × 6 = 42,000<br>
+            → 800 × 6 = 4,800<br>
+            → 40 × 6 = 240<br>
+            → 5 × 6 = 30<br>
+            → Total: <strong>47,070</strong>
+          </blockquote>
+
+          <p><strong>C. Doubling and Halving</strong><br>
+          Useful in multiplication: double one factor, halve the other.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            14 × 50<br>
+            → Halve 14 → 7<br>
+            → Double 50 → 100<br>
+            → 7 × 100 = <strong>700</strong>
+          </blockquote>
+          <p>Works because: 14 × 50 = (14 ÷ 2) × (50 × 2) = 7 × 100</p>
+
+          <p><strong>D. Using Known Facts & Patterns</strong><br>
+          Leverage multiplication tables, powers of 10, or familiar sums.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            25 × 36<br>
+            → 25 × 4 = 100, so 25 × 36 = 25 × (4 × 9) = (25 × 4) × 9 = 100 × 9 = <strong>900</strong>
+          </blockquote>
+
+          <p><strong>E. Front-End Estimation</strong><br>
+          Focus on the largest digits first for quick approximations.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            4,872,345 + 3,198,765<br>
+            → Estimate: 4.8M + 3.2M ≈ <strong>8,000,000</strong>
+          </blockquote>
+
+          <h3>3. Applying Strategies to Large Numbers (&gt;1 Billion)</h3>
+          <p>Even with huge numbers, mental math works when you <strong>focus on structure</strong>.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            What is 5,187,500,000 - 187,500,000?<br>
+            → Notice both share “187,500,000”<br>
+            → So: 5,187.5M - 187.5M = <strong>5,000,000,000</strong>
+          </blockquote>
+          <blockquote>
+            <strong>Using distributive property</strong>:<br>
+            8 × 1,250,000,000 = 8 × (1.25 × 10^9) = (8 × 1.25) × 10^9 = 10 × 10^9 = <strong>10,000,000,000</strong>
+          </blockquote>
+
+          <h3>4. Real-World Applications</h3>
+          <ul>
+            <li><strong>Shopping</strong>: Quickly estimate total cost of 3 items priced at GH₵299 each → 3 × 300 = 900, minus 3 → <strong>GH₵897</strong></li>
+            <li><strong>Budgeting</strong>: Add national expenditures mentally by rounding to nearest hundred-million.</li>
+            <li><strong>Time Management</strong>: Calculate elapsed time using compensation (e.g., from 8:47 a.m. to 12:15 p.m.).</li>
+          </ul>
+          <div class="thought-experiment">
+            <strong>Thought Experiment</strong>:<br>
+            A school has <strong>2,687,500</strong> textbooks. If they distribute <strong>500,000</strong> per region, how many regions can be fully supplied?<br>
+            → Mentally: 2,687,500 ÷ 500,000 = 2.6875 ÷ 0.5 = 5.375 → <strong>5 full regions</strong>
+          </div>
+
+          <h3>Core Competencies Developed</h3>
+          <ul>
+            <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing the best strategy for a given problem.</li>
+            <li><strong>Communication and Collaboration (CC)</strong>: Explaining your mental steps clearly to others.</li>
+            <li><strong>Personal Development and Leadership (PL)</strong>: Building confidence in numerical fluency without digital tools.</li>
+          </ul>
+        `;
+        document.getElementById('lesson-content').innerHTML = content;
+      }
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        const preview = CHAPTER_CONFIG.nextPreview
+          .replace(/\n\n/g, '</p><p>')
+          .replace(/\n/g, '<br>');
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 Coming Up</h3>
+          <p>${preview.replace(/`([^`]+)`/g, '<code>$1</code>')}</p>
+        `;
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderLessonContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
