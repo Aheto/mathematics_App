@@ -1,81 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Benchmark Fractions, Decimals, and Percentages" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Benchmark Fractions, Decimals, and Percentages">
   <title>Mini OpenStax — Benchmark Fractions, Decimals, and Percentages</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
       min-width: 80px;
       text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +96,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -155,12 +154,6 @@
       border-left: 3px solid var(--green);
       color: #555;
       font-style: italic;
-    }
-    .preview-next {
-      background: #e8f5e9;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1.5rem;
     }
     code {
       background: #f1f1f1;
@@ -181,158 +174,159 @@
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Benchmark Fractions, Decimals, and Percentages</h1>
-        <div class="lo-tags" id="lo-tag">B7.1.3.1.1</div>
+        <h1 id="chapter-title">[LESSON_TITLE]</h1>
+        <div class="lo-tags" id="lo-tags">[LO_TAG]</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- Learning Objectives -->
+    <main id="main-content">
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Recall and convert <strong>benchmark fractions</strong> (halves, thirds, fourths, fifths, tenths) into <strong>decimals and percentages</strong> fluently.</li>
-          <li>Use these equivalences to <strong>compare and order</strong> mixed sets of fractions, decimals, and percentages.</li>
-          <li>Apply conversions to solve real-world comparison problems (e.g., discounts, test scores, measurements).</li>
-          <li>Justify comparisons using a common form (all decimals, all percentages, or all fractions).</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">benchmark fraction</span>
-          <span class="word-item">decimal</span>
-          <span class="word-item">percentage</span>
-          <span class="word-item">equivalent</span>
-          <span class="word-item">convert</span>
-          <span class="word-item">compare</span>
-          <span class="word-item">order</span>
-          <span class="word-item">repeating decimal</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
-        <h3>1. Benchmark Fractions and Their Equivalents</h3>
-        <p>Memorize these core conversions—they are essential for mental math and estimation:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Fraction</th>
-              <th>Decimal</th>
-              <th>Percentage</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>¹⁄₁₀</td>
-              <td>0.1</td>
-              <td>10%</td>
-            </tr>
-            <tr>
-              <td>¹⁄₅</td>
-              <td>0.2</td>
-              <td>20%</td>
-            </tr>
-            <tr>
-              <td>¼</td>
-              <td>0.25</td>
-              <td>25%</td>
-            </tr>
-            <tr>
-              <td>⅓</td>
-              <td>0.333…</td>
-              <td>33.3%</td>
-            </tr>
-            <tr>
-              <td>½</td>
-              <td>0.5</td>
-              <td>50%</td>
-            </tr>
-            <tr>
-              <td>⅔</td>
-              <td>0.666…</td>
-              <td>66.7%</td>
-            </tr>
-            <tr>
-              <td>¾</td>
-              <td>0.75</td>
-              <td>75%</td>
-            </tr>
-            <tr>
-              <td>⅘</td>
-              <td>0.8</td>
-              <td>80%</td>
-            </tr>
-            <tr>
-              <td>⁹⁄₁₀</td>
-              <td>0.9</td>
-              <td>90%</td>
-            </tr>
-          </tbody>
-        </table>
-        <blockquote>
-          ✅ <strong>Tip</strong>:<br>
-          – <strong>Fifths</strong>: Multiply numerator by 2 → e.g., ⅗ = 0.6 = 60%<br>
-          – <strong>Fourths</strong>: Divide numerator by 4 → e.g., ¾ = 0.75 = 75%<br>
-          – <strong>Thirds</strong>: Repeating decimals—round to one decimal place for % (e.g., ⅔ ≈ 66.7%)
-        </blockquote>
-
-        <h3>2. Using Equivalents to Compare Quantities</h3>
-        <p>To compare values in different forms, <strong>convert all to the same representation</strong>.</p>
-        <blockquote>
-          <strong>Example</strong>: Order from least to greatest:<br>
-          0.832,&nbsp; ⅜,&nbsp; 38%<br><br>
-          <strong>Step 1: Convert all to percentages</strong><br>
-          – 0.832 = 83.2%<br>
-          – ⅜ = 0.375 = 37.5%<br>
-          – 38% = 38%<br><br>
-          <strong>Step 2: Compare</strong><br>
-          37.5% &lt; 38% &lt; 83.2%<br><br>
-          <strong>Answer</strong>:<br>
-          ⅜ &lt; 38% &lt; 0.832
-        </blockquote>
-        <p>🔍 <strong>Why not just compare decimals?</strong> You can—but percentages often feel more intuitive for real-life contexts like grades or discounts.</p>
-
-        <h3>3. Real-World Applications</h3>
-        <p><strong>A. Shopping & Discounts</strong><br>
-          A shirt is marked “25% off.” Another says “¼ off.” Are they the same?<br>
-          ✅ Yes! ¼ = 25%</p>
-        <p><strong>B. Test Scores</strong><br>
-          Kofi scored ¾ on his quiz. Ama scored 76%. Who did better?<br>
-          – ¾ = 75% → Ama (76%) scored higher.</p>
-        <p><strong>C. Cooking & Recipes</strong><br>
-          A recipe calls for ⅓ cup of oil. You only have a measuring cup marked in decimals. Use <strong>0.33 cups</strong> (≈33%).</p>
-
-        <h3>4. Visual Models for Understanding</h3>
-        <ul>
-          <li><strong>Fraction Wheels</strong>: Spin to match ½ with 50% or 0.5.</li>
-          <li><strong>Shaded Grids</strong>: Shade 3 out of 4 squares → see that it’s 75% full.</li>
-          <li><strong>Number Lines</strong>: Plot ¼,&nbsp; 0.5,&nbsp; 75% on the same line to compare visually.</li>
-        </ul>
-        <blockquote>
-          💡 <strong>Game Idea</strong>: Use fraction cards and percent cards—match equivalents to win!
-        </blockquote>
-
-        <h3>Core Competencies Developed</h3>
-        <ul>
-          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing the best form (fraction/decimal/percent) for comparison.</li>
-          <li><strong>Creativity and Innovation (CI)</strong>: Designing games or real-life scenarios using benchmark equivalences.</li>
-          <li><strong>Communication and Collaboration (CC)</strong>: Explaining why ⅖ = 40% using clear reasoning.</li>
-        </ul>
+        <!-- Dynamically injected -->
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
+        <div class="checkpoint" id="checkpoint-questions"></div>
+      </div>
+
+      <div class="section" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>[Brief preview of next lesson]</p>
+      </div>
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View Dashboard</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
+
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
+      }
+
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 16; // ← Lesson 17 (zero-indexed)
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === CHAPTER CONTENT ===
+      const CHAPTER_CONFIG = {
+        title: "Benchmark Fractions, Decimals, and Percentages",
+        loTags: ["B7.1.3.1.1"],
+        objectives: [
+          "Recall and convert benchmark fractions (halves, thirds, fourths, fifths, tenths) into decimals and percentages fluently.",
+          "Use these equivalences to compare and order mixed sets of fractions, decimals, and percentages.",
+          "Apply conversions to solve real-world comparison problems (e.g., discounts, test scores, measurements).",
+          "Justify comparisons using a common form (all decimals, all percentages, or all fractions)."
+        ],
+        words: [
+          "benchmark fraction",
+          "decimal",
+          "percentage",
+          "equivalent",
+          "convert",
+          "compare",
+          "order",
+          "repeating decimal"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
           <ol>
             <li>Complete the table:
               <table>
@@ -346,23 +340,23 @@
                 <tbody>
                   <tr>
                     <td>⅕</td>
-                    <td>?</td>
-                    <td>?</td>
+                    <td>0.2</td>
+                    <td>20%</td>
                   </tr>
                   <tr>
-                    <td>?</td>
+                    <td>¾</td>
                     <td>0.75</td>
-                    <td>?</td>
+                    <td>75%</td>
                   </tr>
                   <tr>
-                    <td>?</td>
-                    <td>?</td>
+                    <td>⅕</td>
+                    <td>0.2</td>
                     <td>20%</td>
                   </tr>
                   <tr>
                     <td>⅔</td>
-                    <td>?</td>
-                    <td>?</td>
+                    <td>0.666…</td>
+                    <td>66.7%</td>
                   </tr>
                 </tbody>
               </table>
@@ -377,335 +371,442 @@
             <li>A student says: “⅓ = 33%.” Is this exact or approximate? Explain.</li>
           </ol>
           <p><em>Confirm your answers before moving forward.</em></p>
-        </div>
-      </div>
-
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
-        <h3>🔜 Coming Up</h3>
-        <p>In Lesson 18, we’ll focus on <strong>simplifying, comparing, and ordering common fractions</strong>—including how to find equivalent fractions and determine which is closer to 0, ½, or 1 using fraction wheels and number sense.</p>
-      </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
-
-      <div id="student-name-prompt" class="section" style="display:none;">
-        <h2>👤 Your Name</h2>
-        <div id="name-display"></div>
-        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
-          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
-        <div id="name-buttons"></div>
-      </div>
-
-      <div class="quiz" id="quiz-container" style="display:none;">
-        <h2>📝 Quick Check (20 Questions)</h2>
-        <p>Select the best answer for each question.</p>
-        <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
-      </div>
-
-      <div id="feedback"></div>
-
-      <!-- Footer -->
-      <footer>
-        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
-        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
-        <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 16; // ← Lesson 17 (zero-indexed)
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
-
-    // ==============================
-    // 🧠 LESSON CONTENT
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Benchmark Fractions, Decimals, and Percentages",
-      loTag: "B7.1.3.1.1",
-      objectives: [
-        "Recall and convert benchmark fractions (halves, thirds, fourths, fifths, tenths) into decimals and percentages fluently.",
-        "Use these equivalences to compare and order mixed sets of fractions, decimals, and percentages.",
-        "Apply conversions to solve real-world comparison problems (e.g., discounts, test scores, measurements).",
-        "Justify comparisons using a common form (all decimals, all percentages, or all fractions)."
-      ],
-      words: [
-        "benchmark fraction",
-        "decimal",
-        "percentage",
-        "equivalent",
-        "convert",
-        "compare",
-        "order",
-        "repeating decimal"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li>Complete the table:
-            <table>
-              <thead>
-                <tr>
-                  <th>Fraction</th>
-                  <th>Decimal</th>
-                  <th>Percent</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>⅕</td>
-                  <td>0.2</td>
-                  <td>20%</td>
-                </tr>
-                <tr>
-                  <td>¾</td>
-                  <td>0.75</td>
-                  <td>75%</td>
-                </tr>
-                <tr>
-                  <td>⅕</td>
-                  <td>0.2</td>
-                  <td>20%</td>
-                </tr>
-                <tr>
-                  <td>⅔</td>
-                  <td>0.666…</td>
-                  <td>66.7%</td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li>Which is greater:<br>
-            a) ⅗ or 62%?<br>
-            b) 0.4 or ⅖?
-          </li>
-          <li>Arrange in <strong>descending order</strong>:<br>
-            0.985,&nbsp; 0.098,&nbsp; 0.123
-          </li>
-          <li>A student says: “⅓ = 33%.” Is this exact or approximate? Explain.</li>
-        </ol>
-        <p><em>Confirm your answers before moving forward.</em></p>
-      `,
-      nextPreview: "In Lesson 18, we’ll focus on simplifying, comparing, and ordering common fractions—including how to find equivalent fractions and determine which is closer to 0, ½, or 1 using fraction wheels and number sense."
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "What is ¼ as a percentage?", a: "25%", opts: ["10%", "20%", "25%", "30%"] },
-      { q: "What is ½ as a decimal?", a: "0.5", opts: ["0.25", "0.5", "0.75", "1.0"] },
-      { q: "What is ⅗ as a percentage?", a: "60%", opts: ["40%", "50%", "60%", "75%"] },
-      { q: "Which equals 75%?", a: "¾", opts: ["⅔", "¾", "⅘", "½"] },
-      { q: "What is ⅓ as a decimal (approx)?", a: "0.333…", opts: ["0.25", "0.333…", "0.5", "0.666…"] },
-      { q: "What is ⅔ as a percentage (approx)?", a: "66.7%", opts: ["33.3%", "50%", "66.7%", "75%"] },
-      { q: "Which is greater: ⅗ or 62%?", a: "62%", opts: ["⅗", "62%", "They are equal", "Can't tell"] },
-      { q: "Is 0.4 equal to ⅖?", a: "Yes", opts: ["Yes", "No", "Only approximately", "Only in fractions"] },
-      { q: "Descending order: 0.985, 0.098, 0.123", a: "0.985 > 0.123 > 0.098", opts: ["0.985 > 0.123 > 0.098", "0.098 > 0.123 > 0.985", "0.123 > 0.985 > 0.098", "All equal"] },
-      { q: "Is ⅓ = 33% exact?", a: "No, it's approximate", opts: ["Yes", "No, it's approximate", "Only in money", "Only for small numbers"] },
-      { q: "What is ⅘ as a decimal?", a: "0.8", opts: ["0.6", "0.7", "0.8", "0.9"] },
-      { q: "What is ⁹⁄₁₀ as a percentage?", a: "90%", opts: ["10%", "50%", "90%", "100%"] },
-      { q: "Which is 20%?", a: "⅕", opts: ["⅒", "⅕", "¼", "⅓"] },
-      { q: "A shirt is 25% off. What fraction is that?", a: "¼", opts: ["⅒", "⅕", "¼", "⅓"] },
-      { q: "Kofi scored ¾ (75%). Ama scored 76%. Who did better?", a: "Ama", opts: ["Kofi", "Ama", "Same", "Not enough info"] },
-      { q: "Use for ⅓ cup oil:", a: "0.33 cups", opts: ["0.25 cups", "0.33 cups", "0.5 cups", "0.75 cups"] },
-      { q: "To compare 0.6, ⅔, 65%, convert to:", a: "Any common form", opts: ["Only fractions", "Only decimals", "Only percentages", "Any common form"] },
-      { q: "Which is NOT a benchmark fraction?", a: "⅞", opts: ["½", "⅓", "¼", "⅞"] },
-      { q: "Real-world use of benchmarks:", a: "All of the above", opts: ["Shopping", "Test scores", "Cooking", "All of the above"] },
-      { q: "Next lesson covers:", a: "Simplifying and ordering fractions", opts: ["Decimals only", "Percents only", "Simplifying and ordering fractions", "Algebra"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
-      }
-
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 Coming Up</h3>
-        <p>${LESSON_CONFIG.nextPreview}</p>
-      `;
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
-        }
+        `,
+        nextPreview: "In Lesson 18, we’ll focus on simplifying, comparing, and ordering common fractions—including how to find equivalent fractions and determine which is closer to 0, ½, or 1 using fraction wheels and number sense.",
+        assessmentItems: [
+          { id: "1", prompt: "What is ¼ as a percentage?", options: [
+            {id:"a",text:"10%",is_correct:false},
+            {id:"b",text:"20%",is_correct:false},
+            {id:"c",text:"25%",is_correct:true},
+            {id:"d",text:"30%",is_correct:false}
+          ]},
+          { id: "2", prompt: "What is ½ as a decimal?", options: [
+            {id:"a",text:"0.25",is_correct:false},
+            {id:"b",text:"0.5",is_correct:true},
+            {id:"c",text:"0.75",is_correct:false},
+            {id:"d",text:"1.0",is_correct:false}
+          ]},
+          { id: "3", prompt: "What is ⅗ as a percentage?", options: [
+            {id:"a",text:"40%",is_correct:false},
+            {id:"b",text:"50%",is_correct:false},
+            {id:"c",text:"60%",is_correct:true},
+            {id:"d",text:"75%",is_correct:false}
+          ]},
+          { id: "4", prompt: "Which equals 75%?", options: [
+            {id:"a",text:"⅔",is_correct:false},
+            {id:"b",text:"¾",is_correct:true},
+            {id:"c",text:"⅘",is_correct:false},
+            {id:"d",text:"½",is_correct:false}
+          ]},
+          { id: "5", prompt: "What is ⅓ as a decimal (approx)?", options: [
+            {id:"a",text:"0.25",is_correct:false},
+            {id:"b",text:"0.333…",is_correct:true},
+            {id:"c",text:"0.5",is_correct:false},
+            {id:"d",text:"0.666…",is_correct:false}
+          ]},
+          { id: "6", prompt: "What is ⅔ as a percentage (approx)?", options: [
+            {id:"a",text:"33.3%",is_correct:false},
+            {id:"b",text:"50%",is_correct:false},
+            {id:"c",text:"66.7%",is_correct:true},
+            {id:"d",text:"75%",is_correct:false}
+          ]},
+          { id: "7", prompt: "Which is greater: ⅗ or 62%?", options: [
+            {id:"a",text:"⅗",is_correct:false},
+            {id:"b",text:"62%",is_correct:true},
+            {id:"c",text:"They are equal",is_correct:false},
+            {id:"d",text:"Can't tell",is_correct:false}
+          ]},
+          { id: "8", prompt: "Is 0.4 equal to ⅖?", options: [
+            {id:"a",text:"Yes",is_correct:true},
+            {id:"b",text:"No",is_correct:false},
+            {id:"c",text:"Only approximately",is_correct:false},
+            {id:"d",text:"Only in fractions",is_correct:false}
+          ]},
+          { id: "9", prompt: "Descending order: 0.985, 0.098, 0.123", options: [
+            {id:"a",text:"0.985 > 0.123 > 0.098",is_correct:true},
+            {id:"b",text:"0.098 > 0.123 > 0.985",is_correct:false},
+            {id:"c",text:"0.123 > 0.985 > 0.098",is_correct:false},
+            {id:"d",text:"All equal",is_correct:false}
+          ]},
+          { id: "10", prompt: "Is ⅓ = 33% exact?", options: [
+            {id:"a",text:"Yes",is_correct:false},
+            {id:"b",text:"No, it's approximate",is_correct:true},
+            {id:"c",text:"Only in money",is_correct:false},
+            {id:"d",text:"Only for small numbers",is_correct:false}
+          ]},
+          { id: "11", prompt: "What is ⅘ as a decimal?", options: [
+            {id:"a",text:"0.6",is_correct:false},
+            {id:"b",text:"0.7",is_correct:false},
+            {id:"c",text:"0.8",is_correct:true},
+            {id:"d",text:"0.9",is_correct:false}
+          ]},
+          { id: "12", prompt: "What is ⁹⁄₁₀ as a percentage?", options: [
+            {id:"a",text:"10%",is_correct:false},
+            {id:"b",text:"50%",is_correct:false},
+            {id:"c",text:"90%",is_correct:true},
+            {id:"d",text:"100%",is_correct:false}
+          ]},
+          { id: "13", prompt: "Which is 20%?", options: [
+            {id:"a",text:"⅒",is_correct:false},
+            {id:"b",text:"⅕",is_correct:true},
+            {id:"c",text:"¼",is_correct:false},
+            {id:"d",text:"⅓",is_correct:false}
+          ]},
+          { id: "14", prompt: "A shirt is 25% off. What fraction is that?", options: [
+            {id:"a",text:"⅒",is_correct:false},
+            {id:"b",text:"⅕",is_correct:false},
+            {id:"c",text:"¼",is_correct:true},
+            {id:"d",text:"⅓",is_correct:false}
+          ]},
+          { id: "15", prompt: "Kofi scored ¾ (75%). Ama scored 76%. Who did better?", options: [
+            {id:"a",text:"Kofi",is_correct:false},
+            {id:"b",text:"Ama",is_correct:true},
+            {id:"c",text:"Same",is_correct:false},
+            {id:"d",text:"Not enough info",is_correct:false}
+          ]},
+          { id: "16", prompt: "Use for ⅓ cup oil:", options: [
+            {id:"a",text:"0.25 cups",is_correct:false},
+            {id:"b",text:"0.33 cups",is_correct:true},
+            {id:"c",text:"0.5 cups",is_correct:false},
+            {id:"d",text:"0.75 cups",is_correct:false}
+          ]},
+          { id: "17", prompt: "To compare 0.6, ⅔, 65%, convert to:", options: [
+            {id:"a",text:"Only fractions",is_correct:false},
+            {id:"b",text:"Only decimals",is_correct:false},
+            {id:"c",text:"Only percentages",is_correct:false},
+            {id:"d",text:"Any common form",is_correct:true}
+          ]},
+          { id: "18", prompt: "Which is NOT a benchmark fraction?", options: [
+            {id:"a",text:"½",is_correct:false},
+            {id:"b",text:"⅓",is_correct:false},
+            {id:"c",text:"¼",is_correct:false},
+            {id:"d",text:"⅞",is_correct:true}
+          ]},
+          { id: "19", prompt: "Real-world use of benchmarks:", options: [
+            {id:"a",text:"Shopping",is_correct:false},
+            {id:"b",text:"Test scores",is_correct:false},
+            {id:"c",text:"Cooking",is_correct:false},
+            {id:"d",text:"All of the above",is_correct:true}
+          ]},
+          { id: "20", prompt: "Next lesson covers:", options: [
+            {id:"a",text:"Decimals only",is_correct:false},
+            {id:"b",text:"Percents only",is_correct:false},
+            {id:"c",text:"Simplifying and ordering fractions",is_correct:true},
+            {id:"d",text:"Algebra",is_correct:false}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        const lessonHtml = `
+          <h3>1. Benchmark Fractions and Their Equivalents</h3>
+          <p>Memorize these core conversions—they are essential for mental math and estimation:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Fraction</th>
+                <th>Decimal</th>
+                <th>Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>¹⁄₁₀</td><td>0.1</td><td>10%</td></tr>
+              <tr><td>¹⁄₅</td><td>0.2</td><td>20%</td></tr>
+              <tr><td>¼</td><td>0.25</td><td>25%</td></tr>
+              <tr><td>⅓</td><td>0.333…</td><td>33.3%</td></tr>
+              <tr><td>½</td><td>0.5</td><td>50%</td></tr>
+              <tr><td>⅔</td><td>0.666…</td><td>66.7%</td></tr>
+              <tr><td>¾</td><td>0.75</td><td>75%</td></tr>
+              <tr><td>⅘</td><td>0.8</td><td>80%</td></tr>
+              <tr><td>⁹⁄₁₀</td><td>0.9</td><td>90%</td></tr>
+            </tbody>
+          </table>
+          <blockquote>
+            ✅ <strong>Tip</strong>:<br>
+            – <strong>Fifths</strong>: Multiply numerator by 2 → e.g., ⅗ = 0.6 = 60%<br>
+            – <strong>Fourths</strong>: Divide numerator by 4 → e.g., ¾ = 0.75 = 75%<br>
+            – <strong>Thirds</strong>: Repeating decimals—round to one decimal place for % (e.g., ⅔ ≈ 66.7%)
+          </blockquote>
+
+          <h3>2. Using Equivalents to Compare Quantities</h3>
+          <p>To compare values in different forms, <strong>convert all to the same representation</strong>.</p>
+          <blockquote>
+            <strong>Example</strong>: Order from least to greatest:<br>
+            0.832,&nbsp; ⅜,&nbsp; 38%<br><br>
+            <strong>Step 1: Convert all to percentages</strong><br>
+            – 0.832 = 83.2%<br>
+            – ⅜ = 0.375 = 37.5%<br>
+            – 38% = 38%<br><br>
+            <strong>Step 2: Compare</strong><br>
+            37.5% &lt; 38% &lt; 83.2%<br><br>
+            <strong>Answer</strong>:<br>
+            ⅜ &lt; 38% &lt; 0.832
+          </blockquote>
+          <p>🔍 <strong>Why not just compare decimals?</strong> You can—but percentages often feel more intuitive for real-life contexts like grades or discounts.</p>
+
+          <h3>3. Real-World Applications</h3>
+          <p><strong>A. Shopping & Discounts</strong><br>
+            A shirt is marked “25% off.” Another says “¼ off.” Are they the same?<br>
+            ✅ Yes! ¼ = 25%</p>
+          <p><strong>B. Test Scores</strong><br>
+            Kofi scored ¾ on his quiz. Ama scored 76%. Who did better?<br>
+            – ¾ = 75% → Ama (76%) scored higher.</p>
+          <p><strong>C. Cooking & Recipes</strong><br>
+            A recipe calls for ⅓ cup of oil. You only have a measuring cup marked in decimals. Use <strong>0.33 cups</strong> (≈33%).</p>
+
+          <h3>4. Visual Models for Understanding</h3>
+          <ul>
+            <li><strong>Fraction Wheels</strong>: Spin to match ½ with 50% or 0.5.</li>
+            <li><strong>Shaded Grids</strong>: Shade 3 out of 4 squares → see that it’s 75% full.</li>
+            <li><strong>Number Lines</strong>: Plot ¼,&nbsp; 0.5,&nbsp; 75% on the same line to compare visually.</li>
+          </ul>
+          <blockquote>
+            💡 <strong>Game Idea</strong>: Use fraction cards and percent cards—match equivalents to win!
+          </blockquote>
+
+          <h3>Core Competencies Developed</h3>
+          <ul>
+            <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing the best form (fraction/decimal/percent) for comparison.</li>
+            <li><strong>Creativity and Innovation (CI)</strong>: Designing games or real-life scenarios using benchmark equivalences.</li>
+            <li><strong>Communication and Collaboration (CC)</strong>: Explaining why ⅖ = 40% using clear reasoning.</li>
+          </ul>
+        `;
+        document.getElementById('lesson-content').innerHTML = lessonHtml;
+
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 Coming Up</h3>
+          <p>${CHAPTER_CONFIG.nextPreview}</p>
+        `;
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
