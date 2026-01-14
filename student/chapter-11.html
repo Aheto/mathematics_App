@@ -1,81 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Illustrate the Meaning of Repeated Factors Using Counting Objects" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Illustrate the Meaning of Repeated Factors Using Counting Objects">
   <title>Mini OpenStax — Repeated Factors with Counting Objects</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
       min-width: 80px;
       text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +96,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -155,12 +154,6 @@
       border-left: 3px solid var(--green);
       color: #555;
       font-style: italic;
-    }
-    .preview-next {
-      background: #e8f5e9;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1.5rem;
     }
     code {
       background: #f1f1f1;
@@ -181,184 +174,39 @@
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Illustrate the Meaning of Repeated Factors Using Counting Objects</h1>
-        <div class="lo-tags" id="lo-tag">B7.1.2.3.1</div>
+        <h1 id="chapter-title">[LESSON_TITLE]</h1>
+        <div class="lo-tags" id="lo-tags">[LO_TAG]</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- Learning Objectives -->
+    <main id="main-content">
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Explain what <strong>repeated factors</strong> are using concrete materials (e.g., bottle tops, bundle sticks).</li>
-          <li>Model multiplication expressions like <strong>3 × 3 × 3</strong> physically and visually.</li>
-          <li>Connect repeated multiplication to the concept of <strong>powers (exponents)</strong>.</li>
-          <li>Use real-world groupings to understand how repeated factors build larger numbers.</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">repeated factors</span>
-          <span class="word-item">base</span>
-          <span class="word-item">exponent</span>
-          <span class="word-item">power</span>
-          <span class="word-item">bottle tops</span>
-          <span class="word-item">bundle sticks</span>
-          <span class="word-item">cube</span>
-          <span class="word-item">square</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
-        <h3>1. What Are Repeated Factors?</h3>
-        <p><strong>Repeated factors</strong> occur when the <strong>same number is multiplied by itself two or more times</strong>.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          3 × 3 × 3 → the factor <strong>3</strong> is repeated <strong>three times</strong>.<br>
-          This is not just “3 groups of 3”—it’s <strong>3 groups of 3 groups of 3</strong>, which builds a cube-like structure.
-        </blockquote>
-        <p>This is the foundation of <strong>exponential notation</strong>:<br>
-          3 × 3 × 3 = 3³ = 27</p>
-
-        <h3>2. Modeling Repeated Factors with Concrete Objects</h3>
-        <p><strong>A. Using Bottle Tops (or Counters)</strong><br>
-        – <strong>Step 1</strong>: To model 2 × 2:<br>
-          • Make <strong>2 rows</strong> of <strong>2 bottle tops</strong> → total = <strong>4</strong><br>
-          • This is <strong>2²</strong> (two squared)<br><br>
-        – <strong>Step 2</strong>: To model 2 × 2 × 2:<br>
-          • Build <strong>2 layers</strong>, each with a 2 × 2 square<br>
-          • Total = <strong>8 bottle tops</strong> → <strong>2³</strong> (two cubed)
-        </p>
-        <blockquote>
-          ✅ <strong>Visual Insight</strong>:<br>
-          – 1D: 2 → a line<br>
-          – 2D: 2 × 2 → a square<br>
-          – 3D: 2 × 2 × 2 → a cube
-        </blockquote>
-
-        <p><strong>B. Using Bundle Sticks</strong><br>
-        – Bundle sticks can be grouped into <strong>tens</strong>, then those bundles grouped again.<br>
-        – <strong>Example for 5 × 5</strong>:<br>
-          • Make <strong>5 bundles</strong> of <strong>5 sticks</strong> → total = <strong>25 sticks</strong><br>
-        – <strong>For 5 × 5 × 5</strong>:<br>
-          • Make <strong>5 groups</strong>, each containing <strong>5 bundles of 5 sticks</strong> → total = <strong>125 sticks</strong>
-        </p>
-        <blockquote>
-          💡 This mirrors place value:<br>
-          5³ = 125 shows how repeated grouping scales quickly.
-        </blockquote>
-
-        <h3>3. From Repeated Factors to Powers</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Repeated Multiplication</th>
-              <th>Power Form</th>
-              <th>Value</th>
-              <th>Physical Model</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2</td>
-              <td>2¹</td>
-              <td>2</td>
-              <td>2 single sticks</td>
-            </tr>
-            <tr>
-              <td>2 × 2</td>
-              <td>2²</td>
-              <td>4</td>
-              <td>2×2 square</td>
-            </tr>
-            <tr>
-              <td>2 × 2 × 2</td>
-              <td>2³</td>
-              <td>8</td>
-              <td>2×2×2 cube</td>
-            </tr>
-            <tr>
-              <td>3 × 3</td>
-              <td>3²</td>
-              <td>9</td>
-              <td>3×3 grid</td>
-            </tr>
-            <tr>
-              <td>3 × 3 × 3</td>
-              <td>3³</td>
-              <td>27</td>
-              <td>3-layer cube</td>
-            </tr>
-          </tbody>
-        </table>
-        <blockquote>
-          🔍 <strong>Key Terms</strong>:<br>
-          – <strong>Base</strong>: The number being repeated (e.g., 3 in 3³)<br>
-          – <strong>Exponent (Index)</strong>: How many times it’s repeated (e.g., 3 in 3³)
-        </blockquote>
-
-        <h3>4. Real-World Connections</h3>
-        <ul>
-          <li><strong>Packing boxes</strong>: A crate holds 4 boxes; each box holds 4 packets; each packet has 4 items → total = 4 × 4 × 4 = 64 items.</li>
-          <li><strong>Digital storage</strong>: 1 kilobyte = 2¹⁰ bytes → based on repeated doubling.</li>
-          <li><strong>Area & Volume</strong>:<br>
-            – Area of a square = side × side = s²<br>
-            – Volume of a cube = side × side × side = s³</li>
-        </ul>
-        <div class="thought-experiment">
-          <strong>Thought Experiment</strong>:<br>
-          If you stack <strong>3 layers</strong> of egg trays, and each tray has <strong>3 rows</strong> of <strong>3 eggs</strong>, how many eggs total?<br>
-          → 3 × 3 × 3 = <strong>27 eggs</strong> → modeled perfectly with repeated factors.
-        </div>
-
-        <h3>Core Competencies Developed</h3>
-        <ul>
-          <li><strong>Creativity and Innovation (CI)</strong>: Using everyday objects to visualize abstract math.</li>
-          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Recognizing patterns in repeated multiplication.</li>
-          <li><strong>Communication and Collaboration (CC)</strong>: Explaining models using terms like “base” and “exponent.”</li>
-        </ul>
+        <!-- Dynamically injected -->
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
-          <ol>
-            <li>Use bottle tops to model <strong>4 × 4</strong>. How many do you need? What power does this represent?</li>
-            <li>Explain the difference between <strong>5 × 3</strong> and <strong>5 × 5 × 5</strong> using bundle sticks.</li>
-            <li>Write the following as powers:<br>
-              a) 7 × 7<br>
-              b) 10 × 10 × 10 × 10
-            </li>
-            <li>A child says: “<strong>2³ means 2 + 2 + 2</strong>.” Is this correct? Use a physical model to explain why or why not.</li>
-          </ol>
-          <p><em>Confirm your understanding before moving forward.</em></p>
-        </div>
+        <div class="checkpoint" id="checkpoint-questions"></div>
       </div>
 
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
+      <div class="section" id="next-preview">
         <h3>🔜 Coming Up</h3>
-        <p>In Lesson 13, we’ll learn how to <strong>express numbers as products of powers</strong>, such as:</p>
-        <ul>
-          <li>32 = 2⁵</li>
-          <li>81 = 3⁴</li>
-          <li>16 × 27 = 2⁴ × 3³</li>
-        </ul>
-        <p>You’ll use prime factorization and repeated factors to break down and rebuild numbers—essential for algebra and number theory!</p>
+        <p>[Brief preview of next lesson]</p>
       </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
 
       <div id="student-name-prompt" class="section" style="display:none;">
         <h2>👤 Your Name</h2>
@@ -372,282 +220,574 @@
         <h2>📝 Quick Check (20 Questions)</h2>
         <p>Select the best answer for each question.</p>
         <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
       </div>
 
       <div id="feedback"></div>
 
-      <!-- Footer -->
       <footer>
         <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
         <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
         <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
+        <a href="../dashboard.html">📊 View Dashboard</a>
       </footer>
     </main>
   </div>
 
   <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 11; // ← Lesson 12 (zero-indexed)
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
 
-    // ==============================
-    // 🧠 LESSON CONTENT
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Illustrate the Meaning of Repeated Factors Using Counting Objects",
-      loTag: "B7.1.2.3.1",
-      objectives: [
-        "Explain what repeated factors are using concrete materials (e.g., bottle tops, bundle sticks).",
-        "Model multiplication expressions like 3 × 3 × 3 physically and visually.",
-        "Connect repeated multiplication to the concept of powers (exponents).",
-        "Use real-world groupings to understand how repeated factors build larger numbers."
-      ],
-      words: [
-        "repeated factors",
-        "base",
-        "exponent",
-        "power",
-        "bottle tops",
-        "bundle sticks",
-        "cube",
-        "square"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li>Use bottle tops to model <strong>4 × 4</strong>. How many do you need? What power does this represent?</li>
-          <li>Explain the difference between <strong>5 × 3</strong> and <strong>5 × 5 × 5</strong> using bundle sticks.</li>
-          <li>Write the following as powers:<br>
-            a) 7 × 7<br>
-            b) 10 × 10 × 10 × 10
-          </li>
-          <li>A child says: “<strong>2³ means 2 + 2 + 2</strong>.” Is this correct? Use a physical model to explain why or why not.</li>
-        </ol>
-        <p><em>Confirm your understanding before moving forward.</em></p>
-      `,
-      nextPreview: "In Lesson 13, we’ll learn how to express numbers as products of powers, such as:\n- 32 = 2⁵\n- 81 = 3⁴\n- 16 × 27 = 2⁴ × 3³\n\nYou’ll use prime factorization and repeated factors to break down and rebuild numbers—essential for algebra and number theory!"
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "What is 3 × 3 × 3?", a: "27", opts: ["9", "18", "27", "81"] },
-      { q: "2 × 2 × 2 = ?", a: "8", opts: ["4", "6", "8", "12"] },
-      { q: "4 × 4 = ?", a: "16", opts: ["8", "12", "16", "20"] },
-      { q: "5 × 5 × 5 = ?", a: "125", opts: ["25", "75", "125", "150"] },
-      { q: "Which represents 3²?", a: "3 × 3", opts: ["3 + 3", "3 × 3", "3 × 3 × 3", "2 × 3"] },
-      { q: "Which represents 2³?", a: "2 × 2 × 2", opts: ["2 + 2 + 2", "2 × 3", "2 × 2 × 2", "3 × 2"] },
-      { q: "How many bottle tops for 4 × 4?", a: "16", opts: ["8", "12", "16", "20"] },
-      { q: "What power is 4 × 4?", a: "4²", opts: ["4¹", "4²", "4³", "2⁴"] },
-      { q: "7 × 7 = ?", a: "7²", opts: ["7¹", "7²", "7³", "14"] },
-      { q: "10 × 10 × 10 × 10 = ?", a: "10⁴", opts: ["10³", "10⁴", "40", "1,000"] },
-      { q: "Is 2³ equal to 2 + 2 + 2?", a: "No, it's 2 × 2 × 2 = 8", opts: ["Yes", "No, it's 2 × 2 × 2 = 8", "Only sometimes", "It equals 6"] },
-      { q: "What is the base in 5³?", a: "5", opts: ["3", "5", "15", "125"] },
-      { q: "What is the exponent in 3⁴?", a: "4", opts: ["3", "4", "7", "81"] },
-      { q: "A 3×3×3 cube has how many units?", a: "27", opts: ["9", "18", "27", "36"] },
-      { q: "Bundle sticks for 5 × 5 × 5 = ?", a: "125", opts: ["25", "50", "100", "125"] },
-      { q: "Area of a square with side 6:", a: "6² = 36", opts: ["6 × 2 = 12", "6² = 36", "6³ = 216", "6 + 6 = 12"] },
-      { q: "Volume of a cube with side 3:", a: "3³ = 27", opts: ["9", "18", "27", "36"] },
-      { q: "Real-world example of 4³:", a: "4 crates × 4 boxes × 4 items", opts: ["4 apples", "4 + 4 + 4", "4 crates × 4 boxes × 4 items", "4 × 3"] },
-      { q: "Which object helps model 2D squares?", a: "Bottle tops in a grid", opts: ["Single stick", "Bottle tops in a grid", "One bundle", "A line"] },
-      { q: "Repeated factors help understand:", a: "All of the above", opts: ["Powers", "Area/volume", "Digital storage", "All of the above"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
       }
 
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      let preview = LESSON_CONFIG.nextPreview;
-      preview = preview.replace(/\n\n/g, '</p><p>')
-                      .replace(/^- /gm, '• ')
-                      .replace(/\n/g, '<br>');
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 Coming Up</h3>
-        <p>${preview}</p>
-      `.replace(/`([^`]+)`/g, '<code>$1</code>');
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
         }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 11; // ← Lesson 12 (zero-indexed)
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === CHAPTER CONTENT ===
+      const CHAPTER_CONFIG = {
+        title: "Illustrate the Meaning of Repeated Factors Using Counting Objects",
+        loTags: ["B7.1.2.3.1"],
+        objectives: [
+          "Explain what repeated factors are using concrete materials (e.g., bottle tops, bundle sticks).",
+          "Model multiplication expressions like 3 × 3 × 3 physically and visually.",
+          "Connect repeated multiplication to the concept of powers (exponents).",
+          "Use real-world groupings to understand how repeated factors build larger numbers."
+        ],
+        words: [
+          "repeated factors",
+          "base",
+          "exponent",
+          "power",
+          "bottle tops",
+          "bundle sticks",
+          "cube",
+          "square"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
+          <ol>
+            <li>Use bottle tops to model <strong>4 × 4</strong>. How many do you need? What power does this represent?</li>
+            <li>Explain the difference between <strong>5 × 3</strong> and <strong>5 × 5 × 5</strong> using bundle sticks.</li>
+            <li>Write the following as powers:<br>
+              a) 7 × 7<br>
+              b) 10 × 10 × 10 × 10
+            </li>
+            <li>A child says: “<strong>2³ means 2 + 2 + 2</strong>.” Is this correct? Use a physical model to explain why or why not.</li>
+          </ol>
+          <p><em>Confirm your understanding before moving forward.</em></p>
+        `,
+        nextPreview: "In Lesson 13, we’ll learn how to express numbers as products of powers, such as:\n- 32 = 2⁵\n- 81 = 3⁴\n- 16 × 27 = 2⁴ × 3³\n\nYou’ll use prime factorization and repeated factors to break down and rebuild numbers—essential for algebra and number theory!",
+        assessmentItems: [
+          { id: "1", prompt: "What is 3 × 3 × 3?", options: [
+            {id:"a",text:"9",is_correct:false},
+            {id:"b",text:"18",is_correct:false},
+            {id:"c",text:"27",is_correct:true},
+            {id:"d",text:"81",is_correct:false}
+          ]},
+          { id: "2", prompt: "2 × 2 × 2 = ?", options: [
+            {id:"a",text:"4",is_correct:false},
+            {id:"b",text:"6",is_correct:false},
+            {id:"c",text:"8",is_correct:true},
+            {id:"d",text:"12",is_correct:false}
+          ]},
+          { id: "3", prompt: "4 × 4 = ?", options: [
+            {id:"a",text:"8",is_correct:false},
+            {id:"b",text:"12",is_correct:false},
+            {id:"c",text:"16",is_correct:true},
+            {id:"d",text:"20",is_correct:false}
+          ]},
+          { id: "4", prompt: "5 × 5 × 5 = ?", options: [
+            {id:"a",text:"25",is_correct:false},
+            {id:"b",text:"75",is_correct:false},
+            {id:"c",text:"125",is_correct:true},
+            {id:"d",text:"150",is_correct:false}
+          ]},
+          { id: "5", prompt: "Which represents 3²?", options: [
+            {id:"a",text:"3 + 3",is_correct:false},
+            {id:"b",text:"3 × 3",is_correct:true},
+            {id:"c",text:"3 × 3 × 3",is_correct:false},
+            {id:"d",text:"2 × 3",is_correct:false}
+          ]},
+          { id: "6", prompt: "Which represents 2³?", options: [
+            {id:"a",text:"2 + 2 + 2",is_correct:false},
+            {id:"b",text:"2 × 3",is_correct:false},
+            {id:"c",text:"2 × 2 × 2",is_correct:true},
+            {id:"d",text:"3 × 2",is_correct:false}
+          ]},
+          { id: "7", prompt: "How many bottle tops for 4 × 4?", options: [
+            {id:"a",text:"8",is_correct:false},
+            {id:"b",text:"12",is_correct:false},
+            {id:"c",text:"16",is_correct:true},
+            {id:"d",text:"20",is_correct:false}
+          ]},
+          { id: "8", prompt: "What power is 4 × 4?", options: [
+            {id:"a",text:"4¹",is_correct:false},
+            {id:"b",text:"4²",is_correct:true},
+            {id:"c",text:"4³",is_correct:false},
+            {id:"d",text:"2⁴",is_correct:false}
+          ]},
+          { id: "9", prompt: "7 × 7 = ?", options: [
+            {id:"a",text:"7¹",is_correct:false},
+            {id:"b",text:"7²",is_correct:true},
+            {id:"c",text:"7³",is_correct:false},
+            {id:"d",text:"14",is_correct:false}
+          ]},
+          { id: "10", prompt: "10 × 10 × 10 × 10 = ?", options: [
+            {id:"a",text:"10³",is_correct:false},
+            {id:"b",text:"10⁴",is_correct:true},
+            {id:"c",text:"40",is_correct:false},
+            {id:"d",text:"1,000",is_correct:false}
+          ]},
+          { id: "11", prompt: "Is 2³ equal to 2 + 2 + 2?", options: [
+            {id:"a",text:"Yes",is_correct:false},
+            {id:"b",text:"No, it's 2 × 2 × 2 = 8",is_correct:true},
+            {id:"c",text:"Only sometimes",is_correct:false},
+            {id:"d",text:"It equals 6",is_correct:false}
+          ]},
+          { id: "12", prompt: "What is the base in 5³?", options: [
+            {id:"a",text:"3",is_correct:false},
+            {id:"b",text:"5",is_correct:true},
+            {id:"c",text:"15",is_correct:false},
+            {id:"d",text:"125",is_correct:false}
+          ]},
+          { id: "13", prompt: "What is the exponent in 3⁴?", options: [
+            {id:"a",text:"3",is_correct:false},
+            {id:"b",text:"4",is_correct:true},
+            {id:"c",text:"7",is_correct:false},
+            {id:"d",text:"81",is_correct:false}
+          ]},
+          { id: "14", prompt: "A 3×3×3 cube has how many units?", options: [
+            {id:"a",text:"9",is_correct:false},
+            {id:"b",text:"18",is_correct:false},
+            {id:"c",text:"27",is_correct:true},
+            {id:"d",text:"36",is_correct:false}
+          ]},
+          { id: "15", prompt: "Bundle sticks for 5 × 5 × 5 = ?", options: [
+            {id:"a",text:"25",is_correct:false},
+            {id:"b",text:"50",is_correct:false},
+            {id:"c",text:"100",is_correct:false},
+            {id:"d",text:"125",is_correct:true}
+          ]},
+          { id: "16", prompt: "Area of a square with side 6:", options: [
+            {id:"a",text:"6 × 2 = 12",is_correct:false},
+            {id:"b",text:"6² = 36",is_correct:true},
+            {id:"c",text:"6³ = 216",is_correct:false},
+            {id:"d",text:"6 + 6 = 12",is_correct:false}
+          ]},
+          { id: "17", prompt: "Volume of a cube with side 3:", options: [
+            {id:"a",text:"9",is_correct:false},
+            {id:"b",text:"18",is_correct:false},
+            {id:"c",text:"27",is_correct:true},
+            {id:"d",text:"36",is_correct:false}
+          ]},
+          { id: "18", prompt: "Real-world example of 4³:", options: [
+            {id:"a",text:"4 apples",is_correct:false},
+            {id:"b",text:"4 + 4 + 4",is_correct:false},
+            {id:"c",text:"4 crates × 4 boxes × 4 items",is_correct:true},
+            {id:"d",text:"4 × 3",is_correct:false}
+          ]},
+          { id: "19", prompt: "Which object helps model 2D squares?", options: [
+            {id:"a",text:"Single stick",is_correct:false},
+            {id:"b",text:"Bottle tops in a grid",is_correct:true},
+            {id:"c",text:"One bundle",is_correct:false},
+            {id:"d",text:"A line",is_correct:false}
+          ]},
+          { id: "20", prompt: "Repeated factors help understand:", options: [
+            {id:"a",text:"Powers",is_correct:false},
+            {id:"b",text:"Area/volume",is_correct:false},
+            {id:"c",text:"Digital storage",is_correct:false},
+            {id:"d",text:"All of the above",is_correct:true}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        const lessonHtml = `
+          <h3>1. What Are Repeated Factors?</h3>
+          <p><strong>Repeated factors</strong> occur when the <strong>same number is multiplied by itself two or more times</strong>.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            3 × 3 × 3 → the factor <strong>3</strong> is repeated <strong>three times</strong>.<br>
+            This is not just “3 groups of 3”—it’s <strong>3 groups of 3 groups of 3</strong>, which builds a cube-like structure.
+          </blockquote>
+          <p>This is the foundation of <strong>exponential notation</strong>:<br>
+            3 × 3 × 3 = 3³ = 27</p>
+
+          <h3>2. Modeling Repeated Factors with Concrete Objects</h3>
+          <p><strong>A. Using Bottle Tops (or Counters)</strong><br>
+          – <strong>Step 1</strong>: To model 2 × 2:<br>
+            • Make <strong>2 rows</strong> of <strong>2 bottle tops</strong> → total = <strong>4</strong><br>
+            • This is <strong>2²</strong> (two squared)<br><br>
+          – <strong>Step 2</strong>: To model 2 × 2 × 2:<br>
+            • Build <strong>2 layers</strong>, each with a 2 × 2 square<br>
+            • Total = <strong>8 bottle tops</strong> → <strong>2³</strong> (two cubed)
+          </p>
+          <blockquote>
+            ✅ <strong>Visual Insight</strong>:<br>
+            – 1D: 2 → a line<br>
+            – 2D: 2 × 2 → a square<br>
+            – 3D: 2 × 2 × 2 → a cube
+          </blockquote>
+
+          <p><strong>B. Using Bundle Sticks</strong><br>
+          – Bundle sticks can be grouped into <strong>tens</strong>, then those bundles grouped again.<br>
+          – <strong>Example for 5 × 5</strong>:<br>
+            • Make <strong>5 bundles</strong> of <strong>5 sticks</strong> → total = <strong>25 sticks</strong><br>
+          – <strong>For 5 × 5 × 5</strong>:<br>
+            • Make <strong>5 groups</strong>, each containing <strong>5 bundles of 5 sticks</strong> → total = <strong>125 sticks</strong>
+          </p>
+          <blockquote>
+            💡 This mirrors place value:<br>
+            5³ = 125 shows how repeated grouping scales quickly.
+          </blockquote>
+
+          <h3>3. From Repeated Factors to Powers</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Repeated Multiplication</th>
+                <th>Power Form</th>
+                <th>Value</th>
+                <th>Physical Model</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2</td><td>2¹</td><td>2</td><td>2 single sticks</td></tr>
+              <tr><td>2 × 2</td><td>2²</td><td>4</td><td>2×2 square</td></tr>
+              <tr><td>2 × 2 × 2</td><td>2³</td><td>8</td><td>2×2×2 cube</td></tr>
+              <tr><td>3 × 3</td><td>3²</td><td>9</td><td>3×3 grid</td></tr>
+              <tr><td>3 × 3 × 3</td><td>3³</td><td>27</td><td>3-layer cube</td></tr>
+            </tbody>
+          </table>
+          <blockquote>
+            🔍 <strong>Key Terms</strong>:<br>
+            – <strong>Base</strong>: The number being repeated (e.g., 3 in 3³)<br>
+            – <strong>Exponent (Index)</strong>: How many times it’s repeated (e.g., 3 in 3³)
+          </blockquote>
+
+          <h3>4. Real-World Connections</h3>
+          <ul>
+            <li><strong>Packing boxes</strong>: A crate holds 4 boxes; each box holds 4 packets; each packet has 4 items → total = 4 × 4 × 4 = 64 items.</li>
+            <li><strong>Digital storage</strong>: 1 kilobyte = 2¹⁰ bytes → based on repeated doubling.</li>
+            <li><strong>Area & Volume</strong>:<br>
+              – Area of a square = side × side = s²<br>
+              – Volume of a cube = side × side × side = s³</li>
+          </ul>
+          <div class="thought-experiment">
+            <strong>Thought Experiment</strong>:<br>
+            If you stack <strong>3 layers</strong> of egg trays, and each tray has <strong>3 rows</strong> of <strong>3 eggs</strong>, how many eggs total?<br>
+            → 3 × 3 × 3 = <strong>27 eggs</strong> → modeled perfectly with repeated factors.
+          </div>
+
+          <h3>Core Competencies Developed</h3>
+          <ul>
+            <li><strong>Creativity and Innovation (CI)</strong>: Using everyday objects to visualize abstract math.</li>
+            <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Recognizing patterns in repeated multiplication.</li>
+            <li><strong>Communication and Collaboration (CC)</strong>: Explaining models using terms like “base” and “exponent.”</li>
+          </ul>
+        `;
+        document.getElementById('lesson-content').innerHTML = lessonHtml;
+
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        let preview = CHAPTER_CONFIG.nextPreview;
+        preview = preview.replace(/\n\n/g, '</p><p>')
+                        .replace(/^- /gm, '• ')
+                        .replace(/\n/g, '<br>');
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 Coming Up</h3>
+          <p>${preview}</p>
+        `.replace(/`([^`]+)`/g, '<code>$1</code>');
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
