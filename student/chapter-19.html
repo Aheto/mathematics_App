@@ -1,81 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Solve Problems Involving Addition or Subtraction of Fractions" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Solve Problems Involving Addition or Subtraction of Fractions">
   <title>Mini OpenStax — Fraction Word Problems</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
       min-width: 80px;
       text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +96,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -155,12 +154,6 @@
       border-left: 3px solid var(--green);
       color: #555;
       font-style: italic;
-    }
-    .preview-next {
-      background: #e8f5e9;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1.5rem;
     }
     code {
       background: #f1f1f1;
@@ -181,166 +174,39 @@
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Solve Problems Involving Addition or Subtraction of Fractions</h1>
-        <div class="lo-tags" id="lo-tag">B7.1.3.2.2</div>
+        <h1 id="chapter-title">[LESSON_TITLE]</h1>
+        <div class="lo-tags" id="lo-tags">[LO_TAG]</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- Learning Objectives -->
+    <main id="main-content">
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Identify real-world situations that require adding or subtracting fractions.</li>
-          <li>Apply the correct procedure for adding/subtracting <strong>unlike</strong> and <strong>mixed fractions</strong>.</li>
-          <li>Interpret word problems, extract relevant numerical information, and solve them accurately.</li>
-          <li>Justify your answers using estimation, inverse operations, or logical reasoning.</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">word problem</span>
-          <span class="word-item">mixed fraction</span>
-          <span class="word-item">unlike fractions</span>
-          <span class="word-item">common denominator</span>
-          <span class="word-item">LCM</span>
-          <span class="word-item">borrow</span>
-          <span class="word-item">estimate</span>
-          <span class="word-item">reasonableness</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
-        <h3>1. Problem-Solving Steps for Fraction Word Problems</h3>
-        <p>Use the <strong>READ–PLAN–SOLVE–CHECK</strong> strategy:</p>
-        <ol>
-          <li><strong>READ</strong>: Understand what is given and what is being asked.</li>
-          <li><strong>PLAN</strong>: Decide whether to add or subtract; identify if fractions are mixed or unlike.</li>
-          <li><strong>SOLVE</strong>: Convert to improper fractions if needed, find a common denominator, compute, and simplify.</li>
-          <li><strong>CHECK</strong>: Use estimation or reverse operation to verify reasonableness.</li>
-        </ol>
-
-        <h3>2. Real-World Problem Types & Solutions</h3>
-        <p><strong>Example 1: Cutting Materials (Subtraction)</strong><br>
-        <em>3⅓ feet are cut off a board that is 12¼ feet long. How long is the remaining part?</em></p>
-        <blockquote>
-          <strong>Step 1</strong>: Convert to improper fractions:<br>
-          – 12¼ = ⁴⁹⁄₄<br>
-          – 3⅓ = ¹⁰⁄₃<br><br>
-          <strong>Step 2</strong>: Find LCM of 4 and 3 → <strong>12</strong><br>
-          – ⁴⁹⁄₄ = ¹⁴⁷⁄₁₂<br>
-          – ¹⁰⁄₃ = ⁴⁰⁄₁₂<br><br>
-          <strong>Step 3</strong>: Subtract:<br>
-          ¹⁴⁷⁄₁₂ - ⁴⁰⁄₁₂ = ¹⁰⁷⁄₁₂<br><br>
-          <strong>Step 4</strong>: Convert back:<br>
-          ¹⁰⁷⁄₁₂ = <strong>8¹¹⁄₁₂</strong>
-        </blockquote>
-        <p>✅ <strong>Answer</strong>: The remaining board is <strong>8¹¹⁄₁₂ feet</strong> long.</p>
-        <blockquote>
-          💡 <strong>Estimation Check</strong>:<br>
-          12¼ ≈ 12, 3⅓ ≈ 3 → 12 – 3 = 9 → 8¹¹⁄₁₂ is close → reasonable.
-        </blockquote>
-
-        <p><strong>Example 2: Hiking Distance (Subtraction)</strong><br>
-        <em>The Musa family hiked toward a waterfall 8⅝ km away. After an hour, the waterfall was still 5⅓ km away. How far did they hike?</em></p>
-        <blockquote>
-          <strong>Step 1</strong>: Total distance – Remaining = Hiked<br>
-          8⅝ - 5⅓<br><br>
-          <strong>Step 2</strong>: Convert:<br>
-          – 8⅝ = ⁶⁹⁄₈<br>
-          – 5⅓ = ¹⁶⁄₃<br><br>
-          <strong>Step 3</strong>: LCM of 8 and 3 = <strong>24</strong><br>
-          – ⁶⁹⁄₈ = ²⁰⁷⁄₂₄<br>
-          – ¹⁶⁄₃ = ¹²⁸⁄₂₄<br><br>
-          <strong>Step 4</strong>: Subtract:<br>
-          (207 - 128)⁄₂₄ = ⁷⁹⁄₂₄ = <strong>3⁷⁄₂₄</strong>
-        </blockquote>
-        <p>✅ <strong>Answer</strong>: They hiked <strong>3⁷⁄₂₄ km</strong>.</p>
-
-        <p><strong>Example 3: Reasoning About Sums</strong><br>
-        <em>If you add two fractions and the sum is greater than ½, what can you say about the fractions?</em></p>
-        <blockquote>
-          <strong>Possible Answers</strong>:<br>
-          – Both could be greater than ¼ (e.g., ⅓ + ⅓ = ⅔ > ½)<br>
-          – One could be large, the other small (e.g., ½ + ⅛ = ⅝ > ½)<br>
-          – But <strong>not both less than ¼</strong> (e.g., ⅕ + ⅕ = ⅖ < ½)<br><br>
-          ✅ <strong>Conclusion</strong>: At least one fraction must be <strong>greater than ¼</strong>, or their combined size exceeds ½.
-        </blockquote>
-
-        <h3>3. Common Pitfalls & How to Avoid Them</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Mistake</th>
-              <th>Correction</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Adding numerators and denominators directly: ½ + ⅓ = ⅖</td>
-              <td>❌ Wrong! Must find common denominator → ³⁄₆ + ²⁄₆ = ⁵⁄₆</td>
-            </tr>
-            <tr>
-              <td>Forgetting to borrow when subtracting mixed numbers</td>
-              <td>Always check if fractional part of minuend &lt; subtrahend → borrow 1 from whole number</td>
-            </tr>
-            <tr>
-              <td>Not simplifying final answer</td>
-              <td>Reduce to lowest terms and convert improper fractions to mixed numbers when appropriate</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3>4. Visual and Practical Supports</h3>
-        <ul>
-          <li><strong>Number Lines</strong>: Plot start and end points to visualize subtraction.</li>
-          <li><strong>Fraction Bars</strong>: Physically remove a segment to see what’s left.</li>
-          <li><strong>Real Objects</strong>: Use measuring tapes, rulers, or recipe cards to model problems.</li>
-        </ul>
-        <blockquote>
-          <strong>Classroom Activity</strong>:<br>
-          Give students a 12-inch paper strip. Ask them to cut off 3⅓ inches. Measure the remainder—compare with calculated answer.
-        </blockquote>
-
-        <h3>Core Competencies Developed</h3>
-        <ul>
-          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Translating words into mathematical operations.</li>
-          <li><strong>Personal Development and Leadership (PL)</strong>: Applying math to manage time, materials, and resources responsibly.</li>
-          <li><strong>Digital Literacy (DL)</strong>: Using digital tools (e.g., fraction calculators, apps) to verify solutions.</li>
-        </ul>
+        <!-- Dynamically injected -->
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
-          <ol>
-            <li>A rope is <strong>15⅔ meters</strong> long. If <strong>6¼ meters</strong> are cut off, how much remains?</li>
-            <li>During a school trip, students walked <strong>4⅜ km</strong> in the morning and <strong>2⅔ km</strong> in the afternoon. What was the total distance?</li>
-            <li>Two buckets hold water: Bucket A has <strong>7⅕ liters</strong>, Bucket B has <strong>3¾ liters</strong>. How much more water is in Bucket A?</li>
-            <li>Explain why <strong>5⅓ – 2⅔</strong> requires borrowing, and solve it step by step.</li>
-          </ol>
-          <p><em>Confirm your answers before moving forward.</em></p>
-        </div>
+        <div class="checkpoint" id="checkpoint-questions"></div>
       </div>
 
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
+      <div class="section" id="next-preview">
         <h3>🔜 Coming Up</h3>
-        <p>In Lesson 21, we’ll explore <strong>multiplying fractions by whole numbers and other fractions</strong>—including how to find “a fraction of a quantity,” like <strong>⅔ of GH₵60</strong> or <strong>25% of 80 learners</strong>.</p>
-        <p>You’ll learn why “of” means <strong>multiply</strong>—and how this applies to discounts, portions, and data interpretation!</p>
+        <p>[Brief preview of next lesson]</p>
       </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
 
       <div id="student-name-prompt" class="section" style="display:none;">
         <h2>👤 Your Name</h2>
@@ -354,279 +220,586 @@
         <h2>📝 Quick Check (20 Questions)</h2>
         <p>Select the best answer for each question.</p>
         <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
       </div>
 
       <div id="feedback"></div>
 
-      <!-- Footer -->
       <footer>
         <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
         <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
         <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
+        <a href="../dashboard.html">📊 View Dashboard</a>
       </footer>
     </main>
   </div>
 
   <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 19; // ← Lesson 20 (zero-indexed)
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
 
-    // ==============================
-    // 🧠 LESSON CONTENT
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Solve Problems Involving Addition or Subtraction of Fractions",
-      loTag: "B7.1.3.2.2",
-      objectives: [
-        "Identify real-world situations that require adding or subtracting fractions.",
-        "Apply the correct procedure for adding/subtracting unlike and mixed fractions.",
-        "Interpret word problems, extract relevant numerical information, and solve them accurately.",
-        "Justify your answers using estimation, inverse operations, or logical reasoning."
-      ],
-      words: [
-        "word problem",
-        "mixed fraction",
-        "unlike fractions",
-        "common denominator",
-        "LCM",
-        "borrow",
-        "estimate",
-        "reasonableness"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li>A rope is <strong>15⅔ meters</strong> long. If <strong>6¼ meters</strong> are cut off, how much remains?</li>
-          <li>During a school trip, students walked <strong>4⅜ km</strong> in the morning and <strong>2⅔ km</strong> in the afternoon. What was the total distance?</li>
-          <li>Two buckets hold water: Bucket A has <strong>7⅕ liters</strong>, Bucket B has <strong>3¾ liters</strong>. How much more water is in Bucket A?</li>
-          <li>Explain why <strong>5⅓ – 2⅔</strong> requires borrowing, and solve it step by step.</li>
-        </ol>
-        <p><em>Confirm your answers before moving forward.</em></p>
-      `,
-      nextPreview: "In Lesson 21, we’ll explore multiplying fractions by whole numbers and other fractions—including how to find “a fraction of a quantity,” like ⅔ of GH₵60 or 25% of 80 learners.\n\nYou’ll learn why “of” means multiply—and how this applies to discounts, portions, and data interpretation!"
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "A board is 12¼ ft long. Cut off 3⅓ ft. Remainder?", a: "8¹¹⁄₁₂ ft", opts: ["9¼ ft", "8¹¹⁄₁₂ ft", "9⅓ ft", "8¾ ft"] },
-      { q: "Hike: total 8⅝ km, 5⅓ km left. Distance hiked?", a: "3⁷⁄₂₄ km", opts: ["3⅝ km", "3⁷⁄₂₄ km", "2⁷⁄₂₄ km", "3⅓ km"] },
-      { q: "Why estimate after solving?", a: "To check reasonableness", opts: ["To waste time", "To check reasonableness", "To make it harder", "To use calculator"] },
-      { q: "Common mistake: ½ + ⅓ =", a: "⁵⁄₆", opts: ["⅖", "⅚", "⁵⁄₆", "⅓"] },
-      { q: "When to borrow in subtraction?", a: "If fractional part of minuend < subtrahend", opts: ["Always", "If whole number is odd", "If fractional part of minuend < subtrahend", "Never"] },
-      { q: "Rope: 15⅔ m – 6¼ m =", a: "9⁵⁄₁₂ m", opts: ["9¼ m", "9⅓ m", "9⁵⁄₁₂ m", "10⁵⁄₁₂ m"] },
-      { q: "Total walk: 4⅜ + 2⅔ km =", a: "7⁵⁄₂₄ km", opts: ["6⁵⁄₂₄ km", "7⁵⁄₂₄ km", "6¹⁷⁄₂₄ km", "7¹⁷⁄₂₄ km"] },
-      { q: "Bucket A: 7⅕ L, Bucket B: 3¾ L. Difference?", a: "3⁹⁄₂₀ L", opts: ["4⁹⁄₂₀ L", "3⁹⁄₂₀ L", "3¹¹⁄₂₀ L", "4¹⁄₄ L"] },
-      { q: "5⅓ – 2⅔ requires borrowing because:", a: "⅓ < ⅔", opts: ["5 < 2", "⅓ < ⅔", "Denominators differ", "Answer must be positive"] },
-      { q: "After borrowing, 5⅓ becomes:", a: "4⁴⁄₃", opts: ["4⅓", "5⁴⁄₃", "4⁴⁄₃", "6⅓"] },
-      { q: "5⅓ – 2⅔ =", a: "2²⁄₃", opts: ["3⅓", "2²⁄₃", "2⅓", "3²⁄₃"] },
-      { q: "READ–PLAN–SOLVE–CHECK helps with:", a: "All of the above", opts: ["Understanding", "Choosing method", "Verifying", "All of the above"] },
-      { q: "Visual support for subtraction:", a: "Number line", opts: ["Multiplication table", "Number line", "Pie chart", "Bar graph"] },
-      { q: "Classroom activity uses:", a: "Paper strips", opts: ["Calculators only", "Paper strips", "Phones", "Textbooks"] },
-      { q: "Digital literacy involves:", a: "Using apps to verify", opts: ["Memorizing", "Using apps to verify", "Copying", "Guessing"] },
-      { q: "Sum > ½ means:", a: "At least one fraction > ¼", opts: ["Both > ½", "At least one fraction > ¼", "Both < ¼", "Sum is integer"] },
-      { q: "LCM of 3 and 4:", a: "12", opts: ["7", "12", "24", "1"] },
-      { q: "Improper fraction result should be:", a: "Converted to mixed number", opts: ["Left as is", "Converted to mixed number", "Rounded", "Deleted"] },
-      { q: "Real-world context includes:", a: "All of the above", opts: ["Cutting", "Hiking", "Buckets", "All of the above"] },
-      { q: "Next lesson covers:", a: "Multiplying fractions", opts: ["Dividing decimals", "Multiplying fractions", "Graphing", "Algebra"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
       }
 
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      let preview = LESSON_CONFIG.nextPreview;
-      preview = preview.replace(/\n\n/g, '</p><p>')
-                      .replace(/^- /gm, '• ')
-                      .replace(/\n/g, '<br>');
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 Coming Up</h3>
-        <p>${preview}</p>
-      `.replace(/`([^`]+)`/g, '<code>$1</code>');
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
         }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 19; // ← Lesson 20 (zero-indexed)
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === CHAPTER CONTENT ===
+      const CHAPTER_CONFIG = {
+        title: "Solve Problems Involving Addition or Subtraction of Fractions",
+        loTags: ["B7.1.3.2.2"],
+        objectives: [
+          "Identify real-world situations that require adding or subtracting fractions.",
+          "Apply the correct procedure for adding/subtracting unlike and mixed fractions.",
+          "Interpret word problems, extract relevant numerical information, and solve them accurately.",
+          "Justify your answers using estimation, inverse operations, or logical reasoning."
+        ],
+        words: [
+          "word problem",
+          "mixed fraction",
+          "unlike fractions",
+          "common denominator",
+          "LCM",
+          "borrow",
+          "estimate",
+          "reasonableness"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
+          <ol>
+            <li>A rope is <strong>15⅔ meters</strong> long. If <strong>6¼ meters</strong> are cut off, how much remains?</li>
+            <li>During a school trip, students walked <strong>4⅜ km</strong> in the morning and <strong>2⅔ km</strong> in the afternoon. What was the total distance?</li>
+            <li>Two buckets hold water: Bucket A has <strong>7⅕ liters</strong>, Bucket B has <strong>3¾ liters</strong>. How much more water is in Bucket A?</li>
+            <li>Explain why <strong>5⅓ – 2⅔</strong> requires borrowing, and solve it step by step.</li>
+          </ol>
+          <p><em>Confirm your answers before moving forward.</em></p>
+        `,
+        nextPreview: "In Lesson 21, we’ll explore multiplying fractions by whole numbers and other fractions—including how to find “a fraction of a quantity,” like ⅔ of GH₵60 or 25% of 80 learners.\n\nYou’ll learn why “of” means multiply—and how this applies to discounts, portions, and data interpretation!",
+        assessmentItems: [
+          { id: "1", prompt: "A board is 12¼ ft long. Cut off 3⅓ ft. Remainder?", options: [
+            {id:"a",text:"9¼ ft",is_correct:false},
+            {id:"b",text:"8¹¹⁄₁₂ ft",is_correct:true},
+            {id:"c",text:"9⅓ ft",is_correct:false},
+            {id:"d",text:"8¾ ft",is_correct:false}
+          ]},
+          { id: "2", prompt: "Hike: total 8⅝ km, 5⅓ km left. Distance hiked?", options: [
+            {id:"a",text:"3⅝ km",is_correct:false},
+            {id:"b",text:"3⁷⁄₂₄ km",is_correct:true},
+            {id:"c",text:"2⁷⁄₂₄ km",is_correct:false},
+            {id:"d",text:"3⅓ km",is_correct:false}
+          ]},
+          { id: "3", prompt: "Why estimate after solving?", options: [
+            {id:"a",text:"To waste time",is_correct:false},
+            {id:"b",text:"To check reasonableness",is_correct:true},
+            {id:"c",text:"To make it harder",is_correct:false},
+            {id:"d",text:"To use calculator",is_correct:false}
+          ]},
+          { id: "4", prompt: "Common mistake: ½ + ⅓ =", options: [
+            {id:"a",text:"⅖",is_correct:false},
+            {id:"b",text:"⅚",is_correct:false},
+            {id:"c",text:"⁵⁄₆",is_correct:true},
+            {id:"d",text:"⅓",is_correct:false}
+          ]},
+          { id: "5", prompt: "When to borrow in subtraction?", options: [
+            {id:"a",text:"Always",is_correct:false},
+            {id:"b",text:"If whole number is odd",is_correct:false},
+            {id:"c",text:"If fractional part of minuend < subtrahend",is_correct:true},
+            {id:"d",text:"Never",is_correct:false}
+          ]},
+          { id: "6", prompt: "Rope: 15⅔ m – 6¼ m =", options: [
+            {id:"a",text:"9¼ m",is_correct:false},
+            {id:"b",text:"9⅓ m",is_correct:false},
+            {id:"c",text:"9⁵⁄₁₂ m",is_correct:true},
+            {id:"d",text:"10⁵⁄₁₂ m",is_correct:false}
+          ]},
+          { id: "7", prompt: "Total walk: 4⅜ + 2⅔ km =", options: [
+            {id:"a",text:"6⁵⁄₂₄ km",is_correct:false},
+            {id:"b",text:"7⁵⁄₂₄ km",is_correct:true},
+            {id:"c",text:"6¹⁷⁄₂₄ km",is_correct:false},
+            {id:"d",text:"7¹⁷⁄₂₄ km",is_correct:false}
+          ]},
+          { id: "8", prompt: "Bucket A: 7⅕ L, Bucket B: 3¾ L. Difference?", options: [
+            {id:"a",text:"4⁹⁄₂₀ L",is_correct:false},
+            {id:"b",text:"3⁹⁄₂₀ L",is_correct:true},
+            {id:"c",text:"3¹¹⁄₂₀ L",is_correct:false},
+            {id:"d",text:"4¹⁄₄ L",is_correct:false}
+          ]},
+          { id: "9", prompt: "5⅓ – 2⅔ requires borrowing because:", options: [
+            {id:"a",text:"5 < 2",is_correct:false},
+            {id:"b",text:"⅓ < ⅔",is_correct:true},
+            {id:"c",text:"Denominators differ",is_correct:false},
+            {id:"d",text:"Answer must be positive",is_correct:false}
+          ]},
+          { id: "10", prompt: "After borrowing, 5⅓ becomes:", options: [
+            {id:"a",text:"4⅓",is_correct:false},
+            {id:"b",text:"5⁴⁄₃",is_correct:false},
+            {id:"c",text:"4⁴⁄₃",is_correct:true},
+            {id:"d",text:"6⅓",is_correct:false}
+          ]},
+          { id: "11", prompt: "5⅓ – 2⅔ =", options: [
+            {id:"a",text:"3⅓",is_correct:false},
+            {id:"b",text:"2²⁄₃",is_correct:true},
+            {id:"c",text:"2⅓",is_correct:false},
+            {id:"d",text:"3²⁄₃",is_correct:false}
+          ]},
+          { id: "12", prompt: "READ–PLAN–SOLVE–CHECK helps with:", options: [
+            {id:"a",text:"Understanding",is_correct:false},
+            {id:"b",text:"Choosing method",is_correct:false},
+            {id:"c",text:"Verifying",is_correct:false},
+            {id:"d",text:"All of the above",is_correct:true}
+          ]},
+          { id: "13", prompt: "Visual support for subtraction:", options: [
+            {id:"a",text:"Multiplication table",is_correct:false},
+            {id:"b",text:"Number line",is_correct:true},
+            {id:"c",text:"Pie chart",is_correct:false},
+            {id:"d",text:"Bar graph",is_correct:false}
+          ]},
+          { id: "14", prompt: "Classroom activity uses:", options: [
+            {id:"a",text:"Calculators only",is_correct:false},
+            {id:"b",text:"Paper strips",is_correct:true},
+            {id:"c",text:"Phones",is_correct:false},
+            {id:"d",text:"Textbooks",is_correct:false}
+          ]},
+          { id: "15", prompt: "Digital literacy involves:", options: [
+            {id:"a",text:"Memorizing",is_correct:false},
+            {id:"b",text:"Using apps to verify",is_correct:true},
+            {id:"c",text:"Copying",is_correct:false},
+            {id:"d",text:"Guessing",is_correct:false}
+          ]},
+          { id: "16", prompt: "Sum > ½ means:", options: [
+            {id:"a",text:"Both > ½",is_correct:false},
+            {id:"b",text:"At least one fraction > ¼",is_correct:true},
+            {id:"c",text:"Both < ¼",is_correct:false},
+            {id:"d",text:"Sum is integer",is_correct:false}
+          ]},
+          { id: "17", prompt: "LCM of 3 and 4:", options: [
+            {id:"a",text:"7",is_correct:false},
+            {id:"b",text:"12",is_correct:true},
+            {id:"c",text:"24",is_correct:false},
+            {id:"d",text:"1",is_correct:false}
+          ]},
+          { id: "18", prompt: "Improper fraction result should be:", options: [
+            {id:"a",text:"Left as is",is_correct:false},
+            {id:"b",text:"Converted to mixed number",is_correct:true},
+            {id:"c",text:"Rounded",is_correct:false},
+            {id:"d",text:"Deleted",is_correct:false}
+          ]},
+          { id: "19", prompt: "Real-world context includes:", options: [
+            {id:"a",text:"Cutting",is_correct:false},
+            {id:"b",text:"Hiking",is_correct:false},
+            {id:"c",text:"Buckets",is_correct:false},
+            {id:"d",text:"All of the above",is_correct:true}
+          ]},
+          { id: "20", prompt: "Next lesson covers:", options: [
+            {id:"a",text:"Dividing decimals",is_correct:false},
+            {id:"b",text:"Multiplying fractions",is_correct:true},
+            {id:"c",text:"Graphing",is_correct:false},
+            {id:"d",text:"Algebra",is_correct:false}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        const lessonHtml = `
+          <h3>1. Problem-Solving Steps for Fraction Word Problems</h3>
+          <p>Use the <strong>READ–PLAN–SOLVE–CHECK</strong> strategy:</p>
+          <ol>
+            <li><strong>READ</strong>: Understand what is given and what is being asked.</li>
+            <li><strong>PLAN</strong>: Decide whether to add or subtract; identify if fractions are mixed or unlike.</li>
+            <li><strong>SOLVE</strong>: Convert to improper fractions if needed, find a common denominator, compute, and simplify.</li>
+            <li><strong>CHECK</strong>: Use estimation or reverse operation to verify reasonableness.</li>
+          </ol>
+
+          <h3>2. Real-World Problem Types & Solutions</h3>
+          <p><strong>Example 1: Cutting Materials (Subtraction)</strong><br>
+          <em>3⅓ feet are cut off a board that is 12¼ feet long. How long is the remaining part?</em></p>
+          <blockquote>
+            <strong>Step 1</strong>: Convert to improper fractions:<br>
+            – 12¼ = ⁴⁹⁄₄<br>
+            – 3⅓ = ¹⁰⁄₃<br><br>
+            <strong>Step 2</strong>: Find LCM of 4 and 3 → <strong>12</strong><br>
+            – ⁴⁹⁄₄ = ¹⁴⁷⁄₁₂<br>
+            – ¹⁰⁄₃ = ⁴⁰⁄₁₂<br><br>
+            <strong>Step 3</strong>: Subtract:<br>
+            ¹⁴⁷⁄₁₂ - ⁴⁰⁄₁₂ = ¹⁰⁷⁄₁₂<br><br>
+            <strong>Step 4</strong>: Convert back:<br>
+            ¹⁰⁷⁄₁₂ = <strong>8¹¹⁄₁₂</strong>
+          </blockquote>
+          <p>✅ <strong>Answer</strong>: The remaining board is <strong>8¹¹⁄₁₂ feet</strong> long.</p>
+          <blockquote>
+            💡 <strong>Estimation Check</strong>:<br>
+            12¼ ≈ 12, 3⅓ ≈ 3 → 12 – 3 = 9 → 8¹¹⁄₁₂ is close → reasonable.
+          </blockquote>
+
+          <p><strong>Example 2: Hiking Distance (Subtraction)</strong><br>
+          <em>The Musa family hiked toward a waterfall 8⅝ km away. After an hour, the waterfall was still 5⅓ km away. How far did they hike?</em></p>
+          <blockquote>
+            <strong>Step 1</strong>: Total distance – Remaining = Hiked<br>
+            8⅝ - 5⅓<br><br>
+            <strong>Step 2</strong>: Convert:<br>
+            – 8⅝ = ⁶⁹⁄₈<br>
+            – 5⅓ = ¹⁶⁄₃<br><br>
+            <strong>Step 3</strong>: LCM of 8 and 3 = <strong>24</strong><br>
+            – ⁶⁹⁄₈ = ²⁰⁷⁄₂₄<br>
+            – ¹⁶⁄₃ = ¹²⁸⁄₂₄<br><br>
+            <strong>Step 4</strong>: Subtract:<br>
+            (207 - 128)⁄₂₄ = ⁷⁹⁄₂₄ = <strong>3⁷⁄₂₄</strong>
+          </blockquote>
+          <p>✅ <strong>Answer</strong>: They hiked <strong>3⁷⁄₂₄ km</strong>.</p>
+
+          <p><strong>Example 3: Reasoning About Sums</strong><br>
+          <em>If you add two fractions and the sum is greater than ½, what can you say about the fractions?</em></p>
+          <blockquote>
+            <strong>Possible Answers</strong>:<br>
+            – Both could be greater than ¼ (e.g., ⅓ + ⅓ = ⅔ > ½)<br>
+            – One could be large, the other small (e.g., ½ + ⅛ = ⅝ > ½)<br>
+            – But <strong>not both less than ¼</strong> (e.g., ⅕ + ⅕ = ⅖ < ½)<br><br>
+            ✅ <strong>Conclusion</strong>: At least one fraction must be <strong>greater than ¼</strong>, or their combined size exceeds ½.
+          </blockquote>
+
+          <h3>3. Common Pitfalls & How to Avoid Them</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Mistake</th>
+                <th>Correction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Adding numerators and denominators directly: ½ + ⅓ = ⅖</td>
+                <td>❌ Wrong! Must find common denominator → ³⁄₆ + ²⁄₆ = ⁵⁄₆</td>
+              </tr>
+              <tr>
+                <td>Forgetting to borrow when subtracting mixed numbers</td>
+                <td>Always check if fractional part of minuend &lt; subtrahend → borrow 1 from whole number</td>
+              </tr>
+              <tr>
+                <td>Not simplifying final answer</td>
+                <td>Reduce to lowest terms and convert improper fractions to mixed numbers when appropriate</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>4. Visual and Practical Supports</h3>
+          <ul>
+            <li><strong>Number Lines</strong>: Plot start and end points to visualize subtraction.</li>
+            <li><strong>Fraction Bars</strong>: Physically remove a segment to see what’s left.</li>
+            <li><strong>Real Objects</strong>: Use measuring tapes, rulers, or recipe cards to model problems.</li>
+          </ul>
+          <blockquote>
+            <strong>Classroom Activity</strong>:<br>
+            Give students a 12-inch paper strip. Ask them to cut off 3⅓ inches. Measure the remainder—compare with calculated answer.
+          </blockquote>
+
+          <h3>Core Competencies Developed</h3>
+          <ul>
+            <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Translating words into mathematical operations.</li>
+            <li><strong>Personal Development and Leadership (PL)</strong>: Applying math to manage time, materials, and resources responsibly.</li>
+            <li><strong>Digital Literacy (DL)</strong>: Using digital tools (e.g., fraction calculators, apps) to verify solutions.</li>
+          </ul>
+        `;
+        document.getElementById('lesson-content').innerHTML = lessonHtml;
+
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        let preview = CHAPTER_CONFIG.nextPreview;
+        preview = preview.replace(/\n\n/g, '</p><p>')
+                        .replace(/^- /gm, '• ')
+                        .replace(/\n/g, '<br>');
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 Coming Up</h3>
+          <p>${preview}</p>
+        `.replace(/`([^`]+)`/g, '<code>$1</code>');
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
