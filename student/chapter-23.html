@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Determine the Result of Dividing a Quantity or a Fraction by a Fraction" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Determine the Result of Dividing a Quantity or a Fraction by a Fraction">
   <title>Mini OpenStax — Divide Quantities and Fractions by Fractions</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
-      min-width: 80px;
-      text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +94,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -189,205 +186,39 @@
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Determine the Result of Dividing a Quantity or a Fraction by a Fraction</h1>
-        <div class="lo-tags" id="lo-tag">B7.1.3.3.4</div>
+        <h1 id="chapter-title">[LESSON_TITLE]</h1>
+        <div class="lo-tags" id="lo-tags">[LO_TAG]</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- Learning Objectives -->
+    <main id="main-content">
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Divide a <strong>whole quantity</strong> (money, weight, volume, etc.) by a <strong>fraction</strong>.</li>
-          <li>Divide a <strong>fraction</strong> by another <strong>fraction</strong> using the <strong>“invert and multiply”</strong> rule.</li>
-          <li>Interpret real-world problems involving division by fractions (e.g., “How many ¼-cup servings are in 3 cups?”).</li>
-          <li>Justify your answer using models, estimation, or logical reasoning.</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">divide</span>
-          <span class="word-item">fraction</span>
-          <span class="word-item">reciprocal</span>
-          <span class="word-item">invert and multiply</span>
-          <span class="word-item">quantity</span>
-          <span class="word-item">portion</span>
-          <span class="word-item">measure</span>
-          <span class="word-item">fit into</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
-        <h3>1. What Does It Mean to Divide by a Fraction?</h3>
-        <p>Dividing by a fraction answers questions like:</p>
-        <ul>
-          <li><strong>“How many groups of this size fit into the total?”</strong></li>
-          <li><strong>“If each portion is ___ , how many portions can I make?”</strong></li>
-        </ul>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          <strong>10 ÷ ¼</strong> means: <em>How many quarters are in 10 wholes?</em> → <strong>40</strong>
-        </blockquote>
-        <p>This is <strong>not</strong> the same as sharing—it’s <strong>measuring</strong> or <strong>partitioning into equal-sized parts</strong>.</p>
-
-        <h3>2. The Rule: “Invert and Multiply”</h3>
-        <p>To divide by a fraction, <strong>multiply by its reciprocal</strong>:</p>
-        <blockquote>
-          Whole ÷ Fraction = Whole × Reciprocal<br>
-          Fraction ÷ Fraction = First × Reciprocal of Second
-        </blockquote>
-        <blockquote>
-          ✅ <strong>Why it works</strong>: Division is the inverse of multiplication. If <em>x ÷ ¼ = y</em>, then <em>y × ¼ = x</em>. So <em>y = x × 4</em>.
-        </blockquote>
-
-        <h3>3. Dividing a Whole Quantity by a Fraction</h3>
-        <p><strong>Example 1: Weight (Objects)</strong><br>
-        <em>A stack of plates weighs 10 kg. Each plate weighs ¼ kg. How many plates are in the stack?</em></p>
-        <blockquote>
-          10 ÷ ¼ = 10 × ⁴⁄₁ = <strong>40</strong><br><br>
-          ✅ <strong>Answer</strong>: <strong>40 plates</strong>
-        </blockquote>
-        <blockquote>
-          📌 <strong>Check</strong>: 40 × ¼ = 10 kg → correct.
-        </blockquote>
-
-        <p><strong>Example 2: Volume (Liquid)</strong><br>
-        <em>A class was given 9½ litres of juice to share equally among 38 learners. How many <strong>millilitres</strong> does each get?</em></p>
-        <blockquote>
-          <strong>Step 1</strong>: Convert mixed number to improper fraction:<br>
-          &nbsp;&nbsp;9½ = ¹⁹⁄₂<br><br>
-          <strong>Step 2</strong>: Divide by 38:<br>
-          &nbsp;&nbsp;¹⁹⁄₂ ÷ 38 = ¹⁹⁄(2×38) = ¹⁹⁄₇₆ = ¼ litre<br><br>
-          <strong>Step 3</strong>: Convert to millilitres:<br>
-          &nbsp;&nbsp;¼ L = <strong>250 mL</strong>
-        </blockquote>
-        <p>✅ <strong>Answer</strong>: <strong>250 mL per learner</strong></p>
-
-        <h3>4. Dividing a Fraction by Another Fraction</h3>
-        <p><strong>Example</strong>:<br>
-        <em>You have ¾ cup of sugar. Each recipe needs ⅛ cup. How many recipes can you make?</em></p>
-        <blockquote>
-          ¾ ÷ ⅛ = ¾ × ⁸⁄₁ = ²⁴⁄₄ = <strong>6</strong>
-        </blockquote>
-        <p>✅ <strong>Answer</strong>: <strong>6 recipes</strong></p>
-        <blockquote>
-          💡 <strong>Visual Model</strong>:<br>
-          ¾ = ⁶⁄₈, so there are <strong>6 eighths</strong> in ¾.
-        </blockquote>
-
-        <h3>5. Real-World Applications</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Context</th>
-              <th>Problem</th>
-              <th>Solution</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Cooking</strong></td>
-              <td>How many ⅓-cup servings in 2½ cups?</td>
-              <td>⁵⁄₂ ÷ ⅓ = ⁵⁄₂ × 3 = ¹⁵⁄₂ = <strong>7½ servings</strong></td>
-            </tr>
-            <tr>
-              <td><strong>Construction</strong></td>
-              <td>A 6-metre rope is cut into pieces of ¾ m each. How many pieces?</td>
-              <td>6 ÷ ¾ = 6 × ⁴⁄₃ = <strong>8 pieces</strong></td>
-            </tr>
-            <tr>
-              <td><strong>Finance</strong></td>
-              <td>GH₵120 is divided into shares of GH₵⁵⁄₂ (GH₵2.50). How many shares?</td>
-              <td>120 ÷ 2.5 = 120 ÷ ⁵⁄₂ = 120 × ²⁄₅ = <strong>48 shares</strong></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3>6. Common Misconceptions</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Mistake</th>
-              <th>Correction</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>“Dividing makes numbers smaller”</td>
-              <td>❌ Not true when dividing by a <strong>fraction less than 1</strong>—the result is <strong>larger</strong>!</td>
-            </tr>
-            <tr>
-              <td>Confusing <em>a ÷ ½</em> with <em>a⁄2</em></td>
-              <td><em>5 ÷ ½ = 10</em>, but <em>⁵⁄₂ = 2.5</em>—very different!</td>
-            </tr>
-            <tr>
-              <td>Forgetting to convert mixed numbers first</td>
-              <td>Always convert 2½ to ⁵⁄₂ before dividing</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3>Core Competencies Developed</h3>
-        <ul>
-          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Interpreting “how many fit?” vs. “how much each gets.”</li>
-          <li><strong>Personal Development and Leadership (PL)</strong>: Applying math to fair distribution of resources.</li>
-          <li><strong>Communication and Collaboration (CC)</strong>: Explaining why dividing by ¼ is the same as multiplying by 4.</li>
-        </ul>
-
-        <div class="celebration">
-          <h2>🎉 End of Fraction Operations Unit</h2>
-          <p><strong>Congratulations!</strong> You’ve now mastered:</p>
-          <ul>
-            <li>Comparing and ordering fractions, decimals, and percents</li>
-            <li>Adding, subtracting, multiplying, and dividing fractions</li>
-            <li>Solving real-world problems with fractional quantities</li>
-          </ul>
-          <p>These skills are essential for <strong>algebra</strong>, <strong>data analysis</strong>, <strong>financial literacy</strong>, and <strong>everyday decision-making</strong>.</p>
-        </div>
+        <!-- Dynamically filled -->
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
-          <ol>
-            <li>Solve:
-              <br>a) <strong>8 ÷ ⅕</strong>
-              <br>b) <strong>⁵⁄₆ ÷ ⅓</strong>
-              <br>c) <strong>12 ÷ ¾</strong>
-            </li>
-            <li>A sack contains <strong>15 kg</strong> of rice. If each packet holds <strong>¾ kg</strong>, how many packets can be filled?</li>
-            <li>You have <strong>3.6 litres</strong> of paint. Each wall section needs <strong>0.45 litres</strong>. How many sections can you paint?</li>
-            <li>Explain in words: Why does <strong>6 ÷ ⅔ = 9</strong>?</li>
-          </ol>
-          <p><em>Confirm your answers before moving forward.</em></p>
-        </div>
+        <div class="checkpoint" id="checkpoint-questions"></div>
       </div>
 
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
+      <div class="section" id="next-preview">
         <h3>🔜 What's Next?</h3>
-        <p>You've completed the <strong>Fraction Operations Unit</strong>! 🎉</p>
-        <p>Next, we’ll begin a new unit on <strong>Ratios and Proportions</strong>, where you’ll learn to:</p>
-        <ul>
-          <li>Compare quantities using ratios</li>
-          <li>Solve problems involving direct proportion</li>
-          <li>Apply ratios to scale drawings, recipes, and maps</li>
-        </ul>
-        <p>Get ready to explore how relationships between numbers shape our world!</p>
+        <p>[Brief preview of next lesson]</p>
       </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
 
       <div id="student-name-prompt" class="section" style="display:none;">
         <h2>👤 Your Name</h2>
@@ -401,283 +232,610 @@
         <h2>📝 Quick Check (20 Questions)</h2>
         <p>Select the best answer for each question.</p>
         <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
       </div>
 
       <div id="feedback"></div>
 
-      <!-- Footer -->
       <footer>
         <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
         <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
         <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
+        <a href="../dashboard.html">📊 View Dashboard</a>
       </footer>
     </main>
   </div>
 
   <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 23; // ← Lesson 24 (zero-indexed)
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
 
-    // ==============================
-    // 🧠 LESSON CONTENT
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Determine the Result of Dividing a Quantity or a Fraction by a Fraction",
-      loTag: "B7.1.3.3.4",
-      objectives: [
-        "Divide a whole quantity (money, weight, volume, etc.) by a fraction.",
-        "Divide a fraction by another fraction using the “invert and multiply” rule.",
-        "Interpret real-world problems involving division by fractions (e.g., “How many ¼-cup servings are in 3 cups?”).",
-        "Justify your answer using models, estimation, or logical reasoning."
-      ],
-      words: [
-        "divide",
-        "fraction",
-        "reciprocal",
-        "invert and multiply",
-        "quantity",
-        "portion",
-        "measure",
-        "fit into"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li>Solve:
-            <br>a) <strong>8 ÷ ⅕</strong>
-            <br>b) <strong>⁵⁄₆ ÷ ⅓</strong>
-            <br>c) <strong>12 ÷ ¾</strong>
-          </li>
-          <li>A sack contains <strong>15 kg</strong> of rice. If each packet holds <strong>¾ kg</strong>, how many packets can be filled?</li>
-          <li>You have <strong>3.6 litres</strong> of paint. Each wall section needs <strong>0.45 litres</strong>. How many sections can you paint?</li>
-          <li>Explain in words: Why does <strong>6 ÷ ⅔ = 9</strong>?</li>
-        </ol>
-        <p><em>Confirm your answers before moving forward.</em></p>
-      `,
-      nextPreview: "You've completed the Fraction Operations Unit! 🎉\n\nNext, we’ll begin a new unit on Ratios and Proportions, where you’ll learn to:\n- Compare quantities using ratios\n- Solve problems involving direct proportion\n- Apply ratios to scale drawings, recipes, and maps\n\nGet ready to explore how relationships between numbers shape our world!"
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "What does 10 ÷ ¼ mean?", a: "How many quarters in 10?", opts: ["10 groups of ¼", "How many quarters in 10?", "¼ of 10", "10 minus ¼"] },
-      { q: "8 ÷ ⅕ =", a: "40", opts: ["1.6", "8", "40", "⅝"] },
-      { q: "⁵⁄₆ ÷ ⅓ =", a: "2½", opts: ["⁵⁄₁₈", "1⅔", "2½", "3"] },
-      { q: "12 ÷ ¾ =", a: "16", opts: ["9", "12", "16", "18"] },
-      { q: "15 kg ÷ ¾ kg =", a: "20 packets", opts: ["11¼", "15", "20 packets", "25"] },
-      { q: "3.6 L ÷ 0.45 L =", a: "8 sections", opts: ["6", "8 sections", "10", "12"] },
-      { q: "Why is 6 ÷ ⅔ = 9?", a: "Because 9 × ⅔ = 6", opts: ["6 × ⅔ = 4", "Because 9 × ⅔ = 6", "⅔ of 9 is 6", "Both B and C"] },
-      { q: "9½ L ÷ 38 =", a: "¼ L", opts: ["¼ L", "½ L", "1 L", "2 L"] },
-      { q: "¾ ÷ ⅛ =", a: "6", opts: ["3", "6", "9", "12"] },
-      { q: "2½ cups ÷ ⅓ cup =", a: "7½ servings", opts: ["5", "6", "7½ servings", "8"] },
-      { q: "6 m ÷ ¾ m =", a: "8 pieces", opts: ["4", "6", "8 pieces", "9"] },
-      { q: "GH₵120 ÷ GH₵2.50 =", a: "48 shares", opts: ["30", "40", "48 shares", "60"] },
-      { q: "True or False: Dividing by ½ makes a number larger.", a: "True", opts: ["True", "False"] },
-      { q: "5 ÷ ½ vs ⁵⁄₂:", a: "5 ÷ ½ = 10, ⁵⁄₂ = 2.5", opts: ["They are equal", "5 ÷ ½ = 10, ⁵⁄₂ = 2.5", "Both are 2.5", "Both are 10"] },
-      { q: "Always convert mixed numbers before dividing?", a: "Yes", opts: ["Yes", "No", "Only for money", "Only for liquids"] },
-      { q: "Reciprocal of ⅗ is:", a: "⁵⁄₃", opts: ["⅗", "⁵⁄₃", "⅕", "3"] },
-      { q: "Real-world use includes:", a: "All of the above", opts: ["Cooking", "Construction", "Finance", "All of the above"] },
-      { q: "Unit completed:", a: "Fraction Operations", opts: ["Decimals", "Fractions", "Fraction Operations", "Percents"] },
-      { q: "Next unit is:", a: "Ratios and Proportions", opts: ["Algebra", "Geometry", "Ratios and Proportions", "Graphs"] },
-      { q: "Why invert and multiply?", a: "Division is inverse of multiplication", opts: ["It's a rule", "Division is inverse of multiplication", "To make numbers bigger", "Teachers say so"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
       }
 
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      let preview = LESSON_CONFIG.nextPreview;
-      preview = preview.replace(/\n\n/g, '</p><p>')
-                      .replace(/^- /gm, '• ')
-                      .replace(/\n/g, '<br>');
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 What's Next?</h3>
-        <p>${preview}</p>
-      `.replace(/`([^`]+)`/g, '<code>$1</code>');
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
         }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 23; // Lesson 24 (zero-indexed)
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === CHAPTER CONTENT ===
+      const CHAPTER_CONFIG = {
+        title: "Determine the Result of Dividing a Quantity or a Fraction by a Fraction",
+        loTags: ["B7.1.3.3.4"],
+        objectives: [
+          "Divide a whole quantity (money, weight, volume, etc.) by a fraction.",
+          "Divide a fraction by another fraction using the “invert and multiply” rule.",
+          "Interpret real-world problems involving division by fractions (e.g., “How many ¼-cup servings are in 3 cups?”).",
+          "Justify your answer using models, estimation, or logical reasoning."
+        ],
+        words: [
+          "divide", "fraction", "reciprocal", "invert and multiply",
+          "quantity", "portion", "measure", "fit into"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
+          <ol>
+            <li>Solve:<br>a) <strong>8 ÷ ⅕</strong><br>b) <strong>⁵⁄₆ ÷ ⅓</strong><br>c) <strong>12 ÷ ¾</strong></li>
+            <li>A sack contains <strong>15 kg</strong> of rice. If each packet holds <strong>¾ kg</strong>, how many packets can be filled?</li>
+            <li>You have <strong>3.6 litres</strong> of paint. Each wall section needs <strong>0.45 litres</strong>. How many sections can you paint?</li>
+            <li>Explain in words: Why does <strong>6 ÷ ⅔ = 9</strong>?</li>
+          </ol>
+          <p><em>Confirm your understanding before moving on.</em></p>
+        `,
+        nextPreview: "You've completed the Fraction Operations Unit! 🎉\n\nNext, we’ll begin a new unit on Ratios and Proportions, where you’ll learn to:\n- Compare quantities using ratios\n- Solve problems involving direct proportion\n- Apply ratios to scale drawings, recipes, and maps\n\nGet ready to explore how relationships between numbers shape our world!",
+        assessmentItems: [
+          { id: "1", prompt: "What does 10 ÷ ¼ mean?", options: [
+            {id:"a",text:"10 groups of ¼",is_correct:false},
+            {id:"b",text:"How many quarters in 10?",is_correct:true},
+            {id:"c",text:"¼ of 10",is_correct:false},
+            {id:"d",text:"10 minus ¼",is_correct:false}
+          ]},
+          { id: "2", prompt: "8 ÷ ⅕ =", options: [
+            {id:"a",text:"1.6",is_correct:false},
+            {id:"b",text:"8",is_correct:false},
+            {id:"c",text:"40",is_correct:true},
+            {id:"d",text:"⅝",is_correct:false}
+          ]},
+          { id: "3", prompt: "⁵⁄₆ ÷ ⅓ =", options: [
+            {id:"a",text:"⁵⁄₁₈",is_correct:false},
+            {id:"b",text:"1⅔",is_correct:false},
+            {id:"c",text:"2½",is_correct:true},
+            {id:"d",text:"3",is_correct:false}
+          ]},
+          { id: "4", prompt: "12 ÷ ¾ =", options: [
+            {id:"a",text:"9",is_correct:false},
+            {id:"b",text:"12",is_correct:false},
+            {id:"c",text:"16",is_correct:true},
+            {id:"d",text:"18",is_correct:false}
+          ]},
+          { id: "5", prompt: "15 kg ÷ ¾ kg =", options: [
+            {id:"a",text:"11¼",is_correct:false},
+            {id:"b",text:"15",is_correct:false},
+            {id:"c",text:"20 packets",is_correct:true},
+            {id:"d",text:"25",is_correct:false}
+          ]},
+          { id: "6", prompt: "3.6 L ÷ 0.45 L =", options: [
+            {id:"a",text:"6",is_correct:false},
+            {id:"b",text:"8 sections",is_correct:true},
+            {id:"c",text:"10",is_correct:false},
+            {id:"d",text:"12",is_correct:false}
+          ]},
+          { id: "7", prompt: "Why is 6 ÷ ⅔ = 9?", options: [
+            {id:"a",text:"6 × ⅔ = 4",is_correct:false},
+            {id:"b",text:"Because 9 × ⅔ = 6",is_correct:false},
+            {id:"c",text:"⅔ of 9 is 6",is_correct:false},
+            {id:"d",text:"Both B and C",is_correct:true}
+          ]},
+          { id: "8", prompt: "9½ L ÷ 38 =", options: [
+            {id:"a",text:"¼ L",is_correct:true},
+            {id:"b",text:"½ L",is_correct:false},
+            {id:"c",text:"1 L",is_correct:false},
+            {id:"d",text:"2 L",is_correct:false}
+          ]},
+          { id: "9", prompt: "¾ ÷ ⅛ =", options: [
+            {id:"a",text:"3",is_correct:false},
+            {id:"b",text:"6",is_correct:true},
+            {id:"c",text:"9",is_correct:false},
+            {id:"d",text:"12",is_correct:false}
+          ]},
+          { id: "10", prompt: "2½ cups ÷ ⅓ cup =", options: [
+            {id:"a",text:"5",is_correct:false},
+            {id:"b",text:"6",is_correct:false},
+            {id:"c",text:"7½ servings",is_correct:true},
+            {id:"d",text:"8",is_correct:false}
+          ]},
+          { id: "11", prompt: "6 m ÷ ¾ m =", options: [
+            {id:"a",text:"4",is_correct:false},
+            {id:"b",text:"6",is_correct:false},
+            {id:"c",text:"8 pieces",is_correct:true},
+            {id:"d",text:"9",is_correct:false}
+          ]},
+          { id: "12", prompt: "GH₵120 ÷ GH₵2.50 =", options: [
+            {id:"a",text:"30",is_correct:false},
+            {id:"b",text:"40",is_correct:false},
+            {id:"c",text:"48 shares",is_correct:true},
+            {id:"d",text:"60",is_correct:false}
+          ]},
+          { id: "13", prompt: "True or False: Dividing by ½ makes a number larger.", options: [
+            {id:"a",text:"True",is_correct:true},
+            {id:"b",text:"False",is_correct:false}
+          ]},
+          { id: "14", prompt: "5 ÷ ½ vs ⁵⁄₂:", options: [
+            {id:"a",text:"They are equal",is_correct:false},
+            {id:"b",text:"5 ÷ ½ = 10, ⁵⁄₂ = 2.5",is_correct:true},
+            {id:"c",text:"Both are 2.5",is_correct:false},
+            {id:"d",text:"Both are 10",is_correct:false}
+          ]},
+          { id: "15", prompt: "Always convert mixed numbers before dividing?", options: [
+            {id:"a",text:"Yes",is_correct:true},
+            {id:"b",text:"No",is_correct:false},
+            {id:"c",text:"Only for money",is_correct:false},
+            {id:"d",text:"Only for liquids",is_correct:false}
+          ]},
+          { id: "16", prompt: "Reciprocal of ⅗ is:", options: [
+            {id:"a",text:"⅗",is_correct:false},
+            {id:"b",text:"⁵⁄₃",is_correct:true},
+            {id:"c",text:"⅕",is_correct:false},
+            {id:"d",text:"3",is_correct:false}
+          ]},
+          { id: "17", prompt: "Real-world use includes:", options: [
+            {id:"a",text:"Cooking",is_correct:false},
+            {id:"b",text:"Construction",is_correct:false},
+            {id:"c",text:"Finance",is_correct:false},
+            {id:"d",text:"All of the above",is_correct:true}
+          ]},
+          { id: "18", prompt: "Unit completed:", options: [
+            {id:"a",text:"Decimals",is_correct:false},
+            {id:"b",text:"Fractions",is_correct:false},
+            {id:"c",text:"Fraction Operations",is_correct:true},
+            {id:"d",text:"Percents",is_correct:false}
+          ]},
+          { id: "19", prompt: "Next unit is:", options: [
+            {id:"a",text:"Algebra",is_correct:false},
+            {id:"b",text:"Geometry",is_correct:false},
+            {id:"c",text:"Ratios and Proportions",is_correct:true},
+            {id:"d",text:"Graphs",is_correct:false}
+          ]},
+          { id: "20", prompt: "Why invert and multiply?", options: [
+            {id:"a",text:"It's a rule",is_correct:false},
+            {id:"b",text:"Division is inverse of multiplication",is_correct:true},
+            {id:"c",text:"To make numbers bigger",is_correct:false},
+            {id:"d",text:"Teachers say so",is_correct:false}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDER LESSON CONTENT ===
+      function renderLessonContent() {
+        const content = `
+          <h3>1. What Does It Mean to Divide by a Fraction?</h3>
+          <p>Dividing by a fraction answers questions like:</p>
+          <ul>
+            <li><strong>“How many groups of this size fit into the total?”</strong></li>
+            <li><strong>“If each portion is ___ , how many portions can I make?”</strong></li>
+          </ul>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            <strong>10 ÷ ¼</strong> means: <em>How many quarters are in 10 wholes?</em> → <strong>40</strong>
+          </blockquote>
+          <p>This is <strong>not</strong> the same as sharing—it’s <strong>measuring</strong> or <strong>partitioning into equal-sized parts</strong>.</p>
+
+          <h3>2. The Rule: “Invert and Multiply”</h3>
+          <p>To divide by a fraction, <strong>multiply by its reciprocal</strong>:</p>
+          <blockquote>
+            Whole ÷ Fraction = Whole × Reciprocal<br>
+            Fraction ÷ Fraction = First × Reciprocal of Second
+          </blockquote>
+          <blockquote>
+            ✅ <strong>Why it works</strong>: Division is the inverse of multiplication. If <em>x ÷ ¼ = y</em>, then <em>y × ¼ = x</em>. So <em>y = x × 4</em>.
+          </blockquote>
+
+          <h3>3. Dividing a Whole Quantity by a Fraction</h3>
+          <p><strong>Example 1: Weight (Objects)</strong><br>
+          <em>A stack of plates weighs 10 kg. Each plate weighs ¼ kg. How many plates are in the stack?</em></p>
+          <blockquote>
+            10 ÷ ¼ = 10 × ⁴⁄₁ = <strong>40</strong><br><br>
+            ✅ <strong>Answer</strong>: <strong>40 plates</strong>
+          </blockquote>
+          <blockquote>
+            📌 <strong>Check</strong>: 40 × ¼ = 10 kg → correct.
+          </blockquote>
+
+          <p><strong>Example 2: Volume (Liquid)</strong><br>
+          <em>A class was given 9½ litres of juice to share equally among 38 learners. How many <strong>millilitres</strong> does each get?</em></p>
+          <blockquote>
+            <strong>Step 1</strong>: Convert mixed number to improper fraction:<br>
+            &nbsp;&nbsp;9½ = ¹⁹⁄₂<br><br>
+            <strong>Step 2</strong>: Divide by 38:<br>
+            &nbsp;&nbsp;¹⁹⁄₂ ÷ 38 = ¹⁹⁄(2×38) = ¹⁹⁄₇₆ = ¼ litre<br><br>
+            <strong>Step 3</strong>: Convert to millilitres:<br>
+            &nbsp;&nbsp;¼ L = <strong>250 mL</strong>
+          </blockquote>
+          <p>✅ <strong>Answer</strong>: <strong>250 mL per learner</strong></p>
+
+          <h3>4. Dividing a Fraction by Another Fraction</h3>
+          <p><strong>Example</strong>:<br>
+          <em>You have ¾ cup of sugar. Each recipe needs ⅛ cup. How many recipes can you make?</em></p>
+          <blockquote>
+            ¾ ÷ ⅛ = ¾ × ⁸⁄₁ = ²⁴⁄₄ = <strong>6</strong>
+          </blockquote>
+          <p>✅ <strong>Answer</strong>: <strong>6 recipes</strong></p>
+          <blockquote>
+            💡 <strong>Visual Model</strong>:<br>
+            ¾ = ⁶⁄₈, so there are <strong>6 eighths</strong> in ¾.
+          </blockquote>
+
+          <h3>5. Real-World Applications</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Context</th>
+                <th>Problem</th>
+                <th>Solution</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cooking</strong></td>
+                <td>How many ⅓-cup servings in 2½ cups?</td>
+                <td>⁵⁄₂ ÷ ⅓ = ⁵⁄₂ × 3 = ¹⁵⁄₂ = <strong>7½ servings</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Construction</strong></td>
+                <td>A 6-metre rope is cut into pieces of ¾ m each. How many pieces?</td>
+                <td>6 ÷ ¾ = 6 × ⁴⁄₃ = <strong>8 pieces</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Finance</strong></td>
+                <td>GH₵120 is divided into shares of GH₵⁵⁄₂ (GH₵2.50). How many shares?</td>
+                <td>120 ÷ 2.5 = 120 ÷ ⁵⁄₂ = 120 × ²⁄₅ = <strong>48 shares</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>6. Common Misconceptions</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Mistake</th>
+                <th>Correction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>“Dividing makes numbers smaller”</td>
+                <td>❌ Not true when dividing by a <strong>fraction less than 1</strong>—the result is <strong>larger</strong>!</td>
+              </tr>
+              <tr>
+                <td>Confusing <em>a ÷ ½</em> with <em>a⁄2</em></td>
+                <td><em>5 ÷ ½ = 10</em>, but <em>⁵⁄₂ = 2.5</em>—very different!</td>
+              </tr>
+              <tr>
+                <td>Forgetting to convert mixed numbers first</td>
+                <td>Always convert 2½ to ⁵⁄₂ before dividing</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Core Competencies Developed</h3>
+          <ul>
+            <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Interpreting “how many fit?” vs. “how much each gets.”</li>
+            <li><strong>Personal Development and Leadership (PL)</strong>: Applying math to fair distribution of resources.</li>
+            <li><strong>Communication and Collaboration (CC)</strong>: Explaining why dividing by ¼ is the same as multiplying by 4.</li>
+          </ul>
+
+          <div class="celebration">
+            <h2>🎉 End of Fraction Operations Unit</h2>
+            <p><strong>Congratulations!</strong> You’ve now mastered:</p>
+            <ul>
+              <li>Comparing and ordering fractions, decimals, and percents</li>
+              <li>Adding, subtracting, multiplying, and dividing fractions</li>
+              <li>Solving real-world problems with fractional quantities</li>
+            </ul>
+            <p>These skills are essential for <strong>algebra</strong>, <strong>data analysis</strong>, <strong>financial literacy</strong>, and <strong>everyday decision-making</strong>.</p>
+          </div>
+        `;
+        document.getElementById('lesson-content').innerHTML = content;
+      }
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        const preview = CHAPTER_CONFIG.nextPreview
+          .replace(/\n\n/g, '</p><p>')
+          .replace(/\n/g, '<br>');
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 What's Next?</h3>
+          <p>${preview}</p>
+        `;
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderLessonContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
