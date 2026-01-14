@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Make Tables of Equivalent Ratios (Written as Common Fractions) Relating Proportional Quantities" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Make Tables of Equivalent Ratios (Written as Common Fractions) Relating Proportional Quantities">
   <title>Mini OpenStax — Make Tables of Equivalent Ratios (Written as Common Fractions) Relating Proportional Quantities</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
-      min-width: 80px;
-      text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +94,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -168,198 +165,153 @@
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Make Tables of Equivalent Ratios (Written as Common Fractions) Relating Proportional Quantities</h1>
-        <div class="lo-tags" id="lo-tag">B7.1.4.1.3</div>
+        <h1 id="chapter-title">[LESSON_TITLE]</h1>
+        <div class="lo-tags" id="lo-tags">[LO_TAG]</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
-
-      <!-- Learning Objectives -->
+    <main id="main-content">
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Recognize when two or more quantities are <strong>proportional</strong>.</li>
-          <li>Construct and complete <strong>tables of equivalent ratios</strong> using multiplication or division.</li>
-          <li>Express ratios in <strong>simplest fractional form</strong> and scale them up or down consistently.</li>
-          <li>Use ratio tables to solve real-world problems involving <strong>sharing, pricing, mixing</strong>, and <strong>resource allocation</strong>.</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">Equivalent ratios</span>
-          <span class="word-item">Proportional</span>
-          <span class="word-item">Ratio table</span>
-          <span class="word-item">Scale factor</span>
-          <span class="word-item">Simplest form</span>
-          <span class="word-item">Fraction</span>
-          <span class="word-item">Resource allocation</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
-        <h3>1. What Are Equivalent Ratios?</h3>
-        <p>Equivalent ratios express the <strong>same relationship</strong> between two (or more) quantities. They are formed by multiplying or dividing <strong>both parts of a ratio by the same non-zero number</strong>.</p>
-        <blockquote>✅ <strong>Example</strong>:<br>
-        The ratio 36 : 48 : 24 can be simplified by dividing all terms by 12:<br>
-        36 ÷ 12 = 3,&nbsp;&nbsp; 48 ÷ 12 = 4,&nbsp;&nbsp; 24 ÷ 12 = 2<br>
-        So, 36:48:24 = 3:4:2</blockquote>
-        <p>All of these are <strong>equivalent</strong>:</p>
-        <ul>
-          <li>36:48:24</li>
-          <li>18:24:12</li>
-          <li>9:12:6</li>
-          <li>3:4:2</li>
-        </ul>
-
-        <h3>2. Building a Table of Equivalent Ratios</h3>
-        <p>Tables help organize how quantities change <strong>in proportion</strong>.</p>
-        <p><strong>Real-Life Example from Curriculum</strong>:<br>
-        Kafui (36), Adoley (48), and Jantuah (24) shared money in the ratio of their ages.<br>
-        Jantuah received <strong>GH₵24,000</strong>. How much was shared altogether?</p>
-        <p><strong>Step 1: Simplify the age ratio</strong><br>
-        36 : 48 : 24 = 3 : 4 : 2</p>
-        <p><strong>Step 2: Create a ratio table</strong></p>
-        <table>
-          <thead>
-            <tr>
-              <th>Person</th>
-              <th>Simple Ratio</th>
-              <th>Scaled Ratio</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Kafui</td>
-              <td>3</td>
-              <td>?</td>
-            </tr>
-            <tr>
-              <td>Adoley</td>
-              <td>4</td>
-              <td>?</td>
-            </tr>
-            <tr>
-              <td>Jantuah</td>
-              <td>2</td>
-              <td>GH₵24,000</td>
-            </tr>
-          </tbody>
-        </table>
-        <p><strong>Step 3: Find the value of 1 part</strong><br>
-        Since 2 parts = GH₵24,000 →<br>
-        1 part = 24,000 / 2 = GH₵12,000</p>
-        <p><strong>Step 4: Scale up all shares</strong></p>
-        <ul>
-          <li>Kafui: 3 × 12,000 = GH₵36,000</li>
-          <li>Adoley: 4 × 12,000 = GH₵48,000</li>
-          <li>Jantuah: 2 × 12,000 = GH₵24,000</li>
-        </ul>
-        <p><strong>Step 5: Find total amount</strong><br>
-        36,000 + 48,000 + 24,000 = GH₵108,000</p>
-        <p>✅ <strong>Answer</strong>: <strong>GH₵108,000</strong> was shared.</p>
-        <blockquote>💡 <strong>Alternative (Fraction Method)</strong>:<br>
-        Jantuah’s share = 2/(3+4+2) = 2/9 of total<br>
-        So, (2/9) × Total = 24,000 → Total = 24,000 ÷ (2/9) = 108,000</blockquote>
-
-        <h3>3. Writing Ratios as Common Fractions</h3>
-        <p>In a two-quantity context, ratios can be written as fractions to show <strong>part-to-part</strong> or <strong>part-to-whole</strong> relationships.</p>
-        <blockquote><strong>Example</strong>: In a paint mix, red : blue = 3:5<br>
-        - Red as fraction of total = 3/(3+5) = 3/8<br>
-        - Blue as fraction of total = 5/8</blockquote>
-        <p>This is useful when scaling recipes or budget allocations.</p>
-
-        <h3>4. Real-World Applications</h3>
-        <p><strong>A. Recipe Scaling</strong><br>
-        A smoothie recipe uses <strong>2 bananas : 5 cups milk</strong>. Complete the table:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Batch</th>
-              <th>Bananas</th>
-              <th>Milk (cups)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>5</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>4</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>6</td>
-              <td>15</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>10</td>
-              <td>25</td>
-            </tr>
-          </tbody>
-        </table>
-        <p><strong>B. Pricing at Market</strong><br>
-        At Salaga Market, <strong>3 kg</strong> of meat costs <strong>GH₵60</strong>. Fill in the table:</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Meat (kg)</th>
-              <th>2</th>
-              <th>3</th>
-              <th>5</th>
-              <th>12</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Cost (GH₵)</td>
-              <td>40</td>
-              <td>60</td>
-              <td>100</td>
-              <td>240</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>✅ Unit rate = GH₵20/kg → multiply kg by 20</p>
-        <p><strong>C. Classroom Supplies</strong><br>
-        A school allocates pens to classes in the ratio of their sizes: Class A (30), Class B (45), Class C (15).<br>
-        Simplified ratio = 30:45:15 = 2:3:1<br>
-        If Class C gets 24 pens, total pens = (2+3+1) × 24 = 144</p>
-
-        <h3>5. Key Features of Proportional Relationships</h3>
-        <ul>
-          <li>The <strong>ratio between corresponding quantities is constant</strong>.</li>
-          <li>You can always find a <strong>scale factor</strong> that links any two rows in the table.</li>
-          <li>When graphed, proportional pairs lie on a <strong>straight line through the origin (0,0)</strong>.</li>
-        </ul>
-
-        <h3>Core Competencies Developed</h3>
-        <ul>
-          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Identifying patterns, scaling relationships, and verifying solutions.</li>
-          <li><strong>Communication and Collaboration (CC)</strong>: Explaining how ratio tables model fairness or consistency in groups.</li>
-          <li><strong>Creativity and Innovation (CI)</strong>: Designing tables for budgets, recipes, or community resource plans.</li>
-        </ul>
+        <!-- Dynamically filled -->
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
+        <div class="checkpoint" id="checkpoint-questions"></div>
+      </div>
+
+      <div class="section" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>[Brief preview of next lesson]</p>
+      </div>
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View Dashboard</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
+
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
+      }
+
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 26; // Lesson 27 (zero-indexed)
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === CHAPTER CONTENT ===
+      const CHAPTER_CONFIG = {
+        title: "Make Tables of Equivalent Ratios (Written as Common Fractions) Relating Proportional Quantities",
+        loTags: ["B7.1.4.1.3"],
+        objectives: [
+          "Recognize when two or more quantities are proportional.",
+          "Construct and complete tables of equivalent ratios using multiplication or division.",
+          "Express ratios in simplest fractional form and scale them up or down consistently.",
+          "Use ratio tables to solve real-world problems involving sharing, pricing, mixing, and resource allocation."
+        ],
+        words: [
+          "Equivalent ratios", "Proportional", "Ratio table", "Scale factor",
+          "Simplest form", "Fraction", "Resource allocation"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
           <ol>
             <li>Three siblings share GH₵90,000 in the ratio <strong>2 : 3 : 4</strong>.
               <br>a) Complete a ratio table to find each person’s share.
@@ -392,323 +344,522 @@
             <li>In a fruit basket, the ratio of apples to oranges is <strong>3:5</strong>. If there are 24 apples, how many oranges are there? Use a ratio table.</li>
           </ol>
           <p><em>Confirm your understanding before moving on.</em></p>
-        </div>
-      </div>
-
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
-        <h3>🔜 Coming Up</h3>
-        <p>In Lesson 28, we’ll use proportional reasoning to find missing values in ratio tables and begin plotting pairs of values on the coordinate plane—linking ratios to graphs, algebra, and real-world data analysis!</p>
-      </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
-
-      <div id="student-name-prompt" class="section" style="display:none;">
-        <h2>👤 Your Name</h2>
-        <div id="name-display"></div>
-        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
-          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
-        <div id="name-buttons"></div>
-      </div>
-
-      <div class="quiz" id="quiz-container" style="display:none;">
-        <h2>📝 Quick Check (20 Questions)</h2>
-        <p>Select the best answer for each question.</p>
-        <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
-      </div>
-
-      <div id="feedback"></div>
-
-      <!-- Footer -->
-      <footer>
-        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
-        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
-        <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 26; // Lesson 27
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
-
-    // ==============================
-    // 🧠 LESSON CONTENT (EDIT PER FILE)
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Make Tables of Equivalent Ratios (Written as Common Fractions) Relating Proportional Quantities",
-      loTag: "B7.1.4.1.3",
-      objectives: [
-        "Recognize when two or more quantities are proportional.",
-        "Construct and complete tables of equivalent ratios using multiplication or division.",
-        "Express ratios in simplest fractional form and scale them up or down consistently.",
-        "Use ratio tables to solve real-world problems involving sharing, pricing, mixing, and resource allocation."
-      ],
-      words: [
-        "Equivalent ratios",
-        "Proportional",
-        "Ratio table",
-        "Scale factor",
-        "Simplest form",
-        "Fraction",
-        "Resource allocation"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li>Three siblings share GH₵90,000 in the ratio <strong>2 : 3 : 4</strong>.
-            <br>a) Complete a ratio table to find each person’s share.
-            <br>b) What fraction of the total did the oldest sibling receive?</li>
-          <li>A printer uses <strong>4 ink cartridges</strong> for every <strong>160 pages</strong>.
-            <br>a) Write the ratio in simplest fractional form.
-            <br>b) Complete the table:
-            <table style="margin-top:0.5rem;">
-              <thead>
-                <tr>
-                  <th>Pages</th>
-                  <th>160</th>
-                  <th>320</th>
-                  <th>480</th>
-                  <th>800</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Cartridges</td>
-                  <td>4</td>
-                  <td>?</td>
-                  <td>?</td>
-                  <td>?</td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li>True or False: If one row in a ratio table is (5, 15), then (10, 30) must also be in the table. Explain.</li>
-          <li>In a fruit basket, the ratio of apples to oranges is <strong>3:5</strong>. If there are 24 apples, how many oranges are there? Use a ratio table.</li>
-        </ol>
-        <p><em>Confirm your understanding before moving on.</em></p>
-      `,
-      nextPreview: "In Lesson 28, we’ll use proportional reasoning to find missing values in ratio tables and begin plotting pairs of values on the coordinate plane—linking ratios to graphs, algebra, and real-world data analysis!"
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "Which ratio is equivalent to 4:6?", a: "2:3", opts: ["2:3", "8:10", "3:2", "12:15"] },
-      { q: "If 5 kg of rice costs GH₵35, what is the cost of 8 kg?", a: "GH₵56", opts: ["GH₵40", "GH₵48", "GH₵56", "GH₵64"] },
-      { q: "Three people share GH₵120,000 in the ratio 1:2:3. How much does the second person get?", a: "GH₵40,000", opts: ["GH₵20,000", "GH₵30,000", "GH₵40,000", "GH₵60,000"] },
-      { q: "What is the simplified form of 24:36?", a: "2:3", opts: ["2:3", "3:4", "4:6", "6:9"] },
-      { q: "A recipe uses 3 cups flour for 4 cups sugar. How much flour for 12 cups sugar?", a: "9 cups", opts: ["6 cups", "8 cups", "9 cups", "12 cups"] },
-      { q: "Which pair shows equivalent ratios?", a: "5:10 and 15:30", opts: ["2:7 and 4:12", "5:10 and 15:30", "3:8 and 6:14", "4:9 and 8:16"] },
-      { q: "If 6 notebooks cost GH₵27, what is the cost per notebook?", a: "GH₵4.50", opts: ["GH₵3.50", "GH₵4.00", "GH₵4.50", "GH₵5.00"] },
-      { q: "True or False: In a proportional relationship, tripling one quantity triples the other.", a: "True", opts: ["True", "False"] },
-      { q: "The ratio of boys to girls is 3:5. If there are 21 boys, how many girls?", a: "35", opts: ["25", "30", "35", "40"] },
-      { q: "Which is NOT an equivalent ratio to 2:5?", a: "4:8", opts: ["4:10", "6:15", "4:8", "8:20"] },
-      { q: "A map scale is 1 cm : 4 km. How many km does 6 cm represent?", a: "24 km", opts: ["6 km", "10 km", "20 km", "24 km"] },
-      { q: "Two numbers are in ratio 4:7. If the smaller is 28, what is the larger?", a: "49", opts: ["35", "42", "49", "56"] },
-      { q: "What fraction of the total is the first part in a 3:5 ratio?", a: "3/8", opts: ["3/5", "5/8", "3/8", "1/2"] },
-      { q: "Which table shows a proportional relationship?", a: "x:2,4,6 y:6,12,18", opts: ["x:1,2,3 y:4,6,8", "x:2,4,6 y:6,12,18", "x:1,2,3 y:5,8,11", "x:2,3,4 y:4,6,9"] },
-      { q: "If 12 eggs cost GH₵18, how much do 8 eggs cost?", a: "GH₵12", opts: ["GH₵8", "GH₵10", "GH₵12", "GH₵16"] },
-      { q: "In a 2:3:4 ratio, what is the middle part as a fraction of the total?", a: "1/3", opts: ["1/4", "1/3", "3/9", "Both B and C"] },
-      { q: "What is the scale factor from ratio 3:5 to 12:20?", a: "4", opts: ["3", "4", "5", "6"] },
-      { q: "A car travels 210 km in 3 hours. How far in 7 hours at same rate?", a: "490 km", opts: ["210 km", "350 km", "420 km", "490 km"] },
-      { q: "What is the missing value? Ratio table: (3,7), (6,14), (9,?)", a: "21", opts: ["18", "21", "24", "28"] },
-      { q: "If 1 part = GH₵5,000 in a 2:3:5 ratio, what is the total amount?", a: "GH₵50,000", opts: ["GH₵10,000", "GH₵25,000", "GH₵50,000", "GH₵100,000"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
-      }
-
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 Coming Up</h3>
-        <p>${LESSON_CONFIG.nextPreview}</p>
-      `;
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
-        }
+        `,
+        nextPreview: "In Lesson 28, we’ll use proportional reasoning to find missing values in ratio tables and begin plotting pairs of values on the coordinate plane—linking ratios to graphs, algebra, and real-world data analysis!",
+        assessmentItems: [
+          { id: "1", prompt: "Which ratio is equivalent to 4:6?", options: [
+            {id:"a",text:"2:3",is_correct:true},
+            {id:"b",text:"8:10",is_correct:false},
+            {id:"c",text:"3:2",is_correct:false},
+            {id:"d",text:"12:15",is_correct:false}
+          ]},
+          { id: "2", prompt: "If 5 kg of rice costs GH₵35, what is the cost of 8 kg?", options: [
+            {id:"a",text:"GH₵40",is_correct:false},
+            {id:"b",text:"GH₵48",is_correct:false},
+            {id:"c",text:"GH₵56",is_correct:true},
+            {id:"d",text:"GH₵64",is_correct:false}
+          ]},
+          { id: "3", prompt: "Three people share GH₵120,000 in the ratio 1:2:3. How much does the second person get?", options: [
+            {id:"a",text:"GH₵20,000",is_correct:false},
+            {id:"b",text:"GH₵30,000",is_correct:false},
+            {id:"c",text:"GH₵40,000",is_correct:true},
+            {id:"d",text:"GH₵60,000",is_correct:false}
+          ]},
+          { id: "4", prompt: "What is the simplified form of 24:36?", options: [
+            {id:"a",text:"2:3",is_correct:true},
+            {id:"b",text:"3:4",is_correct:false},
+            {id:"c",text:"4:6",is_correct:false},
+            {id:"d",text:"6:9",is_correct:false}
+          ]},
+          { id: "5", prompt: "A recipe uses 3 cups flour for 4 cups sugar. How much flour for 12 cups sugar?", options: [
+            {id:"a",text:"6 cups",is_correct:false},
+            {id:"b",text:"8 cups",is_correct:false},
+            {id:"c",text:"9 cups",is_correct:true},
+            {id:"d",text:"12 cups",is_correct:false}
+          ]},
+          { id: "6", prompt: "Which pair shows equivalent ratios?", options: [
+            {id:"a",text:"2:7 and 4:12",is_correct:false},
+            {id:"b",text:"5:10 and 15:30",is_correct:true},
+            {id:"c",text:"3:8 and 6:14",is_correct:false},
+            {id:"d",text:"4:9 and 8:16",is_correct:false}
+          ]},
+          { id: "7", prompt: "If 6 notebooks cost GH₵27, what is the cost per notebook?", options: [
+            {id:"a",text:"GH₵3.50",is_correct:false},
+            {id:"b",text:"GH₵4.00",is_correct:false},
+            {id:"c",text:"GH₵4.50",is_correct:true},
+            {id:"d",text:"GH₵5.00",is_correct:false}
+          ]},
+          { id: "8", prompt: "True or False: In a proportional relationship, tripling one quantity triples the other.", options: [
+            {id:"a",text:"True",is_correct:true},
+            {id:"b",text:"False",is_correct:false}
+          ]},
+          { id: "9", prompt: "The ratio of boys to girls is 3:5. If there are 21 boys, how many girls?", options: [
+            {id:"a",text:"25",is_correct:false},
+            {id:"b",text:"30",is_correct:false},
+            {id:"c",text:"35",is_correct:true},
+            {id:"d",text:"40",is_correct:false}
+          ]},
+          { id: "10", prompt: "Which is NOT an equivalent ratio to 2:5?", options: [
+            {id:"a",text:"4:10",is_correct:false},
+            {id:"b",text:"6:15",is_correct:false},
+            {id:"c",text:"4:8",is_correct:true},
+            {id:"d",text:"8:20",is_correct:false}
+          ]},
+          { id: "11", prompt: "A map scale is 1 cm : 4 km. How many km does 6 cm represent?", options: [
+            {id:"a",text:"6 km",is_correct:false},
+            {id:"b",text:"10 km",is_correct:false},
+            {id:"c",text:"20 km",is_correct:false},
+            {id:"d",text:"24 km",is_correct:true}
+          ]},
+          { id: "12", prompt: "Two numbers are in ratio 4:7. If the smaller is 28, what is the larger?", options: [
+            {id:"a",text:"35",is_correct:false},
+            {id:"b",text:"42",is_correct:false},
+            {id:"c",text:"49",is_correct:true},
+            {id:"d",text:"56",is_correct:false}
+          ]},
+          { id: "13", prompt: "What fraction of the total is the first part in a 3:5 ratio?", options: [
+            {id:"a",text:"3/5",is_correct:false},
+            {id:"b",text:"5/8",is_correct:false},
+            {id:"c",text:"3/8",is_correct:true},
+            {id:"d",text:"1/2",is_correct:false}
+          ]},
+          { id: "14", prompt: "Which table shows a proportional relationship?", options: [
+            {id:"a",text:"x:1,2,3 y:4,6,8",is_correct:false},
+            {id:"b",text:"x:2,4,6 y:6,12,18",is_correct:true},
+            {id:"c",text:"x:1,2,3 y:5,8,11",is_correct:false},
+            {id:"d",text:"x:2,3,4 y:4,6,9",is_correct:false}
+          ]},
+          { id: "15", prompt: "If 12 eggs cost GH₵18, how much do 8 eggs cost?", options: [
+            {id:"a",text:"GH₵8",is_correct:false},
+            {id:"b",text:"GH₵10",is_correct:false},
+            {id:"c",text:"GH₵12",is_correct:true},
+            {id:"d",text:"GH₵16",is_correct:false}
+          ]},
+          { id: "16", prompt: "In a 2:3:4 ratio, what is the middle part as a fraction of the total?", options: [
+            {id:"a",text:"1/4",is_correct:false},
+            {id:"b",text:"1/3",is_correct:true},
+            {id:"c",text:"3/9",is_correct:false},
+            {id:"d",text:"Both B and C",is_correct:true}
+          ]},
+          { id: "17", prompt: "What is the scale factor from ratio 3:5 to 12:20?", options: [
+            {id:"a",text:"3",is_correct:false},
+            {id:"b",text:"4",is_correct:true},
+            {id:"c",text:"5",is_correct:false},
+            {id:"d",text:"6",is_correct:false}
+          ]},
+          { id: "18", prompt: "A car travels 210 km in 3 hours. How far in 7 hours at same rate?", options: [
+            {id:"a",text:"210 km",is_correct:false},
+            {id:"b",text:"350 km",is_correct:false},
+            {id:"c",text:"420 km",is_correct:false},
+            {id:"d",text:"490 km",is_correct:true}
+          ]},
+          { id: "19", prompt: "What is the missing value? Ratio table: (3,7), (6,14), (9,?)", options: [
+            {id:"a",text:"18",is_correct:false},
+            {id:"b",text:"21",is_correct:true},
+            {id:"c",text:"24",is_correct:false},
+            {id:"d",text:"28",is_correct:false}
+          ]},
+          { id: "20", prompt: "If 1 part = GH₵5,000 in a 2:3:5 ratio, what is the total amount?", options: [
+            {id:"a",text:"GH₵10,000",is_correct:false},
+            {id:"b",text:"GH₵25,000",is_correct:false},
+            {id:"c",text:"GH₵50,000",is_correct:true},
+            {id:"d",text:"GH₵100,000",is_correct:false}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDER LESSON CONTENT ===
+      function renderLessonContent() {
+        const content = `
+          <h3>1. What Are Equivalent Ratios?</h3>
+          <p>Equivalent ratios express the <strong>same relationship</strong> between two (or more) quantities. They are formed by multiplying or dividing <strong>both parts of a ratio by the same non-zero number</strong>.</p>
+          <blockquote>✅ <strong>Example</strong>:<br>
+          The ratio 36 : 48 : 24 can be simplified by dividing all terms by 12:<br>
+          36 ÷ 12 = 3,&nbsp;&nbsp; 48 ÷ 12 = 4,&nbsp;&nbsp; 24 ÷ 12 = 2<br>
+          So, 36:48:24 = 3:4:2</blockquote>
+          <p>All of these are <strong>equivalent</strong>:</p>
+          <ul>
+            <li>36:48:24</li>
+            <li>18:24:12</li>
+            <li>9:12:6</li>
+            <li>3:4:2</li>
+          </ul>
+
+          <h3>2. Building a Table of Equivalent Ratios</h3>
+          <p>Tables help organize how quantities change <strong>in proportion</strong>.</p>
+          <p><strong>Real-Life Example from Curriculum</strong>:<br>
+          Kafui (36), Adoley (48), and Jantuah (24) shared money in the ratio of their ages.<br>
+          Jantuah received <strong>GH₵24,000</strong>. How much was shared altogether?</p>
+          <p><strong>Step 1: Simplify the age ratio</strong><br>
+          36 : 48 : 24 = 3 : 4 : 2</p>
+          <p><strong>Step 2: Create a ratio table</strong></p>
+          <table>
+            <thead>
+              <tr>
+                <th>Person</th>
+                <th>Simple Ratio</th>
+                <th>Scaled Ratio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kafui</td>
+                <td>3</td>
+                <td>?</td>
+              </tr>
+              <tr>
+                <td>Adoley</td>
+                <td>4</td>
+                <td>?</td>
+              </tr>
+              <tr>
+                <td>Jantuah</td>
+                <td>2</td>
+                <td>GH₵24,000</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>Step 3: Find the value of 1 part</strong><br>
+          Since 2 parts = GH₵24,000 →<br>
+          1 part = 24,000 / 2 = GH₵12,000</p>
+          <p><strong>Step 4: Scale up all shares</strong></p>
+          <ul>
+            <li>Kafui: 3 × 12,000 = GH₵36,000</li>
+            <li>Adoley: 4 × 12,000 = GH₵48,000</li>
+            <li>Jantuah: 2 × 12,000 = GH₵24,000</li>
+          </ul>
+          <p><strong>Step 5: Find total amount</strong><br>
+          36,000 + 48,000 + 24,000 = GH₵108,000</p>
+          <p>✅ <strong>Answer</strong>: <strong>GH₵108,000</strong> was shared.</p>
+          <blockquote>💡 <strong>Alternative (Fraction Method)</strong>:<br>
+          Jantuah’s share = 2/(3+4+2) = 2/9 of total<br>
+          So, (2/9) × Total = 24,000 → Total = 24,000 ÷ (2/9) = 108,000</blockquote>
+
+          <h3>3. Writing Ratios as Common Fractions</h3>
+          <p>In a two-quantity context, ratios can be written as fractions to show <strong>part-to-part</strong> or <strong>part-to-whole</strong> relationships.</p>
+          <blockquote><strong>Example</strong>: In a paint mix, red : blue = 3:5<br>
+          - Red as fraction of total = 3/(3+5) = 3/8<br>
+          - Blue as fraction of total = 5/8</blockquote>
+          <p>This is useful when scaling recipes or budget allocations.</p>
+
+          <h3>4. Real-World Applications</h3>
+          <p><strong>A. Recipe Scaling</strong><br>
+          A smoothie recipe uses <strong>2 bananas : 5 cups milk</strong>. Complete the table:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Batch</th>
+                <th>Bananas</th>
+                <th>Milk (cups)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>4</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>6</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>10</td>
+                <td>25</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><strong>B. Pricing at Market</strong><br>
+          At Salaga Market, <strong>3 kg</strong> of meat costs <strong>GH₵60</strong>. Fill in the table:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Meat (kg)</th>
+                <th>2</th>
+                <th>3</th>
+                <th>5</th>
+                <th>12</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cost (GH₵)</td>
+                <td>40</td>
+                <td>60</td>
+                <td>100</td>
+                <td>240</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>✅ Unit rate = GH₵20/kg → multiply kg by 20</p>
+          <p><strong>C. Classroom Supplies</strong><br>
+          A school allocates pens to classes in the ratio of their sizes: Class A (30), Class B (45), Class C (15).<br>
+          Simplified ratio = 30:45:15 = 2:3:1<br>
+          If Class C gets 24 pens, total pens = (2+3+1) × 24 = 144</p>
+
+          <h3>5. Key Features of Proportional Relationships</h3>
+          <ul>
+            <li>The <strong>ratio between corresponding quantities is constant</strong>.</li>
+            <li>You can always find a <strong>scale factor</strong> that links any two rows in the table.</li>
+            <li>When graphed, proportional pairs lie on a <strong>straight line through the origin (0,0)</strong>.</li>
+          </ul>
+
+          <h3>Core Competencies Developed</h3>
+          <ul>
+            <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Identifying patterns, scaling relationships, and verifying solutions.</li>
+            <li><strong>Communication and Collaboration (CC)</strong>: Explaining how ratio tables model fairness or consistency in groups.</li>
+            <li><strong>Creativity and Innovation (CI)</strong>: Designing tables for budgets, recipes, or community resource plans.</li>
+          </ul>
+        `;
+        document.getElementById('lesson-content').innerHTML = content;
+      }
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        const preview = CHAPTER_CONFIG.nextPreview
+          .replace(/\n\n/g, '</p><p>')
+          .replace(/\n/g, '<br>');
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 Coming Up</h3>
+          <p>${preview}</p>
+        `;
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderLessonContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
