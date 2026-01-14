@@ -1,81 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Apply Mental Mathematics Strategies to Solve Word Problems" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Apply Mental Mathematics Strategies to Solve Word Problems">
   <title>Mini OpenStax — Apply Mental Math to Solve Word Problems</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
-      min-width: 80px;
-      text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +94,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -174,183 +171,39 @@
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Apply Mental Mathematics Strategies to Solve Word Problems</h1>
-        <div class="lo-tags" id="lo-tag">B7.1.2.1.3</div>
+        <h1 id="chapter-title">[LESSON_TITLE]</h1>
+        <div class="lo-tags" id="lo-tags">[LO_TAG]</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- Learning Objectives -->
+    <main id="main-content">
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Identify key information and operations in real-life word problems.</li>
-          <li>Select and apply appropriate <strong>mental math strategies</strong> (e.g., compensation, decomposition, rounding, doubling/halving) to solve problems efficiently.</li>
-          <li>Justify your reasoning using clear mathematical language.</li>
-          <li>Check the reasonableness of your answer using estimation or inverse operations.</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">compensation</span>
-          <span class="word-item">decomposition</span>
-          <span class="word-item">rounding</span>
-          <span class="word-item">doubling and halving</span>
-          <span class="word-item">estimation</span>
-          <span class="word-item">word problem</span>
-          <span class="word-item">reasonableness</span>
-          <span class="word-item">inverse operation</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
-        <h3>1. Steps for Solving Word Problems Mentally</h3>
-        <p>Use the <strong>READ–PLAN–SOLVE–CHECK</strong> framework:</p>
-        <ol>
-          <li><strong>READ</strong>: Understand what is given and what is asked.</li>
-          <li><strong>PLAN</strong>: Choose a mental strategy based on numbers and context.</li>
-          <li><strong>SOLVE</strong>: Carry out the calculation mentally using properties or shortcuts.</li>
-          <li><strong>CHECK</strong>: Estimate or use the opposite operation to verify.</li>
-        </ol>
-        <blockquote>
-          💡 <strong>Tip</strong>: Underline or highlight numbers and keywords like “total,” “difference,” “each,” “more than,” etc.
-        </blockquote>
-
-        <h3>2. Common Mental Strategies in Context</h3>
-        <p><strong>A. Compensation (Adjust-and-Correct)</strong><br>
-        Best when numbers are <strong>close to round values</strong>.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          A school bought 998 notebooks at GH₵5 each. How much did they spend?<br>
-          → Think: 1,000 × 5 = 5,000<br>
-          → But they bought <strong>2 fewer</strong>, so subtract 2 × 5 = 10<br>
-          → <strong>Answer: GH₵4,990</strong>
-        </blockquote>
-
-        <p><strong>B. Decomposition (Break Apart by Place Value)</strong><br>
-        Ideal for large or multi-digit numbers.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          A town has a population of 2,687,500. If 1,187,500 are adults, how many are children?<br>
-          → Subtract:<br>
-          2,687,500 - 1,187,500 = (2,687.5 - 1,187.5) thousand = <strong>1,500,000</strong><br>
-          → <strong>Answer: 1,500,000 children</strong>
-        </blockquote>
-
-        <p><strong>C. Doubling and Halving (for Multiplication)</strong><br>
-        Useful with even numbers or friendly factors.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          A truck carries 25 boxes, each weighing 48 kg. What’s the total weight?<br>
-          → Halve 48 → 24<br>
-          → Double 25 → 50<br>
-          → 24 × 50 = <strong>1,200 kg</strong><br>
-          → <strong>Answer: 1,200 kg</strong>
-        </blockquote>
-
-        <p><strong>D. Using Known Facts & Patterns</strong><br>
-        Leverage multiples of 10, 25, 50, 100, or familiar sequences.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          The sequence of grants is: 187,500; 687,500; 1,187,500… How much is the 5th grant?<br>
-          → Pattern: +500,000 each time<br>
-          → 1st: 187,500<br>
-          → 2nd: +500k → 687,500<br>
-          → 3rd: 1,187,500<br>
-          → 4th: 1,687,500<br>
-          → <strong>5th: 2,187,500</strong>
-        </blockquote>
-
-        <p><strong>E. Rounding for Estimation (to Check Reasonableness)</strong><br>
-        Round numbers before calculating to predict approximate answer.</p>
-        <blockquote>
-          <strong>Example</strong>:<br>
-          Is 4,892 × 60 ≈ 300,000?<br>
-          → Round 4,892 → 5,000<br>
-          → 5,000 × 60 = <strong>300,000</strong> → Yes, reasonable!
-        </blockquote>
-
-        <h3>3. Real-World Problem Types</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Context</th>
-              <th>Strategy</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Finance</strong></td>
-              <td>Compensation, multiples of 10/100</td>
-              <td>Calculating total cost of 199 items at GH₵12 each</td>
-            </tr>
-            <tr>
-              <td><strong>Population/Demographics</strong></td>
-              <td>Decomposition, place value</td>
-              <td>Finding difference between city populations over 1 billion</td>
-            </tr>
-            <tr>
-              <td><strong>Measurement</strong></td>
-              <td>Unit conversion + mental scaling</td>
-              <td>Converting km to m (×1,000) mentally</td>
-            </tr>
-            <tr>
-              <td><strong>Sequences & Patterns</strong></td>
-              <td>Recognizing common difference</td>
-              <td>Predicting next term in: 187,500, 687,500, …</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="thought-experiment">
-          <strong>Thought Experiment</strong>:<br>
-          Ghana’s education budget increased from GH₵12,187,500,000 to GH₵12,687,500,000. By how much did it increase?<br>
-          → Notice both share “12,_ _ _,500,000”<br>
-          → Difference: 12,687.5M - 12,187.5M = <strong>500,000,000</strong><br>
-          → <strong>Answer: GH₵500 million</strong>
-        </div>
-
-        <h3>Core Competencies Developed</h3>
-        <ul>
-          <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing efficient strategies based on number structure.</li>
-          <li><strong>Communication and Collaboration (CC)</strong>: Explaining your mental process clearly (“I used compensation because…”).</li>
-          <li><strong>Personal Development and Leadership (PL)</strong>: Building confidence in solving real-life quantitative challenges without calculators.</li>
-        </ul>
+        <!-- Dynamically filled -->
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
-          <ol>
-            <li><strong>Shopping</strong>: Apples cost GH₵3.98 each. How much for 5 apples? (Use compensation.)</li>
-            <li><strong>Population</strong>: City A has 3,687,500 people. City B has 1,187,500 fewer. What’s City B’s population?</li>
-            <li><strong>Pattern Recognition</strong>: In the sequence below, what is the <strong>8th term</strong>?<br>
-              <code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; ...</code>
-            </li>
-            <li><strong>Verification</strong>: A student says 249 × 4 = 996. Use mental math to check if this is reasonable.</li>
-          </ol>
-          <p><em>Confirm your answers before moving forward.</em></p>
-        </div>
+        <div class="checkpoint" id="checkpoint-questions"></div>
       </div>
 
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
+      <div class="section" id="next-preview">
         <h3>🔜 Coming Up</h3>
-        <p>In Lesson 9, we’ll explore <strong>factors, multiples, and divisibility rules</strong> for large numbers—including how to find <strong>common factors</strong> and <strong>prime factorizations</strong> of numbers over one billion.</p>
-        <p>You’ll also learn how these concepts support simplification, fraction work, and problem-solving in algebra.</p>
+        <p>[Brief preview of next lesson]</p>
       </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
 
       <div id="student-name-prompt" class="section" style="display:none;">
         <h2>👤 Your Name</h2>
@@ -364,277 +217,601 @@
         <h2>📝 Quick Check (20 Questions)</h2>
         <p>Select the best answer for each question.</p>
         <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
       </div>
 
       <div id="feedback"></div>
 
-      <!-- Footer -->
       <footer>
         <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
         <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
         <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
+        <a href="../dashboard.html">📊 View Dashboard</a>
       </footer>
     </main>
   </div>
 
   <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 7; // ← Lesson 8 (zero-indexed)
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
 
-    // ==============================
-    // 🧠 LESSON CONTENT
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Apply Mental Mathematics Strategies to Solve Word Problems",
-      loTag: "B7.1.2.1.3",
-      objectives: [
-        "Identify key information and operations in real-life word problems.",
-        "Select and apply appropriate mental math strategies (e.g., compensation, decomposition, rounding, doubling/halving) to solve problems efficiently.",
-        "Justify your reasoning using clear mathematical language.",
-        "Check the reasonableness of your answer using estimation or inverse operations."
-      ],
-      words: [
-        "compensation",
-        "decomposition",
-        "rounding",
-        "doubling and halving",
-        "estimation",
-        "word problem",
-        "reasonableness",
-        "inverse operation"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li><strong>Shopping</strong>: Apples cost GH₵3.98 each. How much for 5 apples? (Use compensation.)</li>
-          <li><strong>Population</strong>: City A has 3,687,500 people. City B has 1,187,500 fewer. What’s City B’s population?</li>
-          <li><strong>Pattern Recognition</strong>: In the sequence below, what is the <strong>8th term</strong>?<br>
-            <code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; ...</code>
-          </li>
-          <li><strong>Verification</strong>: A student says 249 × 4 = 996. Use mental math to check if this is reasonable.</li>
-        </ol>
-        <p><em>Confirm your answers before moving forward.</em></p>
-      `,
-      nextPreview: "In Lesson 9, we’ll explore factors, multiples, and divisibility rules for large numbers—including how to find common factors and prime factorizations of numbers over one billion.\n\nYou’ll also learn how these concepts support simplification, fraction work, and problem-solving in algebra."
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "What does the 'C' in READ–PLAN–SOLVE–CHECK stand for?", a: "Check", opts: ["Calculate", "Confirm", "Check", "Complete"] },
-      { q: "Apples cost GH₵3.98 each. Total for 5? (Use compensation)", a: "GH₵19.90", opts: ["GH₵20.00", "GH₵19.90", "GH₵19.98", "GH₵18.90"] },
-      { q: "City A: 3,687,500. City B has 1,187,500 fewer. City B?", a: "2,500,000", opts: ["2,500,000", "2,687,500", "1,500,000", "4,875,000"] },
-      { q: "Sequence: 187,500; 687,500; 1,187,500... What's the 8th term?", a: "3,687,500", opts: ["3,187,500", "3,687,500", "4,187,500", "2,687,500"] },
-      { q: "Is 249 × 4 = 996 reasonable?", a: "Yes, because 250×4=1,000, so 249×4=996", opts: ["No", "Yes, because 250×4=1,000, so 249×4=996", "Only if rounded", "Can't tell"] },
-      { q: "Which strategy works best for 998 × 5?", a: "Compensation", opts: ["Long multiplication", "Decomposition", "Compensation", "Guessing"] },
-      { q: "2,687,500 - 1,187,500 =", a: "1,500,000", opts: ["1,500,000", "1,400,000", "1,687,500", "1,187,500"] },
-      { q: "25 boxes × 48 kg: best strategy?", a: "Doubling and halving", opts: ["Add 25 forty-eight times", "Doubling and halving", "Calculator", "Skip"] },
-      { q: "Round 4,892 to nearest thousand:", a: "5,000", opts: ["4,000", "4,900", "5,000", "4,890"] },
-      { q: "Ghana’s budget increased from 12,187.5M to 12,687.5M. Increase?", a: "GH₵500 million", opts: ["GH₵50 million", "GH₵500 million", "GH₵1 billion", "GH₵187.5 million"] },
-      { q: "Keyword 'each' usually means:", a: "Multiplication", opts: ["Addition", "Subtraction", "Multiplication", "Division"] },
-      { q: "To check 249 × 4 = 996, you could:", a: "Divide 996 by 4", opts: ["Add 249 four times", "Divide 996 by 4", "Multiply by 5", "Round to 250"] },
-      { q: "Common difference in 187,500; 687,500...?", a: "500,000", opts: ["187,500", "500,000", "687,500", "1,000,000"] },
-      { q: "1st term = 187,500, common diff = 500,000. 4th term?", a: "1,687,500", opts: ["1,187,500", "1,687,500", "2,187,500", "687,500"] },
-      { q: "Which is NOT part of READ–PLAN–SOLVE–CHECK?", a: "Write", opts: ["Read", "Plan", "Write", "Check"] },
-      { q: "Mental math builds confidence in:", a: "Solving real-life problems without calculators", opts: ["Memorizing tables", "Solving real-life problems without calculators", "Using phones", "Avoiding math"] },
-      { q: "Best way to solve 199 × 12 mentally?", a: "200×12 - 12 = 2,400 - 12 = 2,388", opts: ["199×10 + 199×2", "200×12 - 12 = 2,400 - 12 = 2,388", "Add 199 twelve times", "All of the above"] },
-      { q: "Why estimate before solving?", a: "To check reasonableness", opts: ["To waste time", "To check reasonableness", "To avoid exact answer", "To confuse yourself"] },
-      { q: "Unit conversion: 5 km to meters?", a: "5,000 m", opts: ["500 m", "5,000 m", "50,000 m", "50 m"] },
-      { q: "Mental math supports which competency most?", a: "Critical Thinking and Problem Solving", opts: ["Art", "Critical Thinking and Problem Solving", "Reading", "Writing"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
       }
 
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 Coming Up</h3>
-        <p>${LESSON_CONFIG.nextPreview.replace(/\n/g, '<br>')}</p>
-      `;
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
         }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 7; // Lesson 8 (zero-indexed)
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === CHAPTER CONTENT ===
+      const CHAPTER_CONFIG = {
+        title: "Apply Mental Mathematics Strategies to Solve Word Problems",
+        loTags: ["B7.1.2.1.3"],
+        objectives: [
+          "Identify key information and operations in real-life word problems.",
+          "Select and apply appropriate mental math strategies (e.g., compensation, decomposition, rounding, doubling/halving) to solve problems efficiently.",
+          "Justify your reasoning using clear mathematical language.",
+          "Check the reasonableness of your answer using estimation or inverse operations."
+        ],
+        words: [
+          "compensation", "decomposition", "rounding",
+          "doubling and halving", "estimation", "word problem",
+          "reasonableness", "inverse operation"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
+          <ol>
+            <li><strong>Shopping</strong>: Apples cost GH₵3.98 each. How much for 5 apples? (Use compensation.)</li>
+            <li><strong>Population</strong>: City A has 3,687,500 people. City B has 1,187,500 fewer. What’s City B’s population?</li>
+            <li><strong>Pattern Recognition</strong>: In the sequence below, what is the <strong>8th term</strong>?<br>
+              <code>187,500 &nbsp; 687,500 &nbsp; 1,187,500 &nbsp; ...</code>
+            </li>
+            <li><strong>Verification</strong>: A student says 249 × 4 = 996. Use mental math to check if this is reasonable.</li>
+          </ol>
+          <p><em>Confirm your answers before moving forward.</em></p>
+        `,
+        nextPreview: "In Lesson 9, we’ll explore factors, multiples, and divisibility rules for large numbers—including how to find common factors and prime factorizations of numbers over one billion.\n\nYou’ll also learn how these concepts support simplification, fraction work, and problem-solving in algebra.",
+        assessmentItems: [
+          { id: "1", prompt: "What does the 'C' in READ–PLAN–SOLVE–CHECK stand for?", options: [
+            {id:"a",text:"Calculate",is_correct:false},
+            {id:"b",text:"Confirm",is_correct:false},
+            {id:"c",text:"Check",is_correct:true},
+            {id:"d",text:"Complete",is_correct:false}
+          ]},
+          { id: "2", prompt: "Apples cost GH₵3.98 each. Total for 5? (Use compensation)", options: [
+            {id:"a",text:"GH₵20.00",is_correct:false},
+            {id:"b",text:"GH₵19.90",is_correct:true},
+            {id:"c",text:"GH₵19.98",is_correct:false},
+            {id:"d",text:"GH₵18.90",is_correct:false}
+          ]},
+          { id: "3", prompt: "City A: 3,687,500. City B has 1,187,500 fewer. City B?", options: [
+            {id:"a",text:"2,500,000",is_correct:true},
+            {id:"b",text:"2,687,500",is_correct:false},
+            {id:"c",text:"1,500,000",is_correct:false},
+            {id:"d",text:"4,875,000",is_correct:false}
+          ]},
+          { id: "4", prompt: "Sequence: 187,500; 687,500; 1,187,500... What's the 8th term?", options: [
+            {id:"a",text:"3,187,500",is_correct:false},
+            {id:"b",text:"3,687,500",is_correct:true},
+            {id:"c",text:"4,187,500",is_correct:false},
+            {id:"d",text:"2,687,500",is_correct:false}
+          ]},
+          { id: "5", prompt: "Is 249 × 4 = 996 reasonable?", options: [
+            {id:"a",text:"No",is_correct:false},
+            {id:"b",text:"Yes, because 250×4=1,000, so 249×4=996",is_correct:true},
+            {id:"c",text:"Only if rounded",is_correct:false},
+            {id:"d",text:"Can't tell",is_correct:false}
+          ]},
+          { id: "6", prompt: "Which strategy works best for 998 × 5?", options: [
+            {id:"a",text:"Long multiplication",is_correct:false},
+            {id:"b",text:"Decomposition",is_correct:false},
+            {id:"c",text:"Compensation",is_correct:true},
+            {id:"d",text:"Guessing",is_correct:false}
+          ]},
+          { id: "7", prompt: "2,687,500 - 1,187,500 =", options: [
+            {id:"a",text:"1,500,000",is_correct:true},
+            {id:"b",text:"1,400,000",is_correct:false},
+            {id:"c",text:"1,687,500",is_correct:false},
+            {id:"d",text:"1,187,500",is_correct:false}
+          ]},
+          { id: "8", prompt: "25 boxes × 48 kg: best strategy?", options: [
+            {id:"a",text:"Add 25 forty-eight times",is_correct:false},
+            {id:"b",text:"Doubling and halving",is_correct:true},
+            {id:"c",text:"Calculator",is_correct:false},
+            {id:"d",text:"Skip",is_correct:false}
+          ]},
+          { id: "9", prompt: "Round 4,892 to nearest thousand:", options: [
+            {id:"a",text:"4,000",is_correct:false},
+            {id:"b",text:"4,900",is_correct:false},
+            {id:"c",text:"5,000",is_correct:true},
+            {id:"d",text:"4,890",is_correct:false}
+          ]},
+          { id: "10", prompt: "Ghana’s budget increased from 12,187.5M to 12,687.5M. Increase?", options: [
+            {id:"a",text:"GH₵50 million",is_correct:false},
+            {id:"b",text:"GH₵500 million",is_correct:true},
+            {id:"c",text:"GH₵1 billion",is_correct:false},
+            {id:"d",text:"GH₵187.5 million",is_correct:false}
+          ]},
+          { id: "11", prompt: "Keyword 'each' usually means:", options: [
+            {id:"a",text:"Addition",is_correct:false},
+            {id:"b",text:"Subtraction",is_correct:false},
+            {id:"c",text:"Multiplication",is_correct:true},
+            {id:"d",text:"Division",is_correct:false}
+          ]},
+          { id: "12", prompt: "To check 249 × 4 = 996, you could:", options: [
+            {id:"a",text:"Add 249 four times",is_correct:false},
+            {id:"b",text:"Divide 996 by 4",is_correct:true},
+            {id:"c",text:"Multiply by 5",is_correct:false},
+            {id:"d",text:"Round to 250",is_correct:false}
+          ]},
+          { id: "13", prompt: "Common difference in 187,500; 687,500...?", options: [
+            {id:"a",text:"187,500",is_correct:false},
+            {id:"b",text:"500,000",is_correct:true},
+            {id:"c",text:"687,500",is_correct:false},
+            {id:"d",text:"1,000,000",is_correct:false}
+          ]},
+          { id: "14", prompt: "1st term = 187,500, common diff = 500,000. 4th term?", options: [
+            {id:"a",text:"1,187,500",is_correct:false},
+            {id:"b",text:"1,687,500",is_correct:true},
+            {id:"c",text:"2,187,500",is_correct:false},
+            {id:"d",text:"687,500",is_correct:false}
+          ]},
+          { id: "15", prompt: "Which is NOT part of READ–PLAN–SOLVE–CHECK?", options: [
+            {id:"a",text:"Read",is_correct:false},
+            {id:"b",text:"Plan",is_correct:false},
+            {id:"c",text:"Write",is_correct:true},
+            {id:"d",text:"Check",is_correct:false}
+          ]},
+          { id: "16", prompt: "Mental math builds confidence in:", options: [
+            {id:"a",text:"Memorizing tables",is_correct:false},
+            {id:"b",text:"Solving real-life problems without calculators",is_correct:true},
+            {id:"c",text:"Using phones",is_correct:false},
+            {id:"d",text:"Avoiding math",is_correct:false}
+          ]},
+          { id: "17", prompt: "Best way to solve 199 × 12 mentally?", options: [
+            {id:"a",text:"199×10 + 199×2",is_correct:false},
+            {id:"b",text:"200×12 - 12 = 2,400 - 12 = 2,388",is_correct:true},
+            {id:"c",text:"Add 199 twelve times",is_correct:false},
+            {id:"d",text:"All of the above",is_correct:false}
+          ]},
+          { id: "18", prompt: "Why estimate before solving?", options: [
+            {id:"a",text:"To waste time",is_correct:false},
+            {id:"b",text:"To check reasonableness",is_correct:true},
+            {id:"c",text:"To avoid exact answer",is_correct:false},
+            {id:"d",text:"To confuse yourself",is_correct:false}
+          ]},
+          { id: "19", prompt: "Unit conversion: 5 km to meters?", options: [
+            {id:"a",text:"500 m",is_correct:false},
+            {id:"b",text:"5,000 m",is_correct:true},
+            {id:"c",text:"50,000 m",is_correct:false},
+            {id:"d",text:"50 m",is_correct:false}
+          ]},
+          { id: "20", prompt: "Mental math supports which competency most?", options: [
+            {id:"a",text:"Art",is_correct:false},
+            {id:"b",text:"Critical Thinking and Problem Solving",is_correct:true},
+            {id:"c",text:"Reading",is_correct:false},
+            {id:"d",text:"Writing",is_correct:false}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDER LESSON CONTENT ===
+      function renderLessonContent() {
+        const content = `
+          <h3>1. Steps for Solving Word Problems Mentally</h3>
+          <p>Use the <strong>READ–PLAN–SOLVE–CHECK</strong> framework:</p>
+          <ol>
+            <li><strong>READ</strong>: Understand what is given and what is asked.</li>
+            <li><strong>PLAN</strong>: Choose a mental strategy based on numbers and context.</li>
+            <li><strong>SOLVE</strong>: Carry out the calculation mentally using properties or shortcuts.</li>
+            <li><strong>CHECK</strong>: Estimate or use the opposite operation to verify.</li>
+          </ol>
+          <blockquote>
+            💡 <strong>Tip</strong>: Underline or highlight numbers and keywords like “total,” “difference,” “each,” “more than,” etc.
+          </blockquote>
+
+          <h3>2. Common Mental Strategies in Context</h3>
+          <p><strong>A. Compensation (Adjust-and-Correct)</strong><br>
+          Best when numbers are <strong>close to round values</strong>.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            A school bought 998 notebooks at GH₵5 each. How much did they spend?<br>
+            → Think: 1,000 × 5 = 5,000<br>
+            → But they bought <strong>2 fewer</strong>, so subtract 2 × 5 = 10<br>
+            → <strong>Answer: GH₵4,990</strong>
+          </blockquote>
+
+          <p><strong>B. Decomposition (Break Apart by Place Value)</strong><br>
+          Ideal for large or multi-digit numbers.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            A town has a population of 2,687,500. If 1,187,500 are adults, how many are children?<br>
+            → Subtract:<br>
+            2,687,500 - 1,187,500 = (2,687.5 - 1,187.5) thousand = <strong>1,500,000</strong><br>
+            → <strong>Answer: 1,500,000 children</strong>
+          </blockquote>
+
+          <p><strong>C. Doubling and Halving (for Multiplication)</strong><br>
+          Useful with even numbers or friendly factors.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            A truck carries 25 boxes, each weighing 48 kg. What’s the total weight?<br>
+            → Halve 48 → 24<br>
+            → Double 25 → 50<br>
+            → 24 × 50 = <strong>1,200 kg</strong><br>
+            → <strong>Answer: 1,200 kg</strong>
+          </blockquote>
+
+          <p><strong>D. Using Known Facts & Patterns</strong><br>
+          Leverage multiples of 10, 25, 50, 100, or familiar sequences.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            The sequence of grants is: 187,500; 687,500; 1,187,500… How much is the 5th grant?<br>
+            → Pattern: +500,000 each time<br>
+            → 1st: 187,500<br>
+            → 2nd: +500k → 687,500<br>
+            → 3rd: 1,187,500<br>
+            → 4th: 1,687,500<br>
+            → <strong>5th: 2,187,500</strong>
+          </blockquote>
+
+          <p><strong>E. Rounding for Estimation (to Check Reasonableness)</strong><br>
+          Round numbers before calculating to predict approximate answer.</p>
+          <blockquote>
+            <strong>Example</strong>:<br>
+            Is 4,892 × 60 ≈ 300,000?<br>
+            → Round 4,892 → 5,000<br>
+            → 5,000 × 60 = <strong>300,000</strong> → Yes, reasonable!
+          </blockquote>
+
+          <h3>3. Real-World Problem Types</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Context</th>
+                <th>Strategy</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Finance</strong></td>
+                <td>Compensation, multiples of 10/100</td>
+                <td>Calculating total cost of 199 items at GH₵12 each</td>
+              </tr>
+              <tr>
+                <td><strong>Population/Demographics</strong></td>
+                <td>Decomposition, place value</td>
+                <td>Finding difference between city populations over 1 billion</td>
+              </tr>
+              <tr>
+                <td><strong>Measurement</strong></td>
+                <td>Unit conversion + mental scaling</td>
+                <td>Converting km to m (×1,000) mentally</td>
+              </tr>
+              <tr>
+                <td><strong>Sequences & Patterns</strong></td>
+                <td>Recognizing common difference</td>
+                <td>Predicting next term in: 187,500, 687,500, …</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="thought-experiment">
+            <strong>Thought Experiment</strong>:<br>
+            Ghana’s education budget increased from GH₵12,187,500,000 to GH₵12,687,500,000. By how much did it increase?<br>
+            → Notice both share “12,_ _ _,500,000”<br>
+            → Difference: 12,687.5M - 12,187.5M = <strong>500,000,000</strong><br>
+            → <strong>Answer: GH₵500 million</strong>
+          </div>
+
+          <h3>Core Competencies Developed</h3>
+          <ul>
+            <li><strong>Critical Thinking and Problem Solving (CP)</strong>: Choosing efficient strategies based on number structure.</li>
+            <li><strong>Communication and Collaboration (CC)</strong>: Explaining your mental process clearly (“I used compensation because…”).</li>
+            <li><strong>Personal Development and Leadership (PL)</strong>: Building confidence in solving real-life quantitative challenges without calculators.</li>
+          </ul>
+        `;
+        document.getElementById('lesson-content').innerHTML = content;
+      }
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        const preview = CHAPTER_CONFIG.nextPreview
+          .replace(/\n\n/g, '</p><p>')
+          .replace(/\n/g, '<br>');
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 Coming Up</h3>
+          <p>${preview.replace(/`([^`]+)`/g, '<code>$1</code>')}</p>
+        `;
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderLessonContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
