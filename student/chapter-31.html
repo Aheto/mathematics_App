@@ -1,81 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Identify the Rule in a Pattern or Mapping and Predict Subsequent Elements" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Identify the Rule in a Pattern or Mapping and Predict Subsequent Elements">
   <title>Mini OpenStax — Identify the Rule in a Pattern or Mapping and Predict Subsequent Elements</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
       min-width: 80px;
       text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +96,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -156,57 +155,33 @@
       color: #555;
       font-style: italic;
     }
-    .preview-next {
-      background: #e8f5e9;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1.5rem;
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Identify the Rule in a Pattern or Mapping and Predict Subsequent Elements</h1>
-        <div class="lo-tags" id="lo-tag">B7.2.1.1.3</div>
+        <h1 id="chapter-title">Identify the Rule in a Pattern or Mapping and Predict Subsequent Elements</h1>
+        <div class="lo-tags" id="lo-tags">B7.2.1.1.3</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
-
-      <!-- Learning Objectives -->
+    <main id="main-content">
+      <!-- === REPLACE THIS SECTION PER LESSON === -->
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Analyze <strong>symbolic patterns</strong> (e.g., matchstick figures) and <strong>numerical sequences</strong> to uncover the underlying rule.</li>
-          <li>Express the rule using <strong>mathematical language</strong> (e.g., “one more than three times the input”).</li>
-          <li>Use the rule to <strong>predict future terms</strong> or <strong>find missing values</strong>.</li>
-          <li>Verify your predictions by checking consistency across multiple terms.</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">Pattern rule</span>
-          <span class="word-item">Input</span>
-          <span class="word-item">Output</span>
-          <span class="word-item">Additive</span>
-          <span class="word-item">Multiplicative</span>
-          <span class="word-item">Predict</span>
-          <span class="word-item">Mapping</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
         <h3>1. What Is a Pattern Rule?</h3>
         <p>A <strong>rule</strong> explains how each output (co-domain) is generated from its corresponding input (domain). It can be:</p>
@@ -334,10 +309,148 @@
         </ul>
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
+        <div class="checkpoint" id="checkpoint-questions"></div>
+      </div>
+
+      <div class="section" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 33, you’ll learn to plot points from a table on the coordinate plane, draw graphs of relations, and use graphs to solve problems—like finding where two plans cost the same or predicting future trends!</p>
+      </div>
+      <!-- === END REPLACE SECTION === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- FOOTER -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View Dashboard</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
+
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
+      }
+
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 31; // ← UPDATE PER LESSON (e.g., 24 for Lesson 25)
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        // ✅ FIXED: No extra space in URL
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === TYPO CORRECTIONS (for copied content) ===
+      const TYPO_CORRECTIONS = [
+        [/f resh/g, 'fresh'], [/p unch/g, 'punch'], [/slep t/g, 'slept'],
+        [/crep t/g, 'crept'], [/p lant/g, 'plant'], [/p ath/g, 'path'],
+        [/f roth/g, 'froth'], [/p eck/g, 'peck'], [/f luck/g, 'pluck'],
+        [/p luck/g, 'pluck'], [/f ling/g, 'fling'], [/p ass/g, 'pass'],
+        [/f uss/g, 'fuss'], [/sp ell/g, 'spell'], [/f uzz/g, 'fuzz'],
+        [/thef t/g, 'theft'], [/thrif t/g, 'thrift'], [/dep th/g, 'depth'],
+        [/fif th/g, 'fifth'], [/st ink/g, 'stink'], [/wr ink/g, 'wring']
+      ];
+
+      // === CHAPTER CONTENT (EDIT PER FILE) ===
+      const CHAPTER_CONFIG = {
+        title: "Identify the Rule in a Pattern or Mapping and Predict Subsequent Elements",
+        loTags: ["B7.2.1.1.3"],
+        objectives: [
+          "Analyze symbolic patterns (e.g., matchstick figures) and numerical sequences to uncover the underlying rule.",
+          "Express the rule using mathematical language (e.g., “one more than three times the input”).",
+          "Use the rule to predict future terms or find missing values.",
+          "Verify your predictions by checking consistency across multiple terms."
+        ],
+        words: [
+          "Pattern rule",
+          "Input",
+          "Output",
+          "Additive",
+          "Multiplicative",
+          "Predict",
+          "Mapping"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
           <ol>
             <li>A pattern starts: 4, 7, 10, 13, …
               <br>a) What is the rule in words?
@@ -375,328 +488,368 @@
               <br>What is the rule? (Assume linear.)</li>
           </ol>
           <p><em>Confirm your understanding before moving on.</em></p>
-        </div>
-      </div>
-
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
-        <h3>🔜 Coming Up</h3>
-        <p>In Lesson 33, you’ll learn to plot points from a table on the coordinate plane, draw graphs of relations, and use graphs to solve problems—like finding where two plans cost the same or predicting future trends!</p>
-      </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
-
-      <div id="student-name-prompt" class="section" style="display:none;">
-        <h2>👤 Your Name</h2>
-        <div id="name-display"></div>
-        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
-          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
-        <div id="name-buttons"></div>
-      </div>
-
-      <div class="quiz" id="quiz-container" style="display:none;">
-        <h2>📝 Quick Check (20 Questions)</h2>
-        <p>Select the best answer for each question.</p>
-        <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
-      </div>
-
-      <div id="feedback"></div>
-
-      <!-- Footer -->
-      <footer>
-        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
-        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
-        <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 31; // Lesson 32
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
-
-    // ==============================
-    // 🧠 LESSON CONTENT (EDIT PER FILE)
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Identify the Rule in a Pattern or Mapping and Predict Subsequent Elements",
-      loTag: "B7.2.1.1.3",
-      objectives: [
-        "Analyze symbolic patterns (e.g., matchstick figures) and numerical sequences to uncover the underlying rule.",
-        "Express the rule using mathematical language (e.g., “one more than three times the input”).",
-        "Use the rule to predict future terms or find missing values.",
-        "Verify your predictions by checking consistency across multiple terms."
-      ],
-      words: [
-        "Pattern rule",
-        "Input",
-        "Output",
-        "Additive",
-        "Multiplicative",
-        "Predict",
-        "Mapping"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li>A pattern starts: 4, 7, 10, 13, …
-            <br>a) What is the rule in words?
-            <br>b) What is the 10th term?</li>
-          <li>Complete the table and state the rule:
-            <table style="margin-top:0.5rem;">
-              <thead>
-                <tr>
-                  <th>x</th>
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                  <th>4</th>
-                  <th>5</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>y</td>
-                  <td>0</td>
-                  <td>4</td>
-                  <td>8</td>
-                  <td>?</td>
-                  <td>?</td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li>The rule is: “Four times one less than the input.”
-            <br>a) Write the algebraic expression.
-            <br>b) Find the output when x = 6.</li>
-          <li>A mapping gives:
-            <br>- Input 3 → Output 11
-            <br>- Input 5 → Output 19
-            <br>What is the rule? (Assume linear.)</li>
-        </ol>
-        <p><em>Confirm your understanding before moving on.</em></p>
-      `,
-      nextPreview: "In Lesson 33, you’ll learn to plot points from a table on the coordinate plane, draw graphs of relations, and use graphs to solve problems—like finding where two plans cost the same or predicting future trends!"
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "A pattern: 5, 9, 13, 17,… What is the rule?", a: "Four times input plus one", opts: ["Add 5 each time", "Four times input", "Four times input plus one", "Input plus four"] },
-      { q: "If the rule is “three times input minus 2,” what is output for input 4?", a: "10", opts: ["6", "10", "12", "14"] },
-      { q: "Matchstick pattern: P1=6, P2=11, P3=16. What is P5?", a: "26", opts: ["20", "22", "24", "26"] },
-      { q: "Table: x=1→y=2, x=2→y=5, x=3→y=8. What is y when x=4?", a: "11", opts: ["9", "10", "11", "12"] },
-      { q: "Which phrase matches y = 5x - 3?", a: "Five times input minus three", opts: ["Five times input minus three", "Three less than five", "Five minus three times input", "Input times two"] },
-      { q: "True or False: A constant difference means the rule is linear.", a: "True", opts: ["True", "False"] },
-      { q: "If x → 3x + 1 gives output 19, what is x?", a: "6", opts: ["5", "6", "7", "8"] },
-      { q: "Pattern: 2, 6, 10, 14,… What is the 8th term?", a: "30", opts: ["26", "28", "30", "32"] },
-      { q: "Rule: “Two times one more than input.” What is y when x=3?", a: "8", opts: ["6", "7", "8", "9"] },
-      { q: "Table: x=1→y=4, x=2→y=7, x=3→y=10. What is the rule?", a: "Three times input plus one", opts: ["Input plus three", "Three times input plus one", "Two times input plus two", "Four times input"] },
-      { q: "If y = 4(x - 1), what is y when x=5?", a: "16", opts: ["12", "15", "16", "20"] },
-      { q: "A taxi costs GH₵4 base + GH₵2/km. Is this proportional?", a: "No", opts: ["Yes", "No"] },
-      { q: "Pattern rule: “Seven times input minus 2.” What is 1st term?", a: "5", opts: ["5", "7", "9", "14"] },
-      { q: "If input 4 gives output 14 and input 6 gives output 20, what is the rule?", a: "Three times input plus two", opts: ["Two times input plus six", "Three times input plus two", "Input plus ten", "Four times input minus two"] },
-      { q: "Matchstick pattern adds 6 each time. P1=9. What is P4?", a: "27", opts: ["21", "24", "27", "30"] },
-      { q: "Rule: “Five times one less than input.” What is y when x=1?", a: "0", opts: ["0", "1", "4", "5"] },
-      { q: "Table: x=2→y=7, x=3→y=10, x=4→y=13. What is y when x=5?", a: "16", opts: ["14", "15", "16", "17"] },
-      { q: "If y = 2x + 5, what is x when y=15?", a: "5", opts: ["4", "5", "6", "7"] },
-      { q: "Which is NOT linear?", a: "2, 4, 8, 16", opts: ["3, 7, 11, 15", "5, 10, 15, 20", "2, 4, 8, 16", "1, 6, 11, 16"] },
-      { q: "Rule: “One more than four times input.” What is output for input 7?", a: "29", opts: ["25", "28", "29", "32"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
-      }
-
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 Coming Up</h3>
-        <p>${LESSON_CONFIG.nextPreview}</p>
-      `;
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
-        }
+        `,
+        nextPreview: "In Lesson 33, you’ll learn to plot points from a table on the coordinate plane, draw graphs of relations, and use graphs to solve problems—like finding where two plans cost the same or predicting future trends!",
+        assessmentItems: [
+          { id: "1", prompt: "A pattern: 5, 9, 13, 17,… What is the rule?", options: [
+            {id:"a",text:"Add 5 each time",is_correct:false},
+            {id:"b",text:"Four times input",is_correct:false},
+            {id:"c",text:"Four times input plus one",is_correct:true},
+            {id:"d",text:"Input plus four",is_correct:false}
+          ]},
+          { id: "2", prompt: "If the rule is “three times input minus 2,” what is output for input 4?", options: [
+            {id:"a",text:"6",is_correct:false},
+            {id:"b",text:"10",is_correct:true},
+            {id:"c",text:"12",is_correct:false},
+            {id:"d",text:"14",is_correct:false}
+          ]},
+          { id: "3", prompt: "Matchstick pattern: P1=6, P2=11, P3=16. What is P5?", options: [
+            {id:"a",text:"20",is_correct:false},
+            {id:"b",text:"22",is_correct:false},
+            {id:"c",text:"24",is_correct:false},
+            {id:"d",text:"26",is_correct:true}
+          ]},
+          { id: "4", prompt: "Table: x=1→y=2, x=2→y=5, x=3→y=8. What is y when x=4?", options: [
+            {id:"a",text:"9",is_correct:false},
+            {id:"b",text:"10",is_correct:false},
+            {id:"c",text:"11",is_correct:true},
+            {id:"d",text:"12",is_correct:false}
+          ]},
+          { id: "5", prompt: "Which phrase matches y = 5x - 3?", options: [
+            {id:"a",text:"Five times input minus three",is_correct:true},
+            {id:"b",text:"Three less than five",is_correct:false},
+            {id:"c",text:"Five minus three times input",is_correct:false},
+            {id:"d",text:"Input times two",is_correct:false}
+          ]},
+          { id: "6", prompt: "True or False: A constant difference means the rule is linear.", options: [
+            {id:"a",text:"True",is_correct:true},
+            {id:"b",text:"False",is_correct:false}
+          ]},
+          { id: "7", prompt: "If x → 3x + 1 gives output 19, what is x?", options: [
+            {id:"a",text:"5",is_correct:false},
+            {id:"b",text:"6",is_correct:true},
+            {id:"c",text:"7",is_correct:false},
+            {id:"d",text:"8",is_correct:false}
+          ]},
+          { id: "8", prompt: "Pattern: 2, 6, 10, 14,… What is the 8th term?", options: [
+            {id:"a",text:"26",is_correct:false},
+            {id:"b",text:"28",is_correct:false},
+            {id:"c",text:"30",is_correct:true},
+            {id:"d",text:"32",is_correct:false}
+          ]},
+          { id: "9", prompt: "Rule: “Two times one more than input.” What is y when x=3?", options: [
+            {id:"a",text:"6",is_correct:false},
+            {id:"b",text:"7",is_correct:false},
+            {id:"c",text:"8",is_correct:true},
+            {id:"d",text:"9",is_correct:false}
+          ]},
+          { id: "10", prompt: "Table: x=1→y=4, x=2→y=7, x=3→y=10. What is the rule?", options: [
+            {id:"a",text:"Input plus three",is_correct:false},
+            {id:"b",text:"Three times input plus one",is_correct:true},
+            {id:"c",text:"Two times input plus two",is_correct:false},
+            {id:"d",text:"Four times input",is_correct:false}
+          ]},
+          { id: "11", prompt: "If y = 4(x - 1), what is y when x=5?", options: [
+            {id:"a",text:"12",is_correct:false},
+            {id:"b",text:"15",is_correct:false},
+            {id:"c",text:"16",is_correct:true},
+            {id:"d",text:"20",is_correct:false}
+          ]},
+          { id: "12", prompt: "A taxi costs GH₵4 base + GH₵2/km. Is this proportional?", options: [
+            {id:"a",text:"Yes",is_correct:false},
+            {id:"b",text:"No",is_correct:true}
+          ]},
+          { id: "13", prompt: "Pattern rule: “Seven times input minus 2.” What is 1st term?", options: [
+            {id:"a",text:"5",is_correct:true},
+            {id:"b",text:"7",is_correct:false},
+            {id:"c",text:"9",is_correct:false},
+            {id:"d",text:"14",is_correct:false}
+          ]},
+          { id: "14", prompt: "If input 4 gives output 14 and input 6 gives output 20, what is the rule?", options: [
+            {id:"a",text:"Two times input plus six",is_correct:false},
+            {id:"b",text:"Three times input plus two",is_correct:true},
+            {id:"c",text:"Input plus ten",is_correct:false},
+            {id:"d",text:"Four times input minus two",is_correct:false}
+          ]},
+          { id: "15", prompt: "Matchstick pattern adds 6 each time. P1=9. What is P4?", options: [
+            {id:"a",text:"21",is_correct:false},
+            {id:"b",text:"24",is_correct:false},
+            {id:"c",text:"27",is_correct:true},
+            {id:"d",text:"30",is_correct:false}
+          ]},
+          { id: "16", prompt: "Rule: “Five times one less than input.” What is y when x=1?", options: [
+            {id:"a",text:"0",is_correct:true},
+            {id:"b",text:"1",is_correct:false},
+            {id:"c",text:"4",is_correct:false},
+            {id:"d",text:"5",is_correct:false}
+          ]},
+          { id: "17", prompt: "Table: x=2→y=7, x=3→y=10, x=4→y=13. What is y when x=5?", options: [
+            {id:"a",text:"14",is_correct:false},
+            {id:"b",text:"15",is_correct:false},
+            {id:"c",text:"16",is_correct:true},
+            {id:"d",text:"17",is_correct:false}
+          ]},
+          { id: "18", prompt: "If y = 2x + 5, what is x when y=15?", options: [
+            {id:"a",text:"4",is_correct:false},
+            {id:"b",text:"5",is_correct:true},
+            {id:"c",text:"6",is_correct:false},
+            {id:"d",text:"7",is_correct:false}
+          ]},
+          { id: "19", prompt: "Which is NOT linear?", options: [
+            {id:"a",text:"3, 7, 11, 15",is_correct:false},
+            {id:"b",text:"5, 10, 15, 20",is_correct:false},
+            {id:"c",text:"2, 4, 8, 16",is_correct:true},
+            {id:"d",text:"1, 6, 11, 16",is_correct:false}
+          ]},
+          { id: "20", prompt: "Rule: “One more than four times input.” What is output for input 7?", options: [
+            {id:"a",text:"25",is_correct:false},
+            {id:"b",text:"28",is_correct:false},
+            {id:"c",text:"29",is_correct:true},
+            {id:"d",text:"32",is_correct:false}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        // Objectives
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        // Words
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        // Checkpoint
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        // Next preview
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 Coming Up</h3>
+          <p>${CHAPTER_CONFIG.nextPreview}</p>
+        `;
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        // ✅ FIXED: Clean WhatsApp URL
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
