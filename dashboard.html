@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mini OpenStax Dashboard</title>
+  <title>JHS Mathematics Dashboard – NaCCA Syllabus</title>
   <style>
     :root {
       --green: #006b3d;   /* Ghana green */
@@ -173,24 +173,6 @@
       color: #6c757d;
       font-size: 12px;
     }
-    .report-actions {
-      margin-top: 8px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .action-btn {
-      padding: 4px 8px;
-      font-size: 12px;
-      background: #6c757d;
-      color: white;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-    .action-btn:hover {
-      background: #5a6268;
-    }
     @media (max-width: 600px) {
       .panel-header > * { width: 100%; text-align: center; }
       #student-search { width: 100%; margin-bottom: 10px; }
@@ -202,7 +184,7 @@
   <div class="container">
     <header>
       <div>
-        <h1>Mini OpenStax Dashboard</h1>
+        <h1>JHS Mathematics Dashboard<br><small>NaCCA Syllabus • Competency-Based Learning</small></h1>
         <div class="role-badge" id="role-badge">Loading...</div>
       </div>
       <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
@@ -218,23 +200,23 @@
     <!-- REPORTS PANEL -->
     <div id="reports-panel">
       <div class="panel-header">
-        <h2>All Quiz Reports</h2>
+        <h2>Quiz Reports • JHS Mathematics</h2>
         <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
           <button id="whatsapp-all" class="btn btn-whatsapp" style="padding:0.4rem 0.8rem;font-size:0.9rem;">📤 Send All</button>
           <button id="close-reports" class="btn btn-outline" style="padding:0.4rem 0.8rem;font-size:0.9rem;">✕ Close</button>
         </div>
       </div>
       <div class="search-box">
-        <input type="text" id="student-search" placeholder="Enter student name or leave blank for all" />
+        <input type="text" id="student-search" placeholder="Enter student name or leave blank" />
         <button id="search-btn">Search Reports</button>
       </div>
-      <div class="note">Reports are saved only in this browser.</div>
+      <div class="note">Reports are saved only in this browser. No data leaves your device.</div>
       <div id="results"></div>
     </div>
 
     <footer class="note">
-      <p>Data is stored locally. No personal information is sent to servers.</p>
-      <p>Powered by open educational principles • Ghana-made</p>
+      <p>Aligned with NaCCA JHS Mathematics Curriculum • Ghana Education Service</p>
+      <p>Data stored locally • Supports Critical Thinking & Problem Solving (CP), Communication & Collaboration (CC)</p>
     </footer>
   </div>
 
@@ -247,6 +229,11 @@
       const WHATSAPP_NUMBER = "233257320201";
       const REGISTRATION_LINE = "\n\nCALL OR WHATSAPP TO REGISTER FOR A CLASS @ +233257320201 / +233205626264";
 
+      // Configurable: adjust per module (e.g., Algebra Ch 38–41, Geometry Ch 50–55, etc.)
+      // For now, assume lessons are numbered 0–300 as in your template
+      const START_CHAPTER = 0;
+      const END_CHAPTER = 300;
+
       function renderHeader() {
         document.getElementById('role-badge').textContent = 
           ROLE === 'instructor' ? 'Instructor View' : 'Student View';
@@ -254,36 +241,38 @@
 
       // ===== STUDENT VIEW =====
       function renderStudentDashboard() {
-        const totalLessons = 262;
         let mastered = 0;
-        for (let i = 0; i <= 261; i++) {
+        let attempted = 0;
+        for (let i = START_CHAPTER; i <= END_CHAPTER; i++) {
           if (localStorage.getItem(`mastery_${i}`) === '1') mastered++;
+          if (localStorage.getItem(`quiz_attempts_${i}`)) attempted++;
         }
-        const masteryPercent = Math.round((mastered / totalLessons) * 100);
+        const totalLessons = END_CHAPTER - START_CHAPTER + 1;
+        const masteryPercent = attempted > 0 ? Math.round((mastered / attempted) * 100) : 0;
 
-        // Find next lesson to continue
-        let nextLesson = 0;
-        for (let i = 0; i <= 261; i++) {
+        // Find next unmastered lesson
+        let nextChapter = START_CHAPTER;
+        for (let i = START_CHAPTER; i <= END_CHAPTER; i++) {
           if (localStorage.getItem(`mastery_${i}`) !== '1') {
-            nextLesson = i;
+            nextChapter = i;
             break;
           }
         }
 
         const html = `
           <div class="card">
-            <h2>Hello, ${STUDENT_NAME}!</h2>
-            <p>You've mastered <strong>${mastered} of ${totalLessons}</strong> phonics lessons.</p>
+            <h2>Welcome, ${STUDENT_NAME}!</h2>
+            <p>You've mastered <strong>${mastered}</strong> of <strong>${attempted}</strong> attempted lessons in JHS Mathematics.</p>
             <div class="progress-bar">
               <div class="progress-fill" style="width:${masteryPercent}%">
                 ${masteryPercent}%
               </div>
             </div>
-            <a href="student/chapter-${nextLesson}.html" class="btn">Continue Learning</a>
+            <a href="chapter-${nextChapter}.html" class="btn">Continue Learning</a>
           </div>
 
           <div class="card">
-            <h3>Your Recent Activity</h3>
+            <h3>Recent Activity</h3>
             <div id="recent-lessons">
               ${getRecentLessons()}
             </div>
@@ -294,7 +283,7 @@
 
       function getRecentLessons() {
         const lessons = [];
-        for (let i = 261; i >= 0 && lessons.length < 5; i--) {
+        for (let i = END_CHAPTER; i >= START_CHAPTER && lessons.length < 5; i--) {
           const mastered = localStorage.getItem(`mastery_${i}`) === '1';
           if (mastered || localStorage.getItem(`quiz_attempts_${i}`)) {
             const lessonNum = i + 1;
@@ -316,15 +305,14 @@
         document.getElementById('dashboard-content').innerHTML = `
           <div class="card">
             <h2>Instructor Dashboard</h2>
-            <p>Welcome! As an instructor, you can:</p>
+            <p>You're supporting learners through Ghana's NaCCA JHS Mathematics curriculum.</p>
             <ul style="margin: 1rem 0 1.5rem; padding-left: 1.2rem;">
-              <li>Review anonymized class reports via WhatsApp</li>
-              <li>Guide students using their mastery data</li>
-              <li>Encourage consistent practice</li>
+              <li>Review anonymized quiz reports via WhatsApp</li>
+              <li>Guide students in mastering competencies like CP and CC</li>
+              <li>Encourage consistent practice across strands: Number, Algebra, Geometry, Data</li>
             </ul>
             <div class="note">
-              <p><strong>Note:</strong> This demo does not include real-time class analytics.<br>
-              In a live deployment, you'd receive aggregated reports from students who opt in.</p>
+              <p><strong>Note:</strong> This tool stores data locally. In a school deployment, opt-in analytics can help improve teaching strategies.</p>
             </div>
           </div>
         `;
@@ -335,15 +323,9 @@
         const originalSetItem = localStorage.setItem;
         localStorage.setItem = function(key, value) {
           if (typeof value === 'string' && value.includes('*Mini OpenStax —') && value.includes('Student:')) {
-            const lessonMatch = value.match(/Lesson (\d+)/);
-            if (lessonMatch) {
-              const lessonNum = parseInt(lessonMatch[1], 10);
-              if (lessonNum >= 2 && lessonNum <= 262) {
-                const chapter = lessonNum - 1;
-                const reportKey = `saved_report_${chapter}_${Date.now()}`;
-                originalSetItem.call(localStorage, reportKey, value);
-              }
-            }
+            // Generalize: accept any report that looks like a math quiz
+            const reportKey = `saved_report_${Date.now()}`;
+            originalSetItem.call(localStorage, reportKey, value);
           }
           return originalSetItem.apply(this, arguments);
         };
@@ -364,8 +346,7 @@
               const studentMatch = reportText.match(/Student:\s*(.+)\n/);
               const studentName = studentMatch ? studentMatch[1].trim() : '[Unknown]';
               if (!searchTerm || studentName.toLowerCase().includes(searchTerm.toLowerCase())) {
-                const parts = key.split('_');
-                const timestamp = parts.length >= 4 ? parseInt(parts[parts.length - 1], 10) : 0;
+                const timestamp = parseInt(key.split('_').pop(), 10) || 0;
                 reportEntries.push({ text: reportText, time: timestamp });
               }
             }
@@ -414,7 +395,7 @@
         const reports = getFilteredReports(searchTerm);
         if (reports.length === 0) return alert("No reports to send.");
 
-        let msg = `*📚 Mini OpenStax — All Quiz Reports*\nStudent: ${STUDENT_NAME}\nFiltered: ${searchTerm || 'All'}\nTotal: ${reports.length} report(s)\n\n---\n`;
+        let msg = `*📚 JHS Mathematics Quiz Reports*\nStudent: ${STUDENT_NAME}\nCurriculum: NaCCA Syllabus\nFiltered: ${searchTerm || 'All'}\nTotal: ${reports.length} report(s)\n\n---\n`;
         reports.forEach(r => msg += `\n${r.text}\n---\n`);
         msg += REGISTRATION_LINE;
 
