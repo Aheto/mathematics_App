@@ -1,81 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form">
   <title>Mini OpenStax — Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
       min-width: 80px;
       text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +96,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -156,57 +155,33 @@
       color: #555;
       font-style: italic;
     }
-    .preview-next {
-      background: #e8f5e9;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1.5rem;
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form</h1>
-        <div class="lo-tags" id="lo-tag">B7.2.2.1.1</div>
+        <h1 id="chapter-title">Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form</h1>
+        <div class="lo-tags" id="lo-tags">B7.2.2.1.1</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
-
-      <!-- Learning Objectives -->
+    <main id="main-content">
+      <!-- === REPLACE THIS SECTION PER LESSON === -->
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Translate verbal phrases or real-life situations into <strong>algebraic expressions</strong>.</li>
-          <li>Use letters (variables) such as x, y, a, etc., to represent unknown quantities.</li>
-          <li>Apply the correct <strong>order of operations</strong> when forming expressions.</li>
-          <li>Interpret and write expressions involving <strong>addition, subtraction, multiplication, division</strong>, and <strong>grouping</strong>.</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">Algebraic expression</span>
-          <span class="word-item">Variable</span>
-          <span class="word-item">Constant</span>
-          <span class="word-item">Operation</span>
-          <span class="word-item">Grouping</span>
-          <span class="word-item">Translate</span>
-          <span class="word-item">Order of operations</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
         <h3>1. What Is an Algebraic Expression?</h3>
         <p>An <strong>algebraic expression</strong> is a mathematical phrase that includes:</p>
@@ -375,10 +350,147 @@
         </ul>
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
+        <div class="checkpoint" id="checkpoint-questions"></div>
+      </div>
+
+      <div class="section" id="next-preview">
+        <h3>🔜 Coming Up</h3>
+        <p>In Lesson 35, you’ll learn to simplify algebraic expressions by combining like terms—such as turning 4x + 3x into 7x—and use these skills to find perimeters, totals, and more!</p>
+      </div>
+      <!-- === END REPLACE SECTION === -->
+
+      <div id="student-name-prompt" class="section" style="display:none;">
+        <h2>👤 Your Name</h2>
+        <div id="name-display"></div>
+        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
+          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
+        <div id="name-buttons"></div>
+      </div>
+
+      <div class="quiz" id="quiz-container" style="display:none;">
+        <h2>📝 Quick Check (20 Questions)</h2>
+        <p>Select the best answer for each question.</p>
+        <form id="quiz-form"></form>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
+      </div>
+
+      <div id="feedback"></div>
+
+      <!-- FOOTER -->
+      <footer>
+        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
+        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
+        <br>
+        <a href="../dashboard.html">📊 View Dashboard</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
+
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
+      }
+
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 33; // ← UPDATE PER LESSON
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === TYPO CORRECTIONS (for copied content) ===
+      const TYPO_CORRECTIONS = [
+        [/f resh/g, 'fresh'], [/p unch/g, 'punch'], [/slep t/g, 'slept'],
+        [/crep t/g, 'crept'], [/p lant/g, 'plant'], [/p ath/g, 'path'],
+        [/f roth/g, 'froth'], [/p eck/g, 'peck'], [/f luck/g, 'pluck'],
+        [/p luck/g, 'pluck'], [/f ling/g, 'fling'], [/p ass/g, 'pass'],
+        [/f uss/g, 'fuss'], [/sp ell/g, 'spell'], [/f uzz/g, 'fuzz'],
+        [/thef t/g, 'theft'], [/thrif t/g, 'thrift'], [/dep th/g, 'depth'],
+        [/fif th/g, 'fifth'], [/st ink/g, 'stink'], [/wr ink/g, 'wring']
+      ];
+
+      // === CHAPTER CONTENT (EDIT PER FILE) ===
+      const CHAPTER_CONFIG = {
+        title: "Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form",
+        loTags: ["B7.2.2.1.1"],
+        objectives: [
+          "Translate verbal phrases or real-life situations into algebraic expressions.",
+          "Use letters (variables) such as x, y, a, etc., to represent unknown quantities.",
+          "Apply the correct order of operations when forming expressions.",
+          "Interpret and write expressions involving addition, subtraction, multiplication, division, and grouping."
+        ],
+        words: [
+          "Algebraic expression",
+          "Variable",
+          "Constant",
+          "Operation",
+          "Grouping",
+          "Translate",
+          "Order of operations"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
           <ol>
             <li>Let x be a number. Write expressions for:
               <br>a) 7 more than x
@@ -393,305 +505,371 @@
             <li>Translate: “Subtract 9 from 4 times a number, then multiply the result by 3.”</li>
           </ol>
           <p><em>Confirm your understanding before moving on.</em></p>
-        </div>
-      </div>
-
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
-        <h3>🔜 Coming Up</h3>
-        <p>In Lesson 35, you’ll learn to simplify algebraic expressions by combining like terms—such as turning 4x + 3x into 7x—and use these skills to find perimeters, totals, and more!</p>
-      </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
-
-      <div id="student-name-prompt" class="section" style="display:none;">
-        <h2>👤 Your Name</h2>
-        <div id="name-display"></div>
-        <input type="text" id="student-name" placeholder="Enter your name" maxlength="30"
-          style="padding:0.5rem;font-size:1rem;width:100%;margin:0.5rem 0;display:none;">
-        <div id="name-buttons"></div>
-      </div>
-
-      <div class="quiz" id="quiz-container" style="display:none;">
-        <h2>📝 Quick Check (20 Questions)</h2>
-        <p>Select the best answer for each question.</p>
-        <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
-      </div>
-
-      <div id="feedback"></div>
-
-      <!-- Footer -->
-      <footer>
-        <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
-        <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
-        <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 33; // Lesson 34
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
-
-    // ==============================
-    // 🧠 LESSON CONTENT (EDIT PER FILE)
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Create Simple Algebraic Expressions Using Simple Logic to Translate Instructions into Algebraic Form",
-      loTag: "B7.2.2.1.1",
-      objectives: [
-        "Translate verbal phrases or real-life situations into algebraic expressions.",
-        "Use letters (variables) such as x, y, a, etc., to represent unknown quantities.",
-        "Apply the correct order of operations when forming expressions.",
-        "Interpret and write expressions involving addition, subtraction, multiplication, division, and grouping."
-      ],
-      words: [
-        "Algebraic expression",
-        "Variable",
-        "Constant",
-        "Operation",
-        "Grouping",
-        "Translate",
-        "Order of operations"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li>Let x be a number. Write expressions for:
-            <br>a) 7 more than x
-            <br>b) 4 less than x
-            <br>c) Three times x
-            <br>d) Half of x
-            <br>e) 5 less than twice x</li>
-          <li>Kofi is x years old. His sister is 6 years younger. Write an expression for his sister’s age.</li>
-          <li>A basket of mangoes costs m cedis. A basket of oranges costs o cedis.
-            <br>a) What is the total cost of one of each?
-            <br>b) What is the profit if both are sold together for s cedis?</li>
-          <li>Translate: “Subtract 9 from 4 times a number, then multiply the result by 3.”</li>
-        </ol>
-        <p><em>Confirm your understanding before moving on.</em></p>
-      `,
-      nextPreview: "In Lesson 35, you’ll learn to simplify algebraic expressions by combining like terms—such as turning 4x + 3x into 7x—and use these skills to find perimeters, totals, and more!"
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "Which is an algebraic expression?", a: "3x + 5", opts: ["3x + 5", "3x + 5 = 11", "x = 2", "7 > 5"] },
-      { q: "“5 more than x” is written as:", a: "x + 5", opts: ["5 + x", "x + 5", "5x", "x - 5"] },
-      { q: "“7 less than x” is written as:", a: "x - 7", opts: ["7 - x", "x - 7", "7x", "x + 7"] },
-      { q: "“Three times x” is written as:", a: "3x", opts: ["3 + x", "x3", "3x", "x/3"] },
-      { q: "“Half of x” is written as:", a: "x/2", opts: ["2x", "x/2", "x + 2", "x - 2"] },
-      { q: "“Twice the sum of x and 4” is:", a: "2(x + 4)", opts: ["2x + 4", "2(x + 4)", "x + 8", "2x + 8"] },
-      { q: "Kwame is x years old. His brother is 3 years older. Brother's age:", a: "x + 3", opts: ["3x", "x + 3", "x - 3", "3 - x"] },
-      { q: "“5 less than twice x” is:", a: "2x - 5", opts: ["5 - 2x", "2x - 5", "2(x - 5)", "10x"] },
-      { q: "A book costs x cedis. A pen costs 2 cedis more. Pen cost:", a: "x + 2", opts: ["2x", "x + 2", "x - 2", "2 - x"] },
-      { q: "“Subtract 6 from 3 times x” is:", a: "3x - 6", opts: ["6 - 3x", "3x - 6", "3(x - 6)", "18x"] },
-      { q: "Area of rectangle with length x and width y:", a: "xy", opts: ["x + y", "2x + 2y", "xy", "x/y"] },
-      { q: "“Four times the difference of x and 2” is:", a: "4(x - 2)", opts: ["4x - 2", "4(x - 2)", "8x", "4x - 8"] },
-      { q: "Total cost of x items at GH₵5 each:", a: "5x", opts: ["5 + x", "5x", "x/5", "5 - x"] },
-      { q: "“Multiply the sum of x and 3 by 2” is:", a: "2(x + 3)", opts: ["2x + 3", "2(x + 3)", "6x", "2x + 6"] },
-      { q: "Profit = selling price - cost. If cost = x, sell = y, profit =", a: "y - x", opts: ["x - y", "y - x", "xy", "x + y"] },
-      { q: "“One-third of x” is:", a: "x/3", opts: ["3x", "x/3", "x + 3", "3/x"] },
-      { q: "Perimeter of square with side x:", a: "4x", opts: ["x", "2x", "4x", "x²"] },
-      { q: "“9 decreased by x” is:", a: "9 - x", opts: ["x - 9", "9 - x", "9x", "9/x"] },
-      { q: "If x = 4, which expression equals 10?", a: "2x + 2", opts: ["x + 4", "2x + 2", "3x", "x/2"] },
-      { q: "“The product of 5 and x, increased by 3” is:", a: "5x + 3", opts: ["5(x + 3)", "5x + 3", "15x", "5 + 3x"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
-      }
-
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 Coming Up</h3>
-        <p>${LESSON_CONFIG.nextPreview}</p>
-      `;
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
-        }
+        `,
+        nextPreview: "In Lesson 35, you’ll learn to simplify algebraic expressions by combining like terms—such as turning 4x + 3x into 7x—and use these skills to find perimeters, totals, and more!",
+        assessmentItems: [
+          { id: "1", prompt: "Which is an algebraic expression?", options: [
+            {id:"a",text:"3x + 5",is_correct:true},
+            {id:"b",text:"3x + 5 = 11",is_correct:false},
+            {id:"c",text:"x = 2",is_correct:false},
+            {id:"d",text:"7 > 5",is_correct:false}
+          ]},
+          { id: "2", prompt: "“5 more than x” is written as:", options: [
+            {id:"a",text:"5 + x",is_correct:false},
+            {id:"b",text:"x + 5",is_correct:true},
+            {id:"c",text:"5x",is_correct:false},
+            {id:"d",text:"x - 5",is_correct:false}
+          ]},
+          { id: "3", prompt: "“7 less than x” is written as:", options: [
+            {id:"a",text:"7 - x",is_correct:false},
+            {id:"b",text:"x - 7",is_correct:true},
+            {id:"c",text:"7x",is_correct:false},
+            {id:"d",text:"x + 7",is_correct:false}
+          ]},
+          { id: "4", prompt: "“Three times x” is written as:", options: [
+            {id:"a",text:"3 + x",is_correct:false},
+            {id:"b",text:"x3",is_correct:false},
+            {id:"c",text:"3x",is_correct:true},
+            {id:"d",text:"x/3",is_correct:false}
+          ]},
+          { id: "5", prompt: "“Half of x” is written as:", options: [
+            {id:"a",text:"2x",is_correct:false},
+            {id:"b",text:"x/2",is_correct:true},
+            {id:"c",text:"x + 2",is_correct:false},
+            {id:"d",text:"x - 2",is_correct:false}
+          ]},
+          { id: "6", prompt: "“Twice the sum of x and 4” is:", options: [
+            {id:"a",text:"2x + 4",is_correct:false},
+            {id:"b",text:"2(x + 4)",is_correct:true},
+            {id:"c",text:"x + 8",is_correct:false},
+            {id:"d",text:"2x + 8",is_correct:false}
+          ]},
+          { id: "7", prompt: "Kwame is x years old. His brother is 3 years older. Brother's age:", options: [
+            {id:"a",text:"3x",is_correct:false},
+            {id:"b",text:"x + 3",is_correct:true},
+            {id:"c",text:"x - 3",is_correct:false},
+            {id:"d",text:"3 - x",is_correct:false}
+          ]},
+          { id: "8", prompt: "“5 less than twice x” is:", options: [
+            {id:"a",text:"5 - 2x",is_correct:false},
+            {id:"b",text:"2x - 5",is_correct:true},
+            {id:"c",text:"2(x - 5)",is_correct:false},
+            {id:"d",text:"10x",is_correct:false}
+          ]},
+          { id: "9", prompt: "A book costs x cedis. A pen costs 2 cedis more. Pen cost:", options: [
+            {id:"a",text:"2x",is_correct:false},
+            {id:"b",text:"x + 2",is_correct:true},
+            {id:"c",text:"x - 2",is_correct:false},
+            {id:"d",text:"2 - x",is_correct:false}
+          ]},
+          { id: "10", prompt: "“Subtract 6 from 3 times x” is:", options: [
+            {id:"a",text:"6 - 3x",is_correct:false},
+            {id:"b",text:"3x - 6",is_correct:true},
+            {id:"c",text:"3(x - 6)",is_correct:false},
+            {id:"d",text:"18x",is_correct:false}
+          ]},
+          { id: "11", prompt: "Area of rectangle with length x and width y:", options: [
+            {id:"a",text:"x + y",is_correct:false},
+            {id:"b",text:"2x + 2y",is_correct:false},
+            {id:"c",text:"xy",is_correct:true},
+            {id:"d",text:"x/y",is_correct:false}
+          ]},
+          { id: "12", prompt: "“Four times the difference of x and 2” is:", options: [
+            {id:"a",text:"4x - 2",is_correct:false},
+            {id:"b",text:"4(x - 2)",is_correct:true},
+            {id:"c",text:"8x",is_correct:false},
+            {id:"d",text:"4x - 8",is_correct:false}
+          ]},
+          { id: "13", prompt: "Total cost of x items at GH₵5 each:", options: [
+            {id:"a",text:"5 + x",is_correct:false},
+            {id:"b",text:"5x",is_correct:true},
+            {id:"c",text:"x/5",is_correct:false},
+            {id:"d",text:"5 - x",is_correct:false}
+          ]},
+          { id: "14", prompt: "“Multiply the sum of x and 3 by 2” is:", options: [
+            {id:"a",text:"2x + 3",is_correct:false},
+            {id:"b",text:"2(x + 3)",is_correct:true},
+            {id:"c",text:"6x",is_correct:false},
+            {id:"d",text:"2x + 6",is_correct:false}
+          ]},
+          { id: "15", prompt: "Profit = selling price - cost. If cost = x, sell = y, profit =", options: [
+            {id:"a",text:"x - y",is_correct:false},
+            {id:"b",text:"y - x",is_correct:true},
+            {id:"c",text:"xy",is_correct:false},
+            {id:"d",text:"x + y",is_correct:false}
+          ]},
+          { id: "16", prompt: "“One-third of x” is:", options: [
+            {id:"a",text:"3x",is_correct:false},
+            {id:"b",text:"x/3",is_correct:true},
+            {id:"c",text:"x + 3",is_correct:false},
+            {id:"d",text:"3/x",is_correct:false}
+          ]},
+          { id: "17", prompt: "Perimeter of square with side x:", options: [
+            {id:"a",text:"x",is_correct:false},
+            {id:"b",text:"2x",is_correct:false},
+            {id:"c",text:"4x",is_correct:true},
+            {id:"d",text:"x²",is_correct:false}
+          ]},
+          { id: "18", prompt: "“9 decreased by x” is:", options: [
+            {id:"a",text:"x - 9",is_correct:false},
+            {id:"b",text:"9 - x",is_correct:true},
+            {id:"c",text:"9x",is_correct:false},
+            {id:"d",text:"9/x",is_correct:false}
+          ]},
+          { id: "19", prompt: "If x = 4, which expression equals 10?", options: [
+            {id:"a",text:"x + 4",is_correct:false},
+            {id:"b",text:"2x + 2",is_correct:true},
+            {id:"c",text:"3x",is_correct:false},
+            {id:"d",text:"x/2",is_correct:false}
+          ]},
+          { id: "20", prompt: "“The product of 5 and x, increased by 3” is:", options: [
+            {id:"a",text:"5(x + 3)",is_correct:false},
+            {id:"b",text:"5x + 3",is_correct:true},
+            {id:"c",text:"15x",is_correct:false},
+            {id:"d",text:"5 + 3x",is_correct:false}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        // Objectives
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        // Words
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        // Checkpoint
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        // Next preview
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 Coming Up</h3>
+          <p>${CHAPTER_CONFIG.nextPreview}</p>
+        `;
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
