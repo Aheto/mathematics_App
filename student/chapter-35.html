@@ -1,81 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mini OpenStax: Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mini OpenStax: Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients">
   <title>Mini OpenStax — Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients</title>
   <style>
     :root {
-      --green: #006b3d;   /* Ghana green */
-      --gold: #cead00;    /* Ghana gold */
+      --green: #006b3d;
+      --gold: #cead00;
       --light: #f9f9f9;
       --dark: #2d2d2d;
     }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: var(--dark);
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: var(--dark); 
       line-height: 1.6;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 1rem;
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      padding: 1rem; 
     }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
     }
-    .role-badge {
-      background: #e9ecef;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.85rem;
+    .role-badge { 
+      background: #e9ecef; 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-size: 0.85rem; 
     }
-    .chapter-nav {
-      margin: 1.2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      justify-content: center;
+    .chapter-nav { 
+      margin: 1.2rem 0; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.4rem; 
+      justify-content: center; 
     }
     .chapter-btn {
-      padding: 0.4rem 0.8rem;
-      background: var(--green);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
+      padding: 0.4rem 0.8rem; 
+      background: var(--green); 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 4px; 
       font-size: 0.9rem;
       min-width: 80px;
       text-align: center;
     }
-    .chapter-btn.active,
-    .chapter-btn:hover {
-      background: #00502e;
+    .chapter-btn.active, .chapter-btn:hover { 
+      background: #00502e; 
     }
-    .section {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
+    .section { 
+      margin-bottom: 1.5rem; 
+      padding-bottom: 1rem;
       border-bottom: 1px solid #eee;
     }
-    .word-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
+    .word-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.5rem; 
+      margin: 0.5rem 0; 
     }
-    .word-item {
-      background: var(--light);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      font-family: monospace;
+    .word-item { 
+      background: var(--light); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 4px; 
+      font-family: monospace; 
       font-size: 0.95rem;
     }
     table {
@@ -97,57 +96,57 @@
       border-left: 4px solid var(--gold);
       margin: 1.5rem 0;
     }
-    .quiz {
-      margin-top: 2rem;
+    .quiz { 
+      margin-top: 2rem; 
     }
-    .question {
-      margin-bottom: 1.2rem;
+    .question { 
+      margin-bottom: 1.2rem; 
     }
-    .options {
-      margin-left: 1rem;
+    .options { 
+      margin-left: 1rem; 
     }
-    .option {
-      margin: 0.4rem 0;
+    .option { 
+      margin: 0.4rem 0; 
     }
     .btn {
-      background: var(--green);
-      color: white;
-      border: none;
+      background: var(--green); 
+      color: white; 
+      border: none; 
       padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
+      border-radius: 4px; 
+      cursor: pointer; 
+      font-size: 1rem; 
       margin-right: 0.5rem;
       display: inline-block;
     }
-    .btn:hover {
-      background: #00502e;
+    .btn:hover { 
+      background: #00502e; 
     }
-    .btn-secondary {
-      background: #6c757d;
+    .btn-secondary { 
+      background: #6c757d; 
     }
-    .btn-secondary:hover {
-      background: #5a6268;
+    .btn-secondary:hover { 
+      background: #5a6268; 
     }
-    .feedback {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: var(--light);
-      border-left: 4px solid var(--green);
+    .feedback { 
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background: var(--light); 
+      border-left: 4px solid var(--green); 
     }
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    footer { 
+      text-align: center; 
+      margin-top: 2rem; 
+      font-size: 0.9rem; 
       padding-top: 1.5rem;
       border-top: 1px solid #eee;
     }
-    a {
-      color: var(--green);
-      text-decoration: none;
+    a { 
+      color: var(--green); 
+      text-decoration: none; 
     }
-    a:hover {
-      text-decoration: underline;
+    a:hover { 
+      text-decoration: underline; 
     }
     blockquote {
       margin: 1rem 0;
@@ -156,57 +155,33 @@
       color: #555;
       font-style: italic;
     }
-    .preview-next {
-      background: #e8f5e9;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1.5rem;
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
       <div>
-        <h1 id="lesson-title">Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients</h1>
-        <div class="lo-tags" id="lo-tag">B7.2.2.1.3</div>
+        <h1 id="chapter-title">Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients</h1>
+        <div class="lo-tags" id="lo-tags">B7.2.2.1.3</div>
       </div>
       <div class="role-badge">Student View</div>
     </div>
 
-    <!-- Navigation: Home + Current + Next 3 -->
     <nav class="chapter-nav" id="chapter-nav"></nav>
 
-    <main>
-      <!-- === REPLACE EVERYTHING BELOW PER LESSON === -->
-
-      <!-- Learning Objectives -->
+    <main id="main-content">
+      <!-- === REPLACE THIS SECTION PER LESSON === -->
       <div class="section">
         <h2>🎯 What You’ll Learn</h2>
-        <ul id="objectives">
-          <li>Multiply algebraic terms involving <strong>variables and rational coefficients</strong> (whole numbers, fractions, or decimals).</li>
-          <li>Divide algebraic expressions by simplifying coefficients and canceling common variables.</li>
-          <li>Apply the <strong>laws of exponents</strong> when multiplying or dividing like bases.</li>
-          <li>Use these skills to find <strong>areas</strong>, <strong>volumes</strong>, and other real-world quantities.</li>
-        </ul>
+        <ul id="objectives"></ul>
       </div>
 
-      <!-- Word List -->
       <div class="section">
         <h2>🔤 Important Words</h2>
         <p id="word-list-desc">Key terms for this lesson:</p>
-        <div class="word-list" id="word-list">
-          <span class="word-item">Coefficient</span>
-          <span class="word-item">Exponent</span>
-          <span class="word-item">Monomial</span>
-          <span class="word-item">Rational coefficient</span>
-          <span class="word-item">Area</span>
-          <span class="word-item">Volume</span>
-          <span class="word-item">Cancel</span>
-        </div>
+        <div class="word-list" id="word-list"></div>
       </div>
 
-      <!-- Lesson Content -->
       <div class="section" id="lesson-content">
         <h3>1. Multiplying Algebraic Expressions</h3>
         <p>When multiplying algebraic terms:</p>
@@ -289,33 +264,16 @@
         </ul>
       </div>
 
-      <!-- Checkpoint Questions -->
       <div class="section">
         <h2>✅ Check Your Understanding</h2>
-        <div class="checkpoint" id="checkpoint-questions">
-          <ol>
-            <li>Simplify:
-              <br>a) 4p × 8p²
-              <br>b) -2a × 4a × 5a
-              <br>c) 5xy² × 4x⁴y³</li>
-            <li>Simplify:
-              <br>a) (12x³y²) / (16xy⁴)
-              <br>b) (-30a³b²) / (6a³b²)
-              <br>c) (18x⁵y²) / (24x⁷y²)</li>
-            <li>A rectangle has length 7x and width 3y. Write an expression for its area.</li>
-            <li>True or False: x⁵ / x² = x³. Explain.</li>
-          </ol>
-          <p><em>Confirm your understanding before moving on.</em></p>
-        </div>
+        <div class="checkpoint" id="checkpoint-questions"></div>
       </div>
 
-      <!-- Preview Next Lesson -->
-      <div class="preview-next" id="next-preview">
+      <div class="section" id="next-preview">
         <h3>🔜 Coming Up</h3>
         <p>In Lesson 37, you’ll learn to substitute values into algebraic expressions and evaluate them—like finding the actual area when x = 2 and y = 3. This connects symbolic math to real numerical results!</p>
       </div>
-
-      <!-- === QUIZ & NAME PROMPT (DO NOT EDIT BELOW) === -->
+      <!-- === END REPLACE SECTION === -->
 
       <div id="student-name-prompt" class="section" style="display:none;">
         <h2>👤 Your Name</h2>
@@ -329,281 +287,500 @@
         <h2>📝 Quick Check (20 Questions)</h2>
         <p>Select the best answer for each question.</p>
         <form id="quiz-form"></form>
-        <button type="button" class="btn" id="submit-quiz">Check My Answers</button>
+        <button type="button" class="btn" id="submit-quiz">Check Answers</button>
       </div>
 
       <div id="feedback"></div>
 
-      <!-- Footer -->
+      <!-- FOOTER -->
       <footer>
         <a href="../premium.html" style="display:block; margin-bottom:0.5rem;">✨ Unlock Premium Features</a>
         <a href="#" id="send-analytics" style="color:#6c757d;">📤 Send Anonymous Usage Data</a>
         <br>
-        <a href="../dashboard.html">📊 View My Progress</a>
+        <a href="../dashboard.html">📊 View Dashboard</a>
       </footer>
     </main>
   </div>
 
   <script>
-    // ==============================
-    // 🔧 CONFIGURE PER CHAPTER
-    // ==============================
-    const currentChapter = 35; // Lesson 36
-    const WHATSAPP_NUMBER = "233257320201";
-    window.startTime = Date.now();
+    (function () {
+      'use strict';
+      window.startTime = Date.now();
 
-    // ==============================
-    // 🧠 LESSON CONTENT (EDIT PER FILE)
-    // ==============================
-    const LESSON_CONFIG = {
-      title: "Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients",
-      loTag: "B7.2.2.1.3",
-      objectives: [
-        "Multiply algebraic terms involving variables and rational coefficients (whole numbers, fractions, or decimals).",
-        "Divide algebraic expressions by simplifying coefficients and canceling common variables.",
-        "Apply the laws of exponents when multiplying or dividing like bases.",
-        "Use these skills to find areas, volumes, and other real-world quantities."
-      ],
-      words: [
-        "Coefficient",
-        "Exponent",
-        "Monomial",
-        "Rational coefficient",
-        "Area",
-        "Volume",
-        "Cancel"
-      ],
-      wordListDesc: "Key terms for this lesson:",
-      checkpointQuestions: `
-        <ol>
-          <li>Simplify:
-            <br>a) 4p × 8p²
-            <br>b) -2a × 4a × 5a
-            <br>c) 5xy² × 4x⁴y³</li>
-          <li>Simplify:
-            <br>a) (12x³y²) / (16xy⁴)
-            <br>b) (-30a³b²) / (6a³b²)
-            <br>c) (18x⁵y²) / (24x⁷y²)</li>
-          <li>A rectangle has length 7x and width 3y. Write an expression for its area.</li>
-          <li>True or False: x⁵ / x² = x³. Explain.</li>
-        </ol>
-        <p><em>Confirm your understanding before moving on.</em></p>
-      `,
-      nextPreview: "In Lesson 37, you’ll learn to substitute values into algebraic expressions and evaluate them—like finding the actual area when x = 2 and y = 3. This connects symbolic math to real numerical results!"
-    };
-
-    // ==============================
-    // 📝 QUIZ ITEMS (20 QUESTIONS)
-    // Format: { q: "Question?", a: "Correct Answer", opts: ["A","B","C","D"] }
-    // ==============================
-    const QUIZ_ITEMS = [
-      { q: "Simplify: 3x × 4x", a: "12x²", opts: ["7x", "12x", "12x²", "7x²"] },
-      { q: "Simplify: 5a² × 2a³", a: "10a⁵", opts: ["10a⁶", "10a⁵", "7a⁵", "7a⁶"] },
-      { q: "Simplify: -2p × 3p", a: "-6p²", opts: ["-6p", "-6p²", "6p", "6p²"] },
-      { q: "Simplify: 4xy × 5x²y³", a: "20x³y⁴", opts: ["20x²y³", "20x³y⁴", "9x³y⁴", "9xy⁴"] },
-      { q: "Simplify: (12x⁴) / (3x²)", a: "4x²", opts: ["4x²", "4x⁶", "9x²", "9x⁶"] },
-      { q: "Simplify: (15a³b²) / (5ab)", a: "3a²b", opts: ["3a²b", "3ab", "10a²b", "10ab"] },
-      { q: "True or False: x⁷ / x³ = x⁴", a: "True", opts: ["True", "False"] },
-      { q: "Area of rectangle with sides 2x and 5y:", a: "10xy", opts: ["7xy", "10xy", "10x²y²", "7x + 5y"] },
-      { q: "Simplify: -3m × 4m²", a: "-12m³", opts: ["-12m²", "-12m³", "12m³", "-7m³"] },
-      { q: "Simplify: (18p⁵q³) / (6p²q)", a: "3p³q²", opts: ["3p³q²", "12p³q²", "3p⁷q⁴", "12p⁷q⁴"] },
-      { q: "Volume of box with sides 2a, 3a, a:", a: "6a³", opts: ["6a", "6a²", "6a³", "5a³"] },
-      { q: "Simplify: 7x²y × 3xy⁴", a: "21x³y⁵", opts: ["21x²y⁴", "21x³y⁵", "10x³y⁵", "10x²y⁴"] },
-      { q: "Simplify: (-20r⁴s²) / (4r³s²)", a: "-5r", opts: ["-5r", "-5rs", "5r", "5rs"] },
-      { q: "Which equals 8x⁴?", a: "2x² × 4x²", opts: ["2x² × 4x²", "2x × 4x", "8x × x⁴", "2x⁴ + 4x⁴"] },
-      { q: "Simplify: (25m⁶n) / (5m⁴n)", a: "5m²", opts: ["5m²", "5m¹⁰", "20m²", "20m¹⁰"] },
-      { q: "Cost per unit: total = 36x³y², units = 9x²y", a: "4xy", opts: ["4xy", "4x⁵y³", "27xy", "27x⁵y³"] },
-      { q: "Simplify: -4a²b × 3ab³", a: "-12a³b⁴", opts: ["-12a²b³", "-12a³b⁴", "12a³b⁴", "-7a³b⁴"] },
-      { q: "Simplify: (42p⁷q⁵) / (7p⁵q³)", a: "6p²q²", opts: ["6p²q²", "6pq", "35p²q²", "35pq"] },
-      { q: "Which is NOT correct?", a: "x⁵ / x² = x⁷", opts: ["x³ × x² = x⁵", "x⁵ / x² = x³", "x⁵ / x² = x⁷", "2x × 3x = 6x²"] },
-      { q: "Simplify: (16r⁴s³t) / (8r²st)", a: "2r²s²", opts: ["2r²s²", "2r⁶s⁴t²", "8r²s²", "8r⁶s⁴t²"] }
-    ];
-
-    // ==============================
-    // ⚙️ CORE FUNCTIONS (DO NOT EDIT)
-    // ==============================
-
-    // --- Navigation (Unlimited Chapters) ---
-    function renderNavigation() {
-      const nav = document.getElementById('chapter-nav');
-      const buttons = [];
-
-      // Button 1: Home
-      buttons.push({ label: "Home", url: "../index.html", active: false });
-
-      // Buttons 2–5: Current + next 3 lessons
-      for (let i = 0; i < 4; i++) {
-        const chap = currentChapter + i;
-        buttons.push({
-          label: `Lesson ${chap + 1}`,
-          url: `chapter-${chap}.html`,
-          active: i === 0
-        });
+      // === Seeded RNG & Shuffle ===
+      function createSeededRNG(seed) {
+        let state = Math.abs((seed * 9301 + 49297) % 233280);
+        return () => {
+          state = (state * 9301 + 49297) % 233280;
+          return state / 233280;
+        };
       }
 
-      nav.innerHTML = buttons.map(btn =>
-        `<a href="${btn.url}" class="chapter-btn ${btn.active ? 'active' : ''}">${btn.label}</a>`
-      ).join('');
-    }
-
-    // --- Simple Shuffle ---
-    function shuffle(array) {
-      const arr = [...array];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    // --- Render Content ---
-    function renderContent() {
-      document.getElementById('lesson-title').textContent = LESSON_CONFIG.title;
-      document.getElementById('lo-tag').textContent = LESSON_CONFIG.loTag;
-
-      // Objectives
-      document.getElementById('objectives').innerHTML =
-        LESSON_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
-
-      // Words
-      document.getElementById('word-list-desc').textContent = LESSON_CONFIG.wordListDesc;
-      document.getElementById('word-list').innerHTML =
-        LESSON_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
-
-      // Checkpoint
-      document.getElementById('checkpoint-questions').innerHTML = LESSON_CONFIG.checkpointQuestions;
-
-      // Next preview
-      document.getElementById('next-preview').innerHTML = `
-        <h3>🔜 Coming Up</h3>
-        <p>${LESSON_CONFIG.nextPreview}</p>
-      `;
-    }
-
-    // --- Quiz Rendering ---
-    function renderQuiz() {
-      const form = document.getElementById('quiz-form');
-      let html = '';
-      QUIZ_ITEMS.forEach((item, idx) => {
-        const num = idx + 1;
-        const opts = shuffle(item.opts);
-        html += `<div class="question"><strong>${num}. ${item.q}</strong><div class="options">`;
-        opts.forEach(opt => {
-          const letter = String.fromCharCode(65 + opts.indexOf(opt));
-          html += `<div class="option"><label><input type="radio" name="q${num}" value="${opt}" required> ${letter}. ${opt}</label></div>`;
-        });
-        html += `</div></div>`;
-      });
-      form.innerHTML = html;
-    }
-
-    // --- Feedback & WhatsApp ---
-    function showFeedback() {
-      const answers = [];
-      for (let i = 1; i <= QUIZ_ITEMS.length; i++) {
-        const el = document.querySelector(`input[name="q${i}"]:checked`);
-        answers.push(el ? el.value : null);
-      }
-      if (answers.includes(null)) {
-        alert("Please answer all questions.");
-        return;
-      }
-
-      let correct = 0;
-      QUIZ_ITEMS.forEach((item, i) => {
-        if (answers[i] === item.a) correct++;
-      });
-
-      const score = correct;
-      const total = QUIZ_ITEMS.length;
-      const mastery = score >= Math.ceil(total * 0.75); // 75% = mastery
-      const timeSec = Math.floor((Date.now() - window.startTime) / 1000);
-      const attempts = (parseInt(localStorage.getItem(`attempts_${currentChapter}`)) || 0) + 1;
-      localStorage.setItem(`attempts_${currentChapter}`, attempts);
-      localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
-      const name = localStorage.getItem('student_name') || '[Name]';
-
-      const msg = `*Mini OpenStax — ${LESSON_CONFIG.title}*\nStudent: ${name}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeSec}s | Attempts: ${attempts}`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-
-      document.getElementById('feedback').innerHTML = `
-        <div class="feedback">
-          <h3>📊 Results: ${score}/${total}</h3>
-          <p><strong>${mastery ? '🎉 Excellent!' : score >= total/2 ? 'Good effort!' : 'Keep practicing.'}</strong></p>
-          <p>${mastery ? 'You’ve mastered this lesson!' : 'Review and try again.'}</p>
-          <p><strong>Time:</strong> ${timeSec}s | <strong>Attempts:</strong> ${attempts}</p>
-          <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">📲 Send Report</a>
-        </div>
-      `;
-    }
-
-    // --- Name Prompt ---
-    function setupNamePrompt() {
-      const saved = localStorage.getItem('student_name');
-      const promptDiv = document.getElementById('student-name-prompt');
-      const quizDiv = document.getElementById('quiz-container');
-
-      if (saved) {
-        promptDiv.style.display = 'block';
-        quizDiv.style.display = 'none';
-        document.getElementById('name-display').innerHTML = `<p><strong>Name saved:</strong> ${saved}</p>`;
-        document.getElementById('name-buttons').innerHTML = `
-          <button class="btn" onclick="startQuiz()">✅ Keep This Name</button>
-          <button class="btn btn-secondary" onclick="askForNewName()">✏️ Use a Different Name</button>
-        `;
-      } else {
-        askForNewName();
-      }
-    }
-
-    // Global functions for button clicks
-    window.startQuiz = () => {
-      document.getElementById('student-name-prompt').style.display = 'none';
-      document.getElementById('quiz-container').style.display = 'block';
-    };
-    window.askForNewName = () => {
-      document.getElementById('student-name-prompt').style.display = 'block';
-      document.getElementById('quiz-container').style.display = 'none';
-      document.getElementById('name-display').style.display = 'none';
-      document.getElementById('student-name').style.display = 'block';
-      document.getElementById('student-name').value = '';
-      document.getElementById('name-buttons').innerHTML = `
-        <button class="btn" onclick="saveName()">💾 Save and Start Quiz</button>
-        <div style="margin-top:1rem; font-size:0.9rem;">
-          <label><input type="checkbox" id="teacher-mode"> I'm a teacher (help improve lessons)</label>
-        </div>
-      `;
-    };
-    window.saveName = () => {
-      const name = document.getElementById('student-name').value.trim();
-      if (!name) { alert("Please enter your name."); return; }
-      localStorage.setItem('student_name', name);
-      if (document.getElementById('teacher-mode').checked) {
-        localStorage.setItem('miniopenstax_analytics_consent', '1');
-      }
-      window.startQuiz();
-    };
-
-    // --- Initialize Page ---
-    function init() {
-      renderNavigation();
-      renderContent();
-      renderQuiz();
-      document.getElementById('submit-quiz').onclick = showFeedback;
-      setupNamePrompt();
-    }
-
-    // Analytics toggle
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('send-analytics').onclick = (e) => {
-        e.preventDefault();
-        if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
-          localStorage.setItem('miniopenstax_analytics_consent', '1');
-          alert('Analytics enabled. Thank you!');
+      function shuffleWithSeed(array, seed) {
+        const rng = createSeededRNG(seed);
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(rng() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
         }
+        return arr;
+      }
+
+      // === CONFIGURATION ===
+      const currentChapter = 35; // ← UPDATE PER LESSON
+      const MAX_CHAPTER = 300;
+      const WHATSAPP_NUMBER = "233257320201";
+
+      // === ANALYTICS MODULE ===
+      const ANALYTICS_KEY = 'miniopenstax_analytics_consent';
+      const EVENTS_KEY = 'miniopenstax_events';
+
+      function isAnalyticsEnabled() {
+        return localStorage.getItem(ANALYTICS_KEY) === '1';
+      }
+
+      function logEvent(eventType, data = {}) {
+        if (!isAnalyticsEnabled()) return;
+        const event = { type: eventType, timestamp: Date.now(), lesson: currentChapter, data };
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        events.push(event);
+        localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+        if (events.length >= 20) sendAnalyticsEvents();
+      }
+
+      function enableAnalytics() {
+        localStorage.setItem(ANALYTICS_KEY, '1');
+      }
+
+      function sendAnalyticsEvents() {
+        const events = JSON.parse(localStorage.getItem(EVENTS_KEY) || '[]');
+        if (events.length === 0) return;
+        const summary = {
+          lessons_attempted: [...new Set(events.map(e => e.lesson))].length,
+          quizzes_submitted: events.filter(e => e.type === 'quiz_submitted').length,
+          mastery_count: events.filter(e => e.type === 'mastery_achieved').length,
+          first_event: new Date(events[0].timestamp).toISOString().split('T')[0],
+          last_event: new Date(events[events.length - 1].timestamp).toISOString().split('T')[0]
+        };
+        const report = `*Mini OpenStax — Anonymous Usage Report*\n` +
+          `Lessons Tried: ${summary.lessons_attempted}\n` +
+          `Quizzes Taken: ${summary.quizzes_submitted}\n` +
+          `Mastery Achieved: ${summary.mastery_count}\n` +
+          `Period: ${summary.first_event} to ${summary.last_event}\n\n` +
+          `Thank you for helping improve literacy tools!`;
+        localStorage.removeItem(EVENTS_KEY);
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        window.open(url, '_blank');
+      }
+
+      // === TYPO CORRECTIONS (for copied content) ===
+      const TYPO_CORRECTIONS = [
+        [/f resh/g, 'fresh'], [/p unch/g, 'punch'], [/slep t/g, 'slept'],
+        [/crep t/g, 'crept'], [/p lant/g, 'plant'], [/p ath/g, 'path'],
+        [/f roth/g, 'froth'], [/p eck/g, 'peck'], [/f luck/g, 'pluck'],
+        [/p luck/g, 'pluck'], [/f ling/g, 'fling'], [/p ass/g, 'pass'],
+        [/f uss/g, 'fuss'], [/sp ell/g, 'spell'], [/f uzz/g, 'fuzz'],
+        [/thef t/g, 'theft'], [/thrif t/g, 'thrift'], [/dep th/g, 'depth'],
+        [/fif th/g, 'fifth'], [/st ink/g, 'stink'], [/wr ink/g, 'wring']
+      ];
+
+      // === CHAPTER CONTENT (EDIT PER FILE) ===
+      const CHAPTER_CONFIG = {
+        title: "Perform Multiplication and Division of Algebraic Expressions with Rational Coefficients",
+        loTags: ["B7.2.2.1.3"],
+        objectives: [
+          "Multiply algebraic terms involving variables and rational coefficients (whole numbers, fractions, or decimals).",
+          "Divide algebraic expressions by simplifying coefficients and canceling common variables.",
+          "Apply the laws of exponents when multiplying or dividing like bases.",
+          "Use these skills to find areas, volumes, and other real-world quantities."
+        ],
+        words: [
+          "Coefficient",
+          "Exponent",
+          "Monomial",
+          "Rational coefficient",
+          "Area",
+          "Volume",
+          "Cancel"
+        ],
+        wordListDesc: "Key terms for this lesson:",
+        checkpointQuestions: `
+          <ol>
+            <li>Simplify:
+              <br>a) 4p × 8p²
+              <br>b) -2a × 4a × 5a
+              <br>c) 5xy² × 4x⁴y³</li>
+            <li>Simplify:
+              <br>a) (12x³y²) / (16xy⁴)
+              <br>b) (-30a³b²) / (6a³b²)
+              <br>c) (18x⁵y²) / (24x⁷y²)</li>
+            <li>A rectangle has length 7x and width 3y. Write an expression for its area.</li>
+            <li>True or False: x⁵ / x² = x³. Explain.</li>
+          </ol>
+          <p><em>Confirm your understanding before moving on.</em></p>
+        `,
+        nextPreview: "In Lesson 37, you’ll learn to substitute values into algebraic expressions and evaluate them—like finding the actual area when x = 2 and y = 3. This connects symbolic math to real numerical results!",
+        assessmentItems: [
+          { id: "1", prompt: "Simplify: 3x × 4x", options: [
+            {id:"a",text:"7x",is_correct:false},
+            {id:"b",text:"12x",is_correct:false},
+            {id:"c",text:"12x²",is_correct:true},
+            {id:"d",text:"7x²",is_correct:false}
+          ]},
+          { id: "2", prompt: "Simplify: 5a² × 2a³", options: [
+            {id:"a",text:"10a⁶",is_correct:false},
+            {id:"b",text:"10a⁵",is_correct:true},
+            {id:"c",text:"7a⁵",is_correct:false},
+            {id:"d",text:"7a⁶",is_correct:false}
+          ]},
+          { id: "3", prompt: "Simplify: -2p × 3p", options: [
+            {id:"a",text:"-6p",is_correct:false},
+            {id:"b",text:"-6p²",is_correct:true},
+            {id:"c",text:"6p",is_correct:false},
+            {id:"d",text:"6p²",is_correct:false}
+          ]},
+          { id: "4", prompt: "Simplify: 4xy × 5x²y³", options: [
+            {id:"a",text:"20x²y³",is_correct:false},
+            {id:"b",text:"20x³y⁴",is_correct:true},
+            {id:"c",text:"9x³y⁴",is_correct:false},
+            {id:"d",text:"9xy⁴",is_correct:false}
+          ]},
+          { id: "5", prompt: "Simplify: (12x⁴) / (3x²)", options: [
+            {id:"a",text:"4x²",is_correct:true},
+            {id:"b",text:"4x⁶",is_correct:false},
+            {id:"c",text:"9x²",is_correct:false},
+            {id:"d",text:"9x⁶",is_correct:false}
+          ]},
+          { id: "6", prompt: "Simplify: (15a³b²) / (5ab)", options: [
+            {id:"a",text:"3a²b",is_correct:true},
+            {id:"b",text:"3ab",is_correct:false},
+            {id:"c",text:"10a²b",is_correct:false},
+            {id:"d",text:"10ab",is_correct:false}
+          ]},
+          { id: "7", prompt: "True or False: x⁷ / x³ = x⁴", options: [
+            {id:"a",text:"True",is_correct:true},
+            {id:"b",text:"False",is_correct:false}
+          ]},
+          { id: "8", prompt: "Area of rectangle with sides 2x and 5y:", options: [
+            {id:"a",text:"7xy",is_correct:false},
+            {id:"b",text:"10xy",is_correct:true},
+            {id:"c",text:"10x²y²",is_correct:false},
+            {id:"d",text:"7x + 5y",is_correct:false}
+          ]},
+          { id: "9", prompt: "Simplify: -3m × 4m²", options: [
+            {id:"a",text:"-12m²",is_correct:false},
+            {id:"b",text:"-12m³",is_correct:true},
+            {id:"c",text:"12m³",is_correct:false},
+            {id:"d",text:"-7m³",is_correct:false}
+          ]},
+          { id: "10", prompt: "Simplify: (18p⁵q³) / (6p²q)", options: [
+            {id:"a",text:"3p³q²",is_correct:true},
+            {id:"b",text:"12p³q²",is_correct:false},
+            {id:"c",text:"3p⁷q⁴",is_correct:false},
+            {id:"d",text:"12p⁷q⁴",is_correct:false}
+          ]},
+          { id: "11", prompt: "Volume of box with sides 2a, 3a, a:", options: [
+            {id:"a",text:"6a",is_correct:false},
+            {id:"b",text:"6a²",is_correct:false},
+            {id:"c",text:"6a³",is_correct:true},
+            {id:"d",text:"5a³",is_correct:false}
+          ]},
+          { id: "12", prompt: "Simplify: 7x²y × 3xy⁴", options: [
+            {id:"a",text:"21x²y⁴",is_correct:false},
+            {id:"b",text:"21x³y⁵",is_correct:true},
+            {id:"c",text:"10x³y⁵",is_correct:false},
+            {id:"d",text:"10x²y⁴",is_correct:false}
+          ]},
+          { id: "13", prompt: "Simplify: (-20r⁴s²) / (4r³s²)", options: [
+            {id:"a",text:"-5r",is_correct:true},
+            {id:"b",text:"-5rs",is_correct:false},
+            {id:"c",text:"5r",is_correct:false},
+            {id:"d",text:"5rs",is_correct:false}
+          ]},
+          { id: "14", prompt: "Which equals 8x⁴?", options: [
+            {id:"a",text:"2x² × 4x²",is_correct:true},
+            {id:"b",text:"2x × 4x",is_correct:false},
+            {id:"c",text:"8x × x⁴",is_correct:false},
+            {id:"d",text:"2x⁴ + 4x⁴",is_correct:false}
+          ]},
+          { id: "15", prompt: "Simplify: (25m⁶n) / (5m⁴n)", options: [
+            {id:"a",text:"5m²",is_correct:true},
+            {id:"b",text:"5m¹⁰",is_correct:false},
+            {id:"c",text:"20m²",is_correct:false},
+            {id:"d",text:"20m¹⁰",is_correct:false}
+          ]},
+          { id: "16", prompt: "Cost per unit: total = 36x³y², units = 9x²y", options: [
+            {id:"a",text:"4xy",is_correct:true},
+            {id:"b",text:"4x⁵y³",is_correct:false},
+            {id:"c",text:"27xy",is_correct:false},
+            {id:"d",text:"27x⁵y³",is_correct:false}
+          ]},
+          { id: "17", prompt: "Simplify: -4a²b × 3ab³", options: [
+            {id:"a",text:"-12a²b³",is_correct:false},
+            {id:"b",text:"-12a³b⁴",is_correct:true},
+            {id:"c",text:"12a³b⁴",is_correct:false},
+            {id:"d",text:"-7a³b⁴",is_correct:false}
+          ]},
+          { id: "18", prompt: "Simplify: (42p⁷q⁵) / (7p⁵q³)", options: [
+            {id:"a",text:"6p²q²",is_correct:true},
+            {id:"b",text:"6pq",is_correct:false},
+            {id:"c",text:"35p²q²",is_correct:false},
+            {id:"d",text:"35pq",is_correct:false}
+          ]},
+          { id: "19", prompt: "Which is NOT correct?", options: [
+            {id:"a",text:"x³ × x² = x⁵",is_correct:false},
+            {id:"b",text:"x⁵ / x² = x³",is_correct:false},
+            {id:"c",text:"x⁵ / x² = x⁷",is_correct:true},
+            {id:"d",text:"2x × 3x = 6x²",is_correct:false}
+          ]},
+          { id: "20", prompt: "Simplify: (16r⁴s³t) / (8r²st)", options: [
+            {id:"a",text:"2r²s²",is_correct:true},
+            {id:"b",text:"2r⁶s⁴t²",is_correct:false},
+            {id:"c",text:"8r²s²",is_correct:false},
+            {id:"d",text:"8r⁶s⁴t²",is_correct:false}
+          ]}
+        ]
       };
-      init();
-    });
+
+      // === RENDERING FUNCTIONS ===
+      function renderContent() {
+        document.getElementById('chapter-title').textContent = CHAPTER_CONFIG.title;
+        document.getElementById('lo-tags').textContent = CHAPTER_CONFIG.loTags[0];
+
+        // Objectives
+        document.getElementById('objectives').innerHTML =
+          CHAPTER_CONFIG.objectives.map(obj => `<li>${obj}</li>`).join('');
+
+        // Words
+        document.getElementById('word-list-desc').textContent = CHAPTER_CONFIG.wordListDesc;
+        document.getElementById('word-list').innerHTML =
+          CHAPTER_CONFIG.words.map(w => `<span class="word-item">${w}</span>`).join('');
+
+        // Checkpoint
+        document.getElementById('checkpoint-questions').innerHTML = CHAPTER_CONFIG.checkpointQuestions;
+
+        // Next preview
+        document.getElementById('next-preview').innerHTML = `
+          <h3>🔜 Coming Up</h3>
+          <p>${CHAPTER_CONFIG.nextPreview}</p>
+        `;
+      }
+
+      function renderNavigation() {
+        const nav = document.getElementById('chapter-nav');
+        const buttons = [{ label: "Home", url: "../index.html", active: false }];
+        for (let i = 0; i < 4; i++) {
+          const c = currentChapter + i;
+          const lessonNum = c + 1;
+          if (c > MAX_CHAPTER) break;
+          buttons.push({
+            label: `Lesson ${lessonNum}`,
+            url: `chapter-${c}.html`,
+            active: i === 0
+          });
+        }
+        nav.innerHTML = buttons.map(b =>
+          `<a href="${b.url}" class="chapter-btn ${b.active ? 'active' : ''}">${b.label}</a>`
+        ).join('');
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quiz-form');
+        window.quizCorrectMap = {};
+        const baseSeed = currentChapter * 1000000 + (Date.now() % 1000000);
+
+        form.innerHTML = CHAPTER_CONFIG.assessmentItems.map(q => {
+          const seed = baseSeed + parseInt(q.id, 10);
+          const shuffledOpts = shuffleWithSeed([...q.options], seed);
+          const correct = q.options.find(o => o.is_correct);
+          window.quizCorrectMap[q.id] = correct.id;
+
+          const optHtml = shuffledOpts.map((opt, idx) => {
+            const letter = String.fromCharCode(65 + idx);
+            return `<div class="option"><label><input type="radio" name="q${q.id}" value="${opt.id}" required> ${letter}. ${opt.text}</label></div>`;
+          }).join('');
+
+          return `<div class="question"><strong>${q.id}. ${q.prompt}</strong><div class="options">${optHtml}</div></div>`;
+        }).join('');
+      }
+
+      function showFeedback(answers) {
+        const items = CHAPTER_CONFIG.assessmentItems;
+        let correctCount = 0, correctList = [], incorrectList = [];
+
+        items.forEach((item, i) => {
+          const ans = answers[i];
+          const correctId = window.quizCorrectMap[item.id];
+          const correctOpt = item.options.find(o => o.id === correctId);
+          const isCorrect = ans === correctId;
+          if (isCorrect) {
+            correctCount++;
+            correctList.push(`${item.id}. ${item.prompt} → ✅ ${correctOpt.text}`);
+          } else {
+            incorrectList.push(`${item.id}. ${item.prompt} → ❌ Your answer: ${item.options.find(o => o.id === ans)?.text || '—'} | ✅ ${correctOpt.text}`);
+          }
+        });
+
+        const score = correctCount, total = 20, mastery = score >= 15;
+        const timeOnTask = Math.floor((Date.now() - window.startTime) / 1000);
+        const attempts = (parseInt(localStorage.getItem(`quiz_attempts_${currentChapter}`)) || 0) + 1;
+        localStorage.setItem(`quiz_attempts_${currentChapter}`, attempts);
+        localStorage.setItem(`mastery_${currentChapter}`, mastery ? '1' : '0');
+        const studentName = localStorage.getItem('student_name') || '[Name]';
+
+        logEvent('quiz_submitted', { score, time_sec: timeOnTask, mastery, attempts });
+        if (mastery) logEvent('mastery_achieved', {});
+
+        let report = `*Mini OpenStax — ${CHAPTER_CONFIG.title}*\nStudent: ${studentName}\nScore: ${score}/${total} (${Math.round(score/total*100)}%) — ${mastery ? '✅ MASTERED' : '❌ Needs Review'}\nTime: ${timeOnTask}s | Attempts: ${attempts}\n\n`;
+        if (correctList.length) report += `✅ CORRECT (${correctList.length}):\n${correctList.join('\n')}\n\n`;
+        if (incorrectList.length) report += `❌ INCORRECT (${incorrectList.length}):\n${incorrectList.join('\n')}\n\n`;
+        report += `Report generated via Mini OpenStax.`;
+
+        localStorage.setItem(`saved_report_${currentChapter}_${Date.now()}`, report);
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(report)}`;
+        document.getElementById('feedback').innerHTML = `
+          <div class="feedback">
+            <h3>📊 Results: ${score}/${total}</h3>
+            <p><strong>${mastery ? '🎉 Excellent!' : score >= 10 ? 'Good!' : 'Keep practicing.'}</strong> ${
+              mastery ? 'You’ve mastered the concept!' :
+              score >= 10 ? 'Review missed items.' : 'Practice this lesson again.'
+            }</p>
+            <p><strong>Time:</strong> ${timeOnTask}s | <strong>Attempts:</strong> ${attempts}</p>
+            <a href="${url}" target="_blank" class="btn" style="background:#25D366;text-decoration:none;">
+              📲 Send Report via WhatsApp
+            </a>
+          </div>
+        `;
+      }
+
+      function setupQuizListeners() {
+        document.getElementById('submit-quiz').addEventListener('click', () => {
+          const form = document.getElementById('quiz-form');
+          const answers = [];
+          for (let i = 1; i <= 20; i++) {
+            const el = form.querySelector(`input[name="q${i}"]:checked`);
+            answers.push(el ? el.value : null);
+          }
+          if (answers.includes(null)) {
+            alert("Please answer all questions.");
+            return;
+          }
+          showFeedback(answers);
+        });
+      }
+
+      function initNamePrompt() {
+        const saved = localStorage.getItem('student_name');
+        const savedRole = localStorage.getItem('user_role') || 'student';
+        const promptDiv = document.getElementById('student-name-prompt');
+        const quizDiv = document.getElementById('quiz-container');
+        const display = document.getElementById('name-display');
+        const input = document.getElementById('student-name');
+        const buttons = document.getElementById('name-buttons');
+        const roleBadge = document.querySelector('.role-badge');
+        roleBadge.textContent = savedRole === 'instructor' ? 'Instructor View' : 'Student View';
+
+        if (saved) {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.innerHTML = `<p><strong>Current name:</strong> ${saved} (${savedRole})</p>`;
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="keep-btn">✅ Keep This Name</button>
+            <button type="button" class="btn btn-secondary" id="change-btn">✏️ Use a Different Name</button>
+          `;
+          document.getElementById('keep-btn').onclick = () => {
+            promptDiv.style.display = 'none';
+            quizDiv.style.display = 'block';
+            logEvent('lesson_start', {});
+          };
+          document.getElementById('change-btn').onclick = () => {
+            display.style.display = 'none';
+            input.style.display = 'block';
+            buttons.innerHTML = `
+              <button type="button" class="btn" id="save-new">💾 Save and Start Quiz</button>
+              <div style="margin-top:1rem; font-size:0.9rem;">
+                <label>
+                  <input type="checkbox" id="teacher-mode"> 
+                  I'm an instructor (analytics auto-enabled to improve lessons)
+                </label>
+              </div>
+            `;
+            input.value = '';
+            input.focus();
+            document.getElementById('save-new').onclick = () => {
+              const name = input.value.trim();
+              if (name) {
+                localStorage.setItem('student_name', name);
+                const isTeacher = document.getElementById('teacher-mode').checked;
+                localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+                if (isTeacher) enableAnalytics();
+                promptDiv.style.display = 'none';
+                quizDiv.style.display = 'block';
+                roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+                logEvent('lesson_start', {});
+              } else {
+                alert("Please enter your name.");
+                input.focus();
+              }
+            };
+          };
+        } else {
+          promptDiv.style.display = 'block';
+          quizDiv.style.display = 'none';
+          display.style.display = 'none';
+          input.style.display = 'block';
+          buttons.innerHTML = `
+            <button type="button" class="btn" id="save-first">💾 Save and Start Quiz</button>
+            <div style="margin-top:1rem; font-size:0.9rem;">
+              <label>
+                <input type="checkbox" id="teacher-mode"> 
+                I'm an instructor (analytics auto-enabled to improve lessons)
+              </label>
+            </div>
+          `;
+          document.getElementById('save-first').onclick = () => {
+            const name = input.value.trim();
+            if (name) {
+              localStorage.setItem('student_name', name);
+              const isTeacher = document.getElementById('teacher-mode').checked;
+              localStorage.setItem('user_role', isTeacher ? 'instructor' : 'student');
+              if (isTeacher) enableAnalytics();
+              promptDiv.style.display = 'none';
+              quizDiv.style.display = 'block';
+              roleBadge.textContent = isTeacher ? 'Instructor View' : 'Student View';
+              logEvent('lesson_start', {});
+            } else {
+              alert("Please enter your name.");
+              input.focus();
+            }
+          };
+        }
+      }
+
+      function init() {
+        renderContent();
+        renderNavigation();
+        renderQuiz();
+        setupQuizListeners();
+        initNamePrompt();
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('send-analytics').onclick = (e) => {
+          e.preventDefault();
+          if (confirm('Send anonymous usage data to help improve Mini OpenStax?')) {
+            sendAnalyticsEvents();
+          }
+        };
+      });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
   </script>
 </body>
 </html>
